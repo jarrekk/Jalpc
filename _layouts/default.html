@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+	{% include head.html %}
+
+	{% if page.title %}
+		<body id="page-top" class="landing-page">
+	{% else %}
+		<body id="page-top" class="landing-page">
+	{% endif %}
+
+	{% if page.title != 'index' %}
+	    {% include header.html %}
+	{% endif %}
+
+    {{ content }}
+
+	{% if page.title != 'index' %}
+	    {% include footer.html %}
+	{% endif %}
+
+</body>
+
+</html>
