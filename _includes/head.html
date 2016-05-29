@@ -24,6 +24,9 @@
     <link href="{{"static/css/animate.css"| prepend: site.baseurl }}" rel="stylesheet">
     <link href="{{"static/font-awesome/css/font-awesome.min.css"| prepend: site.baseurl }}" rel="stylesheet">
 
+    <!-- Sweet Alert -->
+    <link href="{{"static/css/plugins/sweetalert/sweetalert.css"|prepend: site.baseurl }}" rel="stylesheet">
+
     <!-- Custom styles for this template -->
     <link href="{{"static/css/style.css"| prepend: site.baseurl }}" rel="stylesheet">
 
@@ -42,6 +45,10 @@
 	<!-- Custom and plugin javascript -->
 	<script src="{{"static/js/inspinia.js"| prepend: site.baseurl }}"></script>
 	<script src="{{"static/js/plugins/pace/pace.min.js"| prepend: site.baseurl }}"></script>
+
+    <!-- Sweet alert -->
+    <script src="{{"static/js/plugins/sweetalert/sweetalert.min.js"|prepend: site.baseurl }}"></script>
+
 	<script src="{{"static/js/plugins/wow/wow.min.js"| prepend: site.baseurl }}"></script>
     <script src="{{"static/js/jPages.js" | prepend: site.baseurl}}"></script>
     <script src="{{"static/js/js.js" | prepend: site.baseurl}}"></script>
@@ -69,4 +76,11 @@
         })();
     </script>
 
+    <script>
+        $(document).ready(function(){
+            $("#j-test").click(function(){
+                $(document).scrollTop(250);
+            });
+        });
+    </script>   
 </head>
