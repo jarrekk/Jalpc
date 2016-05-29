@@ -2,7 +2,7 @@
 layout: post
 title:  "From mysql to redis with python"
 date:   2016-05-04
-categories: [Python]
+categories: [Python, Database]
 tags: [Python, MySQL, Redis]
 icon: code
 ---
