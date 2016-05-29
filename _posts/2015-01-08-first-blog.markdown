@@ -2,7 +2,7 @@
 layout: post
 title:  "第一篇博客"
 date:   2015-01-08
-categories: [生活]
+categories: [Life]
 tags: [blog]
 icon: bookmark-o
 ---
