@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
-
+ 
 <div class="wrapper wrapper-content  animated fadeInRight article">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
@@ -18,7 +18,9 @@ layout: default
                             {{ page.title }}
                         </h1>
                     </div>
+
                     	{{ content }}
+
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
@@ -30,39 +32,16 @@ layout: default
                         <div class="col-md-6">
                             <div class="small text-right">
                                 <h5>Stats:</h5>
-                                <div> <i class="fa fa-comments-o"> </i> 56 comments </div>
-                                <i class="fa fa-eye"> </i> 144 views
+                                <div> <i class="fa fa-comments-o"> </i> <span id = "url::{{page.url | prepend: site.url}}" class = "cy_cmt_count" ></span> comments</div>
                             </div>
                         </div>
                     </div>
-
+                    <br>
                     <div class="row">
                         <div class="col-lg-12">
+                            {% include donate.html %}
 
-                            <h2>Comments:</h2>
-                            <div class="social-feed-box">
-                                <div class="social-avatar">
-                                    <a href="" class="pull-left">
-                                        <img alt="image" src="img/a1.jpg">
-                                    </a>
-                                    <div class="media-body">
-                                        <a href="#">
-                                            Andrew Williams
-                                        </a>
-                                        <small class="text-muted">Today 4:21 pm - 12.06.2014</small>
-                                    </div>
-                                </div>
-                                <div class="social-body">
-                                    <p>
-                                        Many desktop publishing packages and web page editors now use Lorem Ipsum as their
-                                        default model text, and a search for 'lorem ipsum' will uncover many web sites still
-                                        default model text.
-                                    </p>
-                                </div>
-                            </div>
-
-                                {% include comments.html %}
-
+                            {% include comments.html %}
                         </div>
                     </div>
 
