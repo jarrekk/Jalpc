@@ -38,6 +38,11 @@
 
 	<!-- Mainly scripts -->
 	<script src="{{"static/js/jquery-2.1.1.js"| prepend: site.baseurl }}"></script>
+    <script>
+    $(function(){
+        $("pre").css('display','block');
+    });
+    </script>
 	<script src="{{"static/js/bootstrap.min.js"| prepend: site.baseurl }}"></script>
 	<script src="{{"static/js/plugins/metisMenu/jquery.metisMenu.js"| prepend: site.baseurl }}"></script>
 	<script src="{{"static/js/plugins/slimscroll/jquery.slimscroll.min.js"| prepend: site.baseurl }}"></script>
@@ -53,13 +58,6 @@
     <script src="{{"static/js/jPages.js" | prepend: site.baseurl}}"></script>
     <script src="{{"static/js/js.js" | prepend: site.baseurl}}"></script>
 
-    <script>
-    $(function(){
-      $("button").click(function(){
-        $("pre").toggleClass("collapse");
-      });
-    });
-    </script>
 
     <script type="text/javascript">
         /* when document is ready */
