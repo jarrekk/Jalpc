@@ -1,43 +1,43 @@
 {
-  "app":{
-    "name": "INSPINIA 2.4"
+  "website":{
+    "title": "Jack's blog"
   },
   "nav":{
-    "dashboard": "Dashboards",
-    "graphs": "Graphs",
-    "mailbox": "Mailbox",
-    "widgets": "Widgets",
-    "metrics": "Metrics",
-    "forms": "Forms",
-    "appviews": "App views",
-    "otherpages": "Other pages",
-    "uielements": "UI elements",
-    "miscellaneous": "Miscellaneous",
-    "gridoptions": "Grid options",
-    "tables": "Tables",
-    "commerce": "E-commerce",
-    "gallery": "Gallery",
-    "menulevels": "Menu levels",
-    "animations": "Animations",
-    "landing": "Landing page",
-    "layouts": "Layouts",
-    "package": "Packages"
+    "home": "Home",
+    "skills": "Skills",
+    "career": "Career",
+    "blog": "Blog",
+    "contact": "Contact"
   },
-  "body":{
-    "welcome": "Welcome Amelia"
-
+  "skills":{
+    "my_skills": "My Skills"
   },
-  "topnav":{
-
-    "messageinfo": "You have 42 messages and 6 notifications.",
-    "search": "Search for something...",
-    "logout": "Log out",
-    "welcometext": "Welcome to INSPINIA+ Admin Theme.",
-    "language": "Language"
+  "career":{
+    "my_career": "My Career",
+    "nextcode": "Nextcode",
+    "nextcode_des": "Now I am in Nextcode and develop website with Python code for genetic analysis.",
+    "nextcode_date": "Apr. 2016",
+    "nextcode_job": "Python Developer",
+    "netease": "Netease Game",
+    "netease_des": "In Netease game, I learned game service system and use Python code for ops.",
+    "netease_date": "Jun. 2015",
+    "netease_job": "Dev Ops",
+    "ucloud": "Ucloud",
+    "ucloud_des": "In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.",
+    "ucloud_date": "Sep. 2013",
+    "ucloud_job": "Dev Ops",
+    "college": "Graduation",
+    "college_des": "At July 2013,I graduated from college and started my IT technology tour.",
+    "college_date": "Jul. 2013",
+    "college_job": "Student"
   },
-  "demo":{
-    "text1": "Internationalization (sometimes shortened to \"I18N , meaning \"I - eighteen letters -N\") is the process of planning and implementing products and services so that they can easily be adapted to specific local languages and cultures, a process called localization . The internationalization process is sometimes called translation or localization enablement ."
+  "blog":{
+    "my_blog": "My Blog"
+  },
+  "contact":{
+    "contact_me": "Contact Me",
+    "email": "Send me mail",
+    "follow": "Or follow me on social platform"
   }
-
 
 }
