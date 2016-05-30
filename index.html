@@ -3,7 +3,6 @@ layout: index
 title: index
 permalink: /
 ---
-
 <div class="navbar-wrapper">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
@@ -14,15 +13,22 @@ permalink: /
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#page-top">Jack's blog</a>
+                    <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">Jack's blog</span></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a class="page-scroll" href="#page-top">Home</a></li>
-                        <li><a class="page-scroll" href="#skills">Skills</a></li>
-                        <li><a class="page-scroll" href="#career">Career</a></li>
-                        <li><a class="page-scroll" href="#blog">Blog</a></li>
-                        <li><a class="page-scroll" href="#contact">Contact</a></li>
+                    <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+                        <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">Home</span></a></li>
+                        <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">Skills</span></a></li>
+                        <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">Career</span></a></li>
+                        <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">Blog</span></a></li>
+                        <li><a class="page-scroll" href="#contact"><span data-i18n="nav.contact">Contact</span></a></li>
+                        <li>
+                            <a class="btn btn-sm set_en"><img src="{{"static/img/flags/16/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                        </li>
+                        <li>
+                            <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/32/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -69,9 +75,9 @@ permalink: /
 <section id="skills" class="features">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center" id="i18_skills">
                 <div class="navy-line"></div>
-                <h1>My Skills</h1>
+                <h1><span data-i18n="skills.my_skills">My Skills</span></h1>
             </div>
         </div>
         <div class="row features-block">
@@ -129,11 +135,11 @@ permalink: /
 </section>
 
 <section id="career" class="timeline gray-section">
-    <div class="container">
+    <div class="container" id="i18_career">
         <div class="row">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>My Career</h1>
+                <h1><span data-i18n="career.my_career">My Career</span></h1>
             </div>
         </div>
         <div class="row features-block">
@@ -147,9 +153,9 @@ permalink: /
                         </div>
 
                         <div class="vertical-timeline-content">
-                            <h2>Nextcode</h2>
-                            <p>Now I am in Nextcode and develop website with Python code for genetic analysis. </p>
-                            <span class="vertical-date"> Apr. 2016 <br/> <small>Python Developer</small> </span>
+                            <h2><span data-i18n="career.nextcode">Nextcode</span></h2>
+                            <p><span data-i18n="career.nextcode_des">Now I am in Nextcode and develop website with Python code for genetic analysis. </span></p>
+                            <span class="vertical-date"><span data-i18n="career.nextcode_date"> Apr. 2016 </span><br/> <small><span data-i18n="career.nextcode_job">Python Developer</span></small> </span>
                         </div>
                     </div>
 
@@ -159,9 +165,9 @@ permalink: /
                         </div>
 
                         <div class="vertical-timeline-content">
-                            <h2>Netease Game</h2>
-                            <p>In Netease game, I learned game service system and use Python code for ops. </p>
-                            <span class="vertical-date"> Jun. 2015 <br/> <small>Dev Ops</small> </span>
+                            <h2><span data-i18n="career.netease">Netease Game</span></h2>
+                            <p><span data-i18n="career.netease_des">In Netease game, I learned game service system and use Python code for ops. </span></p>
+                            <span class="vertical-date"><span data-i18n="career.netease_date"> Jun. 2015 </span><br/> <small><span data-i18n="career.netease_job">Dev Ops</span></small> </span>
                         </div>
                     </div>
 
@@ -171,9 +177,9 @@ permalink: /
                         </div>
 
                         <div class="vertical-timeline-content">
-                            <h2>Ucloud</h2>
-                            <p>In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.</p>
-                            <span class="vertical-date"> Sep. 2013 <br/> <small>Dev Ops</small> </span>
+                            <h2><span data-i18n="career.ucloud">Ucloud</span></h2>
+                            <p><span data-i18n="career.ucloud_des">In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.</span></p>
+                            <span class="vertical-date"><span data-i18n="career.ucloud_date"> Sep. 2013 </span><br/> <small><span data-i18n="career.ucloud_job">Dev Ops</span></small> </span>
                         </div>
                     </div>
                     <div class="vertical-timeline-block">
@@ -182,9 +188,9 @@ permalink: /
                         </div>
 
                         <div class="vertical-timeline-content">
-                            <h2>Graduation</h2>
-                            <p>At July 2013,I graduated from college and started my IT technology tour.</p>
-                            <span class="vertical-date"> Jul. 2013 <br/> <small>Student</small> </span>
+                            <h2><span data-i18n="career.college">Graduation</span></h2>
+                            <p><span data-i18n="career.college_des">At July 2013,I graduated from college and started my IT technology tour.</span></p>
+                            <span class="vertical-date"><span data-i18n="career.college_date"> Jul. 2013 </span><br/> <small><span data-i18n="career.college_job">Student</span></small> </span>
                         </div>
                     </div>
 
@@ -200,9 +206,9 @@ permalink: /
 
     <div class="container">
         <div class="row">
-            <div class="col-lg-12 text-center wow zoomIn">
+            <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
                 <br><br><br><br>
-                <a class="btn btn-lg btn-default btn-rounded btn-outline" href="/blog/">My Blog</a>
+                <a class="btn btn-lg btn-default btn-rounded btn-outline" href="/blog/"><span data-i18n="blog.my_blog">My Blog</span></a>
                 <br><br><br><br>
             </div>
         </div>
@@ -211,19 +217,19 @@ permalink: /
 </section>
 
 <section id="contact" class="gray-section contact">
-    <div class="container">
+    <div class="container" id="i18_contact">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1>Contact Me</h1>
+                <h1><span data-i18n="contact.contact_me">Contact Me</span></h1>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-12 text-center">
-                <a href="mailto:{{ site.author.email }}" class="btn btn-primary">Send me mail</a>
-                <p class="m-t-sm">
+                <a href="mailto:{{ site.author.email }}" class="btn btn-primary"><span data-i18n="contact.email">Send me mail</span></a>
+                <p class="m-t-sm"><span data-i18n="contact.follow">
                     Or follow me on social platform
-                </p>
+                </span></p>
                 <ul class="list-inline social-icon">
                     <li><a href="http://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
                     </li>
@@ -296,5 +302,58 @@ permalink: /
 
     // Activate WOW.js plugin for animation on scrol
     new WOW().init();
+
+</script>
+
+<script>
+
+    $(document).ready(function (){
+
+        $.i18n.init({
+            resGetPath: 'static/locales/__lng__.json',
+            load: 'unspecific',
+            fallbackLng: false,
+            lng: 'en'
+        }, function (t){
+            $('.i18container').i18n();
+            // $('#i18_title').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_career').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_contact').i18n();
+        });
+
+        $('.set_en').on('click', function (){
+            i18n.setLng('en', function(){
+                $('.i18container').i18n();
+                // $('#i18_title').i18n();
+                $('#i18_navbar').i18n();
+                $('#i18_skills').i18n();
+                $('#i18_career').i18n();
+                $('#i18_blog').i18n();
+                $('#i18_contact').i18n();
+
+                // $('.set_en').addClass('active');
+                // $('.set_cn').removeClass('active');
+            });
+        });
+
+        $('.set_cn').on('click', function (){
+            i18n.setLng('cn', function(){
+                $('.i18container').i18n();
+                // $('#i18_title').i18n();
+                $('#i18_navbar').i18n();
+                $('#i18_skills').i18n();
+                $('#i18_career').i18n();
+                $('#i18_blog').i18n();
+                $('#i18_contact').i18n();
+
+                // $('.set_cn').addClass('active');
+                // $('.set_en').removeClass('active');
+            });
+        })
+
+    });
 
 </script>
