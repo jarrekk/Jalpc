@@ -3,7 +3,7 @@ layout: index
 title: index
 permalink: /
 ---
-<div class="navbar-wrapper" id="i18_navbar">
+<div class="navbar-wrapper">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
                 <div class="navbar-header page-scroll">
@@ -13,10 +13,10 @@ permalink: /
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#page-top"><span data-i18n="website.title">Jack's blog</span></a>
+                    <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">Jack's blog</span></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right" id="i18_navbar">
                         <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">Home</span></a></li>
                         <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">Skills</span></a></li>
                         <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">Career</span></a></li>
@@ -316,6 +316,7 @@ permalink: /
             lng: 'en'
         }, function (t){
             $('.i18container').i18n();
+            // $('#i18_title').i18n();
             $('#i18_navbar').i18n();
             $('#i18_skills').i18n();
             $('#i18_career').i18n();
@@ -326,6 +327,7 @@ permalink: /
         $('.set_en').on('click', function (){
             i18n.setLng('en', function(){
                 $('.i18container').i18n();
+                // $('#i18_title').i18n();
                 $('#i18_navbar').i18n();
                 $('#i18_skills').i18n();
                 $('#i18_career').i18n();
@@ -340,6 +342,7 @@ permalink: /
         $('.set_cn').on('click', function (){
             i18n.setLng('cn', function(){
                 $('.i18container').i18n();
+                // $('#i18_title').i18n();
                 $('#i18_navbar').i18n();
                 $('#i18_skills').i18n();
                 $('#i18_career').i18n();
