@@ -9,14 +9,14 @@
 title: Jack's blog
 
 baseurl: "/"
-url: "http://www.jack003.com"
-# url: "http://127.0.0.1:4000"
+# url: "http://www.jack003.com"
+url: "http://127.0.0.1:4000"
 
 author:
   name: 'Jack'
   email: 'jack19890614@gmail.com'
   # twitter_username: joshgerdes
-  # facebook_username: jiakunnj
+  facebook_username: 'jiakunnj'
   github_username: 'Jack614'
   # linkedin_username:  joshgerdes
 
