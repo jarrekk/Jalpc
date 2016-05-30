@@ -135,3 +135,4 @@ Regular expression: \*\*B00000000000000
 Action:             Run Coprocess
 Parameters:         /usr/local/bin/iterm2-zmodem rz
 ```
+Github链接：<https://github.com/Jack614/iterm2-zmodem>
