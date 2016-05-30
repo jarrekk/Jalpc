@@ -20,6 +20,9 @@
     <!-- Bootstrap core CSS -->
     <link href="{{"static/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
 
+    <!-- Jquery ui CSS -->
+    <link href="{{"static/js/plugins/jquery-ui/jquery-ui.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+
     <!-- Animation CSS -->
     <link href="{{"static/css/animate.css"| prepend: site.baseurl }}" rel="stylesheet">
     <link href="{{"static/font-awesome/css/font-awesome.min.css"| prepend: site.baseurl }}" rel="stylesheet">
@@ -38,11 +41,39 @@
 
 	<!-- Mainly scripts -->
 	<script src="{{"static/js/jquery-2.1.1.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"static/js/plugins/jquery-ui/jquery-ui.min.js"| prepend: site.baseurl }}"></script>
     <script>
     $(function(){
         $("pre").css('display','block');
     });
     </script>
+<script type="text/javascript">
+    $(function() {
+          $.ajax({
+              url: "/search.xml",
+              dataType: "xml",
+              success: function( xmlResponse ) {
+                 var data = $( "article", xmlResponse ).map(function() {
+                      return {
+                          value: $( "title", this ).text() + ", " +
+                              ( $.trim( $( "date", this ).text() ) ),
+                          desc: $("description", this).text(),
+                          url: $("url", this).text()
+                      };
+                  }).get();
+
+                  $( "#j_search" ).autocomplete({
+                      source: data,
+                      minLength: 0,
+                      select: function( event, ui ) {
+                        window.location.href = ui.item.url;
+                      }
+                  });
+              }
+          });
+      });
+</script>
+
 	<script src="{{"static/js/bootstrap.min.js"| prepend: site.baseurl }}"></script>
 	<script src="{{"static/js/plugins/metisMenu/jquery.metisMenu.js"| prepend: site.baseurl }}"></script>
 	<script src="{{"static/js/plugins/slimscroll/jquery.slimscroll.min.js"| prepend: site.baseurl }}"></script>

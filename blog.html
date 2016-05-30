@@ -3,7 +3,15 @@ layout: blog
 title: Blog
 permalink: /blog/
 ---
-
+<br>
+<!-- <div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <form>
+            <input type="text"  id="j_search" placeholder="Search Blog" required class="form-control">         
+        </form>
+    </div>
+</div>
+ -->
 <div class="row">
     <div class="col-lg-12 text-center">
         <div class="navy-line"></div>
@@ -15,7 +23,7 @@ permalink: /blog/
     <div class="col-lg-8 col-lg-offset-2">
         <div class="wrapper wrapper-content animated fadeInRight">
 
-			{% for post in site.posts limit:10 %} 
+			{% for post in site.posts limit:5 %} 
             <div class="vote-item">
                 <div class="row">
                     <div class="col-md-10">
@@ -48,4 +56,6 @@ permalink: /blog/
 
         </div>
     </div>
+
 </div>
+
