@@ -4,7 +4,7 @@ title:  "Python challenge 12"
 date:   2015-02-26
 categories: [Python]
 tags: [Python,Challenge]
-icon: code
+icon: fa-code
 ---
 
 Python challenge好像荒废很久了，今天把challenge 12补上。

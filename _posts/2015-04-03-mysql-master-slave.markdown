@@ -4,7 +4,7 @@ title:  "MySQL主备模式配置"
 date:   2015-04-03
 categories: [Database]
 tags: [MySQL, 主从]
-icon: database
+icon: fa-database
 ---
 
 背景：

@@ -4,7 +4,7 @@ title:  "hadoop初识（从安装到查询)"
 date:   2015-10-16
 categories: [Database]
 tags: [hadoop, ambari]
-icon: linux
+icon: fa-linux
 ---
 
 花了一个星期，把hadoop整套算是搞通了，做这套hadoop是给bi做数据分析使用的，之前他们是用MySQL cluster来做数据查询，MySQL cluster的好处是数据全部加载到内存中，查询会非常快，不足的地方是数据容量受限，内存多大，数据最多能放多少，所以我们新建设了一套hadoop集群。

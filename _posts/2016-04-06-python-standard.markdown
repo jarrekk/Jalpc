@@ -4,7 +4,7 @@ title:  "PEP8 Python 编码规范整理"
 date:   2016-04-06
 categories: [Python]
 tags: [优化]
-icon: code
+icon: icon-python
 ---
 
 #### 一、代码编排

@@ -4,7 +4,7 @@ title:  "通过supervisord管理celery守护进程"
 date:   2016-02-04
 categories: [Python,Linux]
 tags: [django,celery,supervisord]
-icon: linux
+icon: fa-linux
 ---
 
 #### Why Supervisord

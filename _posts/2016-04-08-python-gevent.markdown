@@ -4,7 +4,7 @@ title:  "使用gevent提高IO繁忙型wsgi服务的并发量（转）"
 date:   2016-04-08
 categories: [Python]
 tags: [优化]
-icon: code
+icon: icon-python
 ---
 
 

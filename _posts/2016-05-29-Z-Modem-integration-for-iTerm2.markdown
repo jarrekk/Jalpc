@@ -4,7 +4,7 @@ title:  "使用iTerm2上传下载文件"
 date:   2016-05-29
 categories: [Mac]
 tags: [Mac]
-icon: apple
+icon: fa-apple
 ---
 
 在Mac上使用iTerm2确实让Linux终端操作方便的很多，加上[oh-my-zsh](https://github.com/robbyrussell/oh-my-zsh)这个强大shell的利器，敲命令就像滚键盘一样。

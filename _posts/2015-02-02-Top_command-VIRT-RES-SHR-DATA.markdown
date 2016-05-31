@@ -4,7 +4,7 @@ title:  "Top命令VIRT,RES,SHR,DATA的含义"
 date:   2015-02-02
 categories: [Linux]
 tags: [top]
-icon: linux
+icon: fa-linux
 ---
 
 #### VIRT：virtual memory usage

@@ -4,7 +4,7 @@ title:  "LVS三种工作模式脚本及比较"
 date:   2015-05-09
 categories: [Linux]
 tags: [LVS]
-icon: linux
+icon: fa-linux
 ---
 
 ```
