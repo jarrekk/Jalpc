@@ -110,5 +110,5 @@ supervisorctl stop celery:celery-0
 ```
 
 浏览器访问http://10.1.1.1:1222/ 还可以通过web对这些进程进行管理
-![celery](/images/supervisord_celery/celery-web.jpg)
+![celery]({{ site.img_path }}/supervisord_celery/celery-web.jpg)
 

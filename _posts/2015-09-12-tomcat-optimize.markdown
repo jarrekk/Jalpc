@@ -64,15 +64,15 @@ Y给我记住啊，要不然这个-server都不加，那是要打屁股了。
 
 在设这个最大内存即Xmx值时请先打开一个命令行，键入如下的命令：
 
-![tomcat](/images/tomcat-optimize/1.jpg)
+![tomcat]({{ site.img_path }}/tomcat-optimize/1.jpg)
 
 看，能够正常显示JDK的版本信息，说明，这个值你能够用。不是说32位系统下最高能够使用2GB内存吗？即：2048m，我们不防来试试
 
-![tomcat](/images/tomcat-optimize/2.jpg)
+![tomcat]({{ site.img_path }}/tomcat-optimize/2.jpg)
 
 可以吗？不可以！不要说2048m呢，我们小一点，试试1700m如何
 
-![tomcat](/images/tomcat-optimize/3.jpg)
+![tomcat]({{ site.img_path }}/tomcat-optimize/3.jpg)
 
 嘿嘿，连1700m都不可以，更不要说2048m了呢，2048m只是一个理论数值，这样说吧我这边有几台机器，有的机器-Xmx1800都没问题，有的机器最高只能到-Xmx1500m。
 
@@ -301,7 +301,7 @@ HTTP 压缩可以大大提高浏览网站的速度，它的原理是，在客户
 
 在到达第二轮时，我们的性能已经提升了多少倍呢？我们来看一个loaderrunner的截图吧：
 
-![tomcat](/images/tomcat-optimize/4.jpg)
+![tomcat]({{ site.img_path }}/tomcat-optimize/4.jpg)
 
 左边第一列是第一轮没有经过任何调优的压力测试报告。
 

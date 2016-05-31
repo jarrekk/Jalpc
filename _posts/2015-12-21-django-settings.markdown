@@ -54,7 +54,7 @@ python manage.py runserver --settings=mysite.settings.local
 
 这里我使用了test.py和product.py来区分两个不同的配置：
 
-![tree](/images/django_settings/tree.jpg)
+![tree]({{ site.img_path }}/django_settings/tree.jpg)
 
 先看__init__.py
 
