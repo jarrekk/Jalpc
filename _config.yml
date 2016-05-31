@@ -20,6 +20,8 @@ author:
   github_username: 'Jack614'
   # linkedin_username:  joshgerdes
 
+img_path: '/static/img/blog'
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
