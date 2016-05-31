@@ -4,19 +4,16 @@
            placeholder="Search Blog"
            >
 
-    <div style="position: fixed; top: 16px; right: 16px;">
+    <div style="position: fixed; top: 16px; right: 16px; z-index: 9999;">
         <img src="/search/img/cb-close.png"  id="close-btn"/>
     </div>
 </div>
 
-<div style="position: fixed; right: 16px; bottom: 20px;">
+<div style="position: fixed; right: 16px; bottom: 20px; z-index: 9999;">
     <img src="/search/img/cb-search.png"  id="search-btn"  title="Double click Ctrl"/>
 </div>
 
-<link rel="stylesheet" href="{{ "search/css/cb-search.css" | prepend: site.baseurl }}">
 
-<script src="{{ "search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "search/js/cb-search.js" | prepend: site.baseurl }}"></script>
 <div class="navbar-wrapper">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
