@@ -4,7 +4,7 @@ title:  "nginx源码安装及安全"
 date:   2015-03-03
 categories: [Linux]
 tags: [nginx]
-icon: linux
+icon: fa-linux
 ---
 
 nginx安装版本为nginx-1.6.2.tar.gz，这个版本为目前最新的稳定版。

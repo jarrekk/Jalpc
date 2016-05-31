@@ -4,7 +4,7 @@ title:  "Django的权限机制"
 date:   2016-02-06
 categories: [Python]
 tags: [django,permission,权限]
-icon: code
+icon: icon-python
 ---
 
 #### 一、Django权限机制概述

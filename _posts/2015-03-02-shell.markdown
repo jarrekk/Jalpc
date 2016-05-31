@@ -4,7 +4,7 @@ title:  "${}，##and%%在shell中的使用"
 date:   2015-03-02
 categories: [Linux]
 tags: [shell]
-icon: linux
+icon: fa-linux
 ---
 
 为了完整起见，我用一些例子加以说明 ${ } 的一些特异功能：

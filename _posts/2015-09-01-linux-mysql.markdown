@@ -4,7 +4,7 @@ title:  "Linux安装mysql-源码安装"
 date:   2015-09-01
 categories: [Database]
 tags: [MySQL]
-icon: database
+icon: fa-database
 ---
 
 

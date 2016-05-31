@@ -4,7 +4,7 @@ title:  "关于git的ssh-key:解决本地多个ssh-key的问题"
 date:   2016-01-03
 categories: [Linux]
 tags: [ssh,key]
-icon: linux
+icon: fa-linux
 ---
 
 

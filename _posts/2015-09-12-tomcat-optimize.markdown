@@ -4,7 +4,7 @@ title:  "tomcat配置优化参数"
 date:   2015-9-12
 categories: [Linux]
 tags: [tomcat, 优化]
-icon: linux
+icon: icon-tomcat
 ---
 
 ``` ini
