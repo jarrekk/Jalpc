@@ -4,7 +4,7 @@ title:  "memcached源码安装、错误处理及启动参数"
 date:   2015-08-18
 categories: [Linux]
 tags: [memcached]
-icon: database
+icon: fa-database
 ---
 
 memcached服务安装：

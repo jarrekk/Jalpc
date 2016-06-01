@@ -4,7 +4,7 @@ title:  "Python challenge 12"
 date:   2015-02-26
 categories: [Python]
 tags: [Python,Challenge]
-icon: code
+icon: fa-code
 ---
 
 Python challenge好像荒废很久了，今天把challenge 12补上。
@@ -14,12 +14,12 @@ Python challenge好像荒废很久了，今天把challenge 12补上。
 <http://www.pythonchallenge.com/pc/return/evil1.jpg>是网页,
 <http://www.pythonchallenge.com/pc/return/evil2.jpg>是下面的图片：
 
-![evil2](/images/python_challenge12/evil2.jpg)
+![evil2]({{ site.img_path }}/python_challenge12/evil2.jpg)
 
 打开网址：<http://www.pythonchallenge.com/pc/return/evil2.gfx> 发现是一个二进制文档，还是没什么头绪
 继续打开<http://www.pythonchallenge.com/pc/return/evil3.jpg> 是下面的图片：
 
-![evil3-1](/images/python_challenge12/evil3-1.jpg)
+![evil3-1]({{ site.img_path }}/python_challenge12/evil3-1.jpg)
 
 看样子是没有图片了，但是打开<http://www.pythonchallenge.com/pc/return/evil4.jpg> 看到如下语句：**Bert is evil! go back!**，在chrome浏览器是看不到的，我是在IE浏览器上看到。
 回想网页开始的图片，是在均分扑克牌，这应该就是解题的思路了，那么代码很简单了，如下：
@@ -39,14 +39,14 @@ for i in range(5):
 
 得到如下图片：
 
-![0](/images/python_challenge12/0.jpg)
+![0]({{ site.img_path }}/python_challenge12/0.jpg)
 
-![1](/images/python_challenge12/1.png)
+![1]({{ site.img_path }}/python_challenge12/1.png)
 
-![2](/images/python_challenge12/2.gif)
+![2]({{ site.img_path }}/python_challenge12/2.gif)
 
-![3](/images/python_challenge12/3.png)
+![3]({{ site.img_path }}/python_challenge12/3.png)
 
-![4](/images/python_challenge12/4.jpg)
+![4]({{ site.img_path }}/python_challenge12/4.jpg)
 
 最后一张图片的字母划掉了，所以答案是：**disproportional**

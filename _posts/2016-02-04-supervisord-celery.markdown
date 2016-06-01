@@ -4,7 +4,7 @@ title:  "通过supervisord管理celery守护进程"
 date:   2016-02-04
 categories: [Python,Linux]
 tags: [django,celery,supervisord]
-icon: linux
+icon: fa-linux
 ---
 
 #### Why Supervisord
@@ -110,5 +110,5 @@ supervisorctl stop celery:celery-0
 ```
 
 浏览器访问http://10.1.1.1:1222/ 还可以通过web对这些进程进行管理
-![celery](/images/supervisord_celery/celery-web.jpg)
+![celery]({{ site.img_path }}/supervisord_celery/celery-web.jpg)
 

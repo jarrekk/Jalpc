@@ -4,18 +4,23 @@
   },
   "nav":{
     "home": "首页",
+    "about_me": "关于我",
     "skills": "技能",
     "career": "职业",
     "blog": "博客",
     "contact": "联系我"
+  },
+  "about_me":{
+    "about_me": "关于我",
+    "des": "我是一名Python工程师，有开发网站，运维自动化，编写脚本的经验。人生是不断学习的过程，工作使我变的更严谨，旅行让我的生活更加多彩。通过编程和旅行我能结识到很多朋友。"
   },
   "skills":{
     "my_skills": "我的技能"
   },
   "career":{
     "my_career": "职业生涯",
-    "nextcode": "明码科技",
-    "nextcode_des": "我现在在明码科技，使用Python为基因分析项目做网站.",
+    "nextcode": "Nextcode",
+    "nextcode_des": "现在我在Nextcode，使用Python为基因分析项目做网站.",
     "nextcode_date": "2016年4月",
     "nextcode_job": "Python工程师",
     "netease": "网易游戏",

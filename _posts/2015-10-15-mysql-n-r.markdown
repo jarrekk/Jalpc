@@ -4,7 +4,7 @@ title:  "MySQL去除字段中的换行和回车符"
 date:   2015-10-15
 categories: [Database]
 tags: [MySQL, 换行符, 回车符]
-icon: database
+icon: fa-database
 ---
 
 在录入MySQL数据到hive中踩了一个大坑，由于中间保存的文本是TXT格式，导入完成后，行数总是对不上。

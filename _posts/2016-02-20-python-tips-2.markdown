@@ -4,7 +4,7 @@ title:  "Python代码优化Tips(二)"
 date:   2016-02-20
 categories: [Python]
 tags: [优化]
-icon: code
+icon: icon-python
 ---
 
 #### ⑥使用enumerate()后去序列迭代的索引和值

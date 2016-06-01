@@ -4,7 +4,7 @@ title:  "MySQL查看表大小"
 date:   2015-11-1
 categories: [Database]
 tags: [MySQL,table,大小]
-icon: database
+icon: fa-database
 ---
 
 方法一：

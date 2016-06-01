@@ -4,7 +4,7 @@ title:  "rsync简单使用"
 date:   2015-09-30
 categories: [Linux]
 tags: [rsync, 共享]
-icon: linux
+icon: fa-linux
 ---
 
 无用户名密码共享文件：
