@@ -64,7 +64,7 @@ session 实现共享的方法分为多种
 
 粗略配置如下 tomcat/server.xml
 
-``` xml
+```
 <Cluster className="org.apache.catalina.ha.tcp.SimpleTcpCluster"
         channelSendOptions="8">
   <Manager className="org.apache.catalina.ha.session.DeltaManager"
@@ -108,7 +108,7 @@ session 实现共享的方法分为多种
 
 conf/context.xml添加
 
-``` xml
+```
 <Manager className="de.javakaffee.web.msm.MemcachedBackupSessionManager"
      memcachedNodes="n1:192.168.100.208:11211 n2:192.168.100.208:11311"     
   lockingMode="auto"
@@ -122,7 +122,7 @@ conf/context.xml添加
 
 lib增加jar包：
 
-``` text
+```
 spymemcached-2.10.3.jar
 memcached-session-manager-1.7.0.jar
 memcached-session-manager-tc7-1.7.0.jar
@@ -132,7 +132,7 @@ memcached-session-manager-tc7-1.7.0.jar
 
 conf/context.xml添加
 
-``` xml
+```
 <Manager className="de.javakaffee.web.msm.MemcachedBackupSessionManager"
      memcachedNodes="n1:192.168.100.208:11211 n2:192.168.100.208:11311"   
   lockingMode="auto"
@@ -147,7 +147,7 @@ conf/context.xml添加
 
 lib增加jar包
 
-``` text
+```
 msm-javolution-serializer-cglib-1.3.0.jar
 msm-javolution-serializer-jodatime-1.3.0.jar
 spymemcached-2.10.3.jar
@@ -161,7 +161,7 @@ memcached-session-manager-tc7-1.7.0.jar
 
 conf/context.xml添加
 
-``` xml
+```
 <Manager className="de.javakaffee.web.msm.MemcachedBackupSessionManager"
      memcachedNodes="n1:192.168.100.208:11211 n2:192.168.100.208:11311"   
   lockingMode="auto"
@@ -175,7 +175,7 @@ conf/context.xml添加
 
 lib增加jar包
 
-``` text
+```
 xmlpull-1.1.3.1.jar
 xpp3_min-1.1.4c.jar
 xstream-1.4.6.jar
@@ -189,7 +189,7 @@ memcached-session-manager-tc7-1.7.0.jar
 
 conf/context.xml添加
 
-``` xml
+```
 <Manager className="de.javakaffee.web.msm.MemcachedBackupSessionManager"
      memcachedNodes="n1:192.168.100.208:11211 n2:192.168.100.208:11311"     
   lockingMode="auto"
@@ -203,7 +203,7 @@ conf/context.xml添加
 
 lib增加jar包
 
-``` text
+```
 flexjson-3.1.jar
 msm-flexjson-serializer-1.7.0.jar
 spymemcached-2.10.3.jar
@@ -215,7 +215,7 @@ memcached-session-manager-tc7-1.7.0.jar
 
 conf/context.xml添加
 
-``` xml
+```
 <Manager className="de.javakaffee.web.msm.MemcachedBackupSessionManager"
      memcachedNodes="n1:192.168.100.208:11211 n2:192.168.100.208:11311"   
   lockingMode="auto"
@@ -230,7 +230,7 @@ conf/context.xml添加
 
 lib增加jar包
 
-``` text
+```
 kryo-1.04.jar
 minlog-1.2.jar
 asm-3.2.jar
@@ -246,7 +246,7 @@ memcached-session-manager-tc7-1.7.0.jar
 
 修改tomcat/context.xml文件 新增如下代码
 
-``` xml
+```
 <Manager className="de.javakaffee.web.msm.MemcachedBackupSessionManager"
     memcachedNodes="n1:192.168.0.216:11211" 
     sticky="false"
@@ -308,7 +308,7 @@ Non-Sticky模式：tomcat session 为 中转session， memcached1 为主 session
 
 需要使用到得jar 列表如下
 
-``` text
+```
 couchbase-client-1.2.2.jar
 kryo-1.03.jar
 kryo-serializers-0.10.jar

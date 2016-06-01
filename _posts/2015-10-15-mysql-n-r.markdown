@@ -11,7 +11,7 @@ icon: fa-database
 
 解决方法：
 
-``` sql
+```
 UPDATE tablename SET field = REPLACE(REPLACE(field, '\r', ''), '\n', '');
 UPDATE tablename SET field = REPLACE(REPLACE(field, CHAR(10), ''), CHAR(13), '');
 ```
@@ -29,7 +29,7 @@ MySQL的trim函数没办法去掉回车和换行，只能去掉多余的空格�
 
 的短信息(注意内容后有换行)通过(status改变成1)之前的SQL语句是不起作用的
 
-``` sql
+```
 UPDATE `tran` 
 SET `status` = '1' 
 WHERE `msg` = '我爱你';
@@ -37,7 +37,7 @@ WHERE `msg` = '我爱你';
 
 修改之后的语句 
 
-``` sql
+```
 UPDATE `tran` 
 SET `status` = '1' 
 WHERE trim( replace( `msg`, '\r\n', ' ' ) ) = '我爱你';
@@ -45,7 +45,7 @@ WHERE trim( replace( `msg`, '\r\n', ' ' ) ) = '我爱你';
 
 把数据中的回车换行等替换成空格之后再trim掉，就达到目的了，虽然不是特别完美，但是由于没办法在用户录入的时候控制，所以只能出此下策，好在MySQL内置函数的效率还是很有保证的。 
 
-``` sql
+```
 UPDATE `tran` 
 SET `status` = '1' 
 WHERE trim( trim( 

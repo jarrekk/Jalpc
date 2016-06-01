@@ -22,7 +22,7 @@ modprobe -l|grep ipvs     ##检查ipvs的模块
 
 lvs.sh
 
-``` bash
+```
 #！/bin/sh
  VIP=192.168.0.210
  RIP1=192.168.0.175
@@ -58,7 +58,7 @@ lvs.sh
 
 real-server.sh
 
-``` bash
+```
 #!/bin/bash
  VIP=192.168.0.210
  BROADCAST=192.168.0.255  #vip's broadcast
@@ -94,7 +94,7 @@ real-server.sh
 
 lvs.sh
 
-``` bash
+```
 #!/bin/sh
  # description: start LVS of Directorserver
  VIP=192.168.25.41（注意，lvs server那台机器2个ip，一个是vip,一个是本身ip例如192.168.25.42）
@@ -135,7 +135,7 @@ lvs.sh
 
 real-server.sh
 
-``` bash
+```
 #!/bin/sh
  # ghb in 20060812
  # description: Config realserver tunl port and apply arp patch
@@ -172,7 +172,7 @@ real-server.sh
 
 lvs.sh
 
-``` bash
+```
 #!/bin/sh
  # description: start LVS of Nat
  VLAN-IP=202.99.59.110

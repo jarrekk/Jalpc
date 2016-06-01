@@ -13,21 +13,21 @@ icon: fa-linux
 
 首先，在新增私钥的时候，通过指定不同的文件名来生成不同的私钥文件
 
-``` bash
+```
 ssh-keygen -t rsa -f ~/.ssh/id_rsa.work -C "Key for Work"  
 ssh-keygen -t rsa -f ~/.ssh/id_rsa.github -C "Key for GitHub"
 ```
 
 新增ssh的配置文件，并修改权限
 
-``` bash
+```
 touch ~/.ssh/config  
 chmod 600 ~/.ssh/config 
 ```
 
 修改config文件的内容
 
-``` bash
+```
 Host *.workdomain.com   
     IdentityFile ~/.ssh/id_rsa.work  
     User lee  
