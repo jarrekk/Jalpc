@@ -18,6 +18,7 @@ permalink: /
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right" id="i18_navbar">
                         <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">Home</span></a></li>
+                        <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">About</span></a></li>
                         <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">Skills</span></a></li>
                         <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">Career</span></a></li>
                         <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">Blog</span></a></li>
@@ -72,7 +73,62 @@ permalink: /
     </a>
 </div>
 
-<section id="skills" class="features">
+<section id="about_me" class="features">
+    <div class="container" id="i18_about_me">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="about_me.about_me">About Me</span></h1>
+                <!-- <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p> -->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-python"> </i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 wow fadeInLeft">
+                <div class="team-member">            
+                    <div class="vote-icon">
+                        <i class="fa fa-linux"> </i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="team-member wow zoomIn">
+                    <img src="{{"static/img/landing/Jack.jpg" | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+                    <h4><span class="navy">Kun</span> Jia</h4>
+<!--                     <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p> -->
+                </div>
+            </div>
+            <div class="col-sm-2 wow fadeInLeft">
+                <div class="team-member">
+                    <div class="vote-icon">
+                        <i class="icon-html"> </i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-2 wow fadeInLeft">
+                <div class="team-member">            
+                    <div class="vote-icon">
+                        <i class="icon-docker"> </i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                <p><span data-i18n="about_me.des">I am a Python engineers, website development, operation and maintenance of automation experience writing scripts. Life is a continuous learning process, so that my work becomes more rigorous, travel makes my life more colorful. I can travel through programming and to get to know a lot of friends.
+                </span></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="gray-section team">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center" id="i18_skills">
@@ -131,10 +187,10 @@ permalink: /
           </div>
         </div>
     </div>
-
+<br><br><br>
 </section>
 
-<section id="career" class="timeline gray-section">
+<section id="career" class="timeline features">
     <div class="container" id="i18_career">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -216,7 +272,7 @@ permalink: /
 
 </section>
 
-<section id="contact" class="gray-section contact">
+<section id="contact" class="contact">
     <div class="container" id="i18_contact">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
@@ -320,6 +376,7 @@ permalink: /
             $('.i18container').i18n();
             // $('#i18_title').i18n();
             $('#i18_navbar').i18n();
+            $('#i18_about_mer').i18n();
             $('#i18_skills').i18n();
             $('#i18_career').i18n();
             $('#i18_blog').i18n();
@@ -331,6 +388,7 @@ permalink: /
                 $('.i18container').i18n();
                 // $('#i18_title').i18n();
                 $('#i18_navbar').i18n();
+                $('#i18_about_me').i18n();
                 $('#i18_skills').i18n();
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();
@@ -346,6 +404,7 @@ permalink: /
                 $('.i18container').i18n();
                 // $('#i18_title').i18n();
                 $('#i18_navbar').i18n();
+                $('#i18_about_me').i18n();
                 $('#i18_skills').i18n();
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();

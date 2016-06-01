@@ -4,10 +4,15 @@
   },
   "nav":{
     "home": "Home",
+    "about_me": "About",
     "skills": "Skills",
     "career": "Career",
     "blog": "Blog",
     "contact": "Contact"
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des": "I am a Python engineers, website development, operation and maintenance of automation experience writing scripts. Life is a continuous learning process, so that my work becomes more rigorous, travel makes my life more colorful. I can travel through programming and to get to know a lot of friends."
   },
   "skills":{
     "my_skills": "My Skills"
