@@ -159,7 +159,7 @@ rm -rf /etc/my.cnf
 [root@ rhel5~]# mysql -u root mysql
 ```
 
-``` sql
+```
 mysql>use mysql;
 mysql>desc user;
 mysqlGRANT ALL PRIVILEGES ON *.* TO root@"%" IDENTIFIED BY "root";　　//为root添加远程连接的能力。
@@ -183,7 +183,7 @@ mysql -u root -p
 
 注：如果不能远程连接，出现错误mysql error number 1130，则加入下面语句试试：
 
-``` sql
+```
 mysql>GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' IDENTIFIED BY '******' WITH GRANT OPTION;
 ```
 

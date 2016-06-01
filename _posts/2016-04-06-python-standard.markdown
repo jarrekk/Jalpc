@@ -51,7 +51,7 @@ icon: icon-python
 
 1. 块注释，在一段代码前增加的注释。在‘#’后加一空格。段落之间以只有‘#’的行间隔。比如：
 
-``` python
+```
 # Description : Module config.
 # 
 # Input : None
@@ -114,7 +114,7 @@ Optional plotz says to frobnicate the bizbaz first.
 
 5. 异常中try的代码尽可能少。比如：
 
-``` python
+```
 try:
     value = collection[key]
 except KeyError:
@@ -125,7 +125,7 @@ else:
 
 要优于
 
-``` python
+```
 try:
 # Too broad!
     return handle_value(collection[key])

@@ -24,7 +24,7 @@ icon: icon-python
 #### 使用分离式的设置文件
 django项目建立时, 会自动生成settings.py文件. 为了实现分离式的设置文件, 我们首先删除settings.py, 然后建立settings目录:
 
-``` text
+```
 settings/
         __init__.py
         base.py
@@ -43,7 +43,7 @@ settings/
 
 我们可以使用以下命令使用这些不同的设置文件:
 
-``` bash
+```
 python manage.py shell --settings=mysite.settings.local
 python manage.py runserver --settings=mysite.settings.local
 ```
@@ -58,7 +58,7 @@ python manage.py runserver --settings=mysite.settings.local
 
 先看__init__.py
 
-``` python
+```
 import platform
 
 if platform.node() == "94_54":
@@ -77,7 +77,7 @@ else:
 
 base.py
 
-``` python
+```
 """
 Django settings for saplatform project.
 
@@ -187,7 +187,7 @@ base.py中需要注意调整的是BASE_DIR变量，需要套一层os.path.dirnam
 
 test.py
 
-``` python
+```
 from base import *
 
 DATABASES = {
