@@ -15,7 +15,7 @@ icon: fa-database
 
 #### 一、修改主数据库的的配置文件：
 
-``` ini
+```
 [mysqld]
 
 server-id=1
@@ -33,7 +33,7 @@ log_bin_trust_function_creators=1
 
 #### 二、修改从数据库的的配置文件（server-id配置为大于1的数字即可）：
 
-``` ini
+```
 [mysqld]
 
 server-id=2
@@ -81,7 +81,7 @@ exit;
 
 （4）在主数据库上使用mysqldump命令创建一个数据快照：
 
-``` bash
+``` text
 #mysqldump
 -uroot -p -h127.0.0.1 -P3306 –all-databases –triggers –routines –events >all.sql
 ```
@@ -100,7 +100,7 @@ UNLOCK TABLES;
 
 （2）从导入主的快照：
 
-``` bash
+``` text
 #cd /home/yimiju
 #mysql -uroot -p -h127.0.0.1 -P3306 < all.sql 
 ```

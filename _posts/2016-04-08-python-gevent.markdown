@@ -28,7 +28,7 @@ CPU除了执行用户代码外，就是调用调用程序进行线程/协程切�
 
 我使用uwsgi这样启动：
 
-``` ini
+``` text
 uwsgi --harakiri 25 --harakiri-verbose --http :9090 -M  --processes 12 --threads 2 --wsgi-file wsgi.py
 ```
 
@@ -38,7 +38,7 @@ uwsgi --harakiri 25 --harakiri-verbose --http :9090 -M  --processes 12 --threads
 
 这其中有2秒钟用在了线程切换上面
 
-``` ini
+``` text
 siege -r 2 -c 50  "http://127.0.0.1:9090/api POST <./test.post"
 ```
 
@@ -64,7 +64,7 @@ gevent虽然也自带一个wsgi server，但是毕竟不是专业的web服务器
 
 直接使用下面的命令启动，甚至不需要改动一行代码。（add by zhj: 在uwsgi中如果使用了gevent参数，就不能用thread参数了，不过，貌似仍可以在进程中创建线程）
 
-``` ini
+``` text
 uwsgi --gevent 100 --gevent-monkey-patch --http :9090 -M  --processes 4 --wsgi-file wsgi.py
 ```
 

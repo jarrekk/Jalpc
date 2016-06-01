@@ -126,7 +126,7 @@ fi
 
 首先将这个脚本写到/usr/local/bin/iterm2-zmodem文件下，给它可执行权限`chmod +x /usr/local/bin/iterm2/zmodem`，这个脚本是在Linux终端使用rz/sz时调用的，需要由iTerm2触发，在iTerm2->Preferences...->Profiles->Advanced下的Triggers，点击Edit进入编辑。加入如下配置即可：
 
-``` ini
+``` text
 Regular expression: \*\*B0100
 Action:             Run Coprocess
 Parameters:         /usr/local/bin/iterm2-zmodem sz

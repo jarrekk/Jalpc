@@ -7,7 +7,7 @@ tags: [tomcat, 优化]
 icon: icon-tomcat
 ---
 
-``` ini
+```
 export LD_LIBRARY_PATH=/home/opt/tools/apr/lib
 JAVA_OPTS="-server -XX:PermSize=128M -XX:MaxPermSize=256m -Xms1g -Xmx1g -Xmn500m -XX:SurvivorRatio=65536 -XX:MaxTenuringThreshold=0 -XX:+UseParNewGC -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:CMSFullGCsBeforeCompaction=0 -Duser.timezone=Asia/Shanghai"
 ```
@@ -28,7 +28,7 @@ Tomcat 的启动参数位于tomcat的安装目录\bin目录下，如果你是Lin
 
 * Linux系统中tomcat的启动参数
 
-``` ini
+```
 export JAVA_OPTS="-server -Xms1400M -Xmx1400M -Xss512k -XX:+AggressiveOpts -XX:+UseBiasedLocking -XX:PermSize=128M -XX:MaxPermSize=256M -XX:+DisableExplicitGC -XX:MaxTenuringThreshold=31 -XX:+UseConcMarkSweepGC -XX:+UseParNewGC  -XX:+CMSParallelRemarkEnabled -XX:+UseCMSCompactAtFullCollection -XX:LargePageSizeInBytes=128m  -XX:+UseFastAccessorMethods -XX:+UseCMSInitiatingOccupancyOnly -Djava.awt.headless=true "
 ```
 
@@ -173,13 +173,13 @@ CMSInitiatingOccupancyFraction，这个参数设置有很大技巧，基本上�
 
 打开tomcat安装目录\conf\server.xml文件，定位到这一行：
 
-``` ini
+```
 <Connector port="8080" protocol="HTTP/1.1"
 ```
 
 这一行就是我们的tomcat容器性能参数设置的地方，它一般都会有一个默认值，这些默认值是远远不够我们的使用的，我们来看经过更改后的这一段的配置：
 
-``` ini
+```
 <Connector port="8080" protocol="HTTP/1.1"
           URIEncoding="UTF-8"  minSpareThreads="25" maxSpareThreads="75"
           enableLookups="false" disableUploadTimeout="true" connectionTimeout="20000"
@@ -262,7 +262,7 @@ security
 
 * 给Tomcat配置gzip压缩(HTTP压缩)功能
 
-``` ini
+```
 compression="on" compressionMinSize="2048"             
 compressableMimeType="text/html,text/xml,text/javascript,text/css,text/plain"
 ```
@@ -279,7 +279,7 @@ HTTP 压缩可以大大提高浏览网站的速度，它的原理是，在客户
 
 最后不要忘了把8443端口的地方也加上同样的配置，因为如果我们走https协议的话，我们将会用到8443端口这个段的配置，对吧？
 
-``` ini
+```
 <!--enable tomcat ssl-->
     <Connector port="8443" protocol="HTTP/1.1"
                URIEncoding="UTF-8"  minSpareThreads="25" maxSpareThreads="75"

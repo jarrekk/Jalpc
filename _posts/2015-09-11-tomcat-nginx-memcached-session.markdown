@@ -17,7 +17,7 @@ cookie是怎样工作的？
 
 例如，我们创建了一个名字为login的Cookie来包含访问者的信息，创建Cookie时，服务器端的Header如下面所示，这里假设访问者的注册名是“Michael Jordan”，同时还对所创建的Cookie的属性如path、domain、expires等进行了指定。
 
-``` ini
+```
 Set-Cookie:login=Michael Jordan;path=/;domain=msn.com; 
 expires=Monday,01-Mar-99 00:00:01 GMT
 ```
@@ -262,7 +262,7 @@ Manager 各参数说明：
 
 className必选项，可配置为
 
-``` ini
+```
 de.javakaffee.web.msm.MemcachedBackupSessionManager和de.javakaffee.web.msm.DummyMemcachedBackupSessionManager。
 ```
 
@@ -270,7 +270,7 @@ de.javakaffee.web.msm.MemcachedBackupSessionManager和de.javakaffee.web.msm.Dumm
 
 memcachedNodes必选项，memcached的节点信息，格式如：
 
-``` ini
+```
 memcachedNodes="n1:app01:11211,n2:app02:11211"。
 ```
 
