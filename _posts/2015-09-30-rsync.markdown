@@ -9,7 +9,7 @@ icon: fa-linux
 
 无用户名密码共享文件：
 
-``` ini
+```
 uid = root  
 gid = root  
 use chroot = no  
@@ -28,7 +28,7 @@ hosts allow = 192.168.112.243,192.168.104.112,192.168.112.136
 
 使用密码文件进行用户认证共享：
 
-``` ini
+```
 # Minimal configuration file for rsync daemon
 # See rsync(1) and rsyncd.conf(5) man pages for help
 
@@ -60,7 +60,7 @@ auth users = game
 
 /etc/rsyncd.secrets文件：
 
-``` ini
+```
 game:game
 ```
 
@@ -72,11 +72,11 @@ rsync --daemon --config=/etc/rsyncd.conf --port=8723
 
 远程同步：
 
-* 无用户同步：``` ini
+* 无用户同步：```
 rsync -avR --delete --port=8723 192.168.112.243::rdata/ ./
 ```
 
-* 用户认证同步： ``` ini
+* 用户认证同步： ```
 rsync -avR --delete --port=8723 dir@123.58.188.133::antiplug/ ./
 ```
 

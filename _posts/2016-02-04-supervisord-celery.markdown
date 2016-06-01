@@ -20,7 +20,7 @@ supervisord的介绍可以看这篇文章。 在生成环境，celery worker进�
 
 supervisord.conf
 
-``` ini
+```
 [unix_http_server]
 file=/tmp/supervisor.sock   ; path to your socket file
 ;chmod=0777
@@ -74,7 +74,7 @@ files=celeryd.conf
 
 celerd.conf
 
-``` ini
+```
 [program:celery]
 command=celery worker --hostname=celery-%(process_num)d.webscan.com --loglevel=INFO
 
