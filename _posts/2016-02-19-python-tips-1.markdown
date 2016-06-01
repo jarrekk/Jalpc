@@ -4,7 +4,7 @@ title:  "Python代码优化Tips(一)"
 date:   2016-02-19
 categories: [Python]
 tags: [优化]
-icon: code
+icon: icon-python
 ---
 
 #### ①函数设计

@@ -4,7 +4,7 @@ title:  "Django多环境配置settings"
 date:   2015-12-21
 categories: [Python]
 tags: [django,settings]
-icon: code
+icon: icon-python
 ---
 
 在Django中的settings.py中可以修改130多项设置, 但大多数都继承自默认值. 设置是在web服务器启动时首次载入的, 服务器重启时重新载入, 因此, 程序员们应尽量避免修改正式服务器上使用的settings.py文件. 以下是一些我们应当遵循的原则:
@@ -54,7 +54,7 @@ python manage.py runserver --settings=mysite.settings.local
 
 这里我使用了test.py和product.py来区分两个不同的配置：
 
-![tree](/images/django_settings/tree.jpg)
+![tree]({{ site.img_path }}/django_settings/tree.jpg)
 
 先看__init__.py
 

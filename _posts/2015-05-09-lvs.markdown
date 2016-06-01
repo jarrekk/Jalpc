@@ -4,7 +4,7 @@ title:  "LVS三种工作模式脚本及比较"
 date:   2015-05-09
 categories: [Linux]
 tags: [LVS]
-icon: linux
+icon: fa-linux
 ---
 
 ```
@@ -16,7 +16,7 @@ modprobe -l|grep ipvs     ##检查ipvs的模块
 
 #### 一、DR模式
 
-![dr](/images/lvs/dr.jpg)
+![dr]({{ site.img_path }}/lvs/dr.jpg)
 
 堡垒机脚本：
 
@@ -88,7 +88,7 @@ real-server.sh
 
 #### 二、TUN模式
 
-![tun](/images/lvs/tun.jpg)
+![tun]({{ site.img_path }}/lvs/tun.jpg)
 
 堡垒机脚本：
 
@@ -166,7 +166,7 @@ real-server.sh
 
 #### 三、NAT模式
 
-![nat](/images/lvs/nat.jpg)
+![nat]({{ site.img_path }}/lvs/nat.jpg)
 
 堡垒机脚本：
 
@@ -241,6 +241,6 @@ VS-Nat 模式的后端机器不需要配置。
 
 附比较表格图:
 
-![bijiao](/images/lvs/bijiao.jpg)
+![bijiao]({{ site.img_path }}/lvs/bijiao.jpg)
 
 
