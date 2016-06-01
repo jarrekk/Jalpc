@@ -21,7 +21,7 @@ icon: icon-python
 
 将存放常量的文件命名为constant.py，并在其中定义一些列常量：
 
-``` python
+```
 class _const:
     class ConstError(TypeError): pass
     class ConstCaseError(ConstError): pass
@@ -42,14 +42,14 @@ const.MY_NAME = 'JACK'
 
 当在其他模块中引用这些常量时，按照如下方式进行即可：
 
-``` python
+```
 from constant import const
 print const.MY_NAME
 ```
 
 #### ③数据交换不推荐使用中间变量
 
-``` python
+```
 >>> temp = x
 >>> x = y
 >>> t = temp
@@ -57,7 +57,7 @@ print const.MY_NAME
 
 替换为：
 
-``` python
+```
 >>> x,y = y,x
 ```
 
@@ -67,7 +67,7 @@ Lazy evaluation为"延迟计算"或"惰性计算"，Python中最典型的就是�
 
 #### ⑤不推荐使用type进行类型检查
 
-``` python
+```
 >>> import types
 >>> string = 'abc'
 >>> type(string) = types.StringType
@@ -76,7 +76,7 @@ True
 
 替换为：
 
-``` python
+```
 >>> string = 'abc'
 >>> isinstance(string, str)
 True

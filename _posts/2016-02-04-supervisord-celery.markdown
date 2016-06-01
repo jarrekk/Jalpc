@@ -98,13 +98,13 @@ startsecs=10
 上面的设置都完成后先启动supervisord
 
 
-``` bash
+```
 supervisord -c /etc/supervisord.conf
 ```
 
 然后就可以通过supervisorctl对这些进程进行管理了：
 
-``` bash
+```
 supervisorctl restart flower
 supervisorctl stop celery:celery-0
 ```

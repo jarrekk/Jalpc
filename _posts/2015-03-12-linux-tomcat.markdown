@@ -20,11 +20,11 @@ Java环境
 
 增加java环境变量：
 
-``` text
+```
 [root@cms ~]# tail /etc/profile -n 6
 ```
 
-``` text
+```
 export JAVA_HOME=/data/java/jdk1.7.0_15
 PATH=$JAVA_HOME/bin:$PATH
 CLASSPATH=$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:.
@@ -35,7 +35,7 @@ RUN_AS_USER=root
 
 然后执行
 
-``` text
+```
 source /etc/profile
 ```
 

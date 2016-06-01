@@ -15,7 +15,7 @@ icon: fa-database
 
 在MySQL查询中执行以下操作：
 
-``` sql
+```
 select table_name,concat(round(data_length/1000/1000/1000,2),'GB') as data_length_GB 
 from information_schema.tables ORDER BY data_length_GB;
 ```

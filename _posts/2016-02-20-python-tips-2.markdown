@@ -15,7 +15,7 @@ icon: icon-python
 
 ###### 方法一：
 
-``` python
+```
 index = 0
 for i in li:
     print 'index:', index, 'element:', i
@@ -24,14 +24,14 @@ for i in li:
 
 ###### 方法二：
 
-``` python
+```
 for i in range(len(li)):
     print 'index:', i, 'element:', li[i]
 ```
 
 ###### 方法三：
 
-``` python
+```
 index = 0
 while index < len(li):
     print 'index:', index, 'element:', li[index]
@@ -39,21 +39,21 @@ while index < len(li):
 
 ###### 方法四：
 
-``` python
+```
 for i, e in zip(range(len(li)), li):
     print 'index:', i, 'element:', e
 ```
 
 ###### 方法五：
 
-``` python
+```
 for i, e in enumerate(li):
     print 'index:', i, 'element:', e
 ```
 
 对于字典便利迭代则使用如下方法：
 
-``` python
+```
 dict1 = {'a': 1, 'b': 2}
 for k,v in dict1:
     print k, v
@@ -63,14 +63,14 @@ for k,v in dict1:
 
 文件写入一例：
 
-``` python
+```
 >>> f = open('test.txt', 'w')
 >>> f.write('test')
 ```
 
 这样结束会发现文件并没有内容，原因是在操作完成后忘记关闭了，这是一个常识，二使用with就不会出现这样的情况：
 
-``` python
+```
 with open('test.txt', 'w') as f:
     f.write('test')
 ```
@@ -99,7 +99,7 @@ with语句可以在代码块执行完毕后还原进入该代码块的现场。�
 
 自定义上下文管理器一例：
 
-``` python
+```
 class MyClass(object):
     def __enter__(self):
         print 'entering...'
@@ -119,7 +119,7 @@ class MyClass(object):
 
 引用此class：
 
-``` python
+```
 >>> with  MyClass():
 •••     print 'testing...'
 •••     raise(ValueError)
