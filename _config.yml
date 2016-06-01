@@ -23,6 +23,11 @@ author:
 img_path: '/static/img/blog'
 
 # Build settings
-markdown: kramdown
-highlighter: pygments
+
 encoding: "utf-8"
+
+highlighter: rouge
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
