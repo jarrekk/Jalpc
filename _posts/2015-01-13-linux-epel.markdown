@@ -4,7 +4,7 @@ title:  "RHEL的EPEL源地址及安装"
 date:   2015-01-13
 categories: [Linux]
 tags: [epel]
-icon: linux
+icon: icon-centos
 ---
 
 RHEL6:

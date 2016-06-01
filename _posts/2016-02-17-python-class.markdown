@@ -3,8 +3,8 @@ layout: post
 title:  "Python 元类"
 date:   2016-02-17
 categories: [Python]
-tags: [class,元类]
-icon: code
+tags: [metaclass]
+icon: icon-python
 ---
 
 #### type()
