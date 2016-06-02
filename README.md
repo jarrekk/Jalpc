@@ -269,6 +269,10 @@ If you want to give credit to the Jalpc theme with a link to my personal website
 
 I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize and javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>
 
+### CNAME
+
+Replace your website domain in **CNAME** file.
+ 
 ### Enjoy
 
 I hope you enjoy using Jalpc. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
