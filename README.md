@@ -30,7 +30,7 @@ Fork the repo, and then clone it so you've got the code locally.
 
 ### Modify the _config.yml
 
-The _config.yml located in the root of the Pixyll directory contains all of the configuration details for the Jekyll site. The defaults are:
+The _config.yml located in the root of the jack_blog directory contains all of the configuration details for the Jekyll site. The defaults are:
 
 ```
 # Welcome to Jekyll!
@@ -257,9 +257,9 @@ Javascript code
 Link: [i18next](http://i18next.github.io/i18next/)
 
 
-### Changyan
+### Comment
 
-To configure Changyan, get the appid and conf in <http://changyan.kuaizhan.com/>. Then, in `_config.yml`, edit the changyan value to enable Changyan.
+I use Changyan to realize comment,to configure Changyan, get the appid and conf in <http://changyan.kuaizhan.com/>. Then, in `_config.yml`, edit the changyan value to enable Changyan.
 
 ### Put in a Jack's blog Plug
 
@@ -267,7 +267,7 @@ If you want to give credit to the Jack's blog theme with a link to my personal w
 
 ### Web analytics and search engines
 
-I use javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>
+I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize and javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>
 
 ### Enjoy
 
