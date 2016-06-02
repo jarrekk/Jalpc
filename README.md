@@ -1,6 +1,6 @@
 # <http://www.jack003.com>
 
-Jack's blog.
+Jalpc.
 
 ![Blog](blog.jpeg)
 
@@ -17,8 +17,8 @@ Jekyll theme.
 If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
 
 ```
-$ git clone https://github.com/Jack614/jack_blog.git
-$ cd jack_blog
+$ git clone https://github.com/Jack614/jalpc_jekyll_theme.git
+$ cd jalpc_jekyll_theme
 $ gem install jekyll # If you don't have jekyll installed
 $ rm -rf _site && jekyll server
 ```
@@ -30,13 +30,13 @@ Fork the repo, and then clone it so you've got the code locally.
 
 ### Modify the _config.yml
 
-The _config.yml located in the root of the jack_blog directory contains all of the configuration details for the Jekyll site. The defaults are:
+The _config.yml located in the root of the jalpc_jekyll_theme directory contains all of the configuration details for the Jekyll site. The defaults are:
 
 ```
 # Welcome to Jekyll!
 
 # Site settings
-title: "Jack's blog"
+title: "Jalpc"
 
 baseurl: "/"
 url: "http://www.jack003.com"
@@ -164,7 +164,7 @@ en.json
 ```
 {
   "website":{
-    "title": "Jack's blog"
+    "title": "Jalpc"
   },
   "nav":{
     "home": "Home",
@@ -261,9 +261,9 @@ Link: [i18next](http://i18next.github.io/i18next/)
 
 I use Changyan to realize comment,to configure Changyan, get the appid and conf in <http://changyan.kuaizhan.com/>. Then, in `_config.yml`, edit the changyan value to enable Changyan.
 
-### Put in a Jack's blog Plug
+### Put in a Jalpc Plug
 
-If you want to give credit to the Jack's blog theme with a link to my personal website <http://www.jack003.com>, that'd be awesome. No worries if you don't.
+If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jack003.com>, that'd be awesome. No worries if you don't.
 
 ### Web analytics and search engines
 
@@ -271,11 +271,11 @@ I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize an
 
 ### Enjoy
 
-I hope you enjoy using Jack's blog. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
+I hope you enjoy using Jalpc. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
 
-## Upgrading Jack's blog
+## Upgrading Jalpc
 
-Jack's blog is always being improved by its users, so sometimes one may need to upgrade.
+Jalpc is always being improved by its users, so sometimes one may need to upgrade.
 
 ### Ensure there's an upstream remote
 
