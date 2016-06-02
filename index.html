@@ -13,16 +13,16 @@ permalink: /
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">Jack's blog</span></a>
+                    <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right" id="i18_navbar">
-                        <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">Home</span></a></li>
-                        <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">About</span></a></li>
-                        <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">Career</span></a></li>
-                        <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">Skills</span></a></li>
-                        <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">Blog</span></a></li>
-                        <li><a class="page-scroll" href="#contact"><span data-i18n="nav.contact">Contact</span></a></li>
+                        <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">{{ site.landing.home }}</span></a></li>
+                        <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">{{ site.landing.about }}</span></a></li>
+                        <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">{{ site.landing.career }}</span></a></li>
+                        <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
+                        <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
+                        <li><a class="page-scroll" href="#contact"><span data-i18n="nav.contact">{{ site.landing.contact }}</span></a></li>
                         <li>
                             <a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
                         </li>
@@ -99,8 +99,8 @@ permalink: /
             </div>
             <div class="col-sm-4">
                 <div class="team-member wow zoomIn">
-                    <img src="{{"static/img/landing/Jack.jpg" | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
-                    <h4><span class="navy">Kun</span> Jia</h4>
+                    <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+                    <h4><span class="navy">{{ site.author.last_name }}</span> {{ site.author.first_name }}</h4>
 <!--                     <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p> -->
                 </div>
             </div>
@@ -301,7 +301,7 @@ permalink: /
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 Jack's blog</strong></p>
+                <p><strong>&copy; 2015 {{ site.title }}</strong></p>
             </div>
         </div>
     </div>
@@ -414,7 +414,7 @@ permalink: /
                 // $('.set_cn').addClass('active');
                 // $('.set_en').removeClass('active');
             });
-        })
+        });
 
     });
 
