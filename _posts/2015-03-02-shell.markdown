@@ -2,7 +2,7 @@
 layout: post
 title:  "${}，##and%%在shell中的使用"
 date:   2015-03-02
-desc "${}，##and%%在shell中的使用"
+desc: "${}，##and%%在shell中的使用"
 keywords: "shell,linux,#,%"
 categories: [Linux]
 tags: [shell]

@@ -2,7 +2,7 @@
 layout: post
 title:  "rsync简单使用"
 date:   2015-09-30
-desc "rsync使用"
+desc: "rsync使用"
 keywords: "linux,rsync"
 categories: [Linux]
 tags: [rsync, 共享]

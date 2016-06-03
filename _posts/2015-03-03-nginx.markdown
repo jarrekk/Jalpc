@@ -2,7 +2,7 @@
 layout: post
 title:  "nginx源码安装及安全"
 date:   2015-03-03
-desc "nginx源码安装及安全"
+desc: "nginx源码安装及安全"
 keywords: "nginx,linux,safe,安全,安装"
 categories: [Linux]
 tags: [nginx]
