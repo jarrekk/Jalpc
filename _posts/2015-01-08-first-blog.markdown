@@ -1,6 +1,7 @@
 ---
 layout: post
-title:  "第一篇博客"
+title:  "我的第一篇博客"
+desc: "我的第一篇博客，Jekyll"
 date:   2015-01-08
 categories: [Life]
 tags: [blog]

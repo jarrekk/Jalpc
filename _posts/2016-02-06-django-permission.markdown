@@ -2,6 +2,8 @@
 layout: post
 title:  "Django的权限机制"
 date:   2016-02-06
+desc "django权限机制"
+keywords: "Python,django,permission"
 categories: [Python]
 tags: [django,permission,权限]
 icon: icon-python
