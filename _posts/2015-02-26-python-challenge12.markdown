@@ -2,6 +2,8 @@
 layout: post
 title:  "Python challenge 12"
 date:   2015-02-26
+desc "Python challenge"
+keywords: "Python,challenge"
 categories: [Python]
 tags: [Python,Challenge]
 icon: fa-code

@@ -2,6 +2,8 @@
 layout: post
 title:  "LVS三种工作模式脚本及比较"
 date:   2015-05-09
+desc "LVS的DR,TUN,NAT工作模式脚本及比较"
+keywords: "linux,lvs,dr,tun,nat"
 categories: [Linux]
 tags: [LVS]
 icon: fa-linux
