@@ -2,7 +2,7 @@
 layout: post
 title:  "Python 元类"
 date:   2016-02-17
-desc "Python元类"
+desc: "Python元类"
 keywords: "Python,metaclass"
 categories: [Python]
 tags: [metaclass]
