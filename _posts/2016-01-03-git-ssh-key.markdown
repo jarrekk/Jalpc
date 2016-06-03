@@ -2,6 +2,8 @@
 layout: post
 title:  "关于git的ssh-key:解决本地多个ssh-key的问题"
 date:   2016-01-03
+desc "关于git的ssh-key:解决本地多个ssh-key的问题"
+keywords: "git,ssh,key"
 categories: [Linux]
 tags: [ssh,key]
 icon: fa-linux

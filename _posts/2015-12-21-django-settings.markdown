@@ -2,6 +2,8 @@
 layout: post
 title:  "Django多环境配置settings"
 date:   2015-12-21
+desc "Django多环境配置settings"
+keywords: "python,django,settings"
 categories: [Python]
 tags: [django,settings]
 icon: icon-python
