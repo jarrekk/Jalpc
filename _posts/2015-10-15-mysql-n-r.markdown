@@ -2,6 +2,8 @@
 layout: post
 title:  "MySQL去除字段中的换行和回车符"
 date:   2015-10-15
+desc "MySQL去除字段中的换行和回车符"
+keywords: "Linux,mysql,\n,\r,换行符,回车符"
 categories: [Database]
 tags: [MySQL, 换行符, 回车符]
 icon: fa-database
