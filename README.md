@@ -267,7 +267,9 @@ If you want to give credit to the Jalpc theme with a link to my personal website
 
 ### Web analytics and search engines
 
-I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize and javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>
+I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize and javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>,you can double click `Ctrl` or click the icon at lower right corner of the page.
+
+![search](search.gif)
 
 ### CNAME
 
