@@ -2,7 +2,7 @@
 layout: post
 title:  "CPU使用率的计算方法"
 date:   2015-07-22
-desc "CPU使用率的计算方法"
+desc: "CPU使用率的计算方法"
 keywords: "linux,CPU,usage"
 categories: [Linux]
 tags: [CPU]

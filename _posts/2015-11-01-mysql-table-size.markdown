@@ -2,7 +2,7 @@
 layout: post
 title:  "MySQL查看表大小"
 date:   2015-11-1
-desc "MySQL查看表大小"
+desc: "MySQL查看表大小"
 keywords: "Linux,MySQL,table,size"
 categories: [Database]
 tags: [MySQL,table,大小]

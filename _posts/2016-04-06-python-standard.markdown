@@ -2,7 +2,7 @@
 layout: post
 title:  "PEP8 Python 编码规范整理"
 date:   2016-04-06
-desc "Python编码规范"
+desc: "Python编码规范"
 keywords: "PEP8,Python"
 categories: [Python]
 tags: [优化]

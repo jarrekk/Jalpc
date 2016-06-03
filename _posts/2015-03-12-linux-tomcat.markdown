@@ -2,7 +2,7 @@
 layout: post
 title:  "Apache tomcat在Linux上安装部署"
 date:   2015-03-12
-desc "Apache tomcat在Linux上安装部署"
+desc: "Apache tomcat在Linux上安装部署"
 keywords: "linux,apache,tomcat"
 categories: [Linux]
 tags: [tomcat]

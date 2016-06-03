@@ -2,7 +2,7 @@
 layout: post
 title:  "tomcat + memcached + nginx 实现session共享"
 date:   2015-09-11
-desc "tomcat + memcached + nginx 实现session共享"
+desc: "tomcat + memcached + nginx 实现session共享"
 keywords: "linux,tomcat,memcached,nginx,session,share"
 categories: [Linux]
 tags: [tomcat, memcached, nginx, session]
