@@ -2,6 +2,8 @@
 layout: post
 title:  "通过supervisord管理celery守护进程"
 date:   2016-02-04
+desc "通过supervisord管理celery守护进程"
+keywords: "Python,supervisord,celery"
 categories: [Python,Linux]
 tags: [django,celery,supervisord]
 icon: fa-linux

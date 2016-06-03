@@ -2,8 +2,13 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    {% if page.desc %}
+      <meta content="{{ page.desc }}" name="description">
+    {% endif %}
+    {% if page.keywords %}
+      <meta name="keywords" content="{{ page.keywords }}">
+    {% endif %}
+    <meta name="author" content="Jack">
 
     <title>
         {% if page.title %}
