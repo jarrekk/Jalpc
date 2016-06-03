@@ -2,6 +2,8 @@
 layout: post
 title:  "ssh非root用户key认证登陆及忽略known_hosts"
 date:   2015-02-02
+desc "ssh非root用户key认证登陆及忽略known_hosts"
+keywords: "ssh,linux,key,known_hosts"
 categories: [Linux]
 tags: [ssh, key]
 icon: fa-linux
