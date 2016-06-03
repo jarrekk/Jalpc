@@ -2,7 +2,7 @@
 layout: post
 title:  "RHEL的EPEL源地址及安装"
 date:   2015-01-13
-desc "RHEL的EPEL源地址及安装"
+desc: "RHEL的EPEL源地址及安装"
 keywords: "rhel,epel,rpm,linux"
 categories: [Linux]
 tags: [epel]

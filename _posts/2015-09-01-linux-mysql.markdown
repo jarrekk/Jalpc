@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux安装mysql-源码安装"
 date:   2015-09-01
-desc "Linux源码安装MySQL"
+desc: "Linux源码安装MySQL"
 keywords: "linux,mysql,安装,install"
 categories: [Database]
 tags: [MySQL]
