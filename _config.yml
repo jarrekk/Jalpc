@@ -36,6 +36,11 @@ index:
   mac: 'Mac'
   life: 'Life'
 
+# donate
+donate:
+  wechat: 'static/img/pay/wechat.png'
+  alipay: 'static/img/pay/alipay.png'
+
 # comment
 changyan:
   appid: cysfY7ULn
