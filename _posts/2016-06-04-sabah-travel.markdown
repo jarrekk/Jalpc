@@ -23,7 +23,7 @@ icon: fa-bookmark-o
 
 ![Sabah]({{ site.img_path }}/Malaysia_Sabah/7.jpg)
 
-在沙巴附近小岛的沙滩游泳拍照。
+在沙巴附近小岛的沙滩游泳拍照。k
 
 ![Sabah]({{ site.img_path }}/Malaysia_Sabah/3.jpg)
 
