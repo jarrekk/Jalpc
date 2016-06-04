@@ -16,7 +16,7 @@ icon: icon-python
 比方说我们要定义一个`Hello`的class，就写一个`hello.py`模块：
 
 
-```
+``` python
 class Hello(object):
     def hello(self, name='world'):
         print('Hello, %s.' % name)
@@ -87,7 +87,7 @@ metaclass是Python面向对象里最难理解，也是最难使用的魔术代�
 
 定义`ListMetaclass`，按照默认习惯，metaclass的类名总是以Metaclass结尾，以便清楚地表示这是一个metaclass：
 
-```
+``` python
 # metaclass是创建类，所以必须从`type`类型派生：
 class ListMetaclass(type):
     def __new__(cls, name, bases, attrs):
@@ -141,7 +141,7 @@ ORM全称“Object Relational Mapping”，即对象-关系映射，就是把关
 
 编写底层模块的第一步，就是先把调用接口写出来。比如，使用者如果使用这个ORM框架，想定义一个`User`类来操作对应的数据库表`User`，我们期待他写出这样的代码：
 
-```
+``` python
 class User(Model):
     # 定义类的属性到列的映射：
     id = IntegerField('id')
@@ -161,7 +161,7 @@ u.save()
 
 首先来定义`Field`类，它负责保存数据库表的字段名和字段类型：
 
-```
+``` python
 class Field(object):
     def __init__(self, name, column_type):
         self.name = name
@@ -172,7 +172,7 @@ class Field(object):
 
 在`Field`的基础上，进一步定义各种类型的`Field`，比如`StringField`，`IntegerField`等等：
 
-```
+``` python
 class StringField(Field):
     def __init__(self, name):
         super(StringField, self).__init__(name, 'varchar(100)')
@@ -184,7 +184,7 @@ class IntegerField(Field):
 
 下一步，就是编写最复杂的`ModelMetaclass`了：
 
-```
+``` python
 class ModelMetaclass(type):
     def __new__(cls, name, bases, attrs):
         if name=='Model':
@@ -203,7 +203,7 @@ class ModelMetaclass(type):
 
 以及基类`Model`：
 
-```
+``` python
 class Model(dict):
     __metaclass__ = ModelMetaclass
 
@@ -248,7 +248,7 @@ class Model(dict):
 
 编写代码试试：
 
-```
+``` python
 u = User(id=12345, name='Michael', email='test@orm.org', password='my-pwd')
 u.save()
 ```
@@ -273,7 +273,7 @@ ARGS: ['my-pwd', 'test@orm.org', 'Michael', 12345]
 
 最后解释一下类属性和实例属性。直接在class中定义的是类属性：
 
-```
+``` python
 class Student(object):
     name = 'Student'
 ```

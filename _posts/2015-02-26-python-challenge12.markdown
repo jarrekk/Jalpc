@@ -26,7 +26,7 @@ Python challenge好像荒废很久了，今天把challenge 12补上。
 看样子是没有图片了，但是打开<http://www.pythonchallenge.com/pc/return/evil4.jpg> 看到如下语句：**Bert is evil! go back!**，在chrome浏览器是看不到的，我是在IE浏览器上看到。
 回想网页开始的图片，是在均分扑克牌，这应该就是解题的思路了，那么代码很简单了，如下：
 
-```
+``` python
 #!/usr/bin/env python
  
 f=open('evil2.gfx')
