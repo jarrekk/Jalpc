@@ -70,6 +70,16 @@ index:
   database: 'Database'
   mac: 'Mac'
   life: 'Life'
+
+# comment
+changyan:
+  appid: cysfY7ULn
+  conf: prod_861928934cecb7a18e15bedaed9dae29
+
+# share
+bshare:
+  uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
+
 # blog img path
 img_path: '/static/img/blog'
 
@@ -260,6 +270,10 @@ Link: [i18next](http://i18next.github.io/i18next/)
 ### Comment
 
 I use Changyan to realize comment,to configure Changyan, get the appid and conf in <http://changyan.kuaizhan.com/>. Then, in `_config.yml`, edit the changyan value to enable Changyan.
+
+### Share
+
+I use [bshare](http://www.bshare.cn/) to share my blog on other social network platform. You can register a count and get your share uuid.
 
 ### Put in a Jalpc Plug
 
