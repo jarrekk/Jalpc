@@ -23,7 +23,7 @@ icon: fa-bookmark-o
 
 ![Sabah]({{ site.img_path }}/Malaysia_Sabah/7.jpg)
 
-在沙巴附近小岛的沙滩游泳拍照。k
+在沙巴附近小岛的沙滩游泳拍照。
 
 ![Sabah]({{ site.img_path }}/Malaysia_Sabah/3.jpg)
 
@@ -31,7 +31,7 @@ icon: fa-bookmark-o
 
 ![Sabah]({{ site.img_path }}/Malaysia_Sabah/6.jpg)
 
-其实我也看不懂输的内容
+其实我也看不懂书的内容
 
 ![Sabah]({{ site.img_path }}/Malaysia_Sabah/5.jpg)
 
