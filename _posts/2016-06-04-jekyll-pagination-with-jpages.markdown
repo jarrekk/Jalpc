@@ -11,7 +11,7 @@ icon: icon-html
 
 Jekyll自带的分页功能总不是那么全，在[官方文档](http://jekyll.bootcss.com/docs/pagination/)中有讲到Jekyll自带分页的使用方法，为了达到更好的分页效果，比如在不同类别的文章下进行分页，就要用别的方法来实现了。
 
-首先，在网上我也找到了很多Jekyll的第三方插件，功能很强大，不过github不允许使用，无奈之下只好另寻他法。因为平时做网站开发想到的都是后端分页的方法，那么在github这个不用考虑性能的网站上，我们为什么不能尝试使用前端分页的方法呢？而且我们的文章也不是非常多，就这样，我在网上找到了一些基于jQuery的前端分页插件，使用感觉最好的就是[jPages](http://luis-almeida.github.io/jPages/)了。
+首先，在网上我也找到了很多Jekyll的第三方插件，功能很强大，不过github不允许使用，无奈之下只好另寻他法。因为平时做网站开发想到的都是后端分页的方法，那么在github这个不用考虑性能的网站上，我们为什么不能尝试使用前端分页的方法呢？而且我们的文章也不是非常多，一次得到所有数据再分页未尝不可。就这样，我在网上找到了一些基于jQuery的前端分页插件，使用感觉最好的就是[jPages](http://luis-almeida.github.io/jPages/)了。
 
 jPages的文档很详细，每种分页的方法从html、JavaScript到CSS都有源代码，并有展示，这里我讲一下我是怎么用到jekyll中，我使用的是items per page这个example：
 
