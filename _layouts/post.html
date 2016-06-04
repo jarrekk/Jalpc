@@ -39,11 +39,17 @@ layout: default
                     <br>
                     <div class="row">
                         <div class="col-lg-12">
-                            {% include donate.html %}
+                            {% if site.donate %}
+                                {% include donate.html %}
+                            {% endif %}
                             <br>
-                            {% include share.html %}
+                            {% if site.bshare %}
+                                {% include share.html %}
+                            {% endif %}
                             <br>
-                            {% include comments.html %}
+                            {% if site.changyan %}
+                                {% include comments.html %}
+                            {% endif %}
                         </div>
                     </div>
 
