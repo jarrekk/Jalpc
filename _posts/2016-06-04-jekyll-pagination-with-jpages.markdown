@@ -50,7 +50,7 @@ jPages的文档很详细，每种分页的方法从html、JavaScript到CSS都有
 		...
 ```
 
-* ps：因为jekyll会对代码中语法检查，我使用'\'进行转义
+* ps：因为jekyll会对代码中语法检查，我使用"\\"进行转义
 
 因为直接使用`<ul><li>`会有一个圆点在每个item之前，使用`style="list-style:none;"`即可去除，这里我用了一个计数器，是为了在`_includes/pagination.html`中判断文章是否达到分页要求，因为我设置的是`perPage:5`，所以我有一个大于5的判断。
 
