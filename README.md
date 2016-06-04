@@ -159,7 +159,7 @@ If you start server on localhost, you can turn on `# url: "http://127.0.0.1:4000
 
 ### Pagination
 
-The pagination in jekyll is not very perfect,so I use front-end web method, please refer to [jPages](http://luis-almeida.github.io/jPages).
+The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jack003.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
 
 ### Bilingual Page
 
