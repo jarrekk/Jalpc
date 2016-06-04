@@ -10,7 +10,7 @@ icon: icon-redis
 ---
 
 
-```
+``` python
 #!/usr/bin/python
 ## SQL to Redis
 

@@ -60,7 +60,7 @@ python manage.py runserver --settings=mysite.settings.local
 
 先看__init__.py
 
-```
+``` python
 import platform
 
 if platform.node() == "94_54":
@@ -79,7 +79,7 @@ else:
 
 base.py
 
-```
+``` python
 """
 Django settings for saplatform project.
 
@@ -189,7 +189,7 @@ base.py中需要注意调整的是BASE_DIR变量，需要套一层os.path.dirnam
 
 test.py
 
-```
+``` python
 from base import *
 
 DATABASES = {

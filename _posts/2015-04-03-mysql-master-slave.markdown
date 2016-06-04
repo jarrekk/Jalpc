@@ -55,7 +55,7 @@ log_bin_trust_function_creators=1
 
 （1）在主数据库上创建用于主从复制的账户（192.168.100.3换成你的从数据库IP）：
 
-```
+``` sql
 GRANT REPLICATION SLAVE ON *.* TO 'repl'@'192.168.100.3' IDENTIFIED BY 'repl';
 ```
 
@@ -67,7 +67,7 @@ FLUSH TABLES WITH READ LOCK;
 
 （3）然后克隆一个SSH会话窗口，在这个窗口打开MySQL命令行：
 
-```
+``` sql
 SHOW MASTER STATUS;
 +——————---------------——+—------——-+——------——–+——————+——————-+
 | File                  | Position | Binlog_Do_DB | Binlog_Ignore_DB | Executed_Gtid_Set |
@@ -92,7 +92,7 @@ exit;
 
 （5）解锁第（2）步主数据的锁表操作：
 
-```
+``` sql
 UNLOCK TABLES;
 ```
 
@@ -113,19 +113,19 @@ UNLOCK TABLES;
 
 `#mysql -uroot -p`
 
-mysql>```
+mysql>``` sql
 CHANGE MASTER TO MASTER_HOST='192.168.100.2',MASTER_USER='repl',MASTER_PASSWORD='repl',MASTER_LOG_FILE='mysqlmaster-bin.000001',MASTER_LOG_POS=332;
 ```
 
 然后启动从数据库的复制线程：
 
-mysql>```
+mysql>``` sql
 START slave;
 ```
 
 接着查询数据库的slave状态：
 
-mysql>```
+mysql>``` sql
 SHOW slave STATUS \G
 ```
 

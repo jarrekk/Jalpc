@@ -37,7 +37,7 @@ Django用permission对象存储权限项，每个model默认都有三个permissi
 
 如上文所述，Django定义每个model后，默认都会添加该model的add, change和delete三个permission，自定义的permission可以在我们定义model时手动添加：
 
-```
+``` python
 class Task(models.Model):
     ...
     class Meta:
@@ -52,7 +52,7 @@ class Task(models.Model):
 
 在model中创建自定义权限，从系统开发的角度，可理解为创建系统的内置权限，如果需求中涉及到用户使用系统时创建自定义权限，则要通过下面方法：
   
-```
+``` python
 from myapp.models import BlogPost
 from django.contrib.auth.models import Permission
 from django.contrib.contenttypes.models import ContentType
@@ -67,7 +67,7 @@ permission = Permission.objects.create(codename='can_publish',
 
 User对象的user_permission字段管理用户的权限：
 
-```
+``` python
 myuser.user_permissions = [permission_list]
 myuser.user_permissions.add(permission, permission, ...) #增加权限
 myuser.user_permissions.remove(permission, permission, ...) #删除权限
@@ -80,7 +80,7 @@ myuser.user_permissions.clear() #清空权限
 
 检查用户权限用has_perm()方法：
 
-```
+``` python
 myuser.has_perm('myapp.fix_car')
 ```
 
@@ -98,7 +98,7 @@ user.get_group_permissions()方法列出用户所属group的权限，返回值�
 
 group permission管理逻辑与user permission管理一致，group中使用permissions字段做权限管理：
 
-```
+``` python
 group.permissions = [permission_list]
 group.permissions.add(permission, permission, ...)
 group.permissions.remove(permission, permission, ...)
@@ -113,7 +113,7 @@ group.permissions.clear()
 
 权限能约束用户行为，当业务逻辑中涉及到权限检查时，decorator能够分离权限验证和核心的业务逻辑，使代码更简洁，逻辑更清晰。permission的decorator为permission_required：
 
-```
+``` python
 from django.contrib.auth.decorators import permission_required
  
 @permission_required('car.drive_car')
@@ -125,7 +125,7 @@ def my_view(request):
 
 Template中使用全局变量perms存储当前用户的所有权限，权限检查可以参考下面例子：
 
-```
+``` html
 {{ '{% if perms.main.add_page'}} %}
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Pages <span class="caret"></span></a>
@@ -144,7 +144,7 @@ Django-guardian基于django的原生逻辑扩展了django的权限机制，应�
 
 django-guardian详细的使用文档请参考官方文档，其object permission常用方法如下：
 
-```
+``` python
 from guardian.shortcuts import assign_perm, get_perms
 from guardian.core import ObjectPermissionChecker
 from guardian.decorators import permission_required
@@ -154,13 +154,13 @@ from guardian.decorators import permission_required
 
 添加object permission使用assign_perm()方法，如为用户添加对mycar对象的drive_car权限：
 
-```
+``` python
 assign_perm('myapp.drive_car', request.user, mycar)
 ```
 
 assign_perm()方法也可用于group
 
-```
+``` python
 assign_perm('myapp.drive_car', mygroup, mycar)
 ```
 
@@ -170,7 +170,7 @@ assign_perm('myapp.drive_car', mygroup, mycar)
 
 get_perms()方法用于检查用户的“全局权限”（global permission），与user.has_perm()异曲同工，如：
 
-```
+``` python
 #############################
 # It works! 
 #############################
@@ -190,7 +190,7 @@ if not request.user.has_perm('main.change_post')
 
 Django-guardian中使用ObjectPermissionChecker检查用户的object permission，示例如下：
 
-```
+``` python
 checker = ObjectPermissionChecker(request.user)
 print checker.has_perm('main.change_post', post)
 ```
@@ -199,7 +199,7 @@ print checker.has_perm('main.change_post', post)
 
 guardian.decorators.permission_required是django-guardian权限检查的decorator，既可以检查全局权限，又可以检查对象权限（object permission），其中，accept_global_perms参数指出是否检查user的global permission，如：
 
-```
+``` python
 from guardian.decorators import permission_required
  
 class DeletePost(View):
