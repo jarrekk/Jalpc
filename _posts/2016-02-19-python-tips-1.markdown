@@ -23,7 +23,7 @@ icon: icon-python
 
 将存放常量的文件命名为constant.py，并在其中定义一些列常量：
 
-```
+``` python
 class _const:
     class ConstError(TypeError): pass
     class ConstCaseError(ConstError): pass
@@ -44,7 +44,7 @@ const.MY_NAME = 'JACK'
 
 当在其他模块中引用这些常量时，按照如下方式进行即可：
 
-```
+``` python
 from constant import const
 print const.MY_NAME
 ```

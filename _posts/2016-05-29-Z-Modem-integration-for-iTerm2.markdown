@@ -15,7 +15,7 @@ icon: fa-apple
 
 在Mac电脑上安装rz/sz：`brew install lrzsz`
 
-```
+``` shell
 #!/usr/bin/env bash
 
 #
