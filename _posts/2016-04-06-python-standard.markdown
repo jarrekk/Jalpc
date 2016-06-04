@@ -116,7 +116,7 @@ Optional plotz says to frobnicate the bizbaz first.
 
 5. 异常中try的代码尽可能少。比如：
 
-```
+``` python
 try:
     value = collection[key]
 except KeyError:
@@ -127,7 +127,7 @@ else:
 
 要优于
 
-```
+``` python
 try:
 # Too broad!
     return handle_value(collection[key])
