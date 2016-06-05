@@ -11,13 +11,11 @@
     <meta name="author" content="{{ site.author.name }}">
 
     <title>
-        {% if page.title %}
-            {% if page.title != "index" %}
-                {{ site.title }}|{{ page.title }}
-            {% endif %}
-        {% else %}
-            {{ site.title }}
-        {% endif %}
+      {% if page.title != "index" %}
+          {{ site.title }}|{{ page.title }}
+      {% else %}
+          {{ site.title }}
+      {% endif %}
     </title>
     <!-- favicon -->
     <link rel="shortcut icon" href="{{ "static/img/favicon.ico" | prepend: site.baseurl }}">
