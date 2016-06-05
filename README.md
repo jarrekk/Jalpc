@@ -83,14 +83,7 @@ bshare:
 # blog img path
 img_path: '/static/img/blog'
 
-# Build settings
-encoding: "utf-8"
-
-highlighter: rouge
-markdown: kramdown
-kramdown:
-  input: GFM
-  syntax_highlighter: rouge
+...
 ```
 ### Jekyll Serve
 
@@ -209,7 +202,7 @@ cn.json
 
 Next you need to add html indicators in all place you want to use i18.(index.html)
 
-```
+``` html
 <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
 ```
 
@@ -218,7 +211,7 @@ Next you need to add html indicators in all place you want to use i18.(index.htm
 Next you need to initialise the i18next plugin: 
 json files are located in `static/locales` folder.
 
-```
+``` html
 $.i18n.init(
     resGetPath: 'locales/__lng__.json',
     load: 'unspecific',
@@ -235,7 +228,7 @@ After that if you want to change the language you just need to add buttons and f
 
 HTML markup
 
-```
+``` html
 <li>
     <a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
 </li>
@@ -246,7 +239,7 @@ HTML markup
 
 Javascript code
 
-```
+``` html
         $('.set_en').on('click', function (){
             i18n.setLng('en', function(){
 
