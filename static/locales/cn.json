@@ -6,6 +6,7 @@
     "home": "首页",
     "about_me": "关于我",
     "skills": "技能",
+    "projects": "项目",
     "career": "职业",
     "blog": "博客",
     "contact": "联系我"
@@ -16,6 +17,12 @@
   },
   "skills":{
     "my_skills": "我的技能"
+  },
+  "projects":{
+    "my_projects": "我的项目",
+    "saplatform": "Saplatform是一个自动化运维服务，包括资产管理、项目发布、数据库管理等功能,它可以管理大量服务器。",
+    "jalpc": "Jalpc是一个非常简洁、漂亮和快速部署的Jekyll主题，它非常小巧但是影响很广，能非常好的适应所有设备。",
+    "raspberry": "我用Raspberry Pi实现智能家居，它可以是NAS、网站、自动下载器，它可以天气预报也可以监控家庭。"
   },
   "career":{
     "my_career": "职业生涯",

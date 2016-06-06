@@ -1,0 +1,19 @@
+{
+  "name": "peity",
+  "version": "3.2.0",
+  "main": "jquery.peity.js",
+  "dependencies": {
+    "jquery": ">=1.6.2"
+  },
+  "homepage": "https://github.com/benpickles/peity",
+  "_release": "3.2.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.2.0",
+    "commit": "3b2c6ab1f2070721fff91f9bfdd4ede2cfdf2da2"
+  },
+  "_source": "https://github.com/benpickles/peity.git",
+  "_target": "^3.2.0",
+  "_originalSource": "peity",
+  "_direct": true
+}

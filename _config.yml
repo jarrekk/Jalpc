@@ -1,7 +1,9 @@
 # Welcome to Jekyll!
 
-# Site settings
+# Website settings
 title: "Jalpc"
+description: "Jack's blog,use Jekyll and github pages."
+keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
 
 baseurl: "/"
 url: "http://www.jack003.com"
@@ -23,8 +25,24 @@ landing:
   about: 'About'
   career: 'Career'
   skills: 'Skills'
+  projects: 'Project'
   blog: 'Blog'
   contact: 'Contact'
+
+# my projects
+project:
+  saplatform: 
+    name: 'Saplatform'
+    url: '/Jack614/saplatform'
+    img: 'static/img/landing/saplatform.jpg'
+  jalpc: 
+    name: 'Jalpc'
+    url: '/Jack614/jalpc_jekyll_theme'
+    img: 'static/img/landing/jekyll.jpg'
+  raspberry: 
+    name: 'My Raspberry'
+    url: '/Jack614/my_raspberry_pi'
+    img: 'static/img/landing/raspberry.jpg'
 
 # blog index
 index:
@@ -43,8 +61,11 @@ donate:
 
 # comment
 changyan:
-  appid: cysfY7ULn
-  conf: prod_861928934cecb7a18e15bedaed9dae29
+  # appid: cysfY7ULn
+  # conf: prod_861928934cecb7a18e15bedaed9dae29
+disqus:
+  name: jalpc
+  public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
 
 # share
 bshare:
