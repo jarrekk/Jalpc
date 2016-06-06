@@ -10,29 +10,28 @@ It's pretty minimal, but leverages large type and drastic contrast to make a sta
 
 The landing page of the blog is bilingual page.
 
-Jekyll theme.
+If you like this Jekyll theme,please give me encouragement and star this project,I will make it better.
 
 ## Getting Started
 
 If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
 
+#### Fork, then clone
+
+**Fork** the repo, and then **clone** it so you've got the code locally.
+
 ```
-$ git clone https://github.com/Jack614/jalpc_jekyll_theme.git
+$ git clone https://github.com/<your githubname>/jalpc_jekyll_theme.git
 $ cd jalpc_jekyll_theme
 $ gem install jekyll # If you don't have jekyll installed
 $ rm -rf _site && jekyll server
 ```
 
-#### Fork, then clone
-
-**Fork** the repo, and then **clone** it so you've got the code locally.
-
-
 ### Modify the _config.yml
 
 The _config.yml located in the root of the jalpc_jekyll_theme directory contains all of the configuration details for the Jekyll site. The defaults are:
 
-```
+``` yml
 # Welcome to Jekyll!
 
 # Site settings
@@ -105,7 +104,7 @@ In addition to your github-username.github.io repo that maps to the root url, yo
 
 This will require you to modify the _config.yml like so:
 
-```
+``` yml
 # Welcome to Jekyll!
 
 # Site settings
@@ -166,7 +165,7 @@ To add i18 support for your app you need to define what text you would like to t
 
 en.json
 
-```
+``` json
 {
   "website":{
     "title": "Jalpc"
@@ -184,7 +183,7 @@ en.json
 
 cn.json
 
-```
+``` json
 {
   "website":{
     "title": "杰克的博客"
@@ -263,7 +262,13 @@ I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) and [Google a
 
 ### Comment
 
-I use Changyan to realize comment,to configure Changyan, get the appid and conf in <http://changyan.kuaizhan.com/>. Then, in `_config.yml`, edit the changyan value to enable Changyan.
+I use [Changyan](http://changyan.kuaizhan.com/) and [Disqus](https://disqus.com/) to realize comment. 
+
+#### Changyan
+To configure Changyan, get the appid and conf in <http://changyan.kuaizhan.com/>. Then, in `_config.yml`, edit the changyan value to enable Changyan.
+
+#### Disqus
+To configure Disqus,you should set disqus_shortname and get public key and then, in `_config.yml`, edit the disqus value to enable Disqus.
 
 ### Share
 
@@ -271,7 +276,9 @@ I use [bshare](http://www.bshare.cn/) to share my blog on other social network p
 
 ### Search engines
 
-I use javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>,you can double click `Ctrl` or click the icon at lower right corner of the page.Just use it.
+I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>.
+
+Just use it.
 
 ![search](search.gif)
 

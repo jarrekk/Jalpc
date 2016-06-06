@@ -6,6 +6,7 @@
     "home": "Home",
     "about_me": "About",
     "skills": "Skills",
+    "projects": "Projects",
     "career": "Career",
     "blog": "Blog",
     "contact": "Contact"
@@ -16,6 +17,12 @@
   },
   "skills":{
     "my_skills": "My Skills"
+  },
+  "projects":{
+    "my_projects": "My Projects",
+    "saplatform": "Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.",
+    "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.",
+    "raspberry": "I use Raspberry Pi to realize Smart Home, it can be a home NAS, a web server, a auto downloader, it can report the weather and can monitor the home."
   },
   "career":{
     "my_career": "My Career",
