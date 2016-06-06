@@ -231,32 +231,35 @@ After that if you want to change the language you just need to add buttons and f
 HTML markup
 
 ``` html
-    <a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-    <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/64/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+<a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+<a class="btn btn-sm set_cn"><img src="{{"static/img/flags/64/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
 ```
 
 Javascript code
 
 ``` javascript
-        $('.set_en').on('click', function (){
-            i18n.setLng('en', function(){
+$('.set_en').on('click', function (){
+    i18n.setLng('en', function(){
 
-                $('#i18_title').i18n();
+        $('#i18_title').i18n();
 
-           });
-        });
+   });
+});
 
-        $('.set_cn').on('click', function (){
-            i18n.setLng('cn', function(){
+$('.set_cn').on('click', function (){
+    i18n.setLng('cn', function(){
 
-                $('#i18_title').i18n();
+        $('#i18_title').i18n();
 
-            });
-        });
+    });
+});
 ```
 
 Link: [i18next](http://i18next.github.io/i18next/)
 
+### Web analytics
+
+I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) and [Google analytics](https://www.google.com/analytics/) to do web analytics, you can choose either to realize it,just register a account and replace id in `_config.yml`.
 
 ### Comment
 
@@ -266,9 +269,9 @@ I use Changyan to realize comment,to configure Changyan, get the appid and conf 
 
 I use [bshare](http://www.bshare.cn/) to share my blog on other social network platform. You can register a count and get your share uuid.
 
-### Web analytics and search engines
+### Search engines
 
-I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize and javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>,you can double click `Ctrl` or click the icon at lower right corner of the page.
+I use javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>,you can double click `Ctrl` or click the icon at lower right corner of the page.Just use it.
 
 ![search](search.gif)
 

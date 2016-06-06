@@ -50,6 +50,14 @@ changyan:
 bshare:
   uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
 
+# baidu analytics
+ba:
+  uuid: 317acca9ef9255b934e46371e471431d
+
+# google analytics
+ga:
+  id: UA-73784599-1
+
 # blog img path
 img_path: '/static/img/blog'
 
