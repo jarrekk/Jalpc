@@ -25,7 +25,7 @@ $ rm -rf _site && jekyll server
 
 #### Fork, then clone
 
-Fork the repo, and then clone it so you've got the code locally.
+**Fork** the repo, and then **clone** it so you've got the code locally.
 
 
 ### Modify the _config.yml
@@ -36,11 +36,11 @@ The _config.yml located in the root of the jalpc_jekyll_theme directory contains
 # Welcome to Jekyll!
 
 # Site settings
-title: "Jalpc"
+title: "Jalpc"    ### Website title
 
-baseurl: "/"
-url: "http://www.jack003.com"
-# url: "http://127.0.0.1:4000"
+baseurl: "/"      ### Some links refer to this
+url: "http://www.jack003.com"     ### This is for product environment
+# url: "http://127.0.0.1:4000"    ### This is used for debug 
 
 # author
 author:
@@ -50,7 +50,7 @@ author:
   email: 'jack19890614@gmail.com'
   facebook_username: 'jiakunnj'
   github_username: 'Jack614'
-  head_img: 'static/img/landing/Jack.jpg'
+  head_img: 'static/img/landing/Jack.jpg'   ### Relative path
 
 # landing page
 landing:
@@ -81,7 +81,7 @@ bshare:
   uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
 
 # blog img path
-img_path: '/static/img/blog'
+img_path: '/static/img/blog'    ### Full path
 
 ...
 ```
@@ -156,6 +156,8 @@ The pagination in jekyll is not very perfect,so I use front-end web method,there
 
 ### Bilingual Page
 
+The landing page of the blog is bilingual page,when you click national flag,the page language changes.The fllowing is how to set up bilingual page.
+
 #### Step 1
 
 To add i18 support for your app you need to define what text you would like to translate. The best way to define your text is to store it in external json file. For example:
@@ -211,7 +213,7 @@ Next you need to add html indicators in all place you want to use i18.(index.htm
 Next you need to initialise the i18next plugin: 
 json files are located in `static/locales` folder.
 
-``` html
+``` javascript
 $.i18n.init(
     resGetPath: 'locales/__lng__.json',
     load: 'unspecific',
@@ -229,17 +231,13 @@ After that if you want to change the language you just need to add buttons and f
 HTML markup
 
 ``` html
-<li>
     <a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-</li>
-<li>
     <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/64/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-</li>
 ```
 
 Javascript code
 
-``` html
+``` javascript
         $('.set_en').on('click', function (){
             i18n.setLng('en', function(){
 
@@ -268,10 +266,6 @@ I use Changyan to realize comment,to configure Changyan, get the appid and conf 
 
 I use [bshare](http://www.bshare.cn/) to share my blog on other social network platform. You can register a count and get your share uuid.
 
-### Put in a Jalpc Plug
-
-If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jack003.com>, that'd be awesome. No worries if you don't.
-
 ### Web analytics and search engines
 
 I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize and javascript to realize blog search,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>,you can double click `Ctrl` or click the icon at lower right corner of the page.
@@ -281,6 +275,10 @@ I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) to realize an
 ### CNAME
 
 Replace your website domain in **CNAME** file.
+
+### Put in a Jalpc Plug
+
+If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jack003.com>, that'd be awesome. No worries if you don't.
  
 ### Enjoy
 
