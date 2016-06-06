@@ -21,13 +21,14 @@ permalink: /
                         <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">{{ site.landing.about }}</span></a></li>
                         <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">{{ site.landing.career }}</span></a></li>
                         <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
+                        <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
                         <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
                         <li><a class="page-scroll" href="#contact"><span data-i18n="nav.contact">{{ site.landing.contact }}</span></a></li>
                         <li>
-                            <a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                            <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
                         </li>
                         <li>
-                            <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/64/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                            <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
                         </li>
 
                     </ul>
@@ -83,38 +84,42 @@ permalink: /
             </div>
         </div>
         <div class="row">
+            <!-- python -->
             <div class="col-sm-2 wow fadeInLeft">
                 <div class="team-member">
                     <div class="vote-icon">
-                        <i class="icon-python"> </i>
+                        <i class="icon-python"></i>
                     </div>
                 </div>
             </div>
+            <!-- linux -->
             <div class="col-sm-2 wow fadeInLeft">
                 <div class="team-member">            
                     <div class="vote-icon">
-                        <i class="fa fa-linux"> </i>
+                        <i class="fa fa-linux"></i>
                     </div>
                 </div>
             </div>
+            <!-- avatar -->
             <div class="col-sm-4">
                 <div class="team-member wow zoomIn">
                     <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
                     <h4><span class="navy">{{ site.author.last_name }}</span> {{ site.author.first_name }}</h4>
-<!--                     <p>Lorem ipsum dolor sit amet, illum fastidii dissentias quo ne. Sea ne sint animal iisque, nam an soluta sensibus.</p> -->
                 </div>
             </div>
-            <div class="col-sm-2 wow fadeInLeft">
+            <!-- html -->
+            <div class="col-sm-2 wow fadeInRight">
                 <div class="team-member">
                     <div class="vote-icon">
-                        <i class="icon-html"> </i>
+                        <i class="icon-html"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-sm-2 wow fadeInLeft">
+            <!-- docker -->
+            <div class="col-sm-2 wow fadeInRight">
                 <div class="team-member">            
                     <div class="vote-icon">
-                        <i class="icon-docker"> </i>
+                        <i class="icon-docker"></i>
                     </div>
                 </div>
             </div>
@@ -141,47 +146,44 @@ permalink: /
 
             <div class="col-lg-12">
                 <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-
+                    <!-- nextcode -->
                     <div class="vertical-timeline-block">
                         <div class="vertical-timeline-icon navy-bg">
                             <i class="fa fa-plus-square"></i>
                         </div>
-
                         <div class="vertical-timeline-content">
                             <h2><span data-i18n="career.nextcode">Nextcode</span></h2>
                             <p><span data-i18n="career.nextcode_des">Now I am in Nextcode and develop website with Python code for genetic analysis. </span></p>
                             <span class="vertical-date"><span data-i18n="career.nextcode_date"> Apr. 2016 </span><br/> <small><span data-i18n="career.nextcode_job">Python Developer</span></small> </span>
                         </div>
                     </div>
-
+                    <!-- netease game -->
                     <div class="vertical-timeline-block">
                         <div class="vertical-timeline-icon navy-bg">
                             <i class="fa fa-gamepad"></i>
                         </div>
-
                         <div class="vertical-timeline-content">
                             <h2><span data-i18n="career.netease">Netease Game</span></h2>
                             <p><span data-i18n="career.netease_des">In Netease game, I learned game service system and use Python code for ops. </span></p>
                             <span class="vertical-date"><span data-i18n="career.netease_date"> Jun. 2015 </span><br/> <small><span data-i18n="career.netease_job">Dev Ops</span></small> </span>
                         </div>
                     </div>
-
+                    <!-- uloud -->
                     <div class="vertical-timeline-block">
                         <div class="vertical-timeline-icon navy-bg">
                             <i class="fa fa-cloud"></i>
                         </div>
-
                         <div class="vertical-timeline-content">
                             <h2><span data-i18n="career.ucloud">Ucloud</span></h2>
                             <p><span data-i18n="career.ucloud_des">In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.</span></p>
                             <span class="vertical-date"><span data-i18n="career.ucloud_date"> Sep. 2013 </span><br/> <small><span data-i18n="career.ucloud_job">Dev Ops</span></small> </span>
                         </div>
                     </div>
+                    <!-- student -->
                     <div class="vertical-timeline-block">
                         <div class="vertical-timeline-icon navy-bg">
                             <i class="fa fa-book"></i>
                         </div>
-
                         <div class="vertical-timeline-content">
                             <h2><span data-i18n="career.college">Graduation</span></h2>
                             <p><span data-i18n="career.college_des">At July 2013,I graduated from college and started my IT technology tour.</span></p>
@@ -259,6 +261,99 @@ permalink: /
 <br><br><br>
 </section>
 
+<section id="project" class="project gray-section features">
+    <div class="container" id="i18_projects">
+        <div class="row m-b-lg">
+            <div class="col-lg-12 text-center">
+                <div class="navy-line"></div>
+                <h1><span data-i18n="projects.my_projects">My Projects</span></h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-4 wow fadeInLeft">
+                <div class="team-member">
+                    <img src="{{ site.project.saplatform.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">{{ site.project.saplatform.name }}</span></h4>
+                    <p><span data-i18n="projects.saplatform">Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.</span></p>
+                    <ul class="list-inline">
+                        <li>
+                            <a class="github-button" href="{{ site.project.saplatform.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.saplatform.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.saplatform.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.saplatform.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.saplatform.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.saplatform.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-4 wow">
+                <div class="team-member">
+                    <img src="{{ site.project.jalpc.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">{{ site.project.jalpc.name }}</span></h4>
+                    <p><span data-i18n="projects.jalpc">Jalpc is a simple, beautiful and swift theme for Jekyll. It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.</span></p>
+                    <ul class="list-inline">
+                        <li>
+                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.jalpc.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.jalpc.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-sm-4 wow fadeInRight">
+                <div class="team-member">
+                    <img src="{{ site.project.raspberry.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
+                    <h4><span class="navy">{{ site.project.raspberry.name }}</span></h4>
+                    <p><span data-i18n="projects.raspberry">I use Raspberry Pi to realize Smart Home, it can be a home NAS, a web server, a auto downloader, it can report the weather and can monitor the home.</span></p>
+                    <ul class="list-inline">
+                        <li>
+                            <a class="github-button" href="{{ site.project.raspberry.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-star"
+                            data-count-href="{{ site.project.raspberry.url | append: '/stargazers' }}"
+                            data-count-api="{{ site.project.raspberry.url | prepend: '/repos' | append: '#stargazers_count' }}"
+                            data-count-aria-label="# stargazers on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                        </li>
+                        <li>
+                            <a class="github-button" href="{{ site.project.raspberry.url | prepend: 'https://github.com'}}"
+                            data-icon="octicon-fork"
+                            data-count-href="{{ site.project.raspberry.url | append: '/forks' }}"
+                            data-count-api="{{ site.project.raspberry.url | prepend: '/repos' | append: '#forks_count' }}"
+                            data-count-aria-label="# forks on GitHub"
+                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+</section>
+
 <section id="blog" class="navy-section testimonials" style="margin-top: 0">
 
     <div class="container">
@@ -282,7 +377,7 @@ permalink: /
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 text-center">
+            <div class="col-lg-12 text-center fadeInLeft">
                 <a href="mailto:{{ site.author.email }}" class="btn btn-primary"><span data-i18n="contact.email">Send me mail</span></a>
                 <p class="m-t-sm"><span data-i18n="contact.follow">
                     Or through the following ways
@@ -377,8 +472,9 @@ permalink: /
             $('.i18container').i18n();
             // $('#i18_title').i18n();
             $('#i18_navbar').i18n();
-            $('#i18_about_mer').i18n();
+            $('#i18_about_me').i18n();
             $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
             $('#i18_career').i18n();
             $('#i18_blog').i18n();
             $('#i18_contact').i18n();
@@ -391,6 +487,7 @@ permalink: /
                 $('#i18_navbar').i18n();
                 $('#i18_about_me').i18n();
                 $('#i18_skills').i18n();
+                $('#i18_projects').i18n();
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();
                 $('#i18_contact').i18n();
@@ -407,6 +504,7 @@ permalink: /
                 $('#i18_navbar').i18n();
                 $('#i18_about_me').i18n();
                 $('#i18_skills').i18n();
+                $('#i18_projects').i18n();
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();
                 $('#i18_contact').i18n();

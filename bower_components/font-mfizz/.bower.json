@@ -1,0 +1,50 @@
+{
+  "name": "font-mfizz",
+  "version": "2.0.1",
+  "repo": "FortAwesome/Font-Awesome",
+  "homepage": "http://mfizz.com/oss/font-mfizz",
+  "authors": [
+    "Joe Lauer <joe@lauer.bz>",
+    "Aaron O'Mullan <aaron.omullan@friendco.de>",
+    "Samy Pesse <samy.pesse@friendco.de>"
+  ],
+  "styles": [
+    "less/font-mfizz.less"
+  ],
+  "fonts": [
+    "fonts/font-mfizz.eot",
+    "fonts/font-mfizz.svg",
+    "fonts/font-mfizz.ttf",
+    "fonts/font-mfizz.woff"
+  ],
+  "description": "Font Awesome extension with programming languages, operating systems, software engineering, and technology icons.",
+  "keywords": [
+    "font",
+    "awesome",
+    "programmng",
+    "software",
+    "icon",
+    "icons",
+    "technology",
+    "mfizz",
+    "font-mfizz"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "_release": "2.0.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.1",
+    "commit": "37d21a5152cc042df96ebaa6d15d225630d48203"
+  },
+  "_source": "https://github.com/AaronO/font-mfizz.git",
+  "_target": "^2.0.1",
+  "_originalSource": "font-mfizz",
+  "_direct": true
+}

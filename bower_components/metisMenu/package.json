@@ -1,0 +1,75 @@
+{
+  "name": "metismenu",
+  "version": "2.5.2",
+  "description": "A jQuery menu plugin",
+  "main": "./dist/metisMenu.js",
+  "scripts": {
+    "test": "grunt travis --verbose"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onokumus/metisMenu.git"
+  },
+  "keywords": [
+    "twitter",
+    "bootstrap",
+    "twbs",
+    "jquery",
+    "menu",
+    "accordion",
+    "toggle",
+    "metis",
+    "metisMenu"
+  ],
+  "author": "Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)",
+  "contributors": [
+    "Osman Nuri Okumuş <onokumus@gmail.com> (https://github.com/onokumus)",
+    "Rein de Vries <info@reinos.nl> (https://github.com/reinos/)",
+    "Arthur CHAN <arthur@talkgoal.com> (http://catchtop.com)",
+    "Andrew Eastwood (https://github.com/AndrewEastwood)",
+    "Marcelo Tosco <capy.net@gmail.com> (http://ecapy.com)",
+    "Radoslav Štofko (http://www.stoweb.cz)",
+    "Umut Karcı <cediddi@gmail.com> (https://github.com/cediddi)",
+    "Chris Wiggins <chris@wiggins.nz> (https://github.com/chriswiggins)",
+    "Jacob Magnusson <m@jacobian.se> (https://github.com/jmagnusson)",
+    "QQ <sinabs@gmail.com> (https://github.com/sinabs)",
+    "roman <rgnevashev@gmail.com> (https://github.com/rgnevashev)",
+    "diegozhu <zhuhaiyang55@gmail.com> (http://sae.zhuhaiyang.me)"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/onokumus/metisMenu/issues"
+  },
+  "homepage": "https://github.com/onokumus/metisMenu#readme",
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-eslint": "^6.0.4",
+    "babel-plugin-transform-es2015-modules-umd": "^6.8.0",
+    "babel-preset-es2015": "^6.6.0",
+    "cssnano": "^3.5.2",
+    "grunt": "^1.0.1",
+    "grunt-babel": "^6.0.0",
+    "grunt-banner": "^0.6.0",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-eslint": "^18.1.0",
+    "grunt-postcss": "^0.8.0",
+    "normalize.css": "^4.1.1",
+    "pixrem": "^3.0.0",
+    "postcss-custom-media": "^5.0.1",
+    "postcss-import": "^8.1.1",
+    "suitcss-utils-flex": "^1.1.1",
+    "verb-readme-generator": "^0.1.10"
+  },
+  "verb": {
+    "run": true,
+    "toc": true,
+    "tasks": [
+      "readme"
+    ],
+    "reflinks": [
+      "twbuttons"
+    ]
+  }
+}

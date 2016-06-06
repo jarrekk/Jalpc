@@ -1,0 +1,751 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<title>Peity &bull; progressive &lt;svg&gt; pie, donut, bar and line charts</title>
+<link href="docs/style.css" rel="stylesheet">
+<script src="test/jquery-1.6.2.min.js"></script>
+<script src="jquery.peity.js"></script>
+<script>
+$(function() {
+  // Just the defaults.
+  $("span.pie").peity("pie")
+  $('.donut').peity('donut')
+  $(".line").peity("line")
+  $(".bar").peity("bar")
+
+  $(".bar-colours-1").peity("bar", {
+    fill: ["red", "green", "blue"]
+  })
+
+  $(".bar-colours-2").peity("bar", {
+    fill: function(value) {
+      return value > 0 ? "green" : "red"
+    }
+  })
+
+  $(".bar-colours-3").peity("bar", {
+    fill: function(_, i, all) {
+      var g = parseInt((i / all.length) * 255)
+      return "rgb(255, " + g + ", 0)"
+    }
+  })
+
+  $(".pie-colours-1").peity("pie", {
+    fill: ["cyan", "magenta", "yellow", "black"]
+  })
+
+  $(".pie-colours-2").peity("pie", {
+    fill: function(_, i, all) {
+      var g = parseInt((i / all.length) * 255)
+      return "rgb(255, " + g + ", 0)"
+    }
+  })
+
+  // Using data attributes
+  $(".data-attributes span").peity("donut")
+
+  // Simple evented example.
+  $("select").change(function() {
+    var text = $(this).val() + "/" + 5
+
+    $(this)
+      .siblings("span.graph")
+      .text(text)
+      .change()
+
+    $("#notice").text("Chart updated: " + text)
+  }).change()
+
+  $("span.graph").peity("pie")
+
+  // Updating charts.
+  var updatingChart = $(".updating-chart").peity("line", { width: 64 })
+
+  setInterval(function() {
+    var random = Math.round(Math.random() * 10)
+    var values = updatingChart.text().split(",")
+    values.shift()
+    values.push(random)
+
+    updatingChart
+      .text(values.join(","))
+      .change()
+  }, 1000)
+})
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-117680-14']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+<body>
+<div id="container">
+  <h1>Peity</h1>
+
+  <iframe src="http://ghbtns.com/github-btn.html?user=benpickles&repo=peity&type=watch&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="110" height="20"></iframe>
+
+  <iframe src="http://ghbtns.com/github-btn.html?user=benpickles&repo=peity&type=fork&count=true"
+    allowtransparency="true" frameborder="0" scrolling="0" width="95" height="20"></iframe>
+
+  <p>Peity (sounds like deity) is a simple <a href="http://jquery.com/">jQuery</a>
+    plugin that converts an element's content into a simple <code>&lt;svg&gt;</code>
+    mini pie <span class="pie">2/5</span>
+    donut <span class="donut">5,2,3</span>
+    line <span class="line">5,3,9,6,5,9,7,3,5,2</span>
+    or bar chart <span class="bar">5,3,9,6,5,9,7,3,5,2</span> and is
+    compatible with any browser that supports <code>&lt;svg&gt;</code>:
+    Chrome, Firefox, IE9+, Opera, Safari.</p>
+
+  <nav>
+    <p>
+      Read about <a href="#pie-charts">pie charts</a>,
+      <a href="#donut-charts">donut charts</a>,
+      <a href="#line-charts">line charts</a>,
+      <a href="#bar-charts">bar charts</a>,
+      <a href="#data-attributes">data-* attributes</a>,
+      <a href="#dynamic-colours">setting colours dynamically</a>,
+      <a href="#updating-charts">updating charts</a>,
+      <a href="#custom-charts">custom charts</a>,
+      <a href="#events">events</a>,
+      <a href="#defaults">default settings</a>,
+      <a href="#changelog">CHANGELOG</a>.
+    </p>
+  </nav>
+
+  <h2>Download <span class="version">version 3.2.0</span></h2>
+
+  <dl>
+    <dt>Uncompressed <span class="size-js">8.7Kb</span></dt>
+    <dd><a href="jquery.peity.js">jquery.peity.js</a></dd>
+    <dt>Minified <span class="size-min">3.6Kb</span> (+gzipped <span class="size-gz">1.7Kb</span>)</dt>
+    <dd><a href="jquery.peity.min.js">jquery.peity.min.js</a></dd>
+    <dt>Source</dt>
+    <dd><a href="https://github.com/benpickles/peity">github.com/benpickles/peity</a></dd>
+  </dl>
+
+  <a href="https://github.com/benpickles/peity" id="fork-me"><img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+  <h2 id="pie-charts">Pie Charts</h2>
+
+  <p>Simply call <code>peity("pie")</code> on a jQuery selection. There are
+    two subtly different pie chart semantics, a "/" delimiter is assumed to
+    mean "three out of five" and only the first two values will be drawn,
+    otherwise all of the values are included in the chart and the total is the
+    sum of all values.</p>
+
+  <p>You can also pass <code>delimiter</code>, <code>fill</code>,
+    <code>height</code>, <code>radius</code> and <code>width</code>
+    options. Passing a radius will set the correct width and height, the pie
+    will always be a circle that fits the available space.</p>
+
+  <p>
+    <span class="pie">1/5</span>
+    <span class="pie">226/360</span>
+    <span class="pie">0.52/1.561</span>
+    <span class="pie">1,4</span>
+    <span class="pie">226,134</span>
+    <span class="pie">0.52,1.041</span>
+    <span class="pie">1,2,3,2,2</span>
+  </p>
+
+  <div class="example">
+    <h4>HTML</h4>
+
+    <pre><code class="html">&lt;span class=&quot;pie&quot;&gt;1/5&lt;/span&gt;
+&lt;span class=&quot;pie&quot;&gt;226/360&lt;/span&gt;
+&lt;span class=&quot;pie&quot;&gt;0.52/1.561&lt;/span&gt;
+&lt;span class=&quot;pie&quot;&gt;1,4&lt;/span&gt;
+&lt;span class=&quot;pie&quot;&gt;226,134&lt;/span&gt;
+&lt;span class=&quot;pie&quot;&gt;0.52,1.041&lt;/span&gt;
+&lt;span class=&quot;pie&quot;&gt;1,2,3,2,2&lt;/span&gt;</code></pre>
+
+    <h4>JavaScript</h4>
+
+    <pre><code class="javascript">$("span.pie").peity("pie")</code></pre>
+  </div>
+
+  <h2 id="donut-charts">Donut Charts</h2>
+
+  <p>Donut charts are the same as <a href="#pie-charts">pie charts</a> and take the same options with
+    an added <code>innerRadius</code> option which defaults to half the radius.
+
+  <p>
+    <span class="donut">1/5</span>
+    <span class="donut">226/360</span>
+    <span class="donut">0.52/1.561</span>
+    <span class="donut">1,4</span>
+    <span class="donut">226,134</span>
+    <span class="donut">0.52,1.041</span>
+    <span class="donut">1,2,3,2,2</span>
+  </p>
+
+  <div class="example">
+    <h4>HTML</h4>
+
+    <pre><code class="html">&lt;span class=&quot;donut&quot;&gt;1/5&lt;/span&gt;
+&lt;span class=&quot;donut&quot;&gt;226/360&lt;/span&gt;
+&lt;span class=&quot;donut&quot;&gt;0.52/1.561&lt;/span&gt;
+&lt;span class=&quot;donut&quot;&gt;1,4&lt;/span&gt;
+&lt;span class=&quot;donut&quot;&gt;226,134&lt;/span&gt;
+&lt;span class=&quot;donut&quot;&gt;0.52,1.041&lt;/span&gt;
+&lt;span class=&quot;donut&quot;&gt;1,2,3,2,2&lt;/span&gt;</code></pre>
+
+    <h4>JavaScript</h4>
+
+    <pre><code class="javascript">$('.donut').peity('donut')</code></pre>
+  </div>
+
+  <h2 id="line-charts">Line Charts</h2>
+
+  <p>Line charts work on a comma-separated list of digits. Line charts can
+    take the following options: <code>delimiter</code>, <code>fill</code>,
+    <code>height</code>, <code>max</code>, <code>min</code>,
+    <code>stroke</code>, <code>strokeWidth</code> and <code>width</code>.</p>
+
+  <p>
+    <span class="line">5,3,9,6,5,9,7,3,5,2</span>
+    <span class="line">5,3,2,-1,-3,-2,2,3,5,2</span>
+    <span class="line">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+  </p>
+
+  <div class="example">
+    <h4>HTML</h4>
+    <pre><code class="html">&lt;span class="line"&gt;5,3,9,6,5,9,7,3,5,2&lt;/span&gt;
+&lt;span class=&quot;line&quot;&gt;5,3,2,-1,-3,-2,2,3,5,2&lt;/span&gt;
+&lt;span class=&quot;line&quot;&gt;0,-3,-6,-4,-5,-4,-7,-3,-5,-2&lt;/span&gt;</code></pre>
+
+    <h4>JavaScript</h4>
+    <pre><code class="javascript">$(".line").peity("line")</code></pre>
+  </div>
+
+  <h2 id="bar-charts">Bar Charts</h2>
+
+  <p>Bar charts work in the same way as line charts and take the following
+    options: <code>delimiter</code>, <code>fill</code>, <code>height</code>,
+    <code>max</code>, <code>min</code>, <code>padding</code> and
+    <code>width</code>.</p>
+
+  <p>
+    <span class="bar">5,3,9,6,5,9,7,3,5,2</span>
+    <span class="bar">5,3,2,-1,-3,-2,2,3,5,2</span>
+    <span class="bar">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+  </p>
+
+  <div class="example">
+    <h4>HTML</h4>
+    <pre><code class="html">&lt;span class="bar"&gt;5,3,9,6,5,9,7,3,5,2&lt;/span&gt;
+&lt;span class=&quot;bar&quot;&gt;5,3,2,-1,-3,-2,2,3,5,2&lt;/span&gt;
+&lt;span class=&quot;bar&quot;&gt;0,-3,-6,-4,-5,-4,-7,-3,-5,-2&lt;/span&gt;</code></pre>
+
+    <h4>JavaScript</h4>
+    <pre><code class="javascript">$(".bar").peity("bar")</code></pre>
+  </div>
+
+  <h2 id="data-attributes">data-* attributes</h2>
+
+  <p>Data attributes can be used to pass custom settings per-chart - options
+    explicitly passed to the <code>peity()</code> function take precedence over
+    data-* attributes.</p>
+
+  <p class="data-attributes">
+    <span data-peity='{ "fill": ["red", "#eeeeee"],    "innerRadius": 10, "radius": 40 }'>1/7</span>
+    <span data-peity='{ "fill": ["orange", "#eeeeee"], "innerRadius": 14, "radius": 36 }'>2/7</span>
+    <span data-peity='{ "fill": ["yellow", "#eeeeee"], "innerRadius": 16, "radius": 32 }'>3/7</span>
+    <span data-peity='{ "fill": ["green", "#eeeeee"],  "innerRadius": 18, "radius": 28 }'>4/7</span>
+    <span data-peity='{ "fill": ["blue", "#eeeeee"],   "innerRadius": 20, "radius": 24 }'>5/7</span>
+    <span data-peity='{ "fill": ["indigo", "#eeeeee"], "innerRadius": 18, "radius": 20 }'>6/7</span>
+    <span data-peity='{ "fill": ["violet", "#eeeeee"], "innerRadius": 15, "radius": 16 }'>7/7</span>
+  </p>
+
+  <div class="example">
+    <h4>HTML</h4>
+
+    <pre><code class="html">&lt;p class=&quot;data-attributes&quot;&gt;
+  &lt;span data-peity=&#x27;{ &quot;fill&quot;: [&quot;red&quot;, &quot;#eeeeee&quot;],    &quot;innerRadius&quot;: 10, &quot;radius&quot;: 40 }&#x27;&gt;1/7&lt;/span&gt;
+  &lt;span data-peity=&#x27;{ &quot;fill&quot;: [&quot;orange&quot;, &quot;#eeeeee&quot;], &quot;innerRadius&quot;: 14, &quot;radius&quot;: 36 }&#x27;&gt;2/7&lt;/span&gt;
+  &lt;span data-peity=&#x27;{ &quot;fill&quot;: [&quot;yellow&quot;, &quot;#eeeeee&quot;], &quot;innerRadius&quot;: 16, &quot;radius&quot;: 32 }&#x27;&gt;3/7&lt;/span&gt;
+  &lt;span data-peity=&#x27;{ &quot;fill&quot;: [&quot;green&quot;, &quot;#eeeeee&quot;],  &quot;innerRadius&quot;: 18, &quot;radius&quot;: 28 }&#x27;&gt;4/7&lt;/span&gt;
+  &lt;span data-peity=&#x27;{ &quot;fill&quot;: [&quot;blue&quot;, &quot;#eeeeee&quot;],   &quot;innerRadius&quot;: 20, &quot;radius&quot;: 24 }&#x27;&gt;5/7&lt;/span&gt;
+  &lt;span data-peity=&#x27;{ &quot;fill&quot;: [&quot;indigo&quot;, &quot;#eeeeee&quot;], &quot;innerRadius&quot;: 18, &quot;radius&quot;: 20 }&#x27;&gt;6/7&lt;/span&gt;
+  &lt;span data-peity=&#x27;{ &quot;fill&quot;: [&quot;violet&quot;, &quot;#eeeeee&quot;], &quot;innerRadius&quot;: 15, &quot;radius&quot;: 16 }&#x27;&gt;7/7&lt;/span&gt;
+&lt;/p&gt;</code></pre>
+    <h4>JavaScript</h4>
+
+    <pre><code class="javascript">$(&quot;.data-attributes span&quot;).peity(&quot;donut&quot;)</code></pre>
+  </div>
+
+  <h2 id="dynamic-colours">Setting Colours Dynamically</h2>
+
+  <p>Pie, donut and bar chart colours can be defined dynamically based on the
+    values of the chart. When passing an array its values are cycled, when
+    passing a function it is called once for each value allowing you to define
+    each bar or segment's colour. The callback is invoked with the value, its
+    index, and the full array of values - the same arguments as the callback for
+    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach#Description">Array#forEach</a></code>.</p>
+
+  <p>
+    <span class="bar-colours-1">5,3,9,6,5,9,7,3,5,2</span>
+    <span class="bar-colours-2">5,3,2,-1,-3,-2,2,3,5,2</span>
+    <span class="bar-colours-3">0,-3,-6,-4,-5,-4,-7,-3,-5,-2</span>
+    <span class="pie-colours-1">4,7,6,5</span>
+    <span class="pie-colours-2">5,3,9,6,5</span>
+  </p>
+
+  <div class="example">
+    <h4>HTML</h4>
+    <pre><code class="html">&lt;span class="bar-colours-1"&gt;5,3,9,6,5,9,7,3,5,2&lt;/span&gt;
+&lt;span class=&quot;bar-colours-2&quot;&gt;5,3,2,-1,-3,-2,2,3,5,2&lt;/span&gt;
+&lt;span class=&quot;bar-colours-3&quot;&gt;0,-3,-6,-4,-5,-4,-7,-3,-5,-2&lt;/span&gt;
+&lt;span class=&quot;pie-colours-1&quot;&gt;4,7,6,5&lt;/span&gt;
+&lt;span class=&quot;pie-colours-2&quot;&gt;5,3,9,6,5&lt;/span&gt;</code></pre>
+
+    <h4>JavaScript</h4>
+    <pre><code class="javascript">$(".bar-colours-1").peity("bar", {
+  fill: ["red", "green", "blue"]
+})
+
+$(".bar-colours-2").peity("bar", {
+  fill: function(value) {
+    return value > 0 ? "green" : "red"
+  }
+})
+
+$(".bar-colours-3").peity("bar", {
+  fill: function(_, i, all) {
+    var g = parseInt((i / all.length) * 255)
+    return "rgb(255, " + g + ", 0)"
+  }
+})
+
+$(".pie-colours-1").peity("pie", {
+  fill: ["cyan", "magenta", "yellow", "black"]
+})
+
+$(".pie-colours-2").peity("pie", {
+  fill: function(_, i, all) {
+    var g = parseInt((i / all.length) * 255)
+    return "rgb(255, " + g + ", 0)"
+  }
+})</code></pre>
+  </div>
+
+  <h2 id="updating-charts">Updating Charts</h2>
+
+  <p>Charts can be updated by changing the the jQuery selection's text content
+    and calling <code>change()</code> on it. The chart will be redrawn with
+    the same options that were originally passed to it.</p>
+
+  <p>
+    <span class="updating-chart">5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2</span>
+  </p>
+
+  <div class="example">
+    <h4>HTML</h4>
+    <pre><code class="html">&lt;span class="updating-chart"&gt;5,3,9,6,5,9,7,3,5,2,5,3,9,6,5,9,7,3,5,2&lt;/span&gt;</code></pre>
+
+    <h4>JavaScript</h4>
+    <pre><code class="javascript">var updatingChart = $(".updating-chart").peity("line", { width: 64 })
+
+setInterval(function() {
+  var random = Math.round(Math.random() * 10)
+  var values = updatingChart.text().split(",")
+  values.shift()
+  values.push(random)
+
+  updatingChart
+    .text(values.join(","))
+    .change()
+}, 1000)</code></pre>
+  </div>
+
+  <h2 id="custom-charts">Custom Charts</h2>
+
+  <p>You can add a custom chart type by registering it with Peity with a name,
+    defaults object, and custom chart drawing function which is called with an
+    options object. See the existing charts for examples.</p>
+
+  <pre><code class="javascript">$.fn.peity.register('custom', {
+    option: defaults
+  }, function(opts) {
+    // Implementation.
+  }
+)</code></pre>
+
+  <h2 id="events">Events</h2>
+
+  <p>Peity adds a "change" event trigger to your graph elements, so if you
+    update their data your can regenerate one or more charts by triggering
+    <code>change()</code> on them.</p>
+
+  <ul>
+    <li>
+      <span class="graph"></span>
+      <select>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4" selected>4</option>
+        <option value="5">5</option>
+      </select>
+    </li>
+    <li>
+      <span class="graph"></span>
+      <select>
+        <option value="0">0</option>
+        <option value="1" selected>1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </li>
+    <li>
+      <span class="graph"></span>
+      <select>
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3" selected>3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </select>
+    </li>
+  </ul>
+
+  <p id="notice">Nothing's happened yet.</p>
+
+  <div class="example">
+    <h4>HTML</h4>
+
+    <pre><code class="html">&lt;ul&gt;
+  &lt;li&gt;
+    &lt;span class="graph"&gt;&lt;/span&gt;
+    &lt;select&gt;
+      &lt;option value="0"&gt;0&lt;/option&gt;
+      &lt;option value="1"&gt;1&lt;/option&gt;
+      &lt;option value="2"&gt;2&lt;/option&gt;
+      &lt;option value="3"&gt;3&lt;/option&gt;
+      &lt;option value="4" selected&gt;4&lt;/option&gt;
+      &lt;option value="5"&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;span class="graph"&gt;&lt;/span&gt;
+    &lt;select&gt;
+      &lt;option value="0"&gt;0&lt;/option&gt;
+      &lt;option value="1" selected&gt;1&lt;/option&gt;
+      &lt;option value="2"&gt;2&lt;/option&gt;
+      &lt;option value="3"&gt;3&lt;/option&gt;
+      &lt;option value="4"&gt;4&lt;/option&gt;
+      &lt;option value="5"&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;span class="graph"&gt;&lt;/span&gt;
+    &lt;select&gt;
+      &lt;option value="0"&gt;0&lt;/option&gt;
+      &lt;option value="1"&gt;1&lt;/option&gt;
+      &lt;option value="2"&gt;2&lt;/option&gt;
+      &lt;option value="3" selected&gt;3&lt;/option&gt;
+      &lt;option value="4"&gt;4&lt;/option&gt;
+      &lt;option value="5"&gt;5&lt;/option&gt;
+    &lt;/select&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p id="notice"&gt;Nothing's happened yet.&lt;/p&gt;</code></pre>
+
+    <h4>JavaScript</h4>
+
+    <pre><code class="javascript">$('select').change(function() {
+  var text = $(this).val() + '/' + 5
+
+  $(this)
+    .siblings('span.graph')
+    .text(text)
+    .change()
+
+  $('#notice').text('Chart updated: ' + text)
+}).change()
+
+$('span.graph').peity('pie')</code></pre>
+  </div>
+
+  <h2 id="defaults">Default Settings</h2>
+
+  <p>Defaults can be overridden globally like so:</p>
+
+  <pre><code class="javascript">$.fn.peity.defaults.pie = {
+  delimiter: null,
+  fill: ["<span style="background:#ff9900">#ff9900</span>", "<span style="background:#fff4dd">#fff4dd</span>", "<span style="background:#ffd592">#ffd592</span>"],
+  height: null,
+  radius: 8,
+  width: null
+}
+
+$.fn.peity.defaults.donut = {
+  delimiter: null,
+  fill: ["<span style="background:#ff9900">#ff9900</span>", "<span style="background:#fff4dd">#fff4dd</span>", "<span style="background:#ffd592">#ffd592</span>"],
+  height: null,
+  innerRadius: null,
+  radius: 8,
+  width: null
+}
+
+$.fn.peity.defaults.line = {
+  delimiter: ",",
+  fill: "<span style="background:#c6d9fd">#c6d9fd</span>",
+  height: 16,
+  max: null,
+  min: 0,
+  stroke: "<span style="background:#4d89f9">#4d89f9</span>",
+  strokeWidth: 1,
+  width: 32
+}
+
+$.fn.peity.defaults.bar = {
+  delimiter: ",",
+  fill: ["<span style="background:#4d89f9">#4d89f9</span>"],
+  height: 16,
+  max: null,
+  min: 0,
+  padding: 0.1,
+  width: 32
+}</code></pre>
+
+  <div class="changelog"><h2 id="changelog">CHANGELOG</h2>
+
+<h3>Version 3.2.0 - 2015/4/17</h3>
+
+<ul>
+<li>Add an <code>after</code> hook that can be used to decorate a chart.</li>
+</ul>
+
+<h3>Version 3.1.2 - 2015/4/14</h3>
+
+<ul>
+<li>Allow line charts with no fill, just the line.</li>
+</ul>
+
+<h3>Version 3.1.1 - 2015/2/11</h3>
+
+<ul>
+<li>Ensure a donut&#39;s default inner radius honours percentage dimensions by deriving it from its calculated radius.</li>
+</ul>
+
+<h3>Version 3.1.0 - 2015/1/19</h3>
+
+<ul>
+<li>Bring back per-chart reading settings from data attributes but with a slightly different interface: all settings are stored on the <code>data-peity</code> attribute as JSON.</li>
+</ul>
+
+<h3>Version 3.0.3 - 2015/1/16</h3>
+
+<ul>
+<li>Don&#39;t allow negative or zero values to blow up a pie chart.</li>
+</ul>
+
+<h3>Version 3.0.2 - 2014/10/17</h3>
+
+<ul>
+<li>Fix <code>max</code>/<code>min</code> option when it&#39;s a string.</li>
+</ul>
+
+<h3>Version 3.0.1 - 2014/10/16</h3>
+
+<ul>
+<li>jQuery &gt; 1.6.2 doesn’t like <code>undefined</code> being passed to <code>#attr()</code>.</li>
+</ul>
+
+<h3>Version 3.0.0 - 2014/10/15</h3>
+
+<ul>
+<li>Remove the ability to read options from data attributes.</li>
+<li>Add donut chart type.</li>
+<li>Switch from <code>diameter</code> pie chart option to <code>radius</code>.</li>
+<li>Expose the internally-used scale functions to the outside world.</li>
+<li>Rename <code>gap</code> bar chart option to <code>padding</code>. It is now specified as a portion of the width of each bar and is present on both sides.</li>
+</ul>
+
+<h3>Version 2.0.5 - 2014/10/15</h3>
+
+<ul>
+<li>Changes to make the minified version 147 bytes smaller!</li>
+</ul>
+
+<h3>Version 2.0.4 - 2014/10/8</h3>
+
+<ul>
+<li>Fix a null max argument being calculated as zero when all values are negative.</li>
+<li>Ensure that a null min argument means that the minimum is calculated from a chart’s values.</li>
+</ul>
+
+<h3>Version 2.0.3 - 2014/4/29</h3>
+
+<ul>
+<li>Don&#39;t blow up drawing a line chart of all zeros.</li>
+</ul>
+
+<h3>Version 2.0.2 - 2014/3/26</h3>
+
+<ul>
+<li>Fix misaligned bar when its value is negative and equal to the minimum.</li>
+</ul>
+
+<h3>Version 2.0.1 - 2014/1/22</h3>
+
+<ul>
+<li>Ensure bars are positioned correctly when a bar chart&#39;s values are all equal its minimum value.</li>
+</ul>
+
+<h3>Version 2.0.0 - 2014/1/3</h3>
+
+<ul>
+<li>Switch from <code>&lt;canvas&gt;</code> to <code>&lt;svg&gt;</code>.</li>
+<li>Update jQuery dependency from 1.4.4 to 1.6.2 due to problems fetching a <code>&lt;svg&gt;</code> element&#39;s dimensions in Firefox.</li>
+<li>Rename <code>colour</code>/<code>colours</code> options to <code>fill</code>.</li>
+<li>Rename <code>spacing</code> bar chart option to <code>gap</code>.</li>
+<li>Rename <code>strokeColour</code> line chart option to <code>stroke</code>.</li>
+</ul>
+
+<h3>Version 1.2.1 - 2013/11/21</h3>
+
+<ul>
+<li>Ensure a line chart&#39;s outline doesn&#39;t spill off the canvas.</li>
+</ul>
+
+<h3>Version 1.2.0 - 2013/3/11</h3>
+
+<ul>
+<li>Easier CSS targeting of Peity-created canvas elements.</li>
+<li>Percentage dimensions (<code>width: &quot;100%&quot;</code>) now work.</li>
+</ul>
+
+<h3>Version 1.1.2 - 2013/2/23</h3>
+
+<ul>
+<li>Fix reference to <code>devicePixelRatio</code> - thanks <a href="https://github.com/kcivey">@kcivey</a>.</li>
+</ul>
+
+<h3>Version 1.1.1 - 2013/2/5</h3>
+
+<ul>
+<li>component.json for Bower.</li>
+<li>Finally in the jQuery plugin registry: <a href="http://plugins.jquery.com/peity/">http://plugins.jquery.com/peity/</a></li>
+</ul>
+
+<h3>Version 1.1.0 - 2013/2/1</h3>
+
+<ul>
+<li>Multiple calls to <code>peity()</code> on the same element now update the existing chart rather than creating a new one.</li>
+<li>Zero values in a bar chart are now present as a single-pixel bar.</li>
+</ul>
+
+<h3>Version 1.0.0 - 2012/12/4</h3>
+
+<ul>
+<li>Spacing between bars can now be configured.</li>
+<li>Pie charts can now be formed of more than 2 segments.</li>
+<li>The colours of bar and pie charts can now be set dynamically based on their value.</li>
+<li>Re-write of the internals so that the actual <code>&lt;canvas&gt;</code> element is only created once and <code>$.wrapInner</code> is no longer used to contain everything in a separate <code>&lt;span&gt;</code>.</li>
+<li>Peity now automatically reads data-* attributes and passes them as options when instantiating a chart. <a href="https://github.com/buunguyen">@buunguyen</a></li>
+</ul>
+
+<h3>Version 0.6.1 - 2012/10/12</h3>
+
+<ul>
+<li>Workaround for Linux/Chrome bug when using #arc to draw a full circle not having a zero starting angle.</li>
+</ul>
+
+<h3>Version 0.6.0 - 2012/1/27</h3>
+
+<ul>
+<li>Line and bar charts now support negative numbers.</li>
+</ul>
+
+<h3>Version 0.5.0 - 2011/12/6</h3>
+
+<ul>
+<li>Fix - rename radius to diameter.</li>
+<li>Allow line charts with no stroke.</li>
+<li>Support for iPhone 4 retina display.</li>
+</ul>
+
+<h3>Version 0.4.1 - 2011/9/29</h3>
+
+<ul>
+<li>For a line graph with a single value show a straight line instead of nothing.</li>
+</ul>
+
+<h3>Version 0.4.0 - 2011/6/30</h3>
+
+<ul>
+<li>Allow options to be passed a function called with a <code>this</code> value of the element in question.</li>
+</ul>
+
+<h3>Version 0.3.5 - 2011/5/12</h3>
+
+<ul>
+<li>Fix that if the numerator of a pie is zero an empty pie is drawn instead of nothing. <a href="https://github.com/munikho">@munikho</a></li>
+</ul>
+
+<h3>Version 0.3.4 - 2011/5/12</h3>
+
+<ul>
+<li>Remove the little border that appears around the slice of a pie when the slice has a darker colour than the plate. <a href="https://github.com/munikho">@munikho</a></li>
+</ul>
+
+<h3>Version 0.3.3 - 2011/3/20</h3>
+
+<ul>
+<li>Tweaks to aid minification.</li>
+</ul>
+
+<h3>Version 0.3.2 - 2010/5/9</h3>
+
+<ul>
+<li>Don&#39;t blow up if <code>&lt;canvas&gt;</code> isn&#39;t supported.</li>
+</ul>
+
+<h3>Version 0.3.1 - 2010/5/8</h3>
+
+<ul>
+<li>Add &quot;strokeWidth&quot; option to line charts.</li>
+<li>Add &quot;max&quot; option to line and bar chart types.</li>
+</ul>
+
+<h3>Version 0.3.0 - 2010/5/6</h3>
+
+<ul>
+<li>Add line and bar graph types and expose an interface for adding more. <a href="https://github.com/ismasan">@ismasan</a> and me.</li>
+</ul>
+
+<h3>Version 0.2.0 - 2010/4/29</h3>
+
+<p>First official version. Thanks to <a href="https://github.com/ismasan">@ismasan</a> and <a href="https://github.com/olivernn">@olivernn</a> for adding support for the &quot;change&quot; event and making it work in Firefox respectively.</p>
+
+<h3>Birthday - 2009/11/20</h3>
+
+<p>It works!</p>
+</div>
+
+  <footer>
+    <p>
+      &copy; 2009-2015 <a href="http://benpickles.com/">Ben Pickles</a>.
+      <a href="https://github.com/benpickles/peity/blob/master/MIT-LICENCE">MIT LICENCE</a>.
+    </p>
+  </footer>
+</div>
+</body>
+</html>

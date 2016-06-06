@@ -1,75 +1,71 @@
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    {% if page.desc %}
-      <meta content="{{ page.desc }}" name="description">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.desc %}
+    <meta content="{{ page.desc }}" name="description">
+  {% endif %}
+  {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  <meta name="author" content="{{ site.author.name }}">
+
+  <title>
+    {% if page.title != "index" %}
+        {{ site.title }}|{{ page.title }}
+    {% else %}
+        {{ site.title }}
     {% endif %}
-    {% if page.keywords %}
-      <meta name="keywords" content="{{ page.keywords }}">
-    {% endif %}
-    <meta name="author" content="{{ site.author.name }}">
+  </title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ "static/img/favicon.ico" | prepend: site.baseurl }}">
 
-    <title>
-      {% if page.title != "index" %}
-          {{ site.title }}|{{ page.title }}
-      {% else %}
-          {{ site.title }}
-      {% endif %}
-    </title>
-    <!-- favicon -->
-    <link rel="shortcut icon" href="{{ "static/img/favicon.ico" | prepend: site.baseurl }}">
+  <!-- Third-party CSS -->
+  <link href="{{"bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{"bower_components/animate.css/animate.min.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{"bower_components/components-font-awesome/css/font-awesome.min.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{"static/font-mfizz/font-mfizz.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{"bower_components/toastr/toastr.min.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{"bower_components/jquery.gritter/css/jquery.gritter.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{ "search/css/cb-search.css" | prepend: site.baseurl }}">
 
-    <!-- Bootstrap core CSS -->
-    <link href="{{"static/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{{"static/css/style.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{"static/css/pygments.css"| prepend: site.baseurl }}" rel="stylesheet">
 
-    <!-- Animation CSS -->
-    <link href="{{"static/css/animate.css"| prepend: site.baseurl }}" rel="stylesheet">
-    <link href="{{"static/font-awesome/css/font-awesome.min.css"| prepend: site.baseurl }}" rel="stylesheet">
-    <link href="{{"static/font-mfizz/font-mfizz.css"| prepend: site.baseurl }}" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-    <link href="{{"static/css/style.css"| prepend: site.baseurl }}" rel="stylesheet">
-
-    <!-- Toastr style -->
-    <link href="{{"static/css/plugins/toastr/toastr.min.css"| prepend: site.baseurl }}" rel="stylesheet">
-
-    <!-- Gritter -->
-    <link href="{{"static/js/plugins/gritter/jquery.gritter.css"| prepend: site.baseurl }}" rel="stylesheet">
-    <link href="{{"static/css/pygments.css"| prepend: site.baseurl }}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ "search/css/cb-search.css" | prepend: site.baseurl }}">
-
-	<!-- Mainly scripts -->
-	<script src="{{"static/js/jquery-2.1.1.js"| prepend: site.baseurl }}"></script>
-
+  <!-- Scripts -->
+  <script src="{{"bower_components/jquery/dist/jquery.min.js"| prepend: site.baseurl }}"></script>
   <script src="{{ "search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
 
   <!-- cb-search -->
   <script src="{{ "search/js/cb-search.js" | prepend: site.baseurl }}"></script>
-
-      <script>
-      $(function(){
-          $("pre").css('display','block');
-      });
-      </script>
-
+  <script>
+    $(function(){
+        $("pre").css('display','block');
+    });
+  </script>
   <!-- Mainly scripts -->
-	<script src="{{"static/js/bootstrap.min.js"| prepend: site.baseurl }}"></script>
-	<script src="{{"static/js/plugins/metisMenu/jquery.metisMenu.js"| prepend: site.baseurl }}"></script>
-	<script src="{{"static/js/plugins/slimscroll/jquery.slimscroll.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"bower_components/bootstrap/dist/js/bootstrap.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"bower_components/metisMenu/dist/metisMenu.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"bower_components/jquery-slimscroll/jquery.slimscroll.min.js"| prepend: site.baseurl }}"></script>
 
-	<!-- Custom and plugin javascript -->
-	<script src="{{"static/js/inspinia.js"| prepend: site.baseurl }}"></script>
-	<script src="{{"static/js/plugins/pace/pace.min.js"| prepend: site.baseurl }}"></script>
+  <!-- Peity -->
+  <script src="{{"bower_components/peity/jquery.peity.min.js"| prepend: site.baseurl }}"></script>
 
-  <!-- i18next -->
-  <script src="{{"static/js/plugins/i18next/i18next.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"bower_components/PACE/pace.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"bower_components/wow/dist/wow.min.js"| prepend: site.baseurl }}"></script>
+  <!-- Custom and plugin javascript -->
+  <script src="{{"static/js/inspinia.js"| prepend: site.baseurl }}"></script>
 
-	<script src="{{"static/js/plugins/wow/wow.min.js"| prepend: site.baseurl }}"></script>
+  <!-- Rickshaw -->
+  <script src="{{"bower_components/rickshaw/vendor/d3.v3.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"bower_components/rickshaw/rickshaw.min.js"| prepend: site.baseurl }}"></script>
+
 
   <!-- jPages -->
   <script src="{{"static/js/jPages.js" | prepend: site.baseurl}}"></script>
   <script src="{{"static/js/js.js" | prepend: site.baseurl}}"></script>
+  <script id="dsq-count-scr" src="//jalpc.disqus.com/count.js" async></script>
   <script type="text/javascript">
         $(function(){
           /* initiate the plugin */
@@ -83,31 +79,4 @@
           });
       });
   </script>
-
-  <!-- Baidu analytics -->
-{% if site.ba %}
-  <script>
-      var _hmt = _hmt || [];
-      (function() {
-        var hm = document.createElement("script");
-        hm.src = "//hm.baidu.com/hm.js?{{ site.ba.uuid }}";
-        var s = document.getElementsByTagName("script")[0]; 
-        s.parentNode.insertBefore(hm, s);
-      })();
-  </script>
-{% endif %}
-
-  <!-- Google analytics -->
-{% if site.ga %}
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-    ga('create', '{{ site.ga.id }}', 'auto');
-    ga('send', 'pageview');
-
-  </script>
-{% endif %}
 </head>
