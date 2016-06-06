@@ -18,9 +18,7 @@ layout: default
                             {{ page.title }}
                         </h1>
                     </div>
-
                     	{{ content }}
-
                     <hr>
                     <div class="row">
                         <div class="col-md-6">
@@ -32,24 +30,32 @@ layout: default
                         <div class="col-md-6">
                             <div class="small text-right">
                                 <h5>Stats:</h5>
-                                <div> <i class="fa fa-comments-o"> </i> <span id = "url::{{page.url | prepend: site.url}}" class = "cy_cmt_count" ></span> comments</div>
+                                <div> 
+                                {% if site.changyan %}
+                                    <i class="fa fa-comments-o"> </i> <span id = "url::{{post.url | prepend: page.url}}" class = "cy_cmt_count" ></span> comments
+                                {% endif %}
+                                {% if site.disqus %}
+                                <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="{{ site.url }}{{ page.url }}">0</span> comments
+                                {% endif %}
+                                </div>
                             </div>
                         </div>
                     </div>
                     <br>
                     <div class="row">
                         <div class="col-lg-12">
+                            <!-- donate -->
                             {% if site.donate %}
                                 {% include donate.html %}
                             {% endif %}
                             <br>
+                            <!-- share -->
                             {% if site.bshare %}
                                 {% include share.html %}
                             {% endif %}
                             <br>
-                            {% if site.changyan %}
-                                {% include comments.html %}
-                            {% endif %}
+                            <!-- comment -->
+                            {% include comments.html %}
                         </div>
                     </div>
 
