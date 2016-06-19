@@ -9,7 +9,7 @@
     "projects": "Projects",
     "career": "Career",
     "blog": "Blog",
-    "contact": "Contact"
+    "link": "Link"
   },
   "about_me":{
     "about_me": "About Me",
@@ -21,8 +21,9 @@
   "projects":{
     "my_projects": "My Projects",
     "saplatform": "Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.",
-    "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.",
-    "raspberry": "I use Raspberry Pi to realize Smart Home, it can be a home NAS, a web server, a auto downloader, it can report the weather and can monitor the home."
+    "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.",
+    "angularjs": "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.",
+    "rsser": "Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually."
   },
   "career":{
     "my_career": "My Career",
@@ -46,10 +47,9 @@
   "blog":{
     "my_blog": "My Blog"
   },
-  "contact":{
-    "contact_me": "Contact Me",
-    "email": "Send me mail",
-    "follow": "Or through the following ways"
+  "link":{
+    "link": "Link",
+    "view": "views"
   }
 
 }

@@ -1,5 +1,7 @@
-@import url("http://fonts.useso.com/css?family=Open+Sans:300,400,600,700");
-@import url("http://fonts.useso.com/css?family=Roboto:400,300,500,700");
+/*@import url("http://fonts.useso.com/css?family=Open+Sans:300,400,600,700");*/
+/*@import url("http://fonts.useso.com/css?family=Roboto:400,300,500,700");*/
+@import url("./open_sans.min.css");
+@import url("./roboto.min.css");
 /*
  *
  *   INSPINIA - Responsive Admin Theme
@@ -8226,4 +8228,7 @@ body.md-skin {
   #page-wrapper {
     margin: 0;
   }
+}
+.row{
+    margin: 0px !important;
 }

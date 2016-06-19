@@ -4,20 +4,30 @@
 title: "Jalpc"
 description: "Jack's blog,use Jekyll and github pages."
 keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
-
 baseurl: "/"
 url: "http://www.jack003.com"
 # url: "http://127.0.0.1:4000"
+
+# blog img path
+img_path: 'http://www.jack003.com/static/img/blog'
 
 # author
 author:
   name: 'Jack'
   first_name: 'Jia'
   last_name: 'Kun'
-  email: 'jack19890614@gmail.com'
+  email: 'me@jack003.com'
   facebook_username: 'jiakunnj'
   github_username: 'Jack614'
   head_img: 'static/img/landing/Jack.jpg'
+
+# social link
+jingyu:
+  first_name: 'Yu'
+  last_name: 'Jing'
+  description: 'Painter.'
+  link: 'http://angular.jack003.com'
+  email: '805963294@qq.com'
 
 # landing page
 landing:
@@ -27,22 +37,26 @@ landing:
   skills: 'Skills'
   projects: 'Project'
   blog: 'Blog'
-  contact: 'Contact'
+  link: 'Link'
 
 # my projects
 project:
-  saplatform: 
+  saplatform:
     name: 'Saplatform'
     url: '/Jack614/saplatform'
-    img: 'static/img/landing/saplatform.jpg'
-  jalpc: 
+    img: 'static/img/landing/saplatform.png'
+  jalpc:
     name: 'Jalpc'
     url: '/Jack614/jalpc_jekyll_theme'
-    img: 'static/img/landing/jekyll.jpg'
-  raspberry: 
-    name: 'My Raspberry'
-    url: '/Jack614/my_raspberry_pi'
-    img: 'static/img/landing/raspberry.jpg'
+    img: 'static/img/landing/jekyll.png'
+  angularjs:
+    name: 'Jalpc-A'
+    url: '/Jack614/Jalpc-A'
+    img: 'static/img/landing/angularjs.png'
+  Rsser:
+    name: 'Rsser'
+    url: '/Jack614/Rsser'
+    img: 'static/img/landing/rsser.png'
 
 # blog index
 index:
@@ -79,12 +93,10 @@ ba:
 ga:
   id: UA-73784599-1
 
-# blog img path
-img_path: '/static/img/blog'
-
 # Build settings
 encoding: "utf-8"
 
+# other settings
 highlighter: rouge
 markdown: kramdown
 kramdown:

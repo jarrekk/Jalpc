@@ -56,4 +56,4 @@ jPages的文档很详细，每种分页的方法从html、JavaScript到CSS都有
 
 ### Step 3
 
-最后一步就是对分页的样式重新定义，因为jPages自带的样式很不好看，我使用的是bootstrap，这里需要在`jPages.js`中进行修改，具体可以在我[项目](https://github.com/Jack614/jalpc_jekyll_theme/blob/master/static/js/jPages.js)中的代码查看，有注释的部分是jPages原来的代码。
+最后一步就是对分页的样式重新定义，因为jPages自带的样式很不好看，我使用的是bootstrap，这里需要在`jPages.js`中进行修改，具体可以在我[项目](https://github.com/Jack614/jalpc_jekyll_theme/blob/gh-pages/static/js/jPages.js)中的代码查看，有注释的部分是jPages原来的代码。
