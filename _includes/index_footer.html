@@ -1,3 +1,5 @@
+<script async src="{{"static/js/count.min.js"| prepend: site.baseurl }}"></script>
+<!-- <script async src="{{"static/js/count_index.min.js"| prepend: site.baseurl }}"></script> -->
   <!-- Baidu analytics -->
   {% if site.ba %}
     <script>
@@ -5,7 +7,7 @@
         (function() {
           var hm = document.createElement("script");
           hm.src = "//hm.baidu.com/hm.js?{{ site.ba.uuid }}";
-          var s = document.getElementsByTagName("script")[0]; 
+          var s = document.getElementsByTagName("script")[0];
           s.parentNode.insertBefore(hm, s);
         })();
     </script>

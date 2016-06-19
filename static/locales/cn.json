@@ -9,7 +9,7 @@
     "projects": "项目",
     "career": "职业",
     "blog": "博客",
-    "contact": "联系我"
+    "link": "友情链接"
   },
   "about_me":{
     "about_me": "关于我",
@@ -21,8 +21,9 @@
   "projects":{
     "my_projects": "我的项目",
     "saplatform": "Saplatform是一个自动化运维服务，包括资产管理、项目发布、数据库管理等功能,它可以管理大量服务器。",
-    "jalpc": "Jalpc是一个非常简洁、漂亮和快速部署的Jekyll主题，它非常小巧但是影响很广，能非常好的适应所有设备。",
-    "raspberry": "我用Raspberry Pi实现智能家居，它可以是NAS、网站、自动下载器，它可以天气预报也可以监控家庭。"
+    "jalpc": "Jalpc是一个非常简洁、漂亮和快速部署的Jekyll主题，它有非常全面的功能，可以很方便的修改和使用，适应多种设备。",
+    "angularjs": "这是一个Angularjs写的前端应用，使用Jelyll部署在github的gh-pages上，后台使用Leancloud，你也可以使用Parse。",
+    "rsser": "Rsser是一个Ionic应用，在这个应用下，我们可以自由的阅读新闻和文章，你可以从给定的列表中添加rss地址也可以手动添加。"
   },
   "career":{
     "my_career": "职业生涯",
@@ -46,10 +47,9 @@
   "blog":{
     "my_blog": "我的博客"
   },
-  "contact":{
-    "contact_me": "联系我",
-    "email": "给我发邮件",
-    "follow": "或者通过以下方式"
+  "link":{
+    "link": "友情链接",
+    "view": "次访问"
   }
 
 }

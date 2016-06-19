@@ -49,3 +49,36 @@ git push --all --force
 git push --tags --force
 ```
 
+## 查找大文件并清理
+
+下载[Bash Script](https://raw.githubusercontent.com/Jack614/jalpc_jekyll_theme/gh-pages/git_find_big.sh)，在项目目录下：
+
+```
+$ chmod 777 git_find_big.sh
+$ git gc --auto
+```
+
+查找大文件：
+
+```
+$ git_find_big.sh 
+All sizes are in kB's. The pack column is the size of the object, compressed, inside the pack file.
+size  pack  SHA                                       location
+592   580   e3117f48bc305dd1f5ae0df3419a0ce2d9617336  media/img/emojis.jar
+550   169   b594a7f59ba7ba9daebb20447a87ea4357874f43  media/js/aui/aui-dependencies.jar
+518   514   22f7f9a84905aaec019dae9ea1279a9450277130  media/images/screenshots/issue-tracker-wiki.jar
+337   92    1fd8ac97c9fecf74ba6246eacef8288e89b4bff5  media/js/lib/bundle.js
+240   239   e0c26d9959bd583e5ef32b6206fc8abe5fea8624  media/img/featuretour/heroshot.png
+```
+
+手动清理文件：
+
+```
+git filter-branch --index-filter 'git rm --cached --ignore-unmatch filename' HEAD
+```
+
+提交
+
+```
+git push -f
+```
