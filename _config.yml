@@ -39,10 +39,10 @@ project:
     name: 'Jalpc'
     url: '/Jack614/jalpc_jekyll_theme'
     img: 'static/img/landing/jekyll.jpg'
-  raspberry: 
-    name: 'My Raspberry'
-    url: '/Jack614/my_raspberry_pi'
-    img: 'static/img/landing/raspberry.jpg'
+  angularjs: 
+    name: 'Jack614.github.io'
+    url: '/Jack614/Jack614.github.io'
+    img: 'static/img/landing/angularjs.jpg'
 
 # blog index
 index:
