@@ -40,7 +40,7 @@ project:
     url: '/Jack614/jalpc_jekyll_theme'
     img: 'static/img/landing/jekyll.jpg'
   angularjs: 
-    name: 'Jack614.github.io'
+    name: 'Jalpc-A'
     url: '/Jack614/Jack614.github.io'
     img: 'static/img/landing/angularjs.jpg'
 
