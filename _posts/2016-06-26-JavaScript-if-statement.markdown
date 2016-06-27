@@ -13,7 +13,7 @@ icon: icon-javascript
 
 代码如下：
 
-```` javascript
+``` javascript
 if (foo) bar();else baz(); ==> foo? bar(): baz();
 if (!foo) bar();else baz(); ==> foo? baz(): bar();
 if (foo) return bar();else return baz(); ==> return foo? bar(): baz();
