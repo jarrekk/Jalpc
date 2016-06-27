@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "JavaScript中的json数组操作"
-date:   2016-06-123
+date:   2016-06-23
 desc: "在JavaScript的json中操作数组"
 keywords: "JavaScript,json,array,操作"
 categories: [HTML]
