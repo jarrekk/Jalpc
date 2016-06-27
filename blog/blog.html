@@ -28,13 +28,13 @@ permalink: /blog/
                         </a>
                         <div class="vote-info">
                         {% if site.changyan %}
-                            <i class="fa fa-comments-o"> </i> <a href="#" onclick="return false;">Comments (<span id = "url::{{post.url | prepend: site.url}}" class = "cy_cmt_count" ></span>)</a>
+                            <i class="fa fa-comments-o"> </i> <a>Comments (<span id = "url::{{post.url | prepend: site.url}}" class = "cy_cmt_count" ></span>)</a>
                         {% endif %}
                         {% if site.disqus %}
-                            <i class="fa fa-comments-o"> </i> <a href="#" onclick="return false;">Comments (<span class='disqus-comment-count' data-disqus-url="{{ site.url }}{{ post.url }}">0</span>)</a>
+                            <i class="fa fa-comments-o"> </i> <a>Comments (<span class='disqus-comment-count' data-disqus-url="{{ site.url }}{{ post.url }}">0</span>)</a>
                         {% endif %}
-                            <i class="fa fa-clock-o"></i> <a href="#" onclick="return false;">{{ post.date | date: "%-d %b %Y" }}</a>
-                            <i class="fa fa-user"></i> <a href="#" onclick="return false;">{{ site.author.name }}</a>
+                            <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
+                            <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
                         </div>
                     </div>
                     <div class="col-md-2 ">

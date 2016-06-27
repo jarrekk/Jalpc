@@ -9,7 +9,7 @@
     "projects": "项目",
     "career": "职业",
     "blog": "博客",
-    "contact": "联系我"
+    "link": "友情链接"
   },
   "about_me":{
     "about_me": "关于我",
@@ -46,10 +46,9 @@
   "blog":{
     "my_blog": "我的博客"
   },
-  "contact":{
-    "contact_me": "联系我",
-    "email": "给我发邮件",
-    "follow": "或者通过以下方式"
+  "link":{
+    "link": "友情链接",
+    "view": "次访问"
   }
 
 }

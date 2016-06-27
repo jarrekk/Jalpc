@@ -23,7 +23,7 @@ permalink: /
                         <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
                         <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
                         <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
-                        <li><a class="page-scroll" href="#contact"><span data-i18n="nav.contact">{{ site.landing.contact }}</span></a></li>
+                        <li><a class="page-scroll" href="#link"><span data-i18n="nav.link">{{ site.landing.link }}</span></a></li>
                         <li>
                             <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
                         </li>
@@ -36,7 +36,6 @@ permalink: /
             </div>
         </nav>
 </div>
-
 <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
         <li data-target="#inSlider" data-slide-to="0" class="active"></li>
@@ -94,9 +93,9 @@ permalink: /
             </div>
             <!-- linux -->
             <div class="col-sm-2 wow fadeInLeft">
-                <div class="team-member">            
+                <div class="team-member">
                     <div class="vote-icon">
-                        <i class="fa fa-linux"></i>
+                        <i class="icon-shell"></i>
                     </div>
                 </div>
             </div>
@@ -105,19 +104,29 @@ permalink: /
                 <div class="team-member wow zoomIn">
                     <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
                     <h4><span class="navy">{{ site.author.last_name }}</span> {{ site.author.first_name }}</h4>
+                    <ul class="list-inline social-icon">
+                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                        <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
+                        </li>
+                        <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
+                        </li>
+                    </ul>
                 </div>
             </div>
             <!-- html -->
             <div class="col-sm-2 wow fadeInRight">
                 <div class="team-member">
                     <div class="vote-icon">
-                        <i class="icon-html"></i>
+                        <i class="icon-angular"></i>
                     </div>
                 </div>
             </div>
             <!-- docker -->
             <div class="col-sm-2 wow fadeInRight">
-                <div class="team-member">            
+                <div class="team-member">
                     <div class="vote-icon">
                         <i class="icon-docker"></i>
                     </div>
@@ -234,7 +243,7 @@ permalink: /
           </div>
           <div class="row">
             <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
-              <p>Linux</p>
+              <p>Linux/Shell</p>
             </div>
             <div class="col-lg-7 features-text wow fadeInLeft">
                 <div class="progress progress-bar-default">
@@ -246,12 +255,12 @@ permalink: /
           </div>
           <div class="row">
             <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
-              <p>Bash Shell</p>
+              <p>AngularJS</p>
             </div>
             <div class="col-lg-7 features-text wow fadeInLeft">
                 <div class="progress progress-bar-default">
-                    <div style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar" class="progress-bar">
-                        <span class="sr-only">70% Complete (success)</span>
+                    <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                        <span class="sr-only">80% Complete (success)</span>
                     </div>
                 </div>
             </div>
@@ -368,35 +377,36 @@ permalink: /
 
 </section>
 
-<section id="contact" class="contact features">
-    <div class="container" id="i18_contact">
+<section id="link" class="contact features">
+    <div class="container" id="i18_link">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
                 <div class="navy-line"></div>
-                <h1><span data-i18n="contact.contact_me">Contact Me</span></h1>
+                <h1><span data-i18n="link.link">Link</span></h1>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-12 text-center fadeInLeft">
-                <a href="mailto:{{ site.author.email }}" class="btn btn-primary"><span data-i18n="contact.email">Send me mail</span></a>
-                <p class="m-t-sm"><span data-i18n="contact.follow">
-                    Or through the following ways
-                </span></p>
-                <ul class="list-inline social-icon">
-                    <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
-                    </li>
-                    <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
-                    </li>
-                    <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
-                    </li>
-                    <!-- <li><a href="#" target="blank"><i class="fa fa-linkedin"></i></a>
-                    </li> -->
-                </ul>
+            <div class="col-sm-4 col-sm-offset-4">
+                <div class="team-member wow zoomIn">
+                    <h4><span class="navy">{{ site.jingyu.last_name }}</span> {{ site.jingyu.first_name }}</h4>
+                    <p>
+                        {{ site.jingyu.description }}
+                    </p>
+                    <ul class="list-inline social-icon">
+                        <li><a href="{{ site.jingyu.link }}" target="blank"><i class="fa fa-link"></i></a>
+                        </li>
+                        <li><a href="mailto:{{ site.jingyu.email }}"><i class="fa fa-envelope-o"></i></a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><strong>&copy; 2015 {{ site.title }}</strong></p>
+                <p id="jalpc_site_pv"><strong>&copy; 2015 {{ site.title }}</strong></p>
+                <!-- <img src="http://www.reliablecounter.com/count.php?page=www.jack003.com3&digit=style/black-and-white/3/&reloads=0" alt="" title="" border="0">&nbsp;<span data-i18n="link.view">views</span> || -->
+                <!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
+                <!-- <span id="busuanzi_container_site_pv"><strong id="busuanzi_value_site_pv"></strong>&nbsp;views.&nbsp;</span>|| -->
             </div>
         </div>
     </div>
@@ -477,7 +487,7 @@ permalink: /
             $('#i18_projects').i18n();
             $('#i18_career').i18n();
             $('#i18_blog').i18n();
-            $('#i18_contact').i18n();
+            $('#i18_link').i18n();
         });
 
         $('.set_en').on('click', function (){
@@ -490,7 +500,7 @@ permalink: /
                 $('#i18_projects').i18n();
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();
-                $('#i18_contact').i18n();
+                $('#i18_link').i18n();
 
                 // $('.set_en').addClass('active');
                 // $('.set_cn').removeClass('active');
@@ -507,7 +517,7 @@ permalink: /
                 $('#i18_projects').i18n();
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();
-                $('#i18_contact').i18n();
+                $('#i18_link').i18n();
 
                 // $('.set_cn').addClass('active');
                 // $('.set_en').removeClass('active');
