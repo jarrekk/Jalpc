@@ -16,9 +16,9 @@ icon: icon-javascript
 ## 数组的创建
 
 ``` javascript
-var arrayObj = new Array();　//创建一个数组
-var arrayObj = new Array([size]);　//创建一个数组并指定长度，注意不是上限，是长度
-var arrayObj = new Array([element0[, element1[, ...[, elementN]]]]);　创建一个数组并赋值
+var arrayObj = new Array();  //创建一个数组
+var arrayObj = new Array([size]);  //创建一个数组并指定长度，注意不是上限，是长度
+var arrayObj = new Array([element0[, element1[, ...[, elementN]]]]);  //创建一个数组并赋值
 ```
 
 要说明的是，虽然第二种方法创建数组指定了长度，但实际上所有情况下数组都是变长的，也就是说即使指定了长度为5，仍然可以将元素存储在规定长度以外的，注意：这时长度会随之改变。
