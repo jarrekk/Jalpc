@@ -41,7 +41,7 @@ project:
     img: 'static/img/landing/jekyll.jpg'
   angularjs: 
     name: 'Jalpc-A'
-    url: '/Jack614/Jack614.github.io'
+    url: '/Jack614/Jalpc-A'
     img: 'static/img/landing/angularjs.jpg'
 
 # blog index
