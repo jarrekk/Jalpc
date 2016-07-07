@@ -1,5 +1,8 @@
-# Jalpc.
+# Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/Jack614/jekyllthemes)
 
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/)
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 <http://www.jack003.com>
 
 ![Blog](blog.gif)
@@ -11,6 +14,10 @@ It's pretty minimal, but leverages large type and drastic contrast to make a sta
 The landing page of the blog is bilingual page.
 
 If you like this Jekyll theme,please give me encouragement and star this project,I will make it better.
+
+## Ad
+
+[Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
 
 ## Getting Started
 
@@ -330,4 +337,3 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-
