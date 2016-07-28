@@ -1,4 +1,4 @@
-@import url("./open_sans.css");@import url("./roboto.css");h1,h2,h3,h4,h5,h6{font-weight:100}h1{font-size:30px}
+@import url("./open_sans.min.css");@import url("./roboto.min.css");h1,h2,h3,h4,h5,h6{font-weight:100}h1{font-size:30px}
 h2{font-size:24px}h3{font-size:16px}h4{font-size:14px}h5{font-size:12px}h6{font-size:10px}h3,h4,h5{margin-top:5px;font-weight:600}.nav>li>a{color:#a7b1c2;font-weight:600;padding:14px 20px 14px 25px}
 .nav.navbar-right>li>a{color:#999c9e}.nav>li.active>a{color:#fff}.navbar-default .nav>li>a:hover,.navbar-default .nav>li>a:focus{background-color:#293846;color:white}
 .nav .open>a,.nav .open>a:hover,.nav .open>a:focus{background:#fff}.nav.navbar-top-links>li>a:hover,.nav.navbar-top-links>li>a:focus{background-color:transparent}
