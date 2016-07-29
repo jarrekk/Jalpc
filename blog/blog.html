@@ -17,7 +17,7 @@ permalink: /blog/
         <div class="wrapper wrapper-content animated fadeInRight">
 
             <!-- latest 10 blog -->
-			{% for post in site.posts limit:10 %} 
+			{% for post in site.posts limit:10 %}
             <div class="vote-item">
                 <div class="row">
                     <div class="col-md-10">
@@ -38,13 +38,13 @@ permalink: /blog/
                         </div>
                     </div>
                     <div class="col-md-2 ">
-                        <div class="vote-icon-right">
+                        <div class="vote-icon">
                             {% if post.icon %}<i class="fa {{ post.icon }}"> </i>{% endif %}
                         </div>
                     </div>
                 </div>
             </div>
-            {% endfor %} 
+            {% endfor %}
 
         </div>
     </div>
