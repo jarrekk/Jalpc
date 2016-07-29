@@ -647,4 +647,4 @@ body.boxed-layout.skin-3 #wrapper{background:#3e2c42}.skin-3 .nav-header{backgro
 .fixed-sidebar.body-small.mini-navbar .navbar-static-side{display:block}.ibox-tools{float:none;text-align:right;display:block}}@media(max-width:350px){.timeline-item .date{text-align:left;width:110px;position:relative;padding-top:30px}
 .timeline-item .date i{position:absolute;top:0;left:15px;padding:5px;width:30px;text-align:center;border:1px solid #e7eaec;background:#f8f8f8}.timeline-item .content{border-left:none;border-top:1px solid #e7eaec;padding-top:10px;min-height:100px}
 .nav.navbar-top-links li.dropdown{display:none}.ibox-tools{float:none;text-align:left;display:inline-block}}@media(max-width:1000px){.welcome-message{display:none}
-}@media print{nav.navbar-static-side{display:none}#page-wrapper{margin:0}}
+}@media print{nav.navbar-static-side{display:none}#page-wrapper{margin:0}}.row{margin:0!important}
