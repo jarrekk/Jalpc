@@ -175,6 +175,8 @@ The pagination in jekyll is not very perfect,so I use front-end web method,there
 
 ### Page counter
 
+Many third party page counter platform is to slow,so I count my website page view myself,the javascript file is `static/js/count_index.js`,the backend is [Leancloud](https://leancloud.cn).
+
 ### Bilingual Page
 
 The landing page of the blog is bilingual page,when you click national flag,the page language changes.The fllowing is how to set up bilingual page.
