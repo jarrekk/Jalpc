@@ -205,7 +205,6 @@ permalink: /
 
         </div>
     </div>
-
 </section>
 
 <section id="skills" class="team features">
@@ -379,7 +378,6 @@ permalink: /
 </section>
 
 <section id="blog" class="navy-section testimonials" style="margin-top: 0">
-
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
@@ -389,7 +387,6 @@ permalink: /
             </div>
         </div>
     </div>
-
 </section>
 
 <section id="link" class="contact features">
@@ -430,14 +427,11 @@ permalink: /
 
 
 <script>
-
     $(document).ready(function () {
-
         $('body').scrollspy({
             target: '.navbar-fixed-top',
             offset: 80
         });
-
         // Page scrolling feature
         $('a.page-scroll').bind('click', function(event) {
             var link = $(this);
@@ -448,7 +442,6 @@ permalink: /
             $("#navbar").collapse('hide');
         });
     });
-
     var cbpAnimatedHeader = (function() {
         var docElem = document.documentElement,
                 header = document.querySelector( '.navbar-default' ),
@@ -478,16 +471,12 @@ permalink: /
         init();
 
     })();
-
     // Activate WOW.js plugin for animation on scrol
     new WOW().init();
-
 </script>
 
 <script>
-
     $(document).ready(function (){
-
         $.i18n.init({
             resGetPath: 'static/locales/__lng__.json',
             load: 'unspecific',
@@ -504,7 +493,6 @@ permalink: /
             $('#i18_blog').i18n();
             $('#i18_link').i18n();
         });
-
         $('.set_en').on('click', function (){
             i18n.setLng('en', function(){
                 $('.i18container').i18n();
@@ -516,12 +504,10 @@ permalink: /
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();
                 $('#i18_link').i18n();
-
                 // $('.set_en').addClass('active');
                 // $('.set_cn').removeClass('active');
             });
         });
-
         $('.set_cn').on('click', function (){
             i18n.setLng('cn', function(){
                 $('.i18container').i18n();
@@ -533,12 +519,9 @@ permalink: /
                 $('#i18_career').i18n();
                 $('#i18_blog').i18n();
                 $('#i18_link').i18n();
-
                 // $('.set_cn').addClass('active');
                 // $('.set_en').removeClass('active');
             });
         });
-
     });
-
 </script>

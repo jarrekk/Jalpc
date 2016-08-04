@@ -9,6 +9,9 @@ baseurl: "/"
 url: "http://www.jack003.com"
 # url: "http://127.0.0.1:4000"
 
+# blog img path
+img_path: 'http://www.jack003.com/static/img/blog'
+
 # author
 author:
   name: 'Jack'
@@ -86,9 +89,6 @@ ba:
 # google analytics
 ga:
   id: UA-73784599-1
-
-# blog img path
-img_path: '/static/img/blog'
 
 # Build settings
 encoding: "utf-8"
