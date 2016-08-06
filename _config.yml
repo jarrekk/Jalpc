@@ -1,12 +1,12 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "Jalpc"
-description: "Jack's blog,use Jekyll and github pages."
-keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
+title: "Tongyun Wu"
+description: "Tongyun Wu's blog,use Jekyll and github pages."
+keywords: "Tongyun Wu,Tony,blog,Jekyll,github,gh-pages"
 
 baseurl: "/"
-url: "http://www.jack003.com"
+url: "wutongy.github.io"
 # url: "http://127.0.0.1:4000"
 
 # blog img path
@@ -14,12 +14,12 @@ img_path: 'http://www.jack003.com/static/img/blog'
 
 # author
 author:
-  name: 'Jack'
-  first_name: 'Jia'
-  last_name: 'Kun'
-  email: 'me@jack003.com'
-  facebook_username: 'jiakunnj'
-  github_username: 'Jack614'
+  name: 'Tony'
+  first_name: 'Tongyun'
+  last_name: 'Wu'
+  email: 'tongyun.wu@columbia.edu'
+  facebook_username: 'Tongyun Wu'
+  github_username: 'wutongy'
   head_img: 'static/img/landing/Jack.jpg'
 
 # social link
