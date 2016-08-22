@@ -14,7 +14,7 @@ It's pretty minimal, but leverages large type and drastic contrast to make a sta
 
 The landing page of the blog is bilingual page.
 
-If you like this Jekyll theme,please give me encouragement and star this project,I will make it better.
+It is my pleasure to contact me, you can give me your website or some advice about my website. Let's build a wonderful Jekyll theme together!
 
 ## Ad
 
@@ -61,8 +61,8 @@ author:
 
 # social link
 jingyu:
-  first_name: 'Yu'
-  last_name: 'Jing'
+  first_name: ''
+  last_name: 'Celine'
   description: 'Painter.'
   link: 'http://angular.jack003.com'
   email: '805963294@qq.com'
@@ -354,4 +354,3 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
 5. Create new Pull Request
-

@@ -34,7 +34,7 @@ permalink: /database/
                     </p>
                     <div class="row">
                         <div class="col-md-6">
-                                <h5>Tags:</h5>
+                                <h5 style="display: inline;">Tags:</h5>
                                 {% for tag in post.tags %}
                                     <button class="btn btn-white btn-xs" type="button">{{ tag }}</button>
                                 {% endfor %}
@@ -42,7 +42,7 @@ permalink: /database/
                         <div class="col-md-6">
                             <div class="small text-right">
                                 <h5>Stats:</h5>
-                                <div> 
+                                <div>
                                 {% if site.changyan %}
                                     <i class="fa fa-comments-o"> </i> <span id = "url::{{post.url | prepend: site.url}}" class = "cy_cmt_count" ></span> comments
                                 {% endif %}
