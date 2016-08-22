@@ -3,38 +3,38 @@ layout: blog
 title: index
 permalink: /
 ---
-<div class="navbar-wrapper">
-        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-            <div class="container">
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
-                </div>
-                <div id="navbar" class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav navbar-right" id="i18_navbar">
-                        <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">{{ site.landing.home }}</span></a></li>
-                        <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">{{ site.landing.about }}</span></a></li>
-                        <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">{{ site.landing.career }}</span></a></li>
-                        <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
-                        <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
-                        <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
-                        <li><a class="page-scroll" href="#link"><span data-i18n="nav.link">{{ site.landing.link }}</span></a></li>
-                        <li>
-                            <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-                        </li>
-                        <li>
-                            <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-                        </li>
 
-                    </ul>
-                </div>
+<div class="navbar-wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
             </div>
-        </nav>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-right" id="i18_navbar">
+                    <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">{{ site.landing.home }}</span></a></li>
+                    <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">{{ site.landing.about }}</span></a></li>
+                    <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">{{ site.landing.career }}</span></a></li>
+                    <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
+                    <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
+                    <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
+                    <li><a class="page-scroll" href="#link"><span data-i18n="nav.link">{{ site.landing.link }}</span></a></li>
+                    <li>
+                        <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                    </li>
+                    <li>
+                        <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 </div>
 <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">
@@ -52,7 +52,6 @@ permalink: /
             </div>
             <!-- Set background for slide in css -->
             <div class="header-back one"></div>
-
         </div>
         <div class="item">
             <div class="container">
@@ -72,7 +71,6 @@ permalink: /
         <span class="sr-only">Next</span>
     </a>
 </div>
-
 <section id="about_me" class="features">
     <div class="container" id="i18_about_me">
         <div class="row m-b-lg">
@@ -142,7 +140,6 @@ permalink: /
         </div>
     </div>
 </section>
-
 <section id="career" class="timeline features gray-section">
     <div class="container" id="i18_career">
         <div class="row">
@@ -152,7 +149,6 @@ permalink: /
             </div>
         </div>
         <div class="row features-block">
-
             <div class="col-lg-12">
                 <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
                     <!-- nextcode -->
@@ -163,7 +159,8 @@ permalink: /
                         <div class="vertical-timeline-content wow rotateInUpRight">
                             <h2><span data-i18n="career.nextcode">Nextcode</span></h2>
                             <p><span data-i18n="career.nextcode_des">Now I am in Nextcode and develop website with Python code for genetic analysis. </span></p>
-                            <span class="vertical-date"><span data-i18n="career.nextcode_date"> Apr. 2016 </span><br/> <small><span data-i18n="career.nextcode_job">Python Developer</span></small> </span>
+                            <span class="vertical-date"><span data-i18n="career.nextcode_date"> Apr. 2016 </span>
+                            <br/> <small><span data-i18n="career.nextcode_job">Python Developer</span></small> </span>
                         </div>
                     </div>
                     <!-- netease game -->
@@ -174,7 +171,8 @@ permalink: /
                         <div class="vertical-timeline-content wow rotateInUpLeft">
                             <h2><span data-i18n="career.netease">Netease Game</span></h2>
                             <p><span data-i18n="career.netease_des">In Netease game, I learned game service system and use Python code for ops. </span></p>
-                            <span class="vertical-date"><span data-i18n="career.netease_date"> Jun. 2015 </span><br/> <small><span data-i18n="career.netease_job">Dev Ops</span></small> </span>
+                            <span class="vertical-date"><span data-i18n="career.netease_date"> Jun. 2015 </span>
+                            <br/> <small><span data-i18n="career.netease_job">Dev Ops</span></small> </span>
                         </div>
                     </div>
                     <!-- uloud -->
@@ -185,7 +183,8 @@ permalink: /
                         <div class="vertical-timeline-content wow rotateInUpRight">
                             <h2><span data-i18n="career.ucloud">Ucloud</span></h2>
                             <p><span data-i18n="career.ucloud_des">In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.</span></p>
-                            <span class="vertical-date"><span data-i18n="career.ucloud_date"> Sep. 2013 </span><br/> <small><span data-i18n="career.ucloud_job">Dev Ops</span></small> </span>
+                            <span class="vertical-date"><span data-i18n="career.ucloud_date"> Sep. 2013 </span>
+                            <br/> <small><span data-i18n="career.ucloud_job">Dev Ops</span></small> </span>
                         </div>
                     </div>
                     <!-- student -->
@@ -196,17 +195,15 @@ permalink: /
                         <div class="vertical-timeline-content wow rotateInUpLeft">
                             <h2><span data-i18n="career.college">Graduation</span></h2>
                             <p><span data-i18n="career.college_des">At July 2013,I graduated from college and started my IT technology tour.</span></p>
-                            <span class="vertical-date"><span data-i18n="career.college_date"> Jul. 2013 </span><br/> <small><span data-i18n="career.college_job">Student</span></small> </span>
+                            <span class="vertical-date"><span data-i18n="career.college_date"> Jul. 2013 </span>
+                            <br/> <small><span data-i18n="career.college_job">Student</span></small> </span>
                         </div>
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 </section>
-
 <section id="skills" class="team features">
     <div class="container">
         <div class="row">
@@ -216,74 +213,86 @@ permalink: /
             </div>
         </div>
         <div class="row features-block">
-          <div class="row">
-            <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
-              <p>Python</p>
-            </div>
-            <div class="col-lg-7 features-text wow fadeInLeft">
-                <div class="progress progress-bar-default">
-                    <div style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" class="progress-bar">
-                        <!-- <span class="sr-only">85% Complete (success)</span> -->
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
+                    <p>Python</p>
+                </div>
+                <div class="col-lg-7 features-text wow fadeInLeft">
+                    <div class="progress progress-bar-default">
+                        <div style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" class="progress-bar">
+                            <!-- <span class="sr-only">85% Complete (success)</span> -->
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
-              <p>HTML</p>
-            </div>
-            <div class="col-lg-7 wow fadeInRight">
-                <div class="progress progress-bar-default">
-                    <div style="width: 65%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
-                        <!-- <span class="sr-only">65% Complete (success)</span> -->
+            <br>
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="col-lg-7 wow fadeInRight">
+                    <div class="progress progress-bar-default">
+                        <div style="width: 65%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                            <!-- <span class="sr-only">65% Complete (success)</span> -->
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-lg-1 col-lg-offset-2 wow fadeInLeft">
-              <p>Linux/Shell</p>
-            </div>
-            <div class="col-lg-7 wow fadeInLeft">
-                <div class="progress progress-bar-default">
-                    <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
-                        <!-- <span class="sr-only">80% Complete (success)</span> -->
+            <br>
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 wow fadeInLeft">
+                    <p>Linux/Shell</p>
+                </div>
+                <div class="col-lg-7 wow fadeInLeft">
+                    <div class="progress progress-bar-default">
+                        <div style="width: 75%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar">
+                            <!-- <span class="sr-only">80% Complete (success)</span> -->
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
-              <p>AngularJS</p>
-            </div>
-            <div class="col-lg-7 wow fadeInRight">
-                <div class="progress progress-bar-default">
-                    <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
-                        <!-- <span class="sr-only">80% Complete (success)</span> -->
+            <br>
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
+                    <p>jQuery</p>
+                </div>
+                <div class="col-lg-7 wow fadeInRight">
+                    <div class="progress progress-bar-default">
+                        <div style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar" class="progress-bar">
+                            <!-- <span class="sr-only">80% Complete (success)</span> -->
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
-          <br>
-          <div class="row">
-            <div class="col-lg-1 col-lg-offset-2 wow fadeInLeft">
-              <p>Ionic</p>
-            </div>
-            <div class="col-lg-7 wow fadeInLeft">
-                <div class="progress progress-bar-default">
-                    <div style="width: 60%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="60" role="progressbar" class="progress-bar">
-                        <!-- <span class="sr-only">60% Complete (success)</span> -->
+            <br>
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
+                    <p>AngularJS</p>
+                </div>
+                <div class="col-lg-7 wow fadeInRight">
+                    <div class="progress progress-bar-default">
+                        <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
+                            <!-- <span class="sr-only">80% Complete (success)</span> -->
+                        </div>
                     </div>
                 </div>
             </div>
-          </div>
+            <br>
+            <div class="row">
+                <div class="col-lg-1 col-lg-offset-2 wow fadeInLeft">
+                    <p>Ionic</p>
+                </div>
+                <div class="col-lg-7 wow fadeInLeft">
+                    <div class="progress progress-bar-default">
+                        <div style="width: 65%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
+                            <!-- <span class="sr-only">60% Complete (success)</span> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
-
 <section id="project" class="project gray-section features">
     <div class="container" id="i18_projects">
         <div class="row m-b-lg">
@@ -300,25 +309,14 @@ permalink: /
                     <p><span data-i18n="projects.saplatform">Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.</span></p>
                     <ul class="list-inline">
                         <li>
-                            <a class="github-button" href="{{ site.project.saplatform.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-star"
-                            data-count-href="{{ site.project.saplatform.url | append: '/stargazers' }}"
-                            data-count-api="{{ site.project.saplatform.url | prepend: '/repos' | append: '#stargazers_count' }}"
-                            data-count-aria-label="# stargazers on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                            <a class="github-button" href="{{ site.project.saplatform.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ site.project.saplatform.url | append: '/stargazers' }}" data-count-api="{{ site.project.saplatform.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
                         </li>
                         <li>
-                            <a class="github-button" href="{{ site.project.saplatform.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-fork"
-                            data-count-href="{{ site.project.saplatform.url | append: '/forks' }}"
-                            data-count-api="{{ site.project.saplatform.url | prepend: '/repos' | append: '#forks_count' }}"
-                            data-count-aria-label="# forks on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                            <a class="github-button" href="{{ site.project.saplatform.url | prepend: 'https://github.com'}}" data-icon="octicon-fork" data-count-href="{{ site.project.saplatform.url | append: '/network/members' }}" data-count-api="{{ site.project.saplatform.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
             <div class="col-sm-6 wow fadeInRight">
                 <div class="team-member">
                     <img src="{{ site.project.jalpc.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
@@ -326,26 +324,15 @@ permalink: /
                     <p><span data-i18n="projects.jalpc">Jalpc is a simple, beautiful and swift theme for Jekyll. It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.</span></p>
                     <ul class="list-inline">
                         <li>
-                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-star"
-                            data-count-href="{{ site.project.jalpc.url | append: '/stargazers' }}"
-                            data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#stargazers_count' }}"
-                            data-count-aria-label="# stargazers on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ site.project.jalpc.url | append: '/stargazers' }}" data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
                         </li>
                         <li>
-                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-fork"
-                            data-count-href="{{ site.project.jalpc.url | append: '/forks' }}"
-                            data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#forks_count' }}"
-                            data-count-aria-label="# forks on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                            <a class="github-button" href="{{ site.project.jalpc.url | prepend: 'https://github.com'}}" data-icon="octicon-fork" data-count-href="{{ site.project.jalpc.url | append: '/network/members' }}" data-count-api="{{ site.project.jalpc.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-
         <div class="row">
             <div class="col-sm-6 wow fadeInLeft">
                 <div class="team-member">
@@ -354,25 +341,14 @@ permalink: /
                     <p><span data-i18n="projects.angularjs">Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.</span></p>
                     <ul class="list-inline">
                         <li>
-                            <a class="github-button" href="{{ site.project.angularjs.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-star"
-                            data-count-href="{{ site.project.angularjs.url | append: '/stargazers' }}"
-                            data-count-api="{{ site.project.angularjs.url | prepend: '/repos' | append: '#stargazers_count' }}"
-                            data-count-aria-label="# stargazers on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                            <a class="github-button" href="{{ site.project.angularjs.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ site.project.angularjs.url | append: '/stargazers' }}" data-count-api="{{ site.project.angularjs.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
                         </li>
                         <li>
-                            <a class="github-button" href="{{ site.project.angularjs.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-fork"
-                            data-count-href="{{ site.project.angularjs.url | append: '/forks' }}"
-                            data-count-api="{{ site.project.angularjs.url | prepend: '/repos' | append: '#forks_count' }}"
-                            data-count-aria-label="# forks on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                            <a class="github-button" href="{{ site.project.angularjs.url | prepend: 'https://github.com'}}" data-icon="octicon-fork" data-count-href="{{ site.project.angularjs.url | append: '/network/members' }}" data-count-api="{{ site.project.angularjs.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
                         </li>
                     </ul>
                 </div>
             </div>
-
             <div class="col-sm-6 wow fadeInRight">
                 <div class="team-member">
                     <img src="{{ site.project.Rsser.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
@@ -380,20 +356,10 @@ permalink: /
                     <p><span data-i18n="projects.rsser">Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually.</span></p>
                     <ul class="list-inline">
                         <li>
-                            <a class="github-button" href="{{ site.project.Rsser.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-star"
-                            data-count-href="{{ site.project.Rsser.url | append: '/stargazers' }}"
-                            data-count-api="{{ site.project.Rsser.url | prepend: '/repos' | append: '#stargazers_count' }}"
-                            data-count-aria-label="# stargazers on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                            <a class="github-button" href="{{ site.project.Rsser.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ site.project.Rsser.url | append: '/stargazers' }}" data-count-api="{{ site.project.Rsser.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
                         </li>
                         <li>
-                            <a class="github-button" href="{{ site.project.Rsser.url | prepend: 'https://github.com'}}"
-                            data-icon="octicon-fork"
-                            data-count-href="{{ site.project.Rsser.url | append: '/forks' }}"
-                            data-count-api="{{ site.project.Rsser.url | prepend: '/repos' | append: '#forks_count' }}"
-                            data-count-aria-label="# forks on GitHub"
-                            aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                            <a class="github-button" href="{{ site.project.Rsser.url | prepend: 'https://github.com'}}" data-icon="octicon-fork" data-count-href="{{ site.project.Rsser.url | append: '/network/members' }}" data-count-api="{{ site.project.Rsser.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
                         </li>
                     </ul>
                 </div>
@@ -402,19 +368,21 @@ permalink: /
     </div>
     <br>
 </section>
-
 <section id="blog" class="navy-section testimonials" style="margin-top: 0">
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
-                <br><br><br>
+                <br>
+                <br>
+                <br>
                 <a class="btn btn-lg btn-default btn-rounded btn-outline wow bounceIn" href="/blog/"><span data-i18n="blog.my_blog">My Blog</span></a>
-                <br><br><br>
+                <br>
+                <br>
+                <br>
             </div>
         </div>
     </div>
 </section>
-
 <section id="link" class="contact features">
     <div class="container" id="i18_link">
         <div class="row m-b-lg">
@@ -449,66 +417,76 @@ permalink: /
         </div>
     </div>
 </section>
-
-
-
 <script>
-    $(document).ready(function () {
-        $('body').scrollspy({
-            target: '.navbar-fixed-top',
-            offset: 80
-        });
-        // Page scrolling feature
-        $('a.page-scroll').bind('click', function(event) {
-            var link = $(this);
-            $('html, body').stop().animate({
-                scrollTop: $(link.attr('href')).offset().top - 50
-            }, 500);
-            event.preventDefault();
-            $("#navbar").collapse('hide');
-        });
+$(document).ready(function() {
+    $('body').scrollspy({
+        target: '.navbar-fixed-top',
+        offset: 80
     });
-    var cbpAnimatedHeader = (function() {
-        var docElem = document.documentElement,
-                header = document.querySelector( '.navbar-default' ),
-                didScroll = false,
-                changeHeaderOn = 200;
-        function init() {
-            window.addEventListener( 'scroll', function( event ) {
-                if( !didScroll ) {
-                    didScroll = true;
-                    setTimeout( scrollPage, 250 );
-                }
-            }, false );
-        }
-        function scrollPage() {
-            var sy = scrollY();
-            if ( sy >= changeHeaderOn ) {
-                $(header).addClass('navbar-scroll')
-            }
-            else {
-                $(header).removeClass('navbar-scroll')
-            }
-            didScroll = false;
-        }
-        function scrollY() {
-            return window.pageYOffset || docElem.scrollTop;
-        }
-        init();
+    // Page scrolling feature
+    $('a.page-scroll').bind('click', function(event) {
+        var link = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $(link.attr('href')).offset().top - 50
+        }, 500);
+        event.preventDefault();
+        $("#navbar").collapse('hide');
+    });
+});
+var cbpAnimatedHeader = (function() {
+    var docElem = document.documentElement,
+        header = document.querySelector('.navbar-default'),
+        didScroll = false,
+        changeHeaderOn = 200;
 
-    })();
-    // Activate WOW.js plugin for animation on scrol
-    new WOW().init();
+    function init() {
+        window.addEventListener('scroll', function(event) {
+            if (!didScroll) {
+                didScroll = true;
+                setTimeout(scrollPage, 250);
+            }
+        }, false);
+    }
+
+    function scrollPage() {
+        var sy = scrollY();
+        if (sy >= changeHeaderOn) {
+            $(header).addClass('navbar-scroll');
+        } else {
+            $(header).removeClass('navbar-scroll');
+        }
+        didScroll = false;
+    }
+
+    function scrollY() {
+        return window.pageYOffset || docElem.scrollTop;
+    }
+    init();
+
+})();
+// Activate WOW.js plugin for animation on scrol
+new WOW().init();
 </script>
-
 <script>
-    $(document).ready(function (){
-        $.i18n.init({
-            resGetPath: 'static/locales/__lng__.json',
-            load: 'unspecific',
-            fallbackLng: false,
-            lng: 'en'
-        }, function (t){
+$(document).ready(function() {
+    $.i18n.init({
+        resGetPath: 'static/locales/__lng__.json',
+        load: 'unspecific',
+        fallbackLng: false,
+        lng: 'en'
+    }, function(t) {
+        $('.i18container').i18n();
+        // $('#i18_title').i18n();
+        $('#i18_navbar').i18n();
+        $('#i18_about_me').i18n();
+        $('#i18_skills').i18n();
+        $('#i18_projects').i18n();
+        $('#i18_career').i18n();
+        $('#i18_blog').i18n();
+        $('#i18_link').i18n();
+    });
+    $('.set_en').on('click', function() {
+        i18n.setLng('en', function() {
             $('.i18container').i18n();
             // $('#i18_title').i18n();
             $('#i18_navbar').i18n();
@@ -518,36 +496,24 @@ permalink: /
             $('#i18_career').i18n();
             $('#i18_blog').i18n();
             $('#i18_link').i18n();
-        });
-        $('.set_en').on('click', function (){
-            i18n.setLng('en', function(){
-                $('.i18container').i18n();
-                // $('#i18_title').i18n();
-                $('#i18_navbar').i18n();
-                $('#i18_about_me').i18n();
-                $('#i18_skills').i18n();
-                $('#i18_projects').i18n();
-                $('#i18_career').i18n();
-                $('#i18_blog').i18n();
-                $('#i18_link').i18n();
-                // $('.set_en').addClass('active');
-                // $('.set_cn').removeClass('active');
-            });
-        });
-        $('.set_cn').on('click', function (){
-            i18n.setLng('cn', function(){
-                $('.i18container').i18n();
-                // $('#i18_title').i18n();
-                $('#i18_navbar').i18n();
-                $('#i18_about_me').i18n();
-                $('#i18_skills').i18n();
-                $('#i18_projects').i18n();
-                $('#i18_career').i18n();
-                $('#i18_blog').i18n();
-                $('#i18_link').i18n();
-                // $('.set_cn').addClass('active');
-                // $('.set_en').removeClass('active');
-            });
+            // $('.set_en').addClass('active');
+            // $('.set_cn').removeClass('active');
         });
     });
+    $('.set_cn').on('click', function() {
+        i18n.setLng('zh', function() {
+            $('.i18container').i18n();
+            // $('#i18_title').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_me').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_career').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_link').i18n();
+            // $('.set_cn').addClass('active');
+            // $('.set_en').removeClass('active');
+        });
+    });
+});
 </script>
