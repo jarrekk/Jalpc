@@ -1,7 +1,7 @@
 ---
 layout: blog
-title: index
-permalink: /
+title: about
+permalink: /about
 ---
 <div class="navbar-wrapper">
         <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
@@ -37,111 +37,84 @@ permalink: /
         </nav>
 </div>
 <div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
-    <ol class="carousel-indicators">
-        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
-        <li data-target="#inSlider" data-slide-to="1"></li>
-    </ol>
     <div class="carousel-inner" role="listbox">
         <div class="item active">
-            <div class="container">
-                <div class="carousel-caption">
-                </div>
-                <div class="carousel-image wow zoomIn">
-                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
-                </div>
-            </div>
             <!-- Set background for slide in css -->
-            <div class="header-back one"></div>
+
 
         </div>
-        <div class="item">
-            <div class="container">
-                <div class="carousel-caption blank">
+        <section id="about_me" class="features"style="background-color: #1c598e;height: 350px;">
+            <div class="container" id="i18_about_me">
+                <div class="row m-b-lg">
+                    <div class="col-lg-12 text-center">
+                        <div class="navy-line"></div>
+                        <h1><span data-i18n="about_me.about_me" style="color: #ffffff;">About Me</span></h1>
+                        <!-- <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- python -->
+                    <div class="col-xs-2 wow fadeInLeft">
+                        <div class="team-member">
+                            <div class="vote-icon">
+                                <i class="icon-python"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- linux -->
+                    <div class="col-xs-2 wow fadeInLeft">
+                        <div class="team-member">
+                            <div class="vote-icon">
+                                <i class="icon-shell"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- avatar -->
+                    <div class="col-xs-4">
+                        <div class="team-member wow zoomIn">
+                            <h4><span class="navy">{{ site.author.last_name }}  {{ site.author.first_name }}</span></h4>
+                            <ul class="list-inline social-icon">
+                                <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
+                                </li>
+                                <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
+                                </li>
+                                <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!-- html -->
+                    <div class="col-xs-2 wow fadeInRight">
+                        <div class="team-member">
+                            <div class="vote-icon">
+                                <i class="icon-angular"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- docker -->
+                    <div class="col-xs-2 wow fadeInRight">
+                        <div class="team-member">
+                            <div class="vote-icon">
+                                <i class="icon-docker"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
+                        <p><span data-i18n="about_me.des" style="color: #ffffff;">
+                            I am a Python engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.
+                        </span></p>
+                    </div>
                 </div>
             </div>
-            <!-- Set background for slide in css -->
-            <div class="header-back two"></div>
-        </div>
+        </section>
     </div>
-    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
 </div>
 
-<section id="about_me" class="features">
-    <div class="container" id="i18_about_me">
-        <div class="row m-b-lg">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1><span data-i18n="about_me.about_me">About Me</span></h1>
-                <!-- <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p> -->
-            </div>
-        </div>
-        <div class="row">
-            <!-- python -->
-            <div class="col-xs-2 wow fadeInLeft">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-python"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- linux -->
-            <div class="col-xs-2 wow fadeInLeft">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-shell"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- avatar -->
-            <div class="col-xs-4">
-                <div class="team-member wow zoomIn">
-                    <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
-                    <h4><span class="navy">{{ site.author.last_name }}</span> {{ site.author.first_name }}</h4>
-                    <ul class="list-inline social-icon">
-                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- html -->
-            <div class="col-xs-2 wow fadeInRight">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-angular"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- docker -->
-            <div class="col-xs-2 wow fadeInRight">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-docker"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><span data-i18n="about_me.des">
-                    I am a Python engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.
-                </span></p>
-            </div>
-        </div>
-    </div>
-</section>
+
 
 <section id="career" class="timeline features gray-section">
     <div class="container" id="i18_career">
@@ -408,7 +381,7 @@ permalink: /
         <div class="row">
             <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
                 <br><br><br>
-                <a class="btn btn-lg btn-default btn-rounded btn-outline wow bounceIn" href="/blog/"><span data-i18n="blog.my_blog">My Blog</span></a>
+                <a class="btn btn-lg btn-default btn-rounded btn-outline wow bounceIn" href="/"><span data-i18n="blog.my_blog">My Blog</span></a>
                 <br><br><br>
             </div>
         </div>
@@ -502,13 +475,25 @@ permalink: /
 </script>
 
 <script>
-    $(document).ready(function (){
-        $.i18n.init({
-            resGetPath: 'static/locales/__lng__.json',
-            load: 'unspecific',
-            fallbackLng: false,
-            lng: 'en'
-        }, function (t){
+$(document).ready(function (){
+    $.i18n.init({
+        resGetPath: '/static/locales/__lng__.json',
+        load: 'unspecific',
+        fallbackLng: false,
+        lng: 'en'
+    }, function (t){
+        $('.i18container').i18n();
+        // $('#i18_title').i18n();
+        $('#i18_navbar').i18n();
+        $('#i18_about_me').i18n();
+        $('#i18_skills').i18n();
+        $('#i18_projects').i18n();
+        $('#i18_career').i18n();
+        $('#i18_blog').i18n();
+        $('#i18_link').i18n();
+    });
+    $('.set_en').on('click', function (){
+        i18n.setLng('en', function(){
             $('.i18container').i18n();
             // $('#i18_title').i18n();
             $('#i18_navbar').i18n();
@@ -518,36 +503,24 @@ permalink: /
             $('#i18_career').i18n();
             $('#i18_blog').i18n();
             $('#i18_link').i18n();
-        });
-        $('.set_en').on('click', function (){
-            i18n.setLng('en', function(){
-                $('.i18container').i18n();
-                // $('#i18_title').i18n();
-                $('#i18_navbar').i18n();
-                $('#i18_about_me').i18n();
-                $('#i18_skills').i18n();
-                $('#i18_projects').i18n();
-                $('#i18_career').i18n();
-                $('#i18_blog').i18n();
-                $('#i18_link').i18n();
-                // $('.set_en').addClass('active');
-                // $('.set_cn').removeClass('active');
-            });
-        });
-        $('.set_cn').on('click', function (){
-            i18n.setLng('cn', function(){
-                $('.i18container').i18n();
-                // $('#i18_title').i18n();
-                $('#i18_navbar').i18n();
-                $('#i18_about_me').i18n();
-                $('#i18_skills').i18n();
-                $('#i18_projects').i18n();
-                $('#i18_career').i18n();
-                $('#i18_blog').i18n();
-                $('#i18_link').i18n();
-                // $('.set_cn').addClass('active');
-                // $('.set_en').removeClass('active');
-            });
+            // $('.set_en').addClass('active');
+            // $('.set_cn').removeClass('active');
         });
     });
+    $('.set_cn').on('click', function (){
+        i18n.setLng('cn', function(){
+            $('.i18container').i18n();
+            // $('#i18_title').i18n();
+            $('#i18_navbar').i18n();
+            $('#i18_about_me').i18n();
+            $('#i18_skills').i18n();
+            $('#i18_projects').i18n();
+            $('#i18_career').i18n();
+            $('#i18_blog').i18n();
+            $('#i18_link').i18n();
+            // $('.set_cn').addClass('active');
+            // $('.set_en').removeClass('active');
+        });
+    });
+});
 </script>

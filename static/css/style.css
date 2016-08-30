@@ -6710,21 +6710,16 @@ body.landing-page {
   height: 470px;
   width: 100%;
 }
-.landing-page .header-back.one {
-  background: url('../img/landing/header_one.jpg') 50% 0 no-repeat;
-}
-.landing-page .header-back.two {
-  background: url('../img/landing/header_two.jpg') 50% 0 no-repeat;
-}
+
 .landing-page .carousel {
-  height: 470px;
+  height: 300px;
 }
 .landing-page .carousel-caption {
   z-index: 10;
 }
 .landing-page .carousel .item {
-  height: 470px;
-  background-color: #777;
+  height: 300px;
+  background-color: #1c598e;
 }
 .landing-page .carousel-inner > .item > img {
   position: absolute;

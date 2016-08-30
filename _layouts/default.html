@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-	{% if page.title != 'index' %}
+	{% if page.title != 'about' %}
 	    {% include head.html %}
 	{% else %}
 		{% include index_head.html %}
@@ -10,13 +10,13 @@
 
 <body id="page-top" class="landing-page">
 
-	{% if page.title != 'index' %}
+	{% if page.title != 'about' %}
 	    {% include header.html %}
 	{% endif %}
 
     {{ content }}
 
-	{% if page.title != 'index' %}
+	{% if page.title != 'about' %}
 	    {% include footer.html %}
 	{% else %}
 		{% include index_footer.html %}

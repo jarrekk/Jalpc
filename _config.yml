@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "Jalpc"
+title: "Data Me What"
 description: "Jack's blog,use Jekyll and github pages."
 keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
 baseurl: "/"
@@ -13,10 +13,10 @@ img_path: 'http://www.jack003.com/static/img/blog'
 
 # author
 author:
-  name: 'Jack'
-  first_name: 'Jia'
-  last_name: 'Kun'
-  email: 'me@jack003.com'
+  name: 'TJ'
+  first_name: 'Spross'
+  last_name: 'TJ'
+  email: 'tjspross@gmail.com'
   facebook_username: 'jiakunnj'
   github_username: 'Jack614'
   head_img: 'static/img/landing/Jack.jpg'
@@ -69,9 +69,6 @@ index:
   life: 'Life'
 
 # donate
-donate:
-  wechat: 'static/img/pay/wechat.png'
-  alipay: 'static/img/pay/alipay.png'
 
 # comment
 changyan:
@@ -86,8 +83,6 @@ bshare:
   uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
 
 # baidu analytics
-ba:
-  uuid: 317acca9ef9255b934e46371e471431d
 
 # google analytics
 ga:
