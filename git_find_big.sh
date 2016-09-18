@@ -1,13 +1,5 @@
 #!/bin/bash
-#set -x 
 
-# Shows you the largest objects in your repo's pack file.
-# Written for osx.
-#
-# @see http://stubbisms.wordpress.com/2009/07/10/git-script-to-show-largest-pack-objects-and-trim-your-waist-line/
-# @author Antony Stubbs
-
-# set the internal field spereator to line break, so that we can iterate easily over the verify-pack output
 IFS=$'\n';
 
 # list all objects including their size, sort by size, take top 10
