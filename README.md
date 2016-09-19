@@ -327,13 +327,13 @@ Jalpc is always being improved by its users, so sometimes one may need to upgrad
 If `git remote -v` doesn't have an upstream listed, you can do the following to add it:
 
 ```
-git remote add upstream https://github.com/johnotander/pixyll.git
+git remote add upstream https://github.com/Jack614/jalpc_jekyll_theme.git
 ```
 
 ### Pull in the latest changes
 
 ```
-git pull upstream master
+git pull upstream gh-pages 
 ```
 
 There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
