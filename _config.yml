@@ -13,12 +13,12 @@ img_path: 'http://www.jack003.com/static/img/blog'
 
 # author
 author:
-  name: 'Brian J King'
-  first_name: 'Brian'
-  last_name: 'King'
-  email: 'brianjosephking@gmail.com'
-  facebook_username: 'brianjosephking'
-  github_username: 'brianjking'
+  name: 'Jack'
+  first_name: 'Jia'
+  last_name: 'Kun'
+  email: 'me@jack003.com'
+  facebook_username: 'jiakunnj'
+  github_username: 'Jack614'
   head_img: 'static/img/landing/Jack.jpg'
 
 # social link
@@ -91,7 +91,7 @@ ba:
 
 # google analytics
 ga:
-  id:
+  id: UA-73784599-1
 
 # Build settings
 encoding: "utf-8"
