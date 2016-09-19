@@ -333,7 +333,7 @@ git remote add upstream https://github.com/Jack614/jalpc_jekyll_theme.git
 ### Pull in the latest changes
 
 ```
-git pull upstream gh-pages 
+git pull upstream gh-pages
 ```
 
 There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
