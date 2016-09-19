@@ -316,7 +316,7 @@ If you want to give credit to the Jalpc theme with a link to my personal website
 
 ### Enjoy
 
-I hope you enjoy using Jalpc. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
+Hope you enjoy using Jalpc. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
 
 ## Upgrading Jalpc
 
