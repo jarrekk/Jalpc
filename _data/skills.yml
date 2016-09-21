@@ -1,0 +1,17 @@
+- name: 'Python'
+  level: 85
+
+- name: 'HTML/CSS'
+  level: 65
+
+- name: 'Linux/Shell'
+  level: 75
+
+- name: 'jQuery'
+  level: 70
+
+- name: 'AngularJS'
+  level: 80
+
+- name: 'Ionic'
+  level: 65
