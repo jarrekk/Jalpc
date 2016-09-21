@@ -1,0 +1,23 @@
+- name: 'Saplatform'
+  i18n: 'saplatform'
+  url: '/Jack614/saplatform'
+  img: 'static/img/landing/saplatform.png'
+  desc: 'Saplatform is a automated service for operations, it has asset management, project release, database access function, it can control mass servers.'
+
+- name: 'Jalpc'
+  i18n: 'jalpc'
+  url: '/Jack614/jalpc_jekyll_theme'
+  img: 'static/img/landing/jekyll.png'
+  desc: "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices."
+
+- name: 'Jalpc-A'
+  i18n: 'angularjs'
+  url: '/Jack614/Jalpc-A'
+  img: 'static/img/landing/angularjs.png'
+  desc: "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well."
+
+- name: 'Rsser'
+  i18n: 'rsser'
+  url: '/Jack614/Rsser'
+  img: 'static/img/landing/rsser.png'
+  desc: Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually.
