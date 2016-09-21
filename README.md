@@ -316,7 +316,7 @@ If you want to give credit to the Jalpc theme with a link to my personal website
 
 ### Enjoy
 
-I hope you enjoy using Jalpc. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
+Hope you enjoy using Jalpc. If you encounter any issues, please feel free to let me know by creating an issue. I'd love to help.
 
 ## Upgrading Jalpc
 
@@ -333,7 +333,7 @@ git remote add upstream https://github.com/Jack614/jalpc_jekyll_theme.git
 ### Pull in the latest changes
 
 ```
-git pull upstream master
+git pull upstream gh-pages
 ```
 
 There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
