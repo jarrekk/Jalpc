@@ -1,0 +1,17 @@
+- name: Python
+  percentage: 85
+
+- name: HTML/CSS
+  percentage: 65
+
+- name: Linux/Shell
+  percentage: 75
+
+- name: jQuery
+  percentage: 70
+
+- name: AngularJS
+  percentage: 80
+
+- name: Ionic
+  percentage: 65
