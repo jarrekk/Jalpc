@@ -63,10 +63,11 @@ author:
 
 ### Modify `_data/*.yml`
 
-These files are used to dynamically render pages, so you almost don't have to edit *html files* to change this theme to yours, besides you can use `jekyll serve --watch` to reload changes.
+These files are used to dynamically render pages, so you almost don't have to edit *html files* to change your own theme, besides you can use `jekyll serve --watch` to reload changes.
 
 The following is mapping between *yml file* to *sections*.
 
+* blog.yml  ==>  _includes/header.html(id="navbar")
 * careers.yml  ==>  index.html(id="careers")
 * links.yml  ==>  index.html(id="links")
 * navbar.yml  ==>  index.html(id="navbar")
