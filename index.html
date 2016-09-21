@@ -18,13 +18,9 @@ permalink: /
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right" id="i18_navbar">
-                    <li><a class="page-scroll" href="#page-top"><span data-i18n="nav.home">{{ site.landing.home }}</span></a></li>
-                    <li><a class="page-scroll" href="#about_me"><span data-i18n="nav.about_me">{{ site.landing.about }}</span></a></li>
-                    <li><a class="page-scroll" href="#career"><span data-i18n="nav.career">{{ site.landing.career }}</span></a></li>
-                    <li><a class="page-scroll" href="#skills"><span data-i18n="nav.skills">{{ site.landing.skills }}</span></a></li>
-                    <li><a class="page-scroll" href="#project"><span data-i18n="nav.projects">{{ site.landing.projects }}</span></a></li>
-                    <li><a class="page-scroll" href="#blog"><span data-i18n="nav.blog">{{ site.landing.blog }}</span></a></li>
-                    <li><a class="page-scroll" href="#link"><span data-i18n="nav.link">{{ site.landing.link }}</span></a></li>
+                {% for nav in site.data.navbar %}
+                    <li><a class="page-scroll" href="#{{ nav.name.href }}"><span data-i18n="{{ nav.name.i18n }}">{{ nav.name.detail }}</span></a></li>
+                {% endfor %}
                     <li>
                         <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
                     </li>
@@ -71,7 +67,7 @@ permalink: /
         <span class="sr-only">Next</span>
     </a>
 </div>
-<section id="about_me" class="features">
+<section id="about-me" class="features">
     <div class="container" id="i18_about_me">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
@@ -105,9 +101,9 @@ permalink: /
                     <ul class="list-inline social-icon">
                         <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
                         </li>
+                        <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
                         <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
                         </li>
-                        <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
                         </li>
                         <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
                         </li>
@@ -132,15 +128,13 @@ permalink: /
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p><span data-i18n="about_me.des">
-                    I am a Python engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.
-                </span></p>
+            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg wow zoomIn">
+                <p><span data-i18n="about_me.des">{{ site.author.desc }}</span></p>
             </div>
         </div>
     </div>
 </section>
-<section id="career" class="timeline features gray-section">
+<section id="careers" class="timeline features gray-section">
     <div class="container" id="i18_career">
         <div class="row">
             <div class="col-lg-12 text-center">
@@ -151,54 +145,20 @@ permalink: /
         <div class="row features-block">
             <div class="col-lg-12">
                 <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-                    <!-- nextcode -->
+                {% for career in site.data.careers %}
+                {% assign loopindex = forloop.index | modulo: 2 %}
                     <div class="vertical-timeline-block">
                         <div class="vertical-timeline-icon navy-bg wow rotateIn">
-                            <i class="fa fa-plus-square"></i>
+                            <i class="fa {{ career.icon }}"></i>
                         </div>
-                        <div class="vertical-timeline-content wow rotateInUpRight">
-                            <h2><span data-i18n="career.nextcode">Nextcode</span></h2>
-                            <p><span data-i18n="career.nextcode_des">Now I am in Nextcode and develop website with Python code for genetic analysis. </span></p>
-                            <span class="vertical-date"><span data-i18n="career.nextcode_date"> Apr. 2016 </span>
-                            <br/> <small><span data-i18n="career.nextcode_job">Python Developer</span></small> </span>
-                        </div>
-                    </div>
-                    <!-- netease game -->
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg wow rotateIn">
-                            <i class="fa fa-gamepad"></i>
-                        </div>
-                        <div class="vertical-timeline-content wow rotateInUpLeft">
-                            <h2><span data-i18n="career.netease">Netease Game</span></h2>
-                            <p><span data-i18n="career.netease_des">In Netease game, I learned game service system and use Python code for ops. </span></p>
-                            <span class="vertical-date"><span data-i18n="career.netease_date"> Jun. 2015 </span>
-                            <br/> <small><span data-i18n="career.netease_job">Dev Ops</span></small> </span>
+                        <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
+                            <h2><span data-i18n="career.{{ career.name.i18n }}">{{ career.name.detail }}</span></h2>
+                            <p><span data-i18n="career.{{ career.desc.i18n }}">{{ career.desc.detail }} </span></p>
+                            <span class="vertical-date"><span data-i18n="career.{{ career.date.i18n }}"> {{ career.date.detail }} </span>
+                            <br/> <small><span data-i18n="career.{{ career.job.i18n }}">{{ career.job.detail }}</span></small> </span>
                         </div>
                     </div>
-                    <!-- uloud -->
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg wow rotateIn">
-                            <i class="fa fa-cloud"></i>
-                        </div>
-                        <div class="vertical-timeline-content wow rotateInUpRight">
-                            <h2><span data-i18n="career.ucloud">Ucloud</span></h2>
-                            <p><span data-i18n="career.ucloud_des">In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.</span></p>
-                            <span class="vertical-date"><span data-i18n="career.ucloud_date"> Sep. 2013 </span>
-                            <br/> <small><span data-i18n="career.ucloud_job">Dev Ops</span></small> </span>
-                        </div>
-                    </div>
-                    <!-- student -->
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg wow rotateIn">
-                            <i class="fa fa-book"></i>
-                        </div>
-                        <div class="vertical-timeline-content wow rotateInUpLeft">
-                            <h2><span data-i18n="career.college">Graduation</span></h2>
-                            <p><span data-i18n="career.college_des">At July 2013,I graduated from college and started my IT technology tour.</span></p>
-                            <span class="vertical-date"><span data-i18n="career.college_date"> Jul. 2013 </span>
-                            <br/> <small><span data-i18n="career.college_job">Student</span></small> </span>
-                        </div>
-                    </div>
+                {% endfor %}
                 </div>
             </div>
         </div>
@@ -213,29 +173,25 @@ permalink: /
             </div>
         </div>
         <div class="row features-block">
-          {% for skill in site.data.skills %}
-            {% assign loopindex = forloop.index | modulo: 2 %}
+            {% for skill in site.data.skills %}
+                {% assign loopindex = forloop.index | modulo: 2 %}
             <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow
-                            {% if forloop.first == true %} features-text {% endif %}
-                            {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                <div class="col-lg-1 col-lg-offset-2 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
                     <p>{{ skill.name }}</p>
                 </div>
-                <div class="col-lg-7 wow
-                            {% if forloop.first == true %} features-text {% endif %}
-                            {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                <div class="col-lg-7 wow  {% if loopindex == 1 %} fadeInRight {% else %} fadeInLeft {% endif %}">
                     <div class="progress progress-bar-default">
-                        <div style="width: {{ skill.level }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{ skill.level }}"
-                              role="progressbar" class="progress-bar"></div>
+                        <div style="width: {{ skill.percentage }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{ skill.percentage }}" role="progressbar" class="progress-bar">
+                        </div>
                     </div>
                 </div>
             </div>
-            {% if forloop.last != true %} <br /> {% endif %}
-          {% endfor %}
+            <br>
+            {% endfor %}
         </div>
     </div>
 </section>
-<section id="project" class="project gray-section features">
+<section id="projects" class="project gray-section features">
     <div class="container" id="i18_projects">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
@@ -245,8 +201,16 @@ permalink: /
         </div>
         <div class="row">
             {% for project in site.data.projects %}
-              {% assign loopindex = forloop.index | modulo: 2 %}
-              <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                {% assign loopindex = forloop.index | modulo: 2 %}
+                {% if forloop.last %}
+                    {% if forloop.last == forloop.first %}
+                <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
+                    {% else %}
+                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
+                    {% endif %}
+                {% else %}
+                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                {% endif %}
                   <div class="team-member">
                       <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
                       <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ project.name }}</a></h4>
@@ -270,18 +234,14 @@ permalink: /
     <div class="container">
         <div class="row">
             <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
-                <br>
-                <br>
-                <br>
+                <div style="height: 80px;"></div>
                 <a class="btn btn-lg btn-default btn-rounded btn-outline wow bounceIn" href="/blog/"><span data-i18n="blog.my_blog">My Blog</span></a>
-                <br>
-                <br>
-                <br>
+                <div style="height: 80px;"></div>
             </div>
         </div>
     </div>
 </section>
-<section id="link" class="contact features">
+<section id="links" class="contact features">
     <div class="container" id="i18_link">
         <div class="row m-b-lg">
             <div class="col-lg-12 text-center">
@@ -290,27 +250,33 @@ permalink: /
             </div>
         </div>
         <div class="row">
-            <div class="col-sm-4 col-sm-offset-4">
-                <div class="team-member wow zoomIn">
-                    <h4><span class="navy">{{ site.jingyu.last_name }}</span> {{ site.jingyu.first_name }}</h4>
-                    <p>
-                        {{ site.jingyu.description }}
-                    </p>
-                    <ul class="list-inline social-icon">
-                        <li><a href="{{ site.jingyu.link }}" target="blank"><i class="fa fa-link"></i></a>
-                        </li>
-                        <li><a href="mailto:{{ site.jingyu.email }}"><i class="fa fa-envelope-o"></i></a>
-                        </li>
-                    </ul>
-                </div>
+        {% for link in site.data.links %}
+            {% assign loopindex = forloop.index | modulo: 3 %}
+            {% if forloop.last %}
+                {% if forloop.last == forloop.first %}
+            <div class="col-sm-4 col-sm-offset-4 wow zoomIn">
+                    {% else %}
+            <div class="col-sm-4 wow {% if loopindex == 0 %} fadeInRight {% else %} col-sm-offset-4 zoomIn {% endif %}">
+                {% endif %}
+            {% else %}
+            <div class="col-sm-4 wow {% if loopindex == 1 %} fadeInLeft {% else if loopindex == 2 %} zoomIn {% else %} fadeInRight {% endif %}">
+            {% endif %}
+            <div class="team-member">
+                <h4><span class="navy">{{ link.last_name }}</span> {{ link.first_name }}</h4>
+                <p>{{ link.desc }}</p>
+                <ul class="list-inline social-icon">
+                    <li><a href="{{ link.website }}" target="blank"><i class="fa fa-link"></i></a>
+                    </li>
+                    <li><a href="mailto:{{ link.email }}"><i class="fa fa-envelope-o"></i></a>
+                    </li>
+                </ul>
             </div>
+            </div>
+        {% endfor %}
         </div>
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
                 <p id="jalpc_site_pv"><strong>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</strong></p>
-                <!-- <img src="http://www.reliablecounter.com/count.php?page=www.jack003.com3&digit=style/black-and-white/3/&reloads=0" alt="" title="" border="0">&nbsp;<span data-i18n="link.view">views</span> || -->
-                <!-- <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script> -->
-                <!-- <span id="busuanzi_container_site_pv"><strong id="busuanzi_value_site_pv"></strong>&nbsp;views.&nbsp;</span>|| -->
             </div>
         </div>
     </div>
@@ -374,7 +340,6 @@ $(document).ready(function() {
         lng: 'en'
     }, function(t) {
         $('.i18container').i18n();
-        // $('#i18_title').i18n();
         $('#i18_navbar').i18n();
         $('#i18_about_me').i18n();
         $('#i18_skills').i18n();
@@ -386,7 +351,6 @@ $(document).ready(function() {
     $('.set_en').on('click', function() {
         i18n.setLng('en', function() {
             $('.i18container').i18n();
-            // $('#i18_title').i18n();
             $('#i18_navbar').i18n();
             $('#i18_about_me').i18n();
             $('#i18_skills').i18n();
@@ -394,14 +358,11 @@ $(document).ready(function() {
             $('#i18_career').i18n();
             $('#i18_blog').i18n();
             $('#i18_link').i18n();
-            // $('.set_en').addClass('active');
-            // $('.set_cn').removeClass('active');
         });
     });
     $('.set_cn').on('click', function() {
         i18n.setLng('zh', function() {
             $('.i18container').i18n();
-            // $('#i18_title').i18n();
             $('#i18_navbar').i18n();
             $('#i18_about_me').i18n();
             $('#i18_skills').i18n();
@@ -409,8 +370,6 @@ $(document).ready(function() {
             $('#i18_career').i18n();
             $('#i18_blog').i18n();
             $('#i18_link').i18n();
-            // $('.set_cn').addClass('active');
-            // $('.set_en').removeClass('active');
         });
     });
 });
