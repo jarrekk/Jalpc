@@ -39,25 +39,6 @@ landing:
   blog: 'Blog'
   link: 'Link'
 
-# my projects
-project:
-  saplatform:
-    name: 'Saplatform'
-    url: '/Jack614/saplatform'
-    img: 'static/img/landing/saplatform.png'
-  jalpc:
-    name: 'Jalpc'
-    url: '/Jack614/jalpc_jekyll_theme'
-    img: 'static/img/landing/jekyll.png'
-  angularjs:
-    name: 'Jalpc-A'
-    url: '/Jack614/Jalpc-A'
-    img: 'static/img/landing/angularjs.png'
-  Rsser:
-    name: 'Rsser'
-    url: '/Jack614/Rsser'
-    img: 'static/img/landing/rsser.png'
-
 # blog index
 index:
   home: 'Home'
