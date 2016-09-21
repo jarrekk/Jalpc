@@ -35,7 +35,7 @@ $ gem install jekyll # If you don't have jekyll installed
 $ rm -rf _site && jekyll server
 ```
 
-### Modify the `_config.yml`
+### Modify `_config.yml`
 
 The _config.yml located in the root of the jalpc_jekyll_theme directory contains all of the configuration details for the Jekyll site. The defaults are:
 
@@ -54,56 +54,25 @@ author:
   name: 'Jack'
   first_name: 'Jia'
   last_name: 'Kun'
-  email: 'jack19890614@gmail.com'
+  email: 'me@jack003.com'
   facebook_username: 'jiakunnj'
   github_username: 'Jack614'
   head_img: 'static/img/landing/Jack.jpg'
-
-# social link
-jingyu:
-  first_name: ''
-  last_name: 'Celine'
-  description: 'Painter.'
-  link: 'http://angular.jack003.com'
-  email: '805963294@qq.com'
-
-# landing page
-landing:
-  home: 'Home'
-  about: 'About'
-  career: 'Career'
-  skills: 'Skills'
-  projects: 'Project'
-  blog: 'Blog'
-  contact: 'Link'
-
-# my projects
-project:
-  saplatform:
-    name: 'Saplatform'
-    url: '/Jack614/saplatform'
-    img: 'static/img/landing/saplatform.jpg'
-  jalpc:
-    name: 'Jalpc'
-    url: '/Jack614/jalpc_jekyll_theme'
-    img: 'static/img/landing/jekyll.jpg'
-  angularjs:
-    name: 'Jalpc-A'
-    url: '/Jack614/Jalpc-A'
-    img: 'static/img/landing/angularjs.jpg'
-
-# blog index
-index:
-  home: 'Home'
-  python: 'Python'
-  linux: 'Linux'
-  html: 'HTML'
-  database: 'Database'
-  mac: 'Mac'
-  life: 'Life'
-
 ...
 ```
+
+### Modify `_data/*.yml`
+
+These files are used to dynamically render pages, so you almost don't have to edit *html files* to change this theme to yours, besides you can use `jekyll serve --watch` to reload changes.
+
+The following is mapping between *yml file* to *sections*.
+
+* careers.yml  ==>  index.html(id="careers")
+* links.yml  ==>  index.html(id="links")
+* navbar.yml  ==>  index.html(id="navbar")
+* projects.yml  ==>  index.html(id="project")
+* skills.yml  ==>  index.html(id="skills")
+
 ### Jekyll Serve
 
 Then, start the Jekyll Server. I always like to give the --watch option so it updates the generated HTML when I make changes.
@@ -128,7 +97,7 @@ This will require you to modify the _config.yml like so:
 # Welcome to Jekyll!
 
 # Site settings
-title: Repo Name
+title: Website Name
 
 baseurl: "/"
 url: "http://github-username.github.io"
@@ -143,25 +112,6 @@ author:
   facebook_username: facebook_example
   github_username: 'github_example
   head_img: 'path/of/head/img'
-
-# landing page
-landing:
-  home: landing-1
-  about: landing-2
-  career: landing-3
-  skills: landing-4
-  blog: landing-5
-  contact: landing-6
-
-# blog index
-index:
-  home: index-1
-  python: index-2
-  linux: index-3
-  html: index-4
-  database: index-5
-  mac: index-6
-  life: index-7
 
 # blog img path
 img_path: '/path/of/blog/img/'
