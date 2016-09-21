@@ -28,48 +28,14 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li><a class="page-scroll" href="/blog/">{{ site.index.home }}</a></li>
-
-                        {% if page.title == site.index.python %}
+                        {% for tag in site.data.blog %}
+                            {% if page.title == tag.name %}
                             <li class="active">
-                        {% else %}
+                            {% else %}
                             <li>
-                        {% endif %}
-                            <a class="page-scroll" href="/python/">{{ site.index.python }}</a></li>
-
-                        {% if page.title == site.index.linux %}
-                            <li class="active">
-                        {% else %}
-                            <li>
-                        {% endif %}
-                            <a class="page-scroll" href="/linux/">{{ site.index.linux }}</a></li>
-
-                        {% if page.title == site.index.html %}
-                            <li class="active">
-                        {% else %}
-                            <li>
-                        {% endif %}
-                            <a class="page-scroll" href="/html/">{{ site.index.html }}</a></li>
-
-                        {% if page.title == site.index.database %}
-                            <li class="active">
-                        {% else %}
-                            <li>
-                        {% endif %}
-                            <a class="page-scroll" href="/database/">{{ site.index.database }}</a></li>
-
-                        {% if page.title == site.index.mac %}
-                            <li class="active">
-                        {% else %}
-                            <li>
-                        {% endif %}
-                            <a class="page-scroll" href="/mac/">{{ site.index.mac }}</a></li>
-
-                        {% if page.title == site.index.life %}
-                            <li class="active">
-                        {% else %}
-                            <li>
-                        {% endif %}
-                            <a class="page-scroll" href="/life/">{{ site.index.life }}</a></li>
+                            {% endif %}
+                            <a class="page-scroll" href="{{ tag.href }}">{{ tag.name }}</a></li>
+                        {% endfor %}
                     </ul>
                 </div>
             </div>

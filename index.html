@@ -19,7 +19,7 @@ permalink: /
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right" id="i18_navbar">
                 {% for nav in site.data.navbar %}
-                    <li><a class="page-scroll" href="#{{ nav.name.href }}"><span data-i18n="{{ nav.name.i18n }}">{{ nav.name.detail }}</span></a></li>
+                    <li><a class="page-scroll" href="#{{ nav.href }}"><span data-i18n="{{ nav.i18n }}">{{ nav.name }}</span></a></li>
                 {% endfor %}
                     <li>
                         <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
