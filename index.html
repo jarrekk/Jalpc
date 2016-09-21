@@ -213,83 +213,25 @@ permalink: /
             </div>
         </div>
         <div class="row features-block">
+          {% for skill in site.data.skills %}
+            {% assign loopindex = forloop.index | modulo: 2 %}
             <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 features-text wow fadeInLeft">
-                    <p>Python</p>
+                <div class="col-lg-1 col-lg-offset-2 wow
+                            {% if forloop.first == true %} features-text {% endif %}
+                            {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
+                    <p>{{ skill.name }}</p>
                 </div>
-                <div class="col-lg-7 features-text wow fadeInLeft">
+                <div class="col-lg-7 wow
+                            {% if forloop.first == true %} features-text {% endif %}
+                            {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
                     <div class="progress progress-bar-default">
-                        <div style="width: 85%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="85" role="progressbar" class="progress-bar">
-                            <!-- <span class="sr-only">85% Complete (success)</span> -->
-                        </div>
+                        <div style="width: {{ skill.level }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{ skill.level }}"
+                              role="progressbar" class="progress-bar"></div>
                     </div>
                 </div>
             </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
-                    <p>HTML/CSS</p>
-                </div>
-                <div class="col-lg-7 wow fadeInRight">
-                    <div class="progress progress-bar-default">
-                        <div style="width: 65%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
-                            <!-- <span class="sr-only">65% Complete (success)</span> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow fadeInLeft">
-                    <p>Linux/Shell</p>
-                </div>
-                <div class="col-lg-7 wow fadeInLeft">
-                    <div class="progress progress-bar-default">
-                        <div style="width: 75%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" role="progressbar" class="progress-bar">
-                            <!-- <span class="sr-only">80% Complete (success)</span> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
-                    <p>jQuery</p>
-                </div>
-                <div class="col-lg-7 wow fadeInRight">
-                    <div class="progress progress-bar-default">
-                        <div style="width: 70%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="70" role="progressbar" class="progress-bar">
-                            <!-- <span class="sr-only">80% Complete (success)</span> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow fadeInRight">
-                    <p>AngularJS</p>
-                </div>
-                <div class="col-lg-7 wow fadeInRight">
-                    <div class="progress progress-bar-default">
-                        <div style="width: 80%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="80" role="progressbar" class="progress-bar">
-                            <!-- <span class="sr-only">80% Complete (success)</span> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow fadeInLeft">
-                    <p>Ionic</p>
-                </div>
-                <div class="col-lg-7 wow fadeInLeft">
-                    <div class="progress progress-bar-default">
-                        <div style="width: 65%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="65" role="progressbar" class="progress-bar">
-                            <!-- <span class="sr-only">60% Complete (success)</span> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {% if forloop.last != true %} <br /> {% endif %}
+          {% endfor %}
         </div>
     </div>
 </section>
