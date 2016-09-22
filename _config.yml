@@ -8,9 +8,6 @@ baseurl: "/"
 url: "http://www.jack003.com"
 # url: "http://127.0.0.1:4000"
 
-# blog img path
-img_path: 'http://www.jack003.com/static/img/blog'
-
 # author
 author:
   name: 'Jack'
@@ -21,16 +18,6 @@ author:
   github_username: 'Jack614'
   head_img: 'static/img/landing/Jack.jpg'
   desc: 'I am a Python engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.'
-
-# blog index
-index:
-  home: 'Home'
-  python: 'Python'
-  linux: 'Linux'
-  html: 'HTML'
-  database: 'Database'
-  mac: 'Mac'
-  life: 'Life'
 
 # sections
 sections:
@@ -76,6 +63,9 @@ languages:
     flag: 'static/img/flags/United-States.png'
   - locale: 'zh'
     flag: 'static/img/flags/China.png'
+
+# blog img path
+img_path: 'http://www.jack003.com/static/img/blog'
 
 # donate
 donate:
