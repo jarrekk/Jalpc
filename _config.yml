@@ -74,7 +74,7 @@ sections:
 languages:
   - locale: 'en'
     flag: 'static/img/flags/United-States.png'
-  - locale: 'cn'
+  - locale: 'zh'
     flag: 'static/img/flags/China.png'
 
 # donate
