@@ -18,15 +18,21 @@ permalink: /
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right" id="i18_navbar">
-                {% for nav in site.data.navbar %}
-                    <li><a class="page-scroll" href="#{{ nav.href }}"><span data-i18n="{{ nav.i18n }}">{{ nav.name }}</span></a></li>
+                {% for section in site.sections %}
+                    <li>
+                      <a class="page-scroll" href="#{{ section.id }}">
+                        <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
+                      </a>
+                    </li>
                 {% endfor %}
-                    <li>
-                        <a class="btn btn-sm set_en"><img src="{{"static/img/flags/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-                    </li>
-                    <li>
-                        <a class="btn btn-sm set_cn"><img src="{{"static/img/flags/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-                    </li>
+
+                {% for language in site.languages %}
+                  <li>
+                    <a class="btn btn-sm set_{{ language.locale }}">
+                      <img src="{{ language.flag | preprend: site.baseurl }}" height="16px" width="16px">
+                    </a>
+                  </li>
+                {% endfor %}
                 </ul>
             </div>
         </div>
@@ -67,220 +73,14 @@ permalink: /
         <span class="sr-only">Next</span>
     </a>
 </div>
-<section id="about-me" class="features">
-    <div class="container" id="i18_about_me">
-        <div class="row m-b-lg">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1><span data-i18n="about_me.about_me">About Me</span></h1>
-                <!-- <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.</p> -->
-            </div>
-        </div>
-        <div class="row">
-            <!-- python -->
-            <div class="col-xs-2 wow fadeInLeft">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-python"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- linux -->
-            <div class="col-xs-2 wow fadeInLeft">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-shell"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- avatar -->
-            <div class="col-xs-4">
-                <div class="team-member wow zoomIn">
-                    <img src="{{ site.author.head_img | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
-                    <h4><span class="navy">{{ site.author.last_name }}</span> {{ site.author.first_name }}</h4>
-                    <ul class="list-inline social-icon">
-                        <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a>
-                        <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a>
-                        </li>
-                        </li>
-                        <li><a href="{{ site.url}}/feed.xml" target="blank"><i class="fa fa-rss"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <!-- html -->
-            <div class="col-xs-2 wow fadeInRight">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-angular"></i>
-                    </div>
-                </div>
-            </div>
-            <!-- docker -->
-            <div class="col-xs-2 wow fadeInRight">
-                <div class="team-member">
-                    <div class="vote-icon">
-                        <i class="icon-docker"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg wow zoomIn">
-                <p><span data-i18n="about_me.des">{{ site.author.desc }}</span></p>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="careers" class="timeline features gray-section">
-    <div class="container" id="i18_career">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1><span data-i18n="career.my_career">My Career</span></h1>
-            </div>
-        </div>
-        <div class="row features-block">
-            <div class="col-lg-12">
-                <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
-                {% for career in site.data.careers %}
-                {% assign loopindex = forloop.index | modulo: 2 %}
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon navy-bg wow rotateIn">
-                            <i class="fa {{ career.icon }}"></i>
-                        </div>
-                        <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
-                            <h2><span data-i18n="career.{{ career.name.i18n }}">{{ career.name.detail }}</span></h2>
-                            <p><span data-i18n="career.{{ career.desc.i18n }}">{{ career.desc.detail }} </span></p>
-                            <span class="vertical-date"><span data-i18n="career.{{ career.date.i18n }}"> {{ career.date.detail }} </span>
-                            <br/> <small><span data-i18n="career.{{ career.job.i18n }}">{{ career.job.detail }}</span></small> </span>
-                        </div>
-                    </div>
-                {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="skills" class="team features">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center" id="i18_skills">
-                <div class="navy-line"></div>
-                <h1><span data-i18n="skills.my_skills">My Skills</span></h1>
-            </div>
-        </div>
-        <div class="row features-block">
-            {% for skill in site.data.skills %}
-                {% assign loopindex = forloop.index | modulo: 2 %}
-            <div class="row">
-                <div class="col-lg-1 col-lg-offset-2 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
-                    <p>{{ skill.name }}</p>
-                </div>
-                <div class="col-lg-7 wow  {% if loopindex == 1 %} fadeInRight {% else %} fadeInLeft {% endif %}">
-                    <div class="progress progress-bar-default">
-                        <div style="width: {{ skill.percentage }}%" aria-valuemax="100" aria-valuemin="0" aria-valuenow="{{ skill.percentage }}" role="progressbar" class="progress-bar">
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            {% endfor %}
-        </div>
-    </div>
-</section>
-<section id="projects" class="project gray-section features">
-    <div class="container" id="i18_projects">
-        <div class="row m-b-lg">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1><span data-i18n="projects.my_projects">My Projects</span></h1>
-            </div>
-        </div>
-        <div class="row">
-            {% for project in site.data.projects %}
-                {% assign loopindex = forloop.index | modulo: 2 %}
-                {% if forloop.last %}
-                    {% if forloop.last == forloop.first %}
-                <div class="col-sm-6 wow col-sm-offset-3 zoomIn">
-                    {% else %}
-                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft col-sm-offset-3 {% else %} fadeInRight {% endif %}">
-                    {% endif %}
-                {% else %}
-                <div class="col-sm-6 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">
-                {% endif %}
-                  <div class="team-member">
-                      <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
-                      <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ project.name }}</a></h4>
-                      <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
-                      <ul class="list-inline">
-                          <li>
-                              <a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ project.url | append: '/stargazers' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
-                          </li>
-                          <li>
-                              <a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-fork" data-count-href="{{ project.url | append: '/network/members' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
-                          </li>
-                      </ul>
-                  </div>
-              </div>
-          {% endfor %}
-        </div>
-    </div>
-    <br>
-</section>
-<section id="blog" class="navy-section testimonials" style="margin-top: 0">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 text-center wow zoomIn" id="i18_blog">
-                <div style="height: 80px;"></div>
-                <a class="btn btn-lg btn-default btn-rounded btn-outline wow bounceIn" href="/blog/"><span data-i18n="blog.my_blog">My Blog</span></a>
-                <div style="height: 80px;"></div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="links" class="contact features">
-    <div class="container" id="i18_link">
-        <div class="row m-b-lg">
-            <div class="col-lg-12 text-center">
-                <div class="navy-line"></div>
-                <h1><span data-i18n="link.link">Link</span></h1>
-            </div>
-        </div>
-        <div class="row">
-        {% for link in site.data.links %}
-            {% assign loopindex = forloop.index | modulo: 3 %}
-            {% if forloop.last %}
-                {% if forloop.last == forloop.first %}
-            <div class="col-sm-4 col-sm-offset-4 wow zoomIn">
-                    {% else %}
-            <div class="col-sm-4 wow {% if loopindex == 0 %} fadeInRight {% else %} col-sm-offset-4 zoomIn {% endif %}">
-                {% endif %}
-            {% else %}
-            <div class="col-sm-4 wow {% if loopindex == 1 %} fadeInLeft {% else if loopindex == 2 %} zoomIn {% else %} fadeInRight {% endif %}">
-            {% endif %}
-            <div class="team-member">
-                <h4><span class="navy">{{ link.last_name }}</span> {{ link.first_name }}</h4>
-                <p>{{ link.desc }}</p>
-                <ul class="list-inline social-icon">
-                    <li><a href="{{ link.website }}" target="blank"><i class="fa fa-link"></i></a>
-                    </li>
-                    <li><a href="mailto:{{ link.email }}"><i class="fa fa-envelope-o"></i></a>
-                    </li>
-                </ul>
-            </div>
-            </div>
-        {% endfor %}
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-                <p id="jalpc_site_pv"><strong>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</strong></p>
-            </div>
-        </div>
-    </div>
-</section>
+
+{% for section in site.sections %}
+  {% assign loopindex = forloop.index | modulo: 2 %}
+  <section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}">
+    {% include sections/{{section.tpl}} %}
+  </section>
+{% endfor %}
+
 <script>
 $(document).ready(function() {
     $('body').scrollspy({
