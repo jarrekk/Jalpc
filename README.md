@@ -61,7 +61,11 @@ author:
 ...
 ```
 
-### Modify `_data/*.yml`
+#### Index page
+
+The index page is seprated into several sections and they are located in `_includes/sections`,the configuration is in `_config.yml` and section's detail configuration is in `_data/*.yml`.
+
+#### Modify `_data/*.yml`
 
 These files are used to dynamically render pages, so you almost don't have to edit *html files* to change your own theme, besides you can use `jekyll serve --watch` to reload changes.
 
@@ -70,7 +74,6 @@ The following is mapping between *yml file* to *sections*.
 * blog.yml  ==>  _includes/header.html(id="navbar")
 * careers.yml  ==>  index.html(id="careers")
 * links.yml  ==>  index.html(id="links")
-* navbar.yml  ==>  index.html(id="navbar")
 * projects.yml  ==>  index.html(id="project")
 * skills.yml  ==>  index.html(id="skills")
 
