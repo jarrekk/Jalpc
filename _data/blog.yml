@@ -1,3 +1,6 @@
+- name: Blog
+  href: '/blog/'
+
 - name: Python
   href: '/python/'
 
