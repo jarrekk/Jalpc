@@ -28,8 +28,8 @@ permalink: /
 
                 {% for language in site.languages %}
                   <li>
-                    <a class="btn btn-sm set_{{ language.locale }}">
-                      <img src="{{ language.flag | preprend: site.baseurl }}" height="16px" width="16px">
+                    <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
+                      <img src="{{ language.flag | prepend: site.baseurl }}" height="16px" width="16px">
                     </a>
                   </li>
                 {% endfor %}
@@ -80,97 +80,3 @@ permalink: /
     {% include sections/{{section.tpl}} %}
   </section>
 {% endfor %}
-
-<script>
-$(document).ready(function() {
-    $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 80
-    });
-    // Page scrolling feature
-    $('a.page-scroll').bind('click', function(event) {
-        var link = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $(link.attr('href')).offset().top - 50
-        }, 500);
-        event.preventDefault();
-        $("#navbar").collapse('hide');
-    });
-});
-var cbpAnimatedHeader = (function() {
-    var docElem = document.documentElement,
-        header = document.querySelector('.navbar-default'),
-        didScroll = false,
-        changeHeaderOn = 200;
-
-    function init() {
-        window.addEventListener('scroll', function(event) {
-            if (!didScroll) {
-                didScroll = true;
-                setTimeout(scrollPage, 250);
-            }
-        }, false);
-    }
-
-    function scrollPage() {
-        var sy = scrollY();
-        if (sy >= changeHeaderOn) {
-            $(header).addClass('navbar-scroll');
-        } else {
-            $(header).removeClass('navbar-scroll');
-        }
-        didScroll = false;
-    }
-
-    function scrollY() {
-        return window.pageYOffset || docElem.scrollTop;
-    }
-    init();
-
-})();
-// Activate WOW.js plugin for animation on scrol
-new WOW().init();
-</script>
-<script>
-$(document).ready(function() {
-    $.i18n.init({
-        resGetPath: 'static/locales/__lng__.json',
-        load: 'unspecific',
-        fallbackLng: false,
-        lng: 'en'
-    }, function(t) {
-        $('.i18container').i18n();
-        $('#i18_navbar').i18n();
-        $('#i18_about_me').i18n();
-        $('#i18_skills').i18n();
-        $('#i18_projects').i18n();
-        $('#i18_career').i18n();
-        $('#i18_blog').i18n();
-        $('#i18_link').i18n();
-    });
-    $('.set_en').on('click', function() {
-        i18n.setLng('en', function() {
-            $('.i18container').i18n();
-            $('#i18_navbar').i18n();
-            $('#i18_about_me').i18n();
-            $('#i18_skills').i18n();
-            $('#i18_projects').i18n();
-            $('#i18_career').i18n();
-            $('#i18_blog').i18n();
-            $('#i18_link').i18n();
-        });
-    });
-    $('.set_zh').on('click', function() {
-        i18n.setLng('zh', function() {
-            $('.i18container').i18n();
-            $('#i18_navbar').i18n();
-            $('#i18_about_me').i18n();
-            $('#i18_skills').i18n();
-            $('#i18_projects').i18n();
-            $('#i18_career').i18n();
-            $('#i18_blog').i18n();
-            $('#i18_link').i18n();
-        });
-    });
-});
-</script>
