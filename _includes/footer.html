@@ -1,114 +1,63 @@
-<script async src="{{"static/js/count_page.js"| prepend: site.baseurl }}"></script>
-<!-- <script async src="{{"static/js/count_page.js"| prepend: site.baseurl }}"></script> -->
-  <!-- Baidu analytics -->
-  {% if site.ba %}
-    <script>
-        var _hmt = _hmt || [];
-        (function() {
-          var hm = document.createElement("script");
-          hm.src = "//hm.baidu.com/hm.js?{{ site.ba.uuid }}";
-          var s = document.getElementsByTagName("script")[0];
-          s.parentNode.insertBefore(hm, s);
-        })();
-    </script>
-  {% endif %}
+<script src="{{ "static/js/scroll.js" | prepend: site.baseurl }}"></script>
 
-  <!-- Google analytics -->
-  {% if site.ga %}
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+<!-- Baidu analytics -->
+{% if site.ba %}
+  <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "//hm.baidu.com/hm.js?{{ site.ba.uuid }}";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+  </script>
+{% endif %}
 
-      ga('create', '{{ site.ga.id }}', 'auto');
-      ga('send', 'pageview');
+<!-- Google analytics -->
+{% if site.ga %}
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-    </script>
-  {% endif %}
+    ga('create', '{{ site.ga.id }}', 'auto');
+    ga('send', 'pageview');
 
-  {% if site.disqus %}
+  </script>
+{% endif %}
+
+{% if site.disqus %}
   <script type="text/javascript">
-      var disqusShortName = "{{ site.disqus.name }}";
+    var disqusShortName = "{{ site.disqus.name }}";
 
-      var disqusPublicKey = "{{ site.disqus.public_key }}";
+    var disqusPublicKey = "{{ site.disqus.public_key }}";
 
-      var urlArray = [];
-      $('.disqus-comment-count').each(function () {
-        var url = $(this).attr('data-disqus-url');
-        urlArray.push('link:' + url);
-      });
-      $.ajax({
-        type: 'GET',
-        url: "https://disqus.com/api/3.0/threads/set.jsonp",
-        data: { api_key: disqusPublicKey, forum : disqusShortName, thread : urlArray },
-        cache: false,
-        dataType: "jsonp",
-        success: function (result) {
-          for (var i in result.response) {
-            var count = result.response[i].posts;
-            if ( count ) {
-              $('.disqus-comment-count[data-disqus-url="' + result.response[i].link + '"]').html(count);
-            }
+    var urlArray = [];
+    $('.disqus-comment-count').each(function () {
+      var url = $(this).attr('data-disqus-url');
+      urlArray.push('link:' + url);
+    });
+    $.ajax({
+      type: 'GET',
+      url: "https://disqus.com/api/3.0/threads/set.jsonp",
+      data: { api_key: disqusPublicKey, forum : disqusShortName, thread : urlArray },
+      cache: false,
+      dataType: "jsonp",
+      success: function (result) {
+        for (var i in result.response) {
+          var count = result.response[i].posts;
+          if ( count ) {
+            $('.disqus-comment-count[data-disqus-url="' + result.response[i].link + '"]').html(count);
           }
         }
-      });
-  </script>
-  {% endif %}
-  {% if site.changyan %}
+      }
+    });
+</script>
+{% endif %}
+
+{% if site.changyan %}
   <script id="cy_cmt_num" src="http://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=cysfY7ULn"></script>
-  {% endif %}
-  <script>
+{% endif %}
 
-      $(document).ready(function () {
-
-          $('body').scrollspy({
-              target: '.navbar-fixed-top',
-              offset: 80
-          });
-
-          // Page scrolling feature
-          $('a.page-scroll').bind('click', function(event) {
-              var link = $(this);
-              $('html, body').stop().animate({
-                  scrollTop: $(link.attr('href')).offset().top - 50
-              }, 500);
-              event.preventDefault();
-              $("#navbar").collapse('hide');
-          });
-      });
-
-      var cbpAnimatedHeader = (function() {
-          var docElem = document.documentElement,
-                  header = document.querySelector( '.navbar-default' ),
-                  didScroll = false,
-                  changeHeaderOn = 200;
-          function init() {
-              window.addEventListener( 'scroll', function( event ) {
-                  if( !didScroll ) {
-                      didScroll = true;
-                      setTimeout( scrollPage, 250 );
-                  }
-              }, false );
-          }
-          function scrollPage() {
-              var sy = scrollY();
-              if ( sy >= changeHeaderOn ) {
-                  $(header).addClass('navbar-scroll')
-              }
-              else {
-                  $(header).removeClass('navbar-scroll')
-              }
-              didScroll = false;
-          }
-          function scrollY() {
-              return window.pageYOffset || docElem.scrollTop;
-          }
-          init();
-
-      })();
-
-      // Activate WOW.js plugin for animation on scrol
-      new WOW().init();
-
-  </script>
+<script async src="{{"static/js/count_page.js"| prepend: site.baseurl }}"></script>
