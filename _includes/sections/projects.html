@@ -19,7 +19,7 @@
             {% endif %}
               <div class="team-member">
                   <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
-                  <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank" style="color: #1ab394" class="navy">{{ project.name }}</a></h4>
+                  <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank"><span class="navy">{{ project.name }}</a></span></h4>
                   <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
                   <ul class="list-inline">
                       <li>
