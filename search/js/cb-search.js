@@ -29,7 +29,7 @@
 
  		$("#search-content").keyup(function (e) {
             var time2 = new Date().getTime();
-            if (window.event.keyCode == 17) {
+            if (e.keyCode == 17) {
                 var gap = time2 - time1;
                 time1 = time2;
                 if (gap < 500) {
