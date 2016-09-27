@@ -7,35 +7,29 @@
       show = !visible;
       var visibility = visible ? 'block' : 'none';
 
-      if(visible) {
-        $("#search-content").val("");
-        $("#search-content").focus();
-      }
-
+      $("#search-content").val("");
       $(".search-tool").css("display", visibility);
     };
 
+    var shouldToggle = function (time) {
+      var gap = time - initial;
+      initial = time;
+      return gap < 500;
+    };
+
     $(document).keyup(function (e) {
-        var now = new Date().getTime();
-        if (e.keyCode == 17) {
-          var gap = now - initial;
-          initial = now;
-          if (gap < 500) {
-            toggleSearch(show);
-          }
-       } else if (e.keyCode == 27) {
-         toggleSearch(false);
+      var now = new Date().getTime();
+      if (e.keyCode == 17 && shouldToggle(now)) {
+        toggleSearch(show);
+      } else if (e.keyCode == 27) {
+        toggleSearch(false);
       }
     });
 
 		$("#search-content").keyup(function (e) {
       var now = new Date().getTime();
-      if (e.keyCode == 17) {
-          var gap = now - initial;
-          initial = now;
-          if (gap < 500) {
-            toggleSearch(!show);
-          }
+      if (e.keyCode == 17 && shouldToggle(now)) {
+        toggleSearch(show);
       }
     });
 
