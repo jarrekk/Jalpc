@@ -133,7 +133,7 @@ Many third party page counter platform is to slow,so I count my website page vie
 
 ### Multilingual Page
 
-The landing page has multilingual support.
+The landing page has multilingual support with the [i18next](http://i18next.github.io/i18next/) plugin.
 
 Languages are configured in the `config.yml` file.
 
@@ -170,8 +170,6 @@ Example `en.json`
   }
 }
 ```
-
-Link: [i18next](http://i18next.github.io/i18next/)
 
 ### Web analytics
 
