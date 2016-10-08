@@ -71,11 +71,11 @@ These files are used to dynamically render pages, so you almost don't have to ed
 
 The following is mapping between *yml file* to *sections*.
 
-* blog.yml  ==>  _includes/header.html(id="navbar")
-* careers.yml  ==>  index.html(id="careers")
-* links.yml  ==>  index.html(id="links")
-* projects.yml  ==>  index.html(id="project")
-* skills.yml  ==>  index.html(id="skills")
+* blog.yml  ==>  _includes/sections/blog.html
+* careers.yml  ==>  _includes/sections/career.html
+* links.yml  ==>  _includes/sections/links.html
+* projects.yml  ==>  _includes/sections/projects.html
+* skills.yml  ==>  _includes/sections/skills.html
 
 ### Jekyll Serve
 
