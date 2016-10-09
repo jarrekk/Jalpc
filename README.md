@@ -12,7 +12,7 @@ This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluid
 
 It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.
 
-The landing page of the blog is bilingual page.
+The landing page of the blog is multilingual page.
 
 It is my pleasure to contact me, you can give me your website or some advice about my website. Let's build a wonderful Jekyll theme together!
 
@@ -133,7 +133,7 @@ Many third party page counter platform is to slow,so I count my website page vie
 
 ### Multilingual Page
 
-The landing page has multilingual support with the [i18next](http://i18next.github.io/i18next/) plugin.
+The landing page has multilingual support with the [i18next](http://i18next.com) plugin.
 
 Languages are configured in the `config.yml` file.
 
@@ -169,6 +169,31 @@ Example `en.json`
     "contact": "Contact"
   }
 }
+```
+
+#### Step 3
+
+Next you need to add html indicators in all place you want to use i18n.(`_includes/sections/*.html` and `index.html`)
+
+Example:
+
+``` html		
+<a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
+```
+
+#### Step 4
+
+Next you need to initialise the i18next plugin(`index.html`):
+
+``` javascript
+$.i18n.init(
+    resGetPath: 'locales/__lng__.json',
+    load: 'unspecific',
+    fallbackLng: false,
+    lng: 'en'
+}, function (t)
+    $('#i18_title').i18n();
+});
 ```
 
 ### Web analytics
