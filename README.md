@@ -12,7 +12,7 @@ This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluid
 
 It's pretty minimal, but leverages large type and drastic contrast to make a statement, on all devices.
 
-The landing page of the blog is bilingual page.
+The landing page of the blog is multilingual page.
 
 It is my pleasure to contact me, you can give me your website or some advice about my website. Let's build a wonderful Jekyll theme together!
 
@@ -131,19 +131,31 @@ The pagination in jekyll is not very perfect,so I use front-end web method,there
 
 Many third party page counter platform is to slow,so I count my website page view myself,the javascript file is `static/js/count_index.js`,the backend is [Leancloud](https://leancloud.cn).
 
-### Bilingual Page
+### Multilingual Page
 
-The landing page of the blog is bilingual page,when you click national flag,the page language changes.The fllowing is how to set up bilingual page.
+The landing page has multilingual support with the [i18next](http://i18next.com) plugin.
+
+Languages are configured in the `config.yml` file.
 
 #### Step 1
 
-To add i18 support for your app you need to define what text you would like to translate. The best way to define your text is to store it in external json file. For example:
+Add a new language entry
 
-**Each language you should have own json file!**
+```yml
+languages:
+  - locale: 'en'
+    flag: 'static/img/flags/United-States.png'
+  - locale: '<language_locale>'
+    flag: '<language_flag_url>'
+```
 
-en.json
+#### Step 2
 
-``` json
+Add a new json (`static/locales/<language_locale>.json`) file that contains the translations for the new locale.
+
+Example `en.json`
+
+```json
 {
   "website":{
     "title": "Jalpc"
@@ -159,36 +171,19 @@ en.json
 }
 ```
 
-cn.json
+#### Step 3
 
-``` json
-{
-  "website":{
-    "title": "杰克的博客"
-  },
-  "nav":{
-    "home": "首页",
-    "about_me": "关于我",
-    "skills": "技能",
-    "career": "职业",
-    "blog": "博客",
-    "contact": "联系我"
-  }
-}
-```
+Next you need to add html indicators in all place you want to use i18n.(`_includes/sections/*.html` and `index.html`)
 
-#### Step 2
+Example:
 
-Next you need to add html indicators in all place you want to use i18.(index.html)
-
-``` html
+``` html		
 <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
 ```
 
-#### Step 3
+#### Step 4
 
-Next you need to initialise the i18next plugin:
-json files are located in `static/locales` folder.
+Next you need to initialise the i18next plugin(`index.html`):
 
 ``` javascript
 $.i18n.init(
@@ -200,39 +195,6 @@ $.i18n.init(
     $('#i18_title').i18n();
 });
 ```
-
-#### Step 4
-
-After that if you want to change the language you just need to add buttons and fire the i18n.setLng() function.
-
-HTML markup
-
-``` html
-<a class="btn btn-sm set_en"><img src="{{"static/img/flags/64/United-States.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-<a class="btn btn-sm set_cn"><img src="{{"static/img/flags/64/China.png"| prepend: site.baseurl }}" height="16px" width="16px"></a>
-```
-
-Javascript code
-
-``` javascript
-$('.set_en').on('click', function (){
-    i18n.setLng('en', function(){
-
-        $('#i18_title').i18n();
-
-   });
-});
-
-$('.set_cn').on('click', function (){
-    i18n.setLng('cn', function(){
-
-        $('#i18_title').i18n();
-
-    });
-});
-```
-
-Link: [i18next](http://i18next.github.io/i18next/)
 
 ### Web analytics
 
