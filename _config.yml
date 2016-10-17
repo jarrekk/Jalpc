@@ -86,7 +86,7 @@ bshare:
 
 # baidu analytics
 ba:
-  uuid: 317acca9ef9255b934e46371e471431d
+  # uuid: 317acca9ef9255b934e46371e471431d
 
 # google analytics
 ga:
