@@ -8,7 +8,7 @@
   percentage: 75
 
 - name: jQuery
-  percentage: 70
+  percentage: 80
 
 - name: AngularJS
   percentage: 80
