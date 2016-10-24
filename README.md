@@ -114,7 +114,7 @@ author:
   last_name: lastname
   email: your_email@example.com
   facebook_username: facebook_example
-  github_username: 'github_example
+  github_username: 'github_example'
   head_img: 'path/of/head/img'
 
 # blog img path
@@ -177,7 +177,7 @@ Next you need to add html indicators in all place you want to use i18n.(`_includ
 
 Example:
 
-``` html		
+``` html
 <a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
 ```
 
@@ -198,7 +198,7 @@ $.i18n.init(
 
 ### Web analytics
 
-I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login) and [Google analytics](https://www.google.com/analytics/) to do web analytics, you can choose either to realize it,just register a account and replace id in `_config.yml`.
+I use [Baidu analytics](http://tongji.baidu.com/web/welcome/login), [Google analytics](https://www.google.com/analytics/) and [GrowingIO](https://www.growingio.com/) to do web analytics, you can choose either to realize it,just register a account and replace id in `_config.yml`.
 
 ### Comment
 
