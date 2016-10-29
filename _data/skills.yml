@@ -8,10 +8,13 @@
   percentage: 75
 
 - name: jQuery
-  percentage: 80
+  percentage: 85
 
 - name: AngularJS
   percentage: 80
 
 - name: Ionic
+  percentage: 70
+
+- name: Vuejs
   percentage: 65
