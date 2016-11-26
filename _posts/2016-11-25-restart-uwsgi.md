@@ -44,7 +44,9 @@ uwsgi.reload()
 ```
 
 注意，如果要使用pid，需要在uwsgi启动参数中指定 --pidfile，如：
+
 `#/etc/rc.local 修改自启动`
+
 `/usr/local/bin/uwsgi /var/www/html/mz_uwsgi.ini --pidfile /tmp/uwsgi.pid`
 
 比reboot服务器方便。
