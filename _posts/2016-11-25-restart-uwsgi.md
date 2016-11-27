@@ -6,7 +6,7 @@ desc: "重启uwsgi的几种方法"
 keywords: "重启,restart,uwsgi"
 categories: [Python]
 tags: [nginx,uwsgi,django]
-icon: fa-bookmark-o
+icon: icon-python
 ---
 
 There are several ways to make uWSGI gracefully restart.
