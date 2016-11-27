@@ -6,7 +6,7 @@ desc: "如何快速正确的安装 Ruby, Rails 运行环境"
 keywords: "install,ruby,rails"
 categories: [Python]
 tags: [ruby,rails]
-icon: fa-bookmark-o
+icon: icon-ruby
 ---
 
 对于新入门的开发者，如何安装 Ruby, Ruby Gems 和 Rails 的运行环境可能会是个问题，本页主要介绍如何用一条靠谱的路子快速安装 Ruby 开发环境。
