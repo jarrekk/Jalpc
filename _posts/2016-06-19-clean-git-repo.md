@@ -51,7 +51,7 @@ git push --tags --force
 
 ## 查找大文件并清理
 
-下载[Bash Script](https://raw.githubusercontent.com/Jack614/jalpc_jekyll_theme/gh-pages/git_find_big.sh)，在项目目录下：
+下载[Bash Script](https://raw.githubusercontent.com/JiaKunUp/jalpc_jekyll_theme/gh-pages/git_find_big.sh)，在项目目录下：
 
 ```
 $ chmod 777 git_find_big.sh
@@ -61,7 +61,7 @@ $ git gc --auto
 查找大文件：
 
 ```
-$ git_find_big.sh 
+$ git_find_big.sh
 All sizes are in kB's. The pack column is the size of the object, compressed, inside the pack file.
 size  pack  SHA                                       location
 592   580   e3117f48bc305dd1f5ae0df3419a0ce2d9617336  media/img/emojis.jar
