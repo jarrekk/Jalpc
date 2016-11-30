@@ -25,7 +25,7 @@ icon: fa-apple
 #
 # AppleScript portion from:
 # http://stackoverflow.com/questions/4309087/cancel-button-on-osascript-in-a-bash-script
-# licensed under cc-wiki with attribution required 
+# licensed under cc-wiki with attribution required
 #
 
 #
@@ -52,7 +52,7 @@ function cancel {
 # send notification using growlnotify
 function notify {
     local msg=$1
-    
+
     if command -v growlnotify >/dev/null 2>&1; then
         growlnotify -a /Applications/iTerm.app -n "iTerm" -m "$msg" -t "File transfer"
     else
@@ -87,18 +87,18 @@ elif [[ $1 = "rz" ]]; then
             -e "tell application \"iTerm\" to set thefile to choose folder with prompt \"Choose a folder to place received files in\"" \
             -e "do shell script (\"echo \"&(quoted form of POSIX path of thefile as Unicode text)&\"\")"
     )
-    
+
     if [[ $DST = "" ]]; then
         cancel
-        echo 
+        echo
     fi
 
 	cd "$DST"
-	
+
     notify "Z-Modem started receiving file"
 
     $ZCMD -e -y
-    echo 
+    echo
 
     notify "Z-Modem finished receiving file"
 else
@@ -112,14 +112,14 @@ else
 
     if [[ $SRC = "" ]]; then
         cancel
-        echo 
+        echo
     fi
 
     notify "Z-Modem started sending
 $SRC"
 
     $ZCMD -e "$SRC"
-    echo 
+    echo
 
     notify "Z-Modem finished sending
 $SRC"
@@ -137,4 +137,4 @@ Regular expression: \*\*B00000000000000
 Action:             Run Coprocess
 Parameters:         /usr/local/bin/iterm2-zmodem rz
 ```
-Github链接：<https://github.com/Jack614/iterm2-zmodem>
+Github链接：<https://github.com/JiaKunUp/iterm2-zmodem>
