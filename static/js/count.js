@@ -9,7 +9,7 @@ $(document).ready(function() {
         jsonp: "callback",
         jsonpCallback: "flightHandler",
         success: function(json) {
-            var website_count = json.count;
+            var website_count = json.data;
             $("#jalpc_site_pv").html('<span class="navy">' + website_count + '</span>&nbsp;<span data-i18n="link.view">views</span>&nbsp;||&nbsp;' + pre_content);
         },
         error: function() {
