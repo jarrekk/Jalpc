@@ -69,8 +69,8 @@ img_path: 'http://www.jack003.com/static/img/blog'
 
 # donate
 donate:
-  wechat: 'static/img/pay/w1.jpeg'
-  # alipay: 'static/img/pay/alipay.png'
+  wechat1: 'static/img/pay/w1.jpeg'
+  wechat5: 'static/img/pay/w5.jpeg'
 
 # comment
 changyan:
