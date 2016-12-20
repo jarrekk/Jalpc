@@ -19,3 +19,6 @@
 
 - name: Life
   href: '/life/'
+
+- name: Donate
+  href: '/donate/'
