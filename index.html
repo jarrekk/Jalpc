@@ -18,7 +18,7 @@ permalink: /
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right" id="i18_navbar">
-                {% for section in site.sections %}
+                {% for section in site.data.landing %}
                     <li>
                       <a class="page-scroll" href="#{{ section.id }}">
                         <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
@@ -74,7 +74,7 @@ permalink: /
     </a>
 </div>
 
-{% for section in site.sections %}
+{% for section in site.data.landing %}
   {% assign loopindex = forloop.index | modulo: 2 %}
   <section id="{{ section.id }}" class="features {% if loopindex != 1 %} gray-section {% endif %} {{ section.css }}" style="margin-top: 0px;">
     {% include sections/{{section.tpl}} %}
