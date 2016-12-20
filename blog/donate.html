@@ -3,99 +3,88 @@ layout: blog
 title: Donate
 permalink: /donate/
 ---
+    <link href="/static/css/slick.css" rel="stylesheet">
+    <link href="/static/css/slick-theme.css" rel="stylesheet">
 <div class="row">
-    <div class="col-lg-10 col-lg-offset-1">
-        <h4 class="text-center m">
-            Multiple example with responsive breakpoints
-        </h4>
-        <div class="slick_demo_2">
+    <div class="col-lg-8 col-lg-offset-2 text-center">
+        <div class="navy-line"></div>
+        <h1>Donate Jalpc</h1>
+        <h3>If you like this theme and want to support it, just donate it. We can make Jalpc better!</h3>
+    </div>
+</div>
 
-            <div>
-                <div class="ibox-content">
-                    <h2>Slide 1</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen
-                        book. It has survived not only five centuries, but also the leap.
-                    </p>
+<div class="wrapper wrapper-content animated pulse">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2 class="text-center m">Alipay</h2>
+            <div class="slick">
+                {% for alipay in site.data.alipay %}
+                <div>
+                    <div class="ibox-content">
+                        <img src="{{ alipay.name | prepend: '/static/img/donate/' }}" width="100%">
+                    </div>
                 </div>
+                {% endfor %}
             </div>
-            <div>
-                <div class="ibox-content">
-                    <h2>Slide 2</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen
-                        book. It has survived not only five centuries, but also the leap.
-                    </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2 class="text-center m">WeChat Pay</h2>
+            <div class="slick">
+                {% for wechat in site.data.wechat_pay %}
+                <div>
+                    <div class="ibox-content">
+                        <img src="{{ wechat.name | prepend: '/static/img/donate/' }}" width="100%">
+                    </div>
                 </div>
-            </div>
-            <div>
-                <div class="ibox-content">
-                    <h2>Slide 3</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen
-                        book. It has survived not only five centuries, but also the leap.
-                    </p>
-                </div>
-            </div>
-            <div>
-                <div class="ibox-content">
-                    <h2>Slide 4</h2>
-                    <p>
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
-                        Ipsum has been the industry's standard dummy text ever since the 1500s, when an
-                        unknown printer took a galley of type and scrambled it to make a type specimen
-                        book. It has survived not only five centuries, but also the leap.
-                    </p>
-                </div>
+                {% endfor %}
             </div>
         </div>
     </div>
 </div>
-    <style>
-        .slick_demo_2 .ibox-content {
-            margin: 0 10px;
-        }
-    </style>
-    <script src="/static/js/slick.min.js"></script>
-    <script>
-        $(document).ready(function(){
-            $('.slick_demo_2').slick({
-                infinite: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                centerMode: true,
-                responsive: [
-                    {
-                        breakpoint: 1024,
-                        settings: {
-                            slidesToShow: 3,
-                            slidesToScroll: 3,
-                            infinite: true,
-                            dots: true
-                        }
-                    },
-                    {
-                        breakpoint: 600,
-                        settings: {
-                            slidesToShow: 2,
-                            slidesToScroll: 2
-                        }
-                    },
-                    {
-                        breakpoint: 480,
-                        settings: {
-                            slidesToShow: 1,
-                            slidesToScroll: 1
-                        }
-                    }
-                ]
-            });
-        });
 
-    </script>
+<!-- slick carousel-->
+<script src="/static/js/slick.min.js"></script>
+
+<style>
+    .slick .ibox-content {
+        margin: 0 10px;
+    }
+</style>
+
+<script>
+    $(document).ready(function(){
+        $('.slick').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode: true,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+            ]
+        });
+    });
+</script>
