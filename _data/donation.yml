@@ -1,0 +1,40 @@
+# donation list
+- name: Celine
+  avatar: celine.jpg
+  location: Shanghai, China
+  account: 80*****94@qq.com
+  github: YUJING1993
+  website: http://angular.jack003.com
+  type: rmb
+  value: 50
+  date: 2016-11-20
+
+- name: Wenwei Zhou
+  avatar: default.jpg
+  location: Shanghai, China
+  account: 152****2589
+  github: wenwei8268
+  website:
+  type: rmb
+  value: 5
+  date: 2016-12-02
+
+- name: Hongbin Huo
+  avatar: horbie.jpeg
+  location: Shanghai, China
+  account: 136****2534
+  github: HorbieHuo
+  website:
+  type: rmb
+  value: 10
+  date: 2016-12-21
+
+- name: Xiaolong Li
+  avatar: flylixiaolong.jpeg
+  location: Shanghai, China
+  account: 186****0489
+  github: flylixiaolong
+  website:
+  type: rmb
+  value: 5
+  date: 2016-12-21

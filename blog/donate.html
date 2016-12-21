@@ -42,6 +42,36 @@ permalink: /donate/
             </div>
         </div>
     </div>
+    <div class="row">
+        {% for donation in site.data.donation %}
+        {% assign loopindex = forloop.index | modulo: 2 %}
+        <div class="col-lg-4 {% if loopindex == 1 %}col-lg-offset-2{% endif %}">
+            <div class="contact-box">
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <img alt="image" class="img-circle m-t-xs img-responsive" src="{{ donation.avatar | prepend: '/static/img/donation/'}}">
+                        <div class="m-t-xs font-bold">{{ donation.name }}</div>
+                        <p><i class="fa fa-{{ donation.type }}"></i> {{ donation.value }}</p>
+                    </div>
+                </div>
+                <div class="col-sm-8">
+                    <p><i class="fa fa-user"></i> {{ donation.account }}</p>
+                    {% if donation.location %}
+                    <p><i class="fa fa-map-marker"></i> {{ donation.location }}</p>
+                    {% endif %}
+                    {% if donation.website %}
+                    <p><i class="fa fa-globe"></i> <a target="blank" href="{{ donation.website }}">Website</a></p>
+                    {% endif %}
+                    {% if donation.github %}
+                    <p><i class="fa fa-github"></i> <a class="github_username" target="blank" href="{{ donation.github | prepend: 'https://github.com/' }}">{{ donation.github }}</a></p>
+                    {% endif %}
+                    <p><i class="fa fa-calendar"></i> {{ donation.date | date: "%-d %b %Y" }}</p>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 </div>
 
 <!-- slick carousel-->
