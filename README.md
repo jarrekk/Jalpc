@@ -81,7 +81,7 @@ author:
   email: 'me@jack003.com'
   facebook_username: 'jiakunnj'
   github_username: 'Jack614'
-  head_img: 'static/img/landing/Jack.jpg'
+  avatar: 'static/img/landing/Jack.jpg'
 ...
 ```
 
