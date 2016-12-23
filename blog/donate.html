@@ -6,7 +6,7 @@ permalink: /donate/
     <link href="/static/css/slick.css" rel="stylesheet">
     <link href="/static/css/slick-theme.css" rel="stylesheet">
 <div class="row">
-    <div class="col-lg-8 col-lg-offset-2 text-center">
+    <div class="col-sm-8 col-sm-offset-2 text-center">
         <div class="navy-line"></div>
         <h1>Donate Jalpc</h1>
         <h3>If you like this theme and want to support it, just donate it. We can make Jalpc better!</h3>
@@ -15,7 +15,7 @@ permalink: /donate/
 
 <div class="wrapper wrapper-content animated pulse">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-sm-8 col-sm-offset-2">
             <h2 class="text-center m">Alipay</h2>
             <div class="slick">
                 {% for alipay in site.data.alipay %}
@@ -29,7 +29,7 @@ permalink: /donate/
         </div>
     </div>
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
+        <div class="col-sm-8 col-sm-offset-2">
             <h2 class="text-center m">WeChat Pay</h2>
             <div class="slick">
                 {% for wechat in site.data.wechat_pay %}
@@ -45,7 +45,7 @@ permalink: /donate/
     <div class="row">
         {% for donation in site.data.donation %}
         {% assign loopindex = forloop.index | modulo: 2 %}
-        <div class="col-lg-4 {% if loopindex == 1 %}col-lg-offset-2{% endif %}">
+        <div class="col-sm-4 {% if loopindex == 1 %}col-sm-offset-2{% endif %}">
             <div class="contact-box">
                 <div class="col-sm-4">
                     <div class="text-center">
