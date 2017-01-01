@@ -26,7 +26,7 @@ permalink: /
                     </li>
                 {% endfor %}
 
-                {% for language in site.languages %}
+                {% for language in site.data.language %}
                   <li>
                     <a id="set_lang_{{ language.locale }}" class="btn btn-sm set_{{ language.locale }}" data-locale="{{ language.locale }}">
                       <img src="{{ language.flag | prepend: site.baseurl }}" height="16px" width="16px">
