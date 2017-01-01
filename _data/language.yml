@@ -1,0 +1,7 @@
+# localization
+# if you don't want this feature, just clear this file content and  static/locals/ folder.
+- locale: 'zh'
+  flag: 'static/img/flags/China.png'
+
+- locale: 'en'
+  flag: 'static/img/flags/United-States.png'
