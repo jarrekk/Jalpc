@@ -95,11 +95,16 @@ These files are used to dynamically render pages, so you almost don't have to ed
 
 The following is mapping between *yml file* to *sections*.
 
-* blog.yml  ==>  _includes/sections/blog.html
+* alipay.yml  ==>  blog/donate.html
+* blog.yml ==> _includes/header.html
+* donation.yml ==> blog/donate.html
 * careers.yml  ==>  _includes/sections/career.html
+* landing.yml ==> index.html
+* language.yml ==> index.html
 * links.yml  ==>  _includes/sections/links.html
 * projects.yml  ==>  _includes/sections/projects.html
 * skills.yml  ==>  _includes/sections/skills.html
+* wechat_pay.yml ==> blog/donate.yml
 
 ### <a name="jekyll-serve"></a>Jekyll Serve
 
@@ -160,6 +165,8 @@ Many third party page counter platforms are too slow,so I count my website page 
 The landing page has multilingual support with the [i18next](http://i18next.com) plugin.
 
 Languages are configured in the `config.yml` file.
+
+> If you don't need this feature, please clear content in file `_data/language.yml` and folder `static/locales/`.
 
 #### Step 1
 
