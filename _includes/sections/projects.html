@@ -19,7 +19,7 @@
             {% endif %}
               <div class="team-member">
                   <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
-                  <h4><a href="{{ project.url | prepend: 'https://github.com' }}" target="blank"><span class="navy">{{ project.name }}</a></span></h4>
+                  <h4><span class="navy">{{ project.name }}</span></h4>
                   <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
                   {% if project.repo %}
                   <iframe src="https://ghbtns.com/github-btn.html?user={{ site.author.github_username }}&repo={{ project.repo }}&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="22px"></iframe>
