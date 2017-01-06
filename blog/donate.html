@@ -46,24 +46,22 @@ permalink: /donate/
         {% for donation in site.data.donation %}
         {% assign loopindex = forloop.index | modulo: 2 %}
         <div class="col-sm-4 {% if loopindex == 1 %}col-sm-offset-2{% endif %}">
-            <div class="contact-box">
+            <div class="contact-box" style="height: 200px;">
                 <div class="col-sm-4">
                     <div class="text-center">
-                        <img alt="image" class="img-circle m-t-xs img-responsive" src="{{ donation.avatar | prepend: '/static/img/donation/'}}">
+                        <img alt="image" class="img-circle m-t-xs img-responsive {{ donation.github }}" src="/static/img/default.jpg">
                         <div class="m-t-xs font-bold">{{ donation.name }}</div>
                         <p><i class="fa fa-{{ donation.type }}"></i> {{ donation.value }}</p>
                     </div>
                 </div>
                 <div class="col-sm-8">
                     <p><i class="fa fa-user"></i> {{ donation.account }}</p>
-                    {% if donation.location %}
-                    <p><i class="fa fa-map-marker"></i> {{ donation.location }}</p>
-                    {% endif %}
+                    <p class="{{ donation.github }}"><i class="fa fa-map-marker"></i> Earth</p>
                     {% if donation.website %}
                     <p><i class="fa fa-globe"></i> <a target="blank" href="{{ donation.website }}">Website</a></p>
                     {% endif %}
                     {% if donation.github %}
-                    <p><i class="fa fa-github"></i> <a class="github_username" target="blank" href="{{ donation.github | prepend: 'https://github.com/' }}">{{ donation.github }}</a></p>
+                    <p><i class="fa fa-github"></i> <a class="github_username {{ donation.github }}" target="blank" href="#">{{ donation.github }}</a></p>
                     {% endif %}
                     <p><i class="fa fa-calendar"></i> {{ donation.date | date: "%-d %b %Y" }}</p>
                 </div>
@@ -85,6 +83,25 @@ permalink: /donate/
 
 <script>
     $(document).ready(function(){
+        donate_github = $('.github_username');
+        for (var i = 0; i < donate_github.length; i++) {
+            $.ajax({
+            type: "GET",
+            url: "https://api.github.com/users/" + donate_github[i].text,
+            tryCount : 0,
+            retryLimit : 3,
+            async: true,
+            dataType: "json",
+            success: function (data) {
+                $("img." + data.login).attr("src", data.avatar_url);
+                $("a." + data.login).attr("href", data.html_url);
+                if (data.location !== null) {
+                    $("p." + data.login).html("<i class=\"fa fa-map-marker\"></i> " + data.location);
+                }
+            }
+        });
+        }
+        console.log($('.github_username'));
         $('.slick').slick({
             infinite: true,
             slidesToShow: 3,
