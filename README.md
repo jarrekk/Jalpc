@@ -6,7 +6,7 @@
 
 <http://www.jack003.com>
 
-![Blog](blog.gif)
+![Blog](readme_files/blog.gif)
 
 * [Ad](#ad)
 * [Getting Started](#getting-started)
@@ -16,8 +16,9 @@
     * [Modify _data/\*.yml](#mofify-datayml)
     * [Jekyll Serve](#jekyll-serve)
     * [Using Github Pages](#using-github-pages)
+    * [Categories in blog page](#categories-in-blog-page)
     * [Pagination](#pagination)
-    * [Page counter](#page-counter)
+    * [Page views counter](#page-views-counter)
     * [Multilingual Page](#multilingual-page)
     * [Web analytics](#web-analytics)
     * [Comment](#comment)
@@ -87,7 +88,7 @@ author:
 
 ### <a name="#index-page"></a>Index page
 
-The index page is seprated into several sections and they are located in `_includes/sections`,the configuration is in `_config.yml` and section's detail configuration is in `_data/*.yml`.
+The index page is seprated into several sections and they are located in `_includes/sections`,the configuration is in `_data/landing.yml` and section's detail configuration is in `_data/*.yml`.
 
 #### <a name="mofify-datayml"></a>Modify `_data/*.yml`
 
@@ -95,15 +96,21 @@ These files are used to dynamically render pages, so you almost don't have to ed
 
 The following is mapping between *yml file* to *sections*.
 
-* alipay.yml  ==>  blog/donate.html
-* blog.yml ==> _includes/header.html
-* donation.yml ==> blog/donate.html
-* careers.yml  ==>  _includes/sections/career.html
 * landing.yml ==> index.html
 * language.yml ==> index.html
-* links.yml  ==>  _includes/sections/links.html
-* projects.yml  ==>  _includes/sections/projects.html
+* careers.yml  ==>  _includes/sections/career.html
 * skills.yml  ==>  _includes/sections/skills.html
+* projects.yml  ==>  _includes/sections/projects.html
+* links.yml  ==>  _includes/sections/links.html
+
+This *yml file* is about blog page navbar
+
+* blog.yml ==> _includes/header.html
+
+The following is mapping between *yml file* to *donation*
+
+* donation.yml ==> blog/donate.html
+* alipay.yml  ==>  blog/donate.html
 * wechat_pay.yml ==> blog/donate.yml
 
 ### <a name="jekyll-serve"></a>Jekyll Serve
@@ -152,11 +159,39 @@ img_path: '/path/of/blog/img/'
 
 If you start server on localhost, you can turn on `# url: "http://127.0.0.1:4000"`.
 
+### <a name="categories-in-blog-page"></a>Categories in blog page
+
+In blog page, we categorize posts into several categories by url, all category pages use same template html file - `_includes/category.html`.
+
+For example: URL is `http://127.0.0.1:4000/python/`. In `_data/blog.yml`, we define this category named `Python`, so in `_includes/category.html` we get this URL(/python/) and change it to my category(Python), then this page are posts about **Python**. The following code is about how to get url and display corresponding posts in  `_includes/category.html`.
+
+```html
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <div class="navy-line"></div>
+        {% assign category = page.url | remove:'/' | capitalize %}
+        {% if category == 'Html' %}
+        {% assign category = category | upcase %}
+        {% endif %}
+        <h1>{{ category }}</h1>
+    </div>
+</div>
+<div class="wrapper wrapper-content  animated fadeInRight blog">
+    <div class="row">
+        <ul id="pag-itemContainer" style="list-style:none;">
+            {% assign counter = 0 %}
+            {% for post in site.categories[category] %}
+            {% assign counter = counter | plus: 1 %}
+            <li>
+```
+
+
+
 ### <a name="pagination"></a>Pagination
 
 The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jack003.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
 
-### <a name="page-counter"></a>Page counter
+### <a name="page-views-counter"></a>Page views counter
 
 Many third party page counter platforms are too slow,so I count my website page view myself,the javascript file is [static/js/count.min.js](https://github.com/JiaKunUp/jalpc_jekyll_theme/blob/gh-pages/static/js/count.min.js) ([static/js/count.js](https://github.com/JiaKunUp/jalpc_jekyll_theme/blob/gh-pages/static/js/count.js)),the backend API is written with flask on [Vultr VPS](https://www.vultr.com/), detail code please see [jalpc-flask](https://github.com/JiaKunUp/jalpc-flask).
 
@@ -251,7 +286,7 @@ I use javascript to realize blog search,you can double click `Ctrl` or click the
 
 Just use it.
 
-![search](search.gif)
+![search](readme_files/search.gif)
 
 ### <a name="cname"></a>CNAME
 
