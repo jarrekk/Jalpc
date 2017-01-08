@@ -1,35 +1,35 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "Jalpc"
-description: "Jack's blog,use Jekyll and github pages."
-keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
+title: "AmJ"
+description: "Personal page using Jack's JalPC Jekyll theme"
+keywords: "Ashutosh,AmJ,Profile, Blog,Jekyll,github,gh-page"
 baseurl: "/"
-url: "http://www.jack003.com"
+url: "http://www.shutri.com"
 # url: "http://127.0.0.1:4000"
 
 # author
 author:
-  name: 'Jack'
-  first_name: 'Jia'
-  last_name: 'Kun'
-  email: 'me@jack003.com'
-  facebook_username: 'jiakunnj'
-  github_username: 'JiaKunUp'
-  avatar: 'static/img/landing/Jack.jpg'
-  desc: 'I am a Full Stack engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.'
-
+  name: 'AmJ'
+  first_name: 'Ashutosh'
+  last_name: 'Jain'
+  email: 'amj@smbstack.com'
+  facebook_username: 'ashutoshmjain'
+  github_username: 'ashutoshmjain'
+  twitter_username: 'ashutoshmjain'
+  avatar: 'static/img/landing/profilepic.png'
+  desc: 'I am a solution architect and project manager in enterprise apps such as ERP, CRM, SCM, Finance. I am  free and open source enthusiast and regular blogger. Life is a continuous learning process, so work makes me more rigorous.'
 # comment
 changyan:
   # appid: cysfY7ULn
   # conf: prod_861928934cecb7a18e15bedaed9dae29
 disqus:
-  name: jalpc
-  public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
+  name: 'ashutoshmjain'
+  #public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
 
 # share
 bshare:
-  uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
+        #uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
 
 # baidu analytics
 ba:
@@ -37,11 +37,11 @@ ba:
 
 # google analytics
 ga:
-  id: UA-73784599-1
+        #id: UA-73784599-1
 
 # growingIO
 gio:
-  id: a49d4901c7853da9
+        #id: a49d4901c7853da9
 
 # Build settings
 encoding: "utf-8"
