@@ -1,16 +1,16 @@
 # careers section data
 - name:
-    detail: Nextcode
-    i18n: nextcode
+    detail: Method360
+    i18n: method360
   desc:
-    detail: Now I am in Nextcode and develop website with Python code for genetic analysis.
-    i18n: nextcode_des
+    detail: I am currently working with Method360 as Senior Director Business Development.
+    i18n: method360_des
   date:
     detail: Apr. 2016
-    i18n: nextcode_date
+    i18n: method360_date
   job:
-    detail: Python Developer
-    i18n: nextcode_job
+    detail: Sr. Director Sales
+    i18n: method360_job
   icon: fa-plus-square
 
 - name:
