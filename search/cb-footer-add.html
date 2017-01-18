@@ -3,15 +3,15 @@
     <input type="text" class="search-content" id="search-content" style="position: fixed; top: 60px" placeholder="Search Blog">
 
     <div style="position: fixed; top: 16px; right: 16px;">
-        <img src="/search/img/cb-close.png"  id="close-btn"/>
+        <img src="{{ "/search/img/cb-close.png"| prepend: site.baseurl }}"  id="close-btn"/>
     </div>
 </div>
 
 <div style="position: fixed; right: 16px; bottom: 20px;">
-    <img src="/search/img/cb-search.png"  id="search-btn"  title="双击ctrl试一下"/>
+    <img src="{{ "/search/img/cb-search.png" | prepend: site.baseurl }}"  id="search-btn"  title="双击ctrl试一下"/>
 </div>
 
-<link rel="stylesheet" href="{{ "search/css/cb-search.css" | prepend: site.baseurl }}">
+<link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}">
 
-<script src="{{ "search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
-<script src="{{ "search/js/cb-search.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
