@@ -3,8 +3,8 @@ layout: blog
 title: Donate
 permalink: /donate/
 ---
-    <link href="/static/css/slick.css" rel="stylesheet">
-    <link href="/static/css/slick-theme.css" rel="stylesheet">
+    <link href="{{ "/static/css/slick.css" | prepend: site.baseurl }}" rel="stylesheet">
+    <link href="{{ "/static/css/slick-theme.css" | prepend: site.baseurl }}" rel="stylesheet">
 <div class="row">
     <div class="col-sm-8 col-sm-offset-2 text-center">
         <div class="navy-line"></div>
@@ -21,7 +21,7 @@ permalink: /donate/
                 {% for alipay in site.data.alipay %}
                 <div>
                     <div class="ibox-content">
-                        <img src="{{ alipay.name | prepend: '/static/img/donate/' }}" width="100%">
+                        <img src="{{ alipay.name | prepend: '/static/img/donate/' | prepend : site.baseurl }}" width="100%">
                     </div>
                 </div>
                 {% endfor %}
@@ -35,7 +35,7 @@ permalink: /donate/
                 {% for wechat in site.data.wechat_pay %}
                 <div>
                     <div class="ibox-content">
-                        <img src="{{ wechat.name | prepend: '/static/img/donate/' }}" width="100%">
+                        <img src="{{ wechat.name | prepend: '/static/img/donate/' | prepend : site.baseurl }}" width="100%">
                     </div>
                 </div>
                 {% endfor %}
@@ -49,7 +49,7 @@ permalink: /donate/
             <div class="contact-box" style="height: 200px;">
                 <div class="col-sm-4">
                     <div class="text-center">
-                        <img alt="image" class="img-circle m-t-xs img-responsive {{ donation.github }}" src="/static/img/default.jpg">
+                        <img alt="image" class="img-circle m-t-xs img-responsive {{ donation.github }}" src="{{ "/static/img/default.jpg" | prepend: site.baseurl }}">
                         <div class="m-t-xs font-bold">{{ donation.name }}</div>
                         <p><i class="fa fa-{{ donation.type }}"></i> {{ donation.value }}</p>
                     </div>
@@ -73,7 +73,7 @@ permalink: /donate/
 </div>
 
 <!-- slick carousel-->
-<script src="/static/js/slick.min.js"></script>
+<script src="{{ "/static/js/slick.min.js" | prepend: site.baseurl }}"></script>
 
 <style>
     .slick .ibox-content {

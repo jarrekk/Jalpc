@@ -3,12 +3,12 @@
     <input type="text" class="form-control search-content" id="search-content" style="position: fixed; top: 60px" placeholder="Search Blog">
 
     <div style="position: fixed; top: 16px; right: 16px; z-index: 9999;">
-        <img src="/search/img/cb-close.png" id="close-btn"/>
+        <img src="{{ "/search/img/cb-close.png" | prepend: site.baseurl }}" id="close-btn"/>
     </div>
 </div>
 
 <div style="position: fixed; right: 16px; bottom: 20px; z-index: 9999;">
-    <img src="/search/img/cb-search.png"  id="search-btn"  title="Double click Ctrl"/>
+    <img src="{{ "/search/img/cb-search.png" | prepend : site.baseurl }}"  id="search-btn"  title="Double click Ctrl"/>
 </div>
 
 <div class="navbar-wrapper">
@@ -21,18 +21,18 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="{{ site.url }}">{{ site.title }}</a>
+                    <a class="navbar-brand" href="{{ "/" | prepend: site.baseurl }}">{{ site.title }}</a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a class="page-scroll" href="/blog/">{{ site.index.home }}</a></li>
+                        <li><a class="page-scroll" href="{{ "blog/" | prepend: site.baseurl }}">{{ site.index.home }}</a></li>
                         {% for tag in site.data.blog %}
                             {% if page.title == tag.name %}
                             <li class="active">
                             {% else %}
                             <li>
                             {% endif %}
-                            <a class="page-scroll" href="{{ tag.href }}">{{ tag.name }}</a></li>
+                            <a class="page-scroll" href="{{ tag.href | prepend: site.baseurl }}">{{ tag.name }}</a></li>
                         {% endfor %}
                     </ul>
                 </div>

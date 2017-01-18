@@ -18,7 +18,7 @@
                 <div class="col-lg-8 col-lg-offset-2">
                     <div class="ibox">
                         <div class="ibox-content">
-                            <a href="{{ post.url }}" class="btn-link">
+                            <a href="{{ post.url | prepend: site.baseurl }}" class="btn-link">
                                 <h2>{{ post.title }}</h2>
                             </a>
                             <div class="small m-b-xs">

@@ -1,7 +1,7 @@
 ---
 layout: default
 ---
- 
+
 <div class="wrapper wrapper-content  animated fadeInRight article">
     <div class="row">
         <div class="col-lg-10 col-lg-offset-1">
@@ -30,7 +30,7 @@ layout: default
                         <div class="col-md-6">
                             <div class="small text-right">
                                 <h5>Stats:</h5>
-                                <div> 
+                                <div>
                                 {% if site.changyan %}
                                     <i class="fa fa-comments-o"> </i> <span id = "url::{{post.url | prepend: page.url}}" class = "cy_cmt_count" ></span> comments
                                 {% endif %}
@@ -45,9 +45,7 @@ layout: default
                     <div class="row">
                         <div class="col-lg-12">
                             <!-- donate -->
-                            {% if site.donate %}
-                                {% include donate.html %}
-                            {% endif %}
+                            {% include donate.html %}
                             <br>
                             <!-- share -->
                             {% if site.bshare %}

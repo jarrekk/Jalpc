@@ -24,8 +24,8 @@
     "jalpc": "Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.",
     "angularjs": "It is a web font application written by Angularjs and deployed by Jekyll on github (gh-pages), the backend platform is Leancloud, you can use Parse as well.",
     "rsser": "Rsser is an Ionic application, with this application we can read news and articles freely, you can add rss address from the given list and add it manually.",
-    "familycode": "This is a shopping mall in wechat, it promotes gene detection. Since time is precious, I write this website with Django, jQuery, weui. This is WuxiNextcode's major product. You can scan project's picture by wechat.",
-    "leetcode": "LeetCode is a website which has many valuable algorithms questions, this is a project of kamyu104's, I forked it and added more solutions, if you like Python you can find fun from this project."
+    "leetcode": "LeetCode is a website which has many valuable algorithmic questions, this is a project of kamyu104's, I forked it and added more solutions, if you like Python you can find fun from this project.",
+    "familycode": "This is a shopping mall in wechat, it promotes gene detection. Since time is precious, I write this website with Django, jQuery, weui. This is WuxiNextcode's major product. You can scan project's picture by wechat."
   },
   "career":{
     "my_career": "My Career",
