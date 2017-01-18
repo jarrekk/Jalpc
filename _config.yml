@@ -1,13 +1,13 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "Jalpc"
-description: "Jack's blog,use Jekyll and github pages."
-keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
-baseurl: "/test"
-# url: "http://www.jack003.com"
-url: "http://127.0.0.1:4000/test"
-img_path: "/test/static/img/blog"
+title: Jalpc
+description: Jack's blog,use Jekyll and github pages.
+keywords: 'Jack,Jalpc,blog,Jekyll,github,gh-pages'
+baseurl: ''
+url: 'http://www.jack003.com'
+# url: "http://127.0.0.1:4000"
+img_path: '/static/img/blog'
 
 # author
 author:
