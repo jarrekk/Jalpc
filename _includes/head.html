@@ -37,9 +37,67 @@
   <!-- Scripts -->
   <script src="{{"/bower_components/jquery/dist/jquery.min.js"| prepend: site.baseurl }}"></script>
   <script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      var initial = 0;
+      var show = true;
 
-  <!-- cb-search -->
-  <script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
+      var toggleSearch = function (visible) {
+        initial = 0;
+        show = !visible;
+        var visibility = visible ? 'block' : 'none';
+
+        $("#search-content").val("");
+        $(".search-tool").css("display", visibility);
+      };
+
+      var shouldToggle = function (time) {
+        var gap = time - initial;
+        initial = time;
+        return gap < 500;
+      };
+
+      $(document).keyup(function (e) {
+        var now = new Date().getTime();
+        if (e.keyCode == 17 && shouldToggle(now)) {
+          toggleSearch(show);
+        } else if (e.keyCode == 27) {
+          toggleSearch(false);
+        }
+      });
+
+      $("#search-content").keyup(function (e) {
+        var now = new Date().getTime();
+        if (e.keyCode == 17 && shouldToggle(now)) {
+          toggleSearch(show);
+        }
+      });
+
+      $("#close-btn").click(function () {
+        toggleSearch(false);
+      });
+
+      $("#search-btn").click(function() {
+        toggleSearch(true);
+      });
+
+      $.getJSON("{{ "/search/cb-search.json" | prepend: site.baseurl }}")
+        .done(function (data) {
+          if (data.code == 0) {
+            $("#search-content").typeahead({
+              source: data.data,
+              displayText: function (item) {
+                return item.title;
+              },
+              afterSelect: function (item) {
+                window.location.href = item.url;
+              }
+            });
+          }
+        });
+    });
+  </script>
+
   <script>
     $(function(){
         $("pre").css('display','block');
@@ -99,5 +157,6 @@
     })();
   </script>
 {% endif %}
-
+<!-- cb-search -->
+<!-- <script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script> -->
 </head>
