@@ -19,13 +19,22 @@
             {% endif %}
               <div class="team-member">
                   <img src="{{ project.img | prepend: site.baseurl }}" class="img-responsive img-circle img-small" alt="">
-                  <h4><span class="navy">{{ project.name }}</span></h4>
+                  <h4>
+                  {% if project.repo %}
+                  <a href="https://github.com/{{ project.gh_user }}/{{ project.repo }}" target="_blank"><span class="navy">{{ project.name }}</span></a>
+                  {% else %}
+                  <span class="navy">{{ project.name }}</span>
+                  {% endif %}
+                  </h4>
                   <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
+                  <!-- if you want to display github buttons uncomment the follow code -->
+                  <!--
                   {% if project.repo %}
                   <iframe src="https://ghbtns.com/github-btn.html?user={{ project.gh_user }}&repo={{ project.repo }}&type=watch&count=true&v=2" frameborder="0" scrolling="0" width="100px" height="22px"></iframe>
                   <iframe src="https://ghbtns.com/github-btn.html?user={{ project.gh_user }}&repo={{ project.repo }}&type=star&count=true" frameborder="0" scrolling="0" width="100px" height="22px"></iframe>
                   <iframe src="https://ghbtns.com/github-btn.html?user={{ project.gh_user }}&repo={{ project.repo }}&type=fork&count=true" frameborder="0" scrolling="0" width="100px" height="22px"></iframe>
                   {% endif %}
+                  -->
               </div>
           </div>
       {% endfor %}
