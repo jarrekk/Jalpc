@@ -11,13 +11,13 @@
 <body id="page-top" class="landing-page">
 
 	{% if page.title != 'index' %}
-	    {% include header.html %}
+	    {% include blog_header.html %}
 	{% endif %}
 
     {{ content }}
 
 	{% if page.title != 'index' %}
-	    {% include footer.html %}
+	    {% include foot.html %}
 	{% else %}
 		{% include index_foot.html %}
 	{% endif %}
