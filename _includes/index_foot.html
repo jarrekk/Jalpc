@@ -1,8 +1,11 @@
-<script src="{{ "/static/js/scroll.js" | prepend: site.baseurl }}"></script>
+<!-- <script src="{{ "/static/js/scroll.js" | prepend: site.baseurl }}"></script> -->
+{% if site.data.language %}
+<script src="{{"/bower_components/i18next/i18next.min.js"| prepend: site.baseurl }}"></script>
+{% endif %}
 {% if site.data.language %}
 <script src="{{ "/static/js/localization.js" | prepend: site.baseurl }}"></script>
 {% endif %}
-<script async src="{{ "/static/js/count.js" | prepend: site.baseurl }}"></script>
+<!-- <script async src="{{ "/static/js/count.js" | prepend: site.baseurl }}"></script> -->
 
 <!-- Baidu analytics -->
 {% if site.ba %}
@@ -28,5 +31,24 @@
     ga('create', '{{ site.ga.id }}', 'auto');
     ga('send', 'pageview');
 
+  </script>
+{% endif %}
+
+<!-- GrowingIO -->
+{% if site.gio %}
+  <script>
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function(){
+      _vds.push(['setAccountId', '{{ site.gio.id }}']);
+      (function() {
+        var vds = document.createElement('script');
+        vds.type='text/javascript';
+        vds.async = true;
+        vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(vds, s);
+      })();
+    })();
   </script>
 {% endif %}

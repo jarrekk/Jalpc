@@ -1,3 +1,20 @@
+<!-- jPages -->
+<script src="{{"/static/js/jPages.js" | prepend: site.baseurl}}"></script>
+<script src="{{"/static/js/js.js" | prepend: site.baseurl}}"></script>
+<script type="text/javascript">
+$(function(){
+  /* initiate the plugin */
+  $("div.pag-holder").jPages({
+      containerID  : "pag-itemContainer",
+      perPage      : 5,  /* num of items per page */
+      startPage    : 1,
+      startRange   : 1,
+      midRange     : 3,
+      endRange     : 1
+  });
+});
+</script>
+
 <div class="row">
     <div class="col-lg-12 text-center">
         <div class="navy-line"></div>
