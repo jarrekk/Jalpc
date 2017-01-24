@@ -27,6 +27,13 @@
                   {% endif %}
                   </h4>
                   <p><span data-i18n="projects.{{ project.i18n }}">{{ project.desc }}</span></p>
+                  {% if project.repo %}
+                  <div user="{{ project.gh_user }}" repo="{{ project.repo }}" class="ghbtn">
+                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/stargazers" class="btn btn-white btn-xs star"><i class="fa fa-star"></i> ...</a>&emsp;&emsp;
+                      <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.gh_user }}/{{ project.repo }}/network" class="btn btn-white btn-xs fork"><i class="fa fa-code-fork"></i> ...</a>
+                      <div style="height: 10px;"></div>
+                  </div>
+                  {% endif %}
                   <!-- if you want to display github buttons uncomment the follow code -->
                   <!--
                   {% if project.repo %}

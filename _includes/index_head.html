@@ -23,13 +23,14 @@
   <link href="{{"/static/css/style.min.css"| prepend: site.baseurl }}" rel="stylesheet">
 
   <!-- Third-party scripts -->
-  {% if site.data.projects %}
-  <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-  {% endif %}
   <script src="{{ "/static/assets/app-index-20170123.min.js" | prepend: site.baseurl }}"></script>
   <!-- <script src="{{"/bower_components/jquery/dist/jquery.min.js"| prepend: site.baseurl }}"></script> -->
   <!-- <script src="{{"/bower_components/bootstrap/dist/js/bootstrap.min.js"| prepend: site.baseurl }}"></script> -->
   <!-- <script src="{{"/bower_components/PACE/pace.min.js"| prepend: site.baseurl }}"></script> -->
   <!-- <script src="{{"/bower_components/wow/dist/wow.min.js"| prepend: site.baseurl }}"></script> -->
+  {% if site.data.projects %}
+  <!-- <script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script> -->
+  <script async defer src="{{ "/static/js/github_api.js" | prepend: site.baseurl }}"></script>
+  {% endif %}
 
 </head>
