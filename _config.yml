@@ -43,7 +43,7 @@ ga:
 
 # growingIO
 gio:
-  id: a49d4901c7853da9
+  # id: a49d4901c7853da9
 
 # Build settings
 encoding: "utf-8"
