@@ -3,4 +3,5 @@ _site
 .jekyll-metadata
 .idea
 .DS_Store
-
+node_modules
+npm-debug.log
