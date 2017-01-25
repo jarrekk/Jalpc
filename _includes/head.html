@@ -20,14 +20,12 @@
   <!-- favicon -->
   <link rel="shortcut icon" href="{{ "/static/img/favicon.ico" | prepend: site.baseurl }}">
 
-  <!-- Third-party CSS -->
+  <!-- Main CSS -->
   <link href="{{ "/static/assets/app-20170125.min.css" | prepend: site.baseurl }}" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="{{"/static/css/style.min.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <!-- Main Scripts -->
+  <script src="{{"/static/assets/app-20170125.min.js"| prepend: site.baseurl }}"></script>
 
-  <!-- Scripts -->
-  <script src="{{"/static/assets/app-20170125-1.min.js"| prepend: site.baseurl }}"></script>
   <script type="text/javascript">
     $(document).ready(function () {
       var initial = 0;
@@ -87,14 +85,8 @@
           }
         });
     });
-  </script>
-
-  <script>
     $(function(){
         $("pre").css('display','block');
     });
   </script>
-  <!-- Mainly scripts -->
-  <script src="{{"/static/assets/app-20170125-2.min.js"| prepend: site.baseurl }}"></script>
-
 </head>

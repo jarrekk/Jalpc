@@ -5,97 +5,117 @@ var fs = require('fs');
 nowDate = new Date();
 nowDateStr = nowDate.toISOString().slice(0,10).replace(/-/g,"");
 
+// compress js files function
+function compressjs(filename, filelist){
+	console.log('Now compress index page js files to ' + filename + ' ...')
+	var result = UglifyJS.minify(filelist, {
+		mangle: true,
+		compress: {
+			sequences: true,
+			dead_code: true,
+			conditionals: true,
+			booleans: true,
+			unused: true,
+			if_return: true,
+			join_vars: true,
+			drop_console: true
+		},
+	});
+
+	fs.writeFileSync('static/assets/' + filename, result.code);
+	console.log('Index page js files compress succeed. You can find it at "static/assets".\n');
+}
+
+// compress css files function
+function compresscss(filename, filelist) {
+	console.log('Now compress other pages css files to ' + filename + ' ...')
+	var result = new CleanCSS().minify(filelist);
+	var output = new CleanCSS({
+	  	level: {
+			1: {
+		   		transform: function (propertyName, propertyValue) {
+		        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/bootstrap/dist/') > -1) {
+		          		return propertyValue.replace('node_modules/bootstrap/dist/', '');
+		        	}
+		        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/components-font-awesome/') > -1) {
+		          		return propertyValue.replace('node_modules/components-font-awesome/', '');
+		        	}
+		        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/font-mfizz/dist/') > -1) {
+		          		return propertyValue.replace('node_modules/font-mfizz/dist/', '');
+		        	}
+		        	if (propertyName == 'background' && propertyValue.indexOf('static/img/') > -1) {
+		          		return propertyValue.replace('static/', '');
+		        	}
+		        	if (propertyName == 'background-image' && propertyValue.indexOf('static/img/') > -1) {
+		          		return propertyValue.replace('static/', '');
+		        	}
+		      	}
+		   	}
+	  	}
+	}).minify(result.styles);
+
+	fs.writeFileSync('static/assets/' + filename, output.styles);
+	console.log('Blog page css files compress succeed. You can find it at "static/assets".\n');
+}
+
+// compress js files of 404 page
+fofJsFilename = 'fof-' + nowDateStr + '.min.js'
+fofJsFileList = [
+	'node_modules/jquery/dist/jquery.js',
+	'node_modules/bootstrap/dist/js/bootstrap.js',
+	'node_modules/pace-progress/pace.js'
+	]
+compressjs(fofJsFilename, fofJsFileList)
+
+
+// compress css files of 404 page
+fofCSSFilename = 'fof-' + nowDateStr + '.min.css'
+fofCSSFilelist = [
+	'node_modules/normalize.css/normalize.css',
+	'node_modules/bootstrap/dist/css/bootstrap.css',
+	'node_modules/components-font-awesome/css/font-awesome.css',
+	'node_modules/animate.css/animate.css',
+	'static/css/style.css'
+	]
+compresscss(fofCSSFilename, fofCSSFilelist)
+
 
 // compress js files of index page
 indexJsFilename = 'app-index-' + nowDateStr + '.min.js'
-console.log('Now compress index page js files to ' + indexJsFilename + ' ...')
-var result = UglifyJS.minify([
+indexJsFileList = [
 	'node_modules/jquery/dist/jquery.js',
 	'node_modules/bootstrap/dist/js/bootstrap.js',
 	'node_modules/pace-progress/pace.js',
 	'node_modules/wowjs/dist/wow.js',
 	'static/js/scroll.js',
 	'static/js/count.js'
-	], {
-	mangle: true,
-	compress: {
-		sequences: true,
-		dead_code: true,
-		conditionals: true,
-		booleans: true,
-		unused: true,
-		if_return: true,
-		join_vars: true,
-		drop_console: true
-	},
-});
+	]
+compressjs(indexJsFilename, indexJsFileList)
 
-fs.writeFileSync('static/assets/' + indexJsFilename, result.code);
-console.log('Index page js files compress succeed. You can find it at "static/assets".\n');
 
+// compress i18next js files
+i18JsFilename = 'i18-' + nowDateStr + '.min.js'
+i18JsFileList = ['static/js/i18next.min.js', 'static/js/localization.js']
+compressjs(i18JsFilename, i18JsFileList)
 
 // compress css files of index page
 indexCSSFilename = 'app-index-' + nowDateStr + '.min.css'
-console.log('Now compress index page css files to ' + indexCSSFilename + ' ...')
-var result = new CleanCSS().minify([
+indexCSSFilelist = [
 	'node_modules/normalize.css/normalize.css',
 	'node_modules/bootstrap/dist/css/bootstrap.css',
 	'node_modules/animate.css/animate.css',
 	'node_modules/components-font-awesome/css/font-awesome.css',
-	'node_modules/font-mfizz/dist/font-mfizz.css'
+	'node_modules/font-mfizz/dist/font-mfizz.css',
+	'static/css/style.css'
 	]
-);
-
-var output = new CleanCSS({
-  	level: {
-		1: {
-	   		transform: function (propertyName, propertyValue) {
-	        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/bootstrap/dist/') > -1) {
-	          		return propertyValue.replace('node_modules/bootstrap/dist/', '');
-	        	}
-	        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/components-font-awesome/') > -1) {
-	          		return propertyValue.replace('node_modules/components-font-awesome/', '');
-	        	}
-	        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/font-mfizz/dist/') > -1) {
-	          		return propertyValue.replace('node_modules/font-mfizz/dist/', '');
-	        	}
-	      	}
-	   	}
-  	}
-}).minify(result.styles);
-
-fs.writeFileSync('static/assets/' + indexCSSFilename, output.styles);
-console.log('Index page css files compress succeed. You can find it at "static/assets".\n');
+compresscss(indexCSSFilename, indexCSSFilelist)
 
 
-// compress js file of other pages--1
-blogJsFilename1 = 'app-' + nowDateStr + '-1.min.js'
-console.log('Now compress index page js files to ' + blogJsFilename1 + ' ...')
-var result = UglifyJS.minify([
+// compress js file of other pages
+blogJsFilename = 'app-' + nowDateStr + '.min.js'
+blogJsFilelist = [
 	'node_modules/jquery/dist/jquery.js',
-	'search/js/bootstrap3-typeahead.min.js'
-	], {
-	mangle: true,
-	compress: {
-		sequences: true,
-		dead_code: true,
-		conditionals: true,
-		booleans: true,
-		unused: true,
-		if_return: true,
-		join_vars: true,
-		drop_console: true
-	},
-});
-
-fs.writeFileSync('static/assets/' + blogJsFilename1, result.code);
-console.log('Index page js files compress succeed. You can find it at "static/assets".\n');
-
-
-// compress js file of other pages--2
-blogJsFilename2 = 'app-' + nowDateStr + '-2.min.js'
-console.log('Now compress index page js files to ' + blogJsFilename2 + ' ...')
-var result = UglifyJS.minify([
+	'search/js/bootstrap3-typeahead.min.js',
 	'node_modules/bootstrap/dist/js/bootstrap.js',
 	'node_modules/metismenu/dist/metisMenu.js',
 	'node_modules/jquery-slimscroll/jquery.slimscroll.js',
@@ -104,28 +124,22 @@ var result = UglifyJS.minify([
 	'node_modules/wowjs/dist/wow.js',
 	'static/js/scroll.js',
 	'static/js/count.js'
-	], {
-	mangle: true,
-	compress: {
-		sequences: true,
-		dead_code: true,
-		conditionals: true,
-		booleans: true,
-		unused: true,
-		if_return: true,
-		join_vars: true,
-		drop_console: true
-	},
-});
+	],
+compressjs(blogJsFilename, blogJsFilelist)
 
-fs.writeFileSync('static/assets/' + blogJsFilename2, result.code);
-console.log('Index page js files compress succeed. You can find it at "static/assets".\n');
+
+// compress jPage js files
+jPageJsFilename = 'jPage-' + nowDateStr + '.min.js'
+jPageJsFilelist = [
+	'static/js/jPages.js',
+	'static/js/js.js'
+	]
+compressjs(jPageJsFilename, jPageJsFilelist)
 
 
 // compress css files of index page
 blogCSSFilename = 'app-' + nowDateStr + '.min.css'
-console.log('Now compress other pages css files to ' + blogCSSFilename + ' ...')
-var result = new CleanCSS().minify([
+blogCSSFilelist = [
 	'node_modules/normalize.css/normalize.css',
 	'node_modules/bootstrap/dist/css/bootstrap.css',
 	'node_modules/animate.css/animate.css',
@@ -133,27 +147,7 @@ var result = new CleanCSS().minify([
 	'node_modules/font-mfizz/dist/font-mfizz.css',
 	'node_modules/gritter/jquery.gritter.css',
 	'search/css/cb-search.css',
-	'static/css/pygments.css'
+	'static/css/pygments.css',
+	'static/css/style.css'
 	]
-);
-
-var output = new CleanCSS({
-  	level: {
-		1: {
-	   		transform: function (propertyName, propertyValue) {
-	        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/bootstrap/dist/') > -1) {
-	          		return propertyValue.replace('node_modules/bootstrap/dist/', '');
-	        	}
-	        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/components-font-awesome/') > -1) {
-	          		return propertyValue.replace('node_modules/components-font-awesome/', '');
-	        	}
-	        	if (propertyName == 'src' && propertyValue.indexOf('node_modules/font-mfizz/dist/') > -1) {
-	          		return propertyValue.replace('node_modules/font-mfizz/dist/', '');
-	        	}
-	      	}
-	   	}
-  	}
-}).minify(result.styles);
-
-fs.writeFileSync('static/assets/' + blogCSSFilename, output.styles);
-console.log('Blog page css files compress succeed. You can find it at "static/assets".\n');
+compresscss(blogCSSFilename, blogCSSFilelist)

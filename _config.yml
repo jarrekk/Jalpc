@@ -4,10 +4,10 @@
 title: Jalpc
 description: Jack's blog,use Jekyll and github pages.
 keywords: 'Jack,Jalpc,blog,Jekyll,github,gh-pages'
-baseurl: ''
-url: 'http://www.jack003.com'
-# url: "http://127.0.0.1:4000"
-img_path: '/static/img/blog'
+baseurl: ''  # if you have suburl as homepage like '/homepage', please change it to '/homepage'
+# url: 'http://www.jack003.com'
+url: "http://127.0.0.1:4000"
+img_path: '/static/assets/img/blog'
 
 # author
 author:
@@ -18,7 +18,7 @@ author:
   email: 'me@jack003.com'
   facebook_username: 'jiakunnj'
   github_username: 'JiaKunUp'
-  avatar: '/static/img/landing/Jack.jpg'
+  avatar: '/static/assets/img/landing/Jack.jpg'
   desc: 'I am a Full Stack engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.'
 
 # comment
