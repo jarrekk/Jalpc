@@ -1,6 +1,5 @@
 <!-- jPages -->
-<script src="{{"/static/js/jPages.js" | prepend: site.baseurl}}"></script>
-<script src="{{"/static/js/js.js" | prepend: site.baseurl}}"></script>
+<script src="{{"/static/assets/jPage-20170125.min.js" | prepend: site.baseurl}}"></script>
 <script type="text/javascript">
 $(function(){
   /* initiate the plugin */
@@ -48,7 +47,7 @@ $(function(){
                                 <div class="col-md-6">
                                     <h5 style="display: inline;">Tags:</h5>
                                     {% for tag in post.tags %}
-                                    <button class="btn btn-white btn-xs" type="button">{{ tag }}</button>
+                                    <button class="btn btn-white btn-xs">{{ tag }}</button>
                                     {% endfor %}
                                 </div>
                                 <div class="col-md-6">

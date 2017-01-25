@@ -21,7 +21,7 @@ permalink: /donate/
                 {% for alipay in site.data.alipay %}
                 <div>
                     <div class="ibox-content">
-                        <img src="{{ alipay.name | prepend: '/static/img/donate/' | prepend : site.baseurl }}" width="100%">
+                        <img src="{{ alipay.name | prepend: '/static/assets/img/donate/' | prepend : site.baseurl }}" width="100%">
                     </div>
                 </div>
                 {% endfor %}
@@ -35,7 +35,7 @@ permalink: /donate/
                 {% for wechat in site.data.wechat_pay %}
                 <div>
                     <div class="ibox-content">
-                        <img src="{{ wechat.name | prepend: '/static/img/donate/' | prepend : site.baseurl }}" width="100%">
+                        <img src="{{ wechat.name | prepend: '/static/assets/img/donate/' | prepend : site.baseurl }}" width="100%">
                     </div>
                 </div>
                 {% endfor %}
