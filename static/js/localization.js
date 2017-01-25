@@ -1,6 +1,7 @@
 $(document).ready(function() {
   var i18nOpts = {
     lng: 'en',
+    getAsync: true,
     fallbackLng: 'en',
     resGetPath: 'static/locales/__lng__.json'
   };
@@ -23,5 +24,5 @@ $(document).ready(function() {
     });
   });
 
-  $.i18n.init(i18nOpts, translate);
+  i18n.init(i18nOpts, translate);
 });
