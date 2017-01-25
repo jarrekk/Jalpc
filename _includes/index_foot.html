@@ -1,8 +1,6 @@
 {% if site.data.language %}
-<script src="{{"/bower_components/i18next/i18next.min.js"| prepend: site.baseurl }}"></script>
-{% endif %}
-{% if site.data.language %}
-<script src="{{ "/static/js/localization.js" | prepend: site.baseurl }}"></script>
+<script src="{{"/static/js/i18next.min.js"| prepend: site.baseurl }}"></script>
+<script async defer src="{{ "/static/js/localization.js" | prepend: site.baseurl }}"></script>
 {% endif %}
 
 <!-- Baidu analytics -->
