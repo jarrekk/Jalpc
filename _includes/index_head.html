@@ -11,17 +11,12 @@
   <link rel="shortcut icon" href="{{ "/static/img/favicon.ico" | prepend: site.baseurl }}">
 
   <!-- Third-party CSS -->
-  <link href="{{"/bower_components/normalize-css/normalize.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"/bower_components/bootstrap/dist/css/bootstrap.min.css" | prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"/bower_components/animate.css/animate.min.css"| prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"/bower_components/components-font-awesome/css/font-awesome.min.css"| prepend: site.baseurl }}" rel="stylesheet">
-  <link href="{{"/static/font-mfizz/font-mfizz.css"| prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/assets/app-index-20170125.min.css" | prepend: site.baseurl }}" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="{{"/static/css/style.min.css"| prepend: site.baseurl }}" rel="stylesheet">
 
   <!-- Third-party scripts -->
-  <!-- the following js file includes bower_components(jquery.js, bootstrap.js, pace.js, wow.js), static(scroll.js, count.js) -->
-  <script src="{{ "/static/assets/app-index-20170123.min.js" | prepend: site.baseurl }}"></script>
+  <script src="{{ "/static/assets/app-index-20170125.min.js" | prepend: site.baseurl }}"></script>
   {% if site.data.projects %}
   <script async defer src="{{ "/static/js/github_api.js" | prepend: site.baseurl }}"></script>
   {% endif %}
