@@ -19,6 +19,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.6",
+    "clean-css": "^4.0.0",
     "components-font-awesome": "^4.7.0",
     "font-mfizz": "^2.3.0",
     "gritter": "^1.7.4",
@@ -28,6 +29,7 @@
     "normalize.css": "^4.2.0",
     "pace-progress": "^1.0.2",
     "peity": "^3.2.0",
+    "uglify-js": "^2.7.5",
     "wowjs": "^1.1.2"
   }
 }
