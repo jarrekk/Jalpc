@@ -5,8 +5,8 @@ title: Jalpc
 description: Jack's blog,use Jekyll and github pages.
 keywords: 'Jack,Jalpc,blog,Jekyll,github,gh-pages'
 baseurl: ''  # if you have suburl as homepage like '/homepage', please change it to '/homepage'
-# url: 'http://www.jack003.com'
-url: "http://127.0.0.1:4000"
+url: 'http://www.jack003.com'
+# url: "http://127.0.0.1:4000"
 img_path: '/static/assets/img/blog'
 
 # author
