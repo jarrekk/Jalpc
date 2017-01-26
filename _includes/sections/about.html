@@ -7,22 +7,16 @@
         </div>
     </div>
     <div class="row">
-        <!-- python -->
+        <!-- first two icons -->
+        {% for icon in site.author.skill_icon1 %}
         <div class="col-xs-2 wow fadeInLeft">
             <div class="team-member">
                 <div class="vote-icon">
-                    <i class="icon-python"></i>
+                    <i class="{{ icon.name }}"></i>
                 </div>
             </div>
         </div>
-        <!-- linux -->
-        <div class="col-xs-2 wow fadeInLeft">
-            <div class="team-member">
-                <div class="vote-icon">
-                    <i class="icon-shell"></i>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
         <!-- avatar -->
         <div class="col-xs-4">
             <div class="team-member wow zoomIn">
@@ -49,22 +43,16 @@
                 </ul>
             </div>
         </div>
-        <!-- html -->
+        <!-- second two icons -->
+        {% for icon in site.author.skill_icon2 %}
         <div class="col-xs-2 wow fadeInRight">
             <div class="team-member">
                 <div class="vote-icon">
-                    <i class="icon-angular"></i>
+                    <i class="{{ icon.name }}"></i>
                 </div>
             </div>
         </div>
-        <!-- docker -->
-        <div class="col-xs-2 wow fadeInRight">
-            <div class="team-member">
-                <div class="vote-icon">
-                    <i class="icon-docker"></i>
-                </div>
-            </div>
-        </div>
+        {% endfor %}
     </div>
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg wow zoomIn">

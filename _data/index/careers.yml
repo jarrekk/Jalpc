@@ -1,4 +1,5 @@
 # careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
     detail: Nextcode
     i18n: nextcode

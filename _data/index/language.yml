@@ -1,5 +1,5 @@
 # localization
-# if you don't want this feature, just clear this file content and  static/locals/ folder.
+# if you don't want this feature, just clear this file content then ignore "i18n" in files careers.yml and projects.yml
 - locale: 'zh'
   flag: '/static/assets/img/flags/China.png'
 

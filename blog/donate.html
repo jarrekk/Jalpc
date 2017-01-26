@@ -18,7 +18,7 @@ permalink: /donate/
         <div class="col-sm-8 col-sm-offset-2">
             <h2 class="text-center m">Alipay</h2>
             <div class="slick">
-                {% for alipay in site.data.alipay %}
+                {% for alipay in site.data.donation.alipay %}
                 <div>
                     <div class="ibox-content">
                         <img src="{{ alipay.name | prepend: '/static/assets/img/donate/' | prepend : site.baseurl }}" width="100%">
@@ -32,7 +32,7 @@ permalink: /donate/
         <div class="col-sm-8 col-sm-offset-2">
             <h2 class="text-center m">WeChat Pay</h2>
             <div class="slick">
-                {% for wechat in site.data.wechat_pay %}
+                {% for wechat in site.data.donation.wechat_pay %}
                 <div>
                     <div class="ibox-content">
                         <img src="{{ wechat.name | prepend: '/static/assets/img/donate/' | prepend : site.baseurl }}" width="100%">
@@ -43,13 +43,13 @@ permalink: /donate/
         </div>
     </div>
     <div class="row">
-        {% for donation in site.data.donation %}
+        {% for donation in site.data.donation.donationlist %}
         {% assign loopindex = forloop.index | modulo: 2 %}
         <div class="col-sm-4 {% if loopindex == 1 %}col-sm-offset-2{% endif %}">
             <div class="contact-box" style="height: 200px;">
                 <div class="col-sm-4">
                     <div class="text-center">
-                        <img alt="image" class="img-circle m-t-xs img-responsive {{ donation.github }}" src="{{ "/static/img/default.jpg" | prepend: site.baseurl }}">
+                        <img alt="image" class="img-circle m-t-xs img-responsive {{ donation.github }}" src="{{ "/static/assets/img/default.jpg" | prepend: site.baseurl }}">
                         <div class="m-t-xs font-bold">{{ donation.name }}</div>
                         <p><i class="fa fa-{{ donation.type }}"></i> {{ donation.value }}</p>
                     </div>

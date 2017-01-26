@@ -1,4 +1,5 @@
 # index page sections
+# custom following lines to edit your index page
 - id: 'about-me'
   i18n: 'nav.about_me'
   name: 'About'

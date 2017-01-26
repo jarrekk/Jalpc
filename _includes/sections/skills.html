@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="row features-block">
-        {% for skill in site.data.skills %}
+        {% for skill in site.data.index.skills %}
             {% assign loopindex = forloop.index | modulo: 2 %}
         <div class="row">
             <div class="col-lg-1 col-lg-offset-2 wow {% if loopindex == 1 %} fadeInLeft {% else %} fadeInRight {% endif %}">

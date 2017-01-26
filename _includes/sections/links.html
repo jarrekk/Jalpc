@@ -6,7 +6,7 @@
         </div>
     </div>
     <div class="row">
-    {% for link in site.data.links %}
+    {% for link in site.data.index.links %}
         {% assign loopindex = forloop.index | modulo: 3 %}
         {% if forloop.last %}
             {% if forloop.last == forloop.first %}

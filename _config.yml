@@ -5,12 +5,12 @@ title: Jalpc
 description: Jack's blog,use Jekyll and github pages.
 keywords: 'Jack,Jalpc,blog,Jekyll,github,gh-pages'
 baseurl: ''  # if you have suburl as homepage like '/homepage', please change it to '/homepage'
-url: 'http://www.jack003.com'  # url should be changed to
+url: 'http://www.jack003.com'  # url should be changed to 'http://www.jack003.com/homepage' as before
 # url: "http://127.0.0.1:4000"
-img_path: '/static/assets/img/blog'
+img_path: '/static/assets/img/blog'  # url should be changed to 'homepage/static/assets/img/blog' as before
 
-# author
-author:
+# author -- index page "about me" section
+author:  # change following line to your infomation
   name: 'Jack'
   first_name: 'Kun'
   last_name: 'Jia'
@@ -19,27 +19,28 @@ author:
   facebook_username: 'jiakunnj'
   github_username: 'JiaKunUp'
   avatar: '/static/assets/img/landing/Jack.jpg'
+  skill_icon1:
+    - name: icon-python
+    - name: icon-shell
+  skill_icon2:
+    - name: icon-angular
+    - name: icon-docker
   desc: 'I am a Full Stack engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.'
 
 # comment
-changyan:
-  # appid: cysfY7ULn
-  # conf: prod_861928934cecb7a18e15bedaed9dae29
-disqus:
+disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
   name: jalpc
   public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
 
-# baidu analytics
-ba:
-  # uuid: 317acca9ef9255b934e46371e471431d
-
-# google analytics
-ga:
+# analytics
+## google analytics
+ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
   id: UA-73784599-1
 
-# growingIO
-gio:
+## growingIO
+gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your configuration; if not, comment following line.
   # id: a49d4901c7853da9
+
 
 # Build settings
 encoding: "utf-8"
