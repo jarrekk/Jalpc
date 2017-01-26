@@ -1,4 +1,5 @@
 # projects section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name: 'Saplatform'
   i18n: 'saplatform'
   gh_user: 'JiaKunUp'

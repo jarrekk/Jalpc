@@ -1,15 +1,3 @@
-{% if site.changyan %}
-<h2>Comments:</h2>
-<div id="SOHUCS"></div>
-<script charset="utf-8" type="text/javascript" src="http://changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: '{{ site.changyan.appid }}',
-        conf: '{{ site.changyan.conf }}'
-    });
-</script>
-{% endif %}
-
 {% if site.disqus %}
 <div id="disqus_thread"></div>
 <script>
