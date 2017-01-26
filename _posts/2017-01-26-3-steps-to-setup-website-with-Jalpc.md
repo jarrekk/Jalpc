@@ -25,14 +25,14 @@ So, if you like this website <http://www.jack003.com> and are willing to have a 
 
 	* **_data/blog.yml**: edit navbar(categories) of blog page, if you have different/more blog page, add HTML file at `blog/` like this:
 
-		``` html
-		---
-		layout: blog
-		title: Sample    <!-- Suppose your category is Sample -->
-		permalink: /sample/    <!-- permalink should be '/sample/' -->
-		---
-		{\% include category.html \%}
-		```
+``` html
+---
+layout: blog
+title: Sample    <!-- Suppose your category is Sample -->
+permalink: /sample/    <!-- permalink should be '/sample/' -->
+---
+{\% include category.html \%}
+```
 
 		ps：`\%` should be `%`, since this code will be rendered by Jekyll.
 
@@ -40,11 +40,11 @@ So, if you like this website <http://www.jack003.com> and are willing to have a 
 
 3. Push changes to your github repository and view your website, done!
 
-	``` bash
-	cd /path/of/repository/directory
-	git add .
-	git commit -m 'edit my website'
-	git push
-	```
+``` bash
+cd /path/of/repository/directory
+git add .
+git commit -m 'edit my website'
+git push
+```
 
 If you like this repository, I appreciate you star this repository. Please don't hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!
