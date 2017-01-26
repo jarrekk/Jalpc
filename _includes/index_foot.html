@@ -1,0 +1,9 @@
+{% if site.data.index.projects %}
+<script async defer src="{{ "/static/js/github_api.min.js" | prepend: site.baseurl }}"></script>
+{% endif %}
+
+{% if site.data.index.language %}
+<script src="{{"/static/assets/i18-20170125.min.js"| prepend: site.baseurl }}"></script>
+{% endif %}
+
+{% include analytics.html %}
