@@ -25,10 +25,8 @@ So, if you like this website <http://www.jack003.com> and are willing to have a 
 
 	* **_data/blog.yml**: edit navbar(categories) of blog page, if you have different/more blog page, copy `blog/python.html` and change it to your category HTML file, and edit **Python**, **/python/** to your category name at items **title** and **permalink**, make sure title is the same as permalink but capitalized first letter(except HTML).
 
-	* **CNAME**: If you wanna release website at your own domain name: edit it; if you want to use *github_username.github.io*: remove it.
+	* **CNAME**: If you wanna release website at your own domain name: edit it; if you want to use *github_username.github.io*: remove it and create master branch.
 
 3. Push changes to your github repository and view your website, done!
-
-	` cd  /path/of/repository/directory && git add . && git commit -m 'edit my website' && git push`
 
 If you like this repository, I appreciate you star this repository. Please don't hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!
