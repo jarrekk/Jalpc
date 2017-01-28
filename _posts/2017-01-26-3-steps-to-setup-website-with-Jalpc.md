@@ -29,4 +29,6 @@ So, if you like this website <http://www.jack003.com> and are willing to have a 
 
 3. Push changes to your github repository and view your website, done!
 
-If you like this repository, I appreciate you star this repository. Please don't hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!
+From now on, you can post your blog to this website by create md file at `post/` directory and push it to GitHub, you can clear files at this directory before you post blogs.
+
+If you like this repository, I appreciate you star this repository. Please don't hesitate to mail me or post issues on GitHub if you have any questions. Hope you have a happy blog time!😊
