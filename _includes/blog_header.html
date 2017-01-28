@@ -27,12 +27,14 @@
                 <ul class="nav navbar-nav navbar-right">
                     <li><a class="page-scroll" href="{{ "blog/" | prepend: site.baseurl }}">{{ site.index.home }}</a></li>
                     {% for tag in site.data.blog %}
+                        {% if tag.name != 'Donate' or site.donation %}
                         {% if page.title == tag.name %}
                         <li class="active">
                         {% else %}
                         <li>
                         {% endif %}
                         <a class="page-scroll" href="{{ tag.href | prepend: site.baseurl }}">{{ tag.name }}</a></li>
+                        {% endif %}
                     {% endfor %}
                 </ul>
             </div>
