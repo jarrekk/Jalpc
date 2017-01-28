@@ -1,18 +1,18 @@
 # links section data
 - last_name: Celine
   first_name:
-  desc: 'Painter.'
-  website: 'http://angular.jack003.com'
-  email: '805963294@qq.com'
+  desc: Painter.
+  website: http://angular.jack003.com
+  email: 805963294@qq.com
 
 - last_name: Donate
   first_name: Jalpc
-  desc: 'Support Jalpc'
-  website: 'http://www.jack003.com/donate/'
-  email: 'me@jack003.com'
+  desc: Support Jalpc
+  website: http://www.jack003.com/donate/
+  email: me@jack003.com
 
 - last_name: Lucas
   first_name: Schejtman
-  desc: 'Full Stack Developer.'
-  website: 'http://lucasschejtman.github.io'
-  email: 'lucas.schejtman@gmail.com'
+  desc: Full Stack Developer.
+  website: http://lucasschejtman.github.io
+  email: lucas.schejtman@gmail.com
