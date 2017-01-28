@@ -45,7 +45,9 @@ layout: default
                     <div class="row">
                         <div class="col-lg-12">
                             <!-- donate -->
+                            {% if site.donation %}
                             {% include donate.html %}
+                            {% endif %}
                             <br>
                             <!-- share -->
                             {% include share.html %}
