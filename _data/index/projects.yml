@@ -4,7 +4,7 @@
 - name: Jalpc
   i18n: jalpc
   gh_user: jarrekk
-  repo: jalpc_jekyll_theme
+  repo: Jalpc
   img: /static/assets/img/landing/jekyll.png
   desc: Jalpc is a simple, beautiful and swift theme for Jekyll. It has comprehensive function, it can be easily used and edited. It's adapted for many kinds devices.
 
