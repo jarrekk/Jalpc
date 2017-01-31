@@ -2,8 +2,8 @@
 # If you want to change flags, find file path at dir '/static/assets/img/flags' and replace following line(en is displayed default)
 #    then edit '/static/locals/*.json' content to your language.
 # If you don't want this feature, just clear this file content then ignore "i18n" in files careers.yml and projects.yml
-- locale: zh
-  flag: /static/assets/img/flags/China.png
+# - locale: zh
+  # flag: /static/assets/img/flags/China.png
 
-- locale: en
-  flag: /static/assets/img/flags/United-States.png
+# - locale: en
+  # flag: /static/assets/img/flags/United-States.png
