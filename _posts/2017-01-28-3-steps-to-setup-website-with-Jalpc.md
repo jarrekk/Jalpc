@@ -13,7 +13,7 @@ Everyone wants to have a personal website, you can display your infomation to pu
 
 So, if you like this website <http://www.jack003.com> and are willing to have a website, here is a way to build your website in 3 steps(2 minutes). Following are steps to setup your website:
 
-1. Fork [Jalpc](https://github.com/JiaKunUp/jalpc_jekyll_theme) at [GitHub](https://github.com), then clone forked repository. `git clone git@github.com:github_username/jalpc_jekyll_theme.git`
+1. Fork [Jalpc](https://github.com/jarrekk/jalpc_jekyll_theme) at [GitHub](https://github.com), then clone forked repository. `git clone git@github.com:github_username/jalpc_jekyll_theme.git`
 
 2. Enter into repository directory and edit following file list:
 

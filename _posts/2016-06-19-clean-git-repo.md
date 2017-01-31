@@ -51,7 +51,7 @@ git push --tags --force
 
 ## 查找大文件并清理
 
-下载[Bash Script](https://raw.githubusercontent.com/JiaKunUp/jalpc_jekyll_theme/gh-pages/git_find_big.sh)，在项目目录下：
+下载[Bash Script](https://raw.githubusercontent.com/jarrekk/jalpc_jekyll_theme/gh-pages/git_find_big.sh)，在项目目录下：
 
 ```
 $ chmod 777 git_find_big.sh
