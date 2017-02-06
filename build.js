@@ -1,9 +1,22 @@
 var UglifyJS = require('uglify-js');
 var CleanCSS = require('clean-css');
+require('shelljs/global');
 var fs = require('fs');
+require('colors');
 
 nowDate = new Date();
 nowDateStr = nowDate.toISOString().slice(0,10).replace(/-/g,"");
+
+// remove preceding compressed files
+rm('-rf', 'static/assets/*.min.js');
+rm('-rf', 'static/assets/*.min.css');
+
+// change link/src files to new file path
+sed_exp = 's/(.*)[0-9]{8}(.*)/\1' + nowDateStr + '\2/';
+sed('-i', /(.*)[0-9]{8}(.*)/, '$1' + nowDateStr + '$2', '_includes/index_head.html');
+sed('-i', /(.*)[0-9]{8}(.*)/, '$1' + nowDateStr + '$2', '_includes/head.html');
+sed('-i', /(.*)[0-9]{8}(.*)/, '$1' + nowDateStr + '$2', '_includes/category.html');
+sed('-i', /(.*)[0-9]{8}(.*)/, '$1' + nowDateStr + '$2', '404.html');
 
 // compress js files function
 function compressjs(filename, filelist){
@@ -23,7 +36,7 @@ function compressjs(filename, filelist){
 	});
 
 	fs.writeFileSync('static/assets/' + filename, result.code);
-	console.log('Index page js files compress succeed. You can find it at "static/assets".\n');
+	console.log("Index page js files compress succeed. You can find it at \"static/assets\".\n".green);
 }
 
 // compress css files function
@@ -55,7 +68,7 @@ function compresscss(filename, filelist) {
 	}).minify(result.styles);
 
 	fs.writeFileSync('static/assets/' + filename, output.styles);
-	console.log('Blog page css files compress succeed. You can find it at "static/assets".\n');
+	console.log("Blog page css files compress succeed. You can find it at \"static/assets\".\n".green);
 }
 
 // compress js files of 404 page
