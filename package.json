@@ -4,7 +4,7 @@
   "description": "npm config file for jalpc",
   "main": "index.js",
   "scripts": {
-    "compress": "node build.js"
+    "build": "node build.js"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "bootstrap": "^3.3.6",
     "chart.js": "^2.4.0",
     "clean-css": "^4.0.0",
+    "colors": "^1.1.2",
     "components-font-awesome": "^4.7.0",
     "font-mfizz": "^2.3.0",
     "gritter": "^1.7.4",
@@ -30,6 +31,7 @@
     "normalize.css": "^4.2.0",
     "pace-progress": "^1.0.2",
     "peity": "^3.2.0",
+    "shelljs": "^0.7.6",
     "uglify-js": "^2.7.5",
     "wowjs": "^1.1.2"
   }
