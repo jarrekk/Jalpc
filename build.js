@@ -85,6 +85,7 @@ indexJsFilename = 'app-index-' + nowDateStr + '.min.js'
 indexJsFileList = [
 	'node_modules/jquery/dist/jquery.js',
 	'node_modules/bootstrap/dist/js/bootstrap.js',
+	'node_modules/chart.js/dist/Chart.js',
 	'node_modules/pace-progress/pace.js',
 	'node_modules/wowjs/dist/wow.js',
 	'static/js/scroll.js',
