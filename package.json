@@ -19,6 +19,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.6",
+    "chart.js": "^2.4.0",
     "clean-css": "^4.0.0",
     "components-font-awesome": "^4.7.0",
     "font-mfizz": "^2.3.0",

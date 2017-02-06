@@ -1,12 +1,6 @@
 # skills section data
-- name: Python
-  percentage: 100
 
-- name: HTML/CSS
-  percentage: 95
-
-- name: jQuery
-  percentage: 90
-
-- name: Vuejs
-  percentage: 20
+label: Ability
+id : cs
+aspects: GitHub, Motivation, HTML5, ReactJS, Machine Learing, Python, Sleeping
+percentage: 100, 35, 65, 80, 70, 90, 50
