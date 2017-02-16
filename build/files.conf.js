@@ -10,19 +10,19 @@ module.exports = {
             'node_modules/pace-progress/pace.js'
         ]
     }, {
-        name: '404 page',
-        quotefile: '404.html',
-        prefix: 'fof-',
-        type: 'css',
-        list: [
-            'node_modules/normalize.css/normalize.css',
-            'node_modules/bootstrap/dist/css/bootstrap.css',
-            'node_modules/components-font-awesome/css/font-awesome.css',
-            'node_modules/animate.css/animate.css',
-            // 'static/css/style.css'
-            'static/css/style-purify.css'
-        ]
-    }, {
+    //     name: '404 page',
+    //     quotefile: '404.html',
+    //     prefix: 'fof-',
+    //     type: 'css',
+    //     list: [
+    //         'node_modules/normalize.css/normalize.css',
+    //         'node_modules/bootstrap/dist/css/bootstrap.css',
+    //         'node_modules/components-font-awesome/css/font-awesome.css',
+    //         'node_modules/animate.css/animate.css',
+    //         // 'static/css/style.css'
+    //         'static/css/style-purify.css'
+    //     ]
+    // }, {
         name: 'index page',
         quotefile: '_includes/index_head.html',
         prefix: 'app-index-',
@@ -46,21 +46,21 @@ module.exports = {
             'static/js/localization.js'
         ]
     }, {
-        name: 'index page',
-        quotefile: '_includes/index_head.html',
-        prefix: 'app-index-',
-        type: 'css',
-        list: [
-            'node_modules/normalize.css/normalize.css',
-            'node_modules/bootstrap/dist/css/bootstrap.css',
-            'node_modules/animate.css/animate.css',
-            'node_modules/components-font-awesome/css/font-awesome.css',
-            'node_modules/font-mfizz/dist/font-mfizz.css',
-            'static/css/project-sprite.css',
-            // 'static/css/style.css'
-            'static/css/style-purify.css'
-        ]
-    }, {
+    //     name: 'index page',
+    //     quotefile: '_includes/index_head.html',
+    //     prefix: 'app-index-',
+    //     type: 'css',
+    //     list: [
+    //         'node_modules/normalize.css/normalize.css',
+    //         'node_modules/bootstrap/dist/css/bootstrap.css',
+    //         'node_modules/animate.css/animate.css',
+    //         'node_modules/components-font-awesome/css/font-awesome.css',
+    //         'node_modules/font-mfizz/dist/font-mfizz.css',
+    //         'static/css/project-sprite.css',
+    //         // 'static/css/style.css'
+    //         'static/css/style-purify.css'
+    //     ]
+    // }, {
         name: 'blog pages',
         quotefile: '_includes/head.html',
         prefix: 'app-',
@@ -87,7 +87,7 @@ module.exports = {
             'static/js/js.js'
         ]
     }, {
-        name: 'blog pages',
+        name: 'all pages',
         quotefile: '_includes/head.html',
         prefix: 'app-',
         type: 'css',
