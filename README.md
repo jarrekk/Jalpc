@@ -113,66 +113,9 @@ The landing page has multilingual support with the [i18next](http://i18next.com)
 
 Languages are configured in the `_data/index/language.yml` file.
 
-> If you don't need this feature, please clear content in file `_data/language.yml` and folder `static/locales/`.
+> Not everyone needs this feature, so I make it very easy to remove it, just clear content in file `_data/language.yml` and folder `static/locales/`.
 
-#### Step 1
-
-Add a new language entry
-
-```yml
-languages:
-  - locale: 'en'
-    flag: 'static/img/flags/United-States.png'
-  - locale: '<language_locale>'
-    flag: '<language_flag_url>'
-```
-
-#### Step 2
-
-Add a new json (`static/locales/<language_locale>.json`) file that contains the translations for the new locale.
-
-Example `en.json`
-
-```json
-{
-  "website":{
-    "title": "Jalpc"
-  },
-  "nav":{
-    "home": "Home",
-    "about_me": "About",
-    "skills": "Skills",
-    "career": "Career",
-    "blog": "Blog",
-    "contact": "Contact"
-  }
-}
-```
-
-#### Step 3
-
-Next you need to add html indicators in all place you want to use i18n.(`_includes/sections/*.html` and `index.html`)
-
-Example:
-
-``` html
-<a class="navbar-brand" href="#page-top" id="i18_title"><span data-i18n="website.title">{{ site.title }}</span></a>
-```
-
-#### Step 4
-
-Next you need to initialise the i18next plugin(`index.html`):
-
-``` javascript
-$.i18n.init(
-    resGetPath: 'locales/__lng__.json',
-    load: 'unspecific',
-    fallbackLng: false,
-    lng: 'en'
-}, function (t)
-    $('#i18_title').i18n();
-});
-```
+About how to custom multilingual page, please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Multilingual-Page).
 
 ### <a name="web-analytics"></a>Web analytics
 
@@ -190,9 +133,7 @@ I use [AddToAny](https://www.addtoany.com/) to share my blog on other social net
 
 ### <a name="search-engines"></a>Search engines
 
-I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this [repository](https://github.com/androiddevelop/jekyll-search).
-
-Just use it.
+I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this [repository](https://github.com/androiddevelop/jekyll-search). Just use it.
 
 ![search](readme_files/search.gif)
 
@@ -204,12 +145,12 @@ I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://gith
 
 1. Install [NPM](https://github.com/npm/npm) then install **UglifyJS2** and **clean-css**: `npm install -g uglifyjs; npm install -g clean-css`, then run `npm install` at root dir of project.
 2. Compress script is **build.js**, index page has its own CSS and JS compressed files, they are :
-  * **app-index-xxx.min.css**
+  * **app-xxx.min.css**
   * **app-index-xxx.min.js**
   * **i18-xxx.min.js**
 
   404 page are
-  * **fof-xxx.min.css**
+  * **app-xxx.min.css*
   * **fof-xxx.min.js**
 
   other pages are
@@ -218,7 +159,7 @@ I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://gith
   * **jPage-xxx.min.js**
 
   **xxx** is date when you compress your files.
-3. If you want to add/remove CSS/JS files, just edit **build/build.js** and **build/files.conf.js**, then run `npm run build` at root dir of project, link/src files will use new files.
+3. If you want to add or remove CSS/JS files, just edit **build/build.js** and **build/files.conf.js**, then run `npm run build` at root dir of project, link/src files will use new files.
 
 ## <a name="put-in-a-jalpc-plug"></a>Put in a Jalpc Plug
 
