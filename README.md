@@ -30,6 +30,7 @@
 * [Contributing](#contributing)
 * [Todo](#todo)
 * [Change Log](#change-log)
+* [Donate](#donate)
 * [Ad](#ad)
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
@@ -190,7 +191,7 @@ I use [AddToAny](https://www.addtoany.com/) to share my blog on other social net
 
 ### <a name="search-engines"></a>Search engines
 
-I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this repo: <https://github.com/androiddevelop/jekyll-search>.
+I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this [repository](https://github.com/androiddevelop/jekyll-search).
 
 Just use it.
 
@@ -292,6 +293,8 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 * v1.0.1
   * first release
 
+## <a name="donate"></a>Donate
+If this project let you enjoy your blog time, you can give me a cup of coffee :)
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
 
 ## <a name="ad"></a>Ad
