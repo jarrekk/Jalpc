@@ -1,4 +1,4 @@
-# <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/Jack614/jalpc_jekyll_theme)
+# <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
@@ -27,10 +27,9 @@
     * [Ensure there's an upstream remote](#ensure-theres-an-upstream-remote)
     * [Pull in the latest changes](#pull-in-the-latest-changes)
 * [Thanks to the following](#thanks-to-the-following)
-* [Contributing](#contributing)
 * [Todo](#todo)
 * [Change Log](#change-log)
-* [Donate](#donate)
+* [Donate Jalpc](#donate)
 * [Ad](#ad)
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
@@ -258,43 +257,15 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 * [shelljs](https://github.com/shelljs/shelljs)
 * [colors](https://github.com/marak/colors.js/)
 
-## <a name="contributing"></a>Contributing
-1. Fork it
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
-
 ## <a name="todo"></a>Todo
 - [ ] `jekyll server --watch` mode need to use original CSS/JS files
 
 ##  <a name="change-log"></a>Change Log
-* v1.1.2
-  * purify style.css
-* v1.1.1
-  * display skills with Chart.js
-  * add shelljs and colors
-  * compress CSS/JS file with build.js automatically
-* v1.1.0
-  * Speed up!! reduce request times and file size
-  * change bower to npm
-  * compress CSS/JS files with uglifyjs and clean-css
-* v1.0.5
-  * add donation page
-  * fix basuurl and url bug
-* v1.0.4
-  * use **_data** to config index page
-  * separate index page by sections
-* v1.0.3
-  * change color
-  * remove unused css code
-* v1.0.2
-  * use jPages to realize pagination
-* v1.0.1
-  * first release
+Please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Change-Log)
 
-## <a name="donate"></a>Donate
+## <a name="donate"></a>Donate Jalpc
 If this project let you enjoy your blog time, you can give me a cup of coffee :)
+
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
 
 ## <a name="ad"></a>Ad
