@@ -202,7 +202,7 @@ All CSS and JS files are compressed at `/static/assets`.
 
 I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://github.com/jakubpawlowicz/clean-css) and [purifycss](https://github.com/purifycss/purifycss) to compress/purify CSS and JS files. If you want to custom CSS and JS files, you need to do the following:
 
-1. Install **UglifyJS2** and **clean-css**: `npm install -g uglifyjs; npm install -g clean-css`, then run `npm install` at root dir of project.
+1. Install [NPM](https://github.com/npm/npm) then install **UglifyJS2** and **clean-css**: `npm install -g uglifyjs; npm install -g clean-css`, then run `npm install` at root dir of project.
 2. Compress script is **build.js**, index page has its own CSS and JS compressed files, they are :
   * **app-index-xxx.min.css**
   * **app-index-xxx.min.js**
@@ -265,7 +265,7 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 5. Create new Pull Request
 
 ## <a name="todo"></a>Todo
-1. `jekyll server --watch` mode need to use original CSS/JS files
+-[] `jekyll server --watch` mode need to use original CSS/JS files
 
 ##  <a name="change-log"></a>Change Log
 * v1.1.2
