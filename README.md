@@ -265,7 +265,7 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 5. Create new Pull Request
 
 ## <a name="todo"></a>Todo
--[] `jekyll server --watch` mode need to use original CSS/JS files
+- [ ] `jekyll server --watch` mode need to use original CSS/JS files
 
 ##  <a name="change-log"></a>Change Log
 * v1.1.2
