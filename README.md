@@ -38,7 +38,7 @@ If you're completely new to Jekyll, I recommend checking out the documentation a
 
 ## <a name="three-steps"></a> 3 steps to setup this theme at your website!
 
-Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps.
+Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps. If you have any **questions** please ask me at [GitHub Issues](https://github.com/jarrekk/Jalpc/issues).
 
 ## <a name="feature"></a>Features
 
@@ -291,6 +291,8 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
   * use jPages to realize pagination
 * v1.0.1
   * first release
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
 
 ## <a name="ad"></a>Ad
 [Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
