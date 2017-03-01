@@ -1,0 +1,77 @@
+<div class="search-tool" style="position: fixed; top: 0px ; bottom: 0px; left: 0px; right:  0px;
+      opacity: 0.95; background-color: #111111; z-index: 9999; display: none;">
+    <input type="text" class="search-content" id="search-content" style="position: fixed; top: 60px" placeholder="Search Blog">
+
+    <div style="position: fixed; top: 16px; right: 16px;">
+        <img src="{{ "/search/img/cb-close.png"| prepend: site.baseurl }}"  id="close-btn"/>
+    </div>
+</div>
+
+<div style="position: fixed; right: 16px; bottom: 20px;">
+    <img src="{{ "/search/img/cb-search.png" | prepend: site.baseurl }}"  id="search-btn"  title="双击ctrl试一下"/>
+</div>
+
+<link rel="stylesheet" href="{{ "/search/css/cb-search.css" | prepend: site.baseurl }}">
+
+<script src="{{ "/search/js/bootstrap3-typeahead.min.js" | prepend: site.baseurl }}"></script>
+<script src="{{ "/search/js/cb-search.js" | prepend: site.baseurl }}"></script>
+<!-- <script type="text/javascript">
+	$(document).ready(function () {
+	  var initial = 0;
+	  var show = true;
+
+	  var toggleSearch = function (visible) {
+	    initial = 0;
+	    show = !visible;
+	    var visibility = visible ? 'block' : 'none';
+
+	    $("#search-content").val("");
+	    $(".search-tool").css("display", visibility);
+	  };
+
+	  var shouldToggle = function (time) {
+	    var gap = time - initial;
+	    initial = time;
+	    return gap < 500;
+	  };
+
+	  $(document).keyup(function (e) {
+	    var now = new Date().getTime();
+	    if (e.keyCode == 17 && shouldToggle(now)) {
+	      toggleSearch(show);
+	    } else if (e.keyCode == 27) {
+	      toggleSearch(false);
+	    }
+	  });
+
+		$("#search-content").keyup(function (e) {
+	    var now = new Date().getTime();
+	    if (e.keyCode == 17 && shouldToggle(now)) {
+	      toggleSearch(show);
+	    }
+	  });
+
+	  $("#close-btn").click(function () {
+	    toggleSearch(false);
+	  });
+
+	  $("#search-btn").click(function() {
+	    toggleSearch(true);
+	  });
+
+	  $.getJSON("{{ "/search/cb-search.json" | prepend: site.baseurl }}")
+	    .done(function (data) {
+	      if (data.code == 0) {
+	        $("#search-content").typeahead({
+	          source: data.data,
+	          displayText: function (item) {
+	            return item.title;
+	          },
+	          afterSelect: function (item) {
+	            window.location.href = item.url;
+	          }
+	        });
+	      }
+	    });
+	});
+</script> -->

@@ -6,7 +6,7 @@
 
 <https://jarrekk.github.io/Jalpc/>
 
-![Blog](readme_files/blog.gif)
+![Blog](readme_files/Jalpc.png)
 
 * [3 steps to setup this theme at your website!](#three-steps)
 * [Features](#features)
