@@ -150,7 +150,7 @@ I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://gith
   * **i18-xxx.min.js**
 
   404 page are
-  * **app-xxx.min.css*
+  * **app-xxx.min.css**
   * **fof-xxx.min.js**
 
   other pages are
@@ -174,7 +174,7 @@ Jalpc is always being improved by its users, so sometimes one may need to upgrad
 If `git remote -v` doesn't have an upstream listed, you can do the following to add it:
 
 ```
-git remote add upstream https://github.com/jarrekk/jalpc_jekyll_theme.git
+git remote add upstream https://github.com/jarrekk/Jalpc.git
 ```
 
 ### <a name="pull-in-the-latest-changes"></a>Pull in the latest changes
