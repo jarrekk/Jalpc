@@ -3,9 +3,6 @@ require('shelljs/global');
 
 // purify style.css
 exec('jekyll build', function(code, stdout, stderr) {
-    console.log('Exit code:', code);
-    console.log('Program output:', stdout);
-    console.log('Program stderr:', stderr);
 });
 
 var content = [

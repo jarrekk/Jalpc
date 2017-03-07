@@ -186,6 +186,14 @@ body.top-navigation.fixed-nav #wrapper #page-wrapper {
   margin-top: 0;
 }
 
+body.fixed-nav.fixed-nav-basic .navbar-fixed-top {
+  left: 220px;
+}
+
+body.fixed-nav.fixed-nav-basic.body-small .navbar-fixed-top {
+  left: 0;
+}
+
 .body-small .navbar-fixed-top {
   margin-left: 0;
 }
@@ -621,6 +629,15 @@ button.dim:active:before {
   border-radius: 25px;
   font-size: 18px;
   line-height: 1.33;
+}
+
+.vertical-align div {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vertical-align h2,.vertical-align h3 {
+  margin: 0;
 }
 
 .glyphicon.fa {
