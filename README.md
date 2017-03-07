@@ -101,7 +101,7 @@ For example: URL is `http://127.0.0.1:4000/python/`. In `_data/blog.yml`, we def
 
 ### <a name="pagination"></a>Pagination
 
-The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jack003.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
+The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jarrekk.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
 
 ### <a name="page-views-counter"></a>Page views counter
 
@@ -163,7 +163,7 @@ I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://gith
 
 ## <a name="put-in-a-jalpc-plug"></a>Put in a Jalpc Plug
 
-If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jack003.com>, that'd be awesome. No worries if you don't.
+If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jarrekk.com>, that'd be awesome. No worries if you don't.
 
 ## <a name="upgrading-jalpc"></a>Upgrading Jalpc
 
