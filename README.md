@@ -38,7 +38,7 @@ If you're completely new to Jekyll, I recommend checking out the documentation a
 
 ## <a name="three-steps"></a> 3 steps to setup this theme at your website!
 
-Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps. If you have any **questions** please ask me at [GitHub Issues](https://github.com/jarrekk/Jalpc/issues).
+Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps and a [wiki](https://github.com/jarrekk/Jalpc/wiki/How-to-add-posts) of how to add posts. If you have any **questions** please ask me at [GitHub Issues](https://github.com/jarrekk/Jalpc/issues).
 
 ## <a name="feature"></a>Features
 
@@ -197,6 +197,8 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 * [Chart.js](http://www.chartjs.org/)
 * [shelljs](https://github.com/shelljs/shelljs)
 * [colors](https://github.com/marak/colors.js/)
+* [Font Awesome](http://fontawesome.io/icons/)
+* [Font Mfizz](http://fizzed.com/oss/font-mfizz)
 
 ## <a name="todo"></a>Todo
 - [ ] `jekyll server --watch` mode need to use original CSS/JS files
