@@ -1,5 +1,8 @@
 {% include analytics.html %}
 
+{% if site.txtpen %}
+  <script src="https://txtpen.com/embed.js?site={{ site.txtpen.name  }}" />
+{% endif %}
 {% if site.disqus %}
   <script id="dsq-count-scr" src="//jalpc.disqus.com/count.js" async></script>
   <script type="text/javascript">
