@@ -2,11 +2,9 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [chapter 1](#chapter-1)
-  - [section 1](#section-1)
 - [<a name="jalpc"></a>Jalpc. *](#a-namejalpcajalpc-)
-  - [<a name="three-steps"></a> 3 steps to setup this theme at your website!](#a-namethree-stepsa-3-steps-to-setup-this-theme-at-your-website)
-  - [<a name="feature"></a>Features](#a-namefeatureafeatures)
+  - [3 steps to setup this theme at your website!](#3-steps-to-setup-this-theme-at-your-website)
+  - [Features](#features)
     - [<a name="#index-page"></a>Index page](#a-nameindex-pageaindex-page)
       - [<a name="datayml"></a>`_data/*.yml`](#a-namedataymla_datayml)
     - [<a name="chart-skills"></a>Chart Skills](#a-namechart-skillsachart-skills)
@@ -31,12 +29,6 @@
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-chapter 1
-========
-
-section 1
---------
-
 # <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
@@ -47,39 +39,15 @@ section 1
 
 ![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
 
-* [3 steps to setup this theme at your website!](#three-steps)
-* [Features](#features)
-    * [Index page](#index-page)
-    * [_data/\*.yml](#mofify-datayml)
-    * [Chart Skills](#chart-skills)
-    * [Categories in blog page](#categories-in-blog-page)
-    * [Pagination](#pagination)
-    * [Page views counter](#page-views-counter)
-    * [Multilingual Page](#multilingual-page)
-    * [Web analytics](#web-analytics)
-    * [Comment](#comment)
-    * [Share](#share)
-    * [Search engines](#search-engines)
-    * [Compress CSS and JS files](#compress-css-js)
-* [Put in a Jalpc Plug](#put-in-a-jalpc-plug)
-* [Upgrading Jalpc](#upgrading-jalpc)
-    * [Ensure there's an upstream remote](#ensure-theres-an-upstream-remote)
-    * [Pull in the latest changes](#pull-in-the-latest-changes)
-* [Thanks to the following](#thanks-to-the-following)
-* [Todo](#todo)
-* [Change Log](#change-log)
-* [Donate Jalpc](#donate)
-* [Ad](#ad)
-
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
 
 If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
 
-## <a name="three-steps"></a> 3 steps to setup this theme at your website!
+## 3 steps to setup this theme at your website!
 
 Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps and a [wiki](https://github.com/jarrekk/Jalpc/wiki/How-to-add-posts) of how to add posts. If you have any **questions** please ask me at [GitHub Issues](https://github.com/jarrekk/Jalpc/issues).
 
-## <a name="feature"></a>Features
+## Features
 
 ### <a name="#index-page"></a>Index page
 
