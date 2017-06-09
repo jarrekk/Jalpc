@@ -2,6 +2,8 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
+- [chapter 1](#chapter-1)
+  - [section 1](#section-1)
 - [<a name="jalpc"></a>Jalpc. *](#a-namejalpcajalpc-)
   - [<a name="three-steps"></a> 3 steps to setup this theme at your website!](#a-namethree-stepsa-3-steps-to-setup-this-theme-at-your-website)
   - [<a name="feature"></a>Features](#a-namefeatureafeatures)
@@ -28,6 +30,12 @@
   - [<a name="ad"></a>Ad](#a-nameadaad)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+chapter 1
+========
+
+section 1
+--------
 
 # <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
