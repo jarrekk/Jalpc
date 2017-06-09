@@ -1,3 +1,34 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [<a name="jalpc"></a>Jalpc. *](#a-namejalpcajalpc-)
+  - [<a name="three-steps"></a> 3 steps to setup this theme at your website!](#a-namethree-stepsa-3-steps-to-setup-this-theme-at-your-website)
+  - [<a name="feature"></a>Features](#a-namefeatureafeatures)
+    - [<a name="#index-page"></a>Index page](#a-nameindex-pageaindex-page)
+      - [<a name="datayml"></a>`_data/*.yml`](#a-namedataymla_datayml)
+    - [<a name="chart-skills"></a>Chart Skills](#a-namechart-skillsachart-skills)
+    - [<a name="categories-in-blog-page"></a>Categories in blog page](#a-namecategories-in-blog-pageacategories-in-blog-page)
+    - [<a name="pagination"></a>Pagination](#a-namepaginationapagination)
+    - [<a name="page-views-counter"></a>Page views counter](#a-namepage-views-counterapage-views-counter)
+    - [<a name="multilingual-page"></a>Multilingual Page](#a-namemultilingual-pageamultilingual-page)
+    - [<a name="web-analytics"></a>Web analytics](#a-nameweb-analyticsaweb-analytics)
+    - [<a name="comment"></a>Comment](#a-namecommentacomment)
+    - [<a name="share"></a>Share](#a-nameshareashare)
+    - [<a name="search-engines"></a>Search engines](#a-namesearch-enginesasearch-engines)
+    - [<a name="compress-css-js"></a>Compress CSS and JS files](#a-namecompress-css-jsacompress-css-and-js-files)
+  - [<a name="put-in-a-jalpc-plug"></a>Put in a Jalpc Plug](#a-nameput-in-a-jalpc-plugaput-in-a-jalpc-plug)
+  - [<a name="upgrading-jalpc"></a>Upgrading Jalpc](#a-nameupgrading-jalpcaupgrading-jalpc)
+    - [<a name="ensure-theres-an-upstream-remote"></a>Ensure there's an upstream remote](#a-nameensure-theres-an-upstream-remoteaensure-theres-an-upstream-remote)
+    - [<a name="pull-in-the-latest-changes"></a>Pull in the latest changes](#a-namepull-in-the-latest-changesapull-in-the-latest-changes)
+  - [<a name="thanks-to-the-following"></a>Thanks to the following](#a-namethanks-to-the-followingathanks-to-the-following)
+  - [<a name="todo"></a>Todo](#a-nametodoatodo)
+  - [<a name="change-log"></a>Change Log](#a-namechange-logachange-log)
+  - [<a name="donate"></a>Donate Jalpc](#a-namedonateadonate-jalpc)
+  - [<a name="ad"></a>Ad](#a-nameadaad)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
