@@ -2,34 +2,34 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 **Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
 
-- [<a name="jalpc"></a>Jalpc. *](#a-namejalpcajalpc-)
-  - [3 steps to setup this theme at your website!](#3-steps-to-setup-this-theme-at-your-website)
-  - [Features](#features)
-    - [<a name="#index-page"></a>Index page](#a-nameindex-pageaindex-page)
-      - [<a name="datayml"></a>`_data/*.yml`](#a-namedataymla_datayml)
-    - [<a name="chart-skills"></a>Chart Skills](#a-namechart-skillsachart-skills)
-    - [<a name="categories-in-blog-page"></a>Categories in blog page](#a-namecategories-in-blog-pageacategories-in-blog-page)
-    - [<a name="pagination"></a>Pagination](#a-namepaginationapagination)
-    - [<a name="page-views-counter"></a>Page views counter](#a-namepage-views-counterapage-views-counter)
-    - [<a name="multilingual-page"></a>Multilingual Page](#a-namemultilingual-pageamultilingual-page)
-    - [<a name="web-analytics"></a>Web analytics](#a-nameweb-analyticsaweb-analytics)
-    - [<a name="comment"></a>Comment](#a-namecommentacomment)
-    - [<a name="share"></a>Share](#a-nameshareashare)
-    - [<a name="search-engines"></a>Search engines](#a-namesearch-enginesasearch-engines)
-    - [<a name="compress-css-js"></a>Compress CSS and JS files](#a-namecompress-css-jsacompress-css-and-js-files)
-  - [<a name="put-in-a-jalpc-plug"></a>Put in a Jalpc Plug](#a-nameput-in-a-jalpc-plugaput-in-a-jalpc-plug)
-  - [<a name="upgrading-jalpc"></a>Upgrading Jalpc](#a-nameupgrading-jalpcaupgrading-jalpc)
-    - [<a name="ensure-theres-an-upstream-remote"></a>Ensure there's an upstream remote](#a-nameensure-theres-an-upstream-remoteaensure-theres-an-upstream-remote)
-    - [<a name="pull-in-the-latest-changes"></a>Pull in the latest changes](#a-namepull-in-the-latest-changesapull-in-the-latest-changes)
-  - [<a name="thanks-to-the-following"></a>Thanks to the following](#a-namethanks-to-the-followingathanks-to-the-following)
-  - [<a name="todo"></a>Todo](#a-nametodoatodo)
-  - [<a name="change-log"></a>Change Log](#a-namechange-logachange-log)
-  - [<a name="donate"></a>Donate Jalpc](#a-namedonateadonate-jalpc)
-  - [<a name="ad"></a>Ad](#a-nameadaad)
+- [Jalpc. *](#jalpc-)
+- [3 steps to setup this theme at your website!](#3-steps-to-setup-this-theme-at-your-website)
+- [Features](#features)
+  - [Index page](#index-page)
+    - [`_data/*.yml`](#_datayml)
+  - [Chart Skills](#chart-skills)
+  - [Categories in blog page](#categories-in-blog-page)
+  - [Pagination](#pagination)
+  - [Page views counter](#page-views-counter)
+  - [Multilingual Page](#multilingual-page)
+  - [Web analytics](#web-analytics)
+  - [Comment](#comment)
+  - [Share](#share)
+  - [Search engines](#search-engines)
+  - [Compress CSS and JS files](#compress-css-and-js-files)
+- [Put in a Jalpc Plug](#put-in-a-jalpc-plug)
+- [Upgrading Jalpc](#upgrading-jalpc)
+  - [Ensure there's an upstream remote](#ensure-theres-an-upstream-remote)
+  - [Pull in the latest changes](#pull-in-the-latest-changes)
+- [Thanks to the following](#thanks-to-the-following)
+- [Todo](#todo)
+- [Change Log](#change-log)
+- [Donate Jalpc](#donate-jalpc)
+- [Ad](#ad)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
-# <a name="jalpc"></a>Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
+# Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
@@ -43,17 +43,17 @@ This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluid
 
 If you're completely new to Jekyll, I recommend checking out the documentation at <http://jekyllrb.com> or there's a tutorial by Smashing Magazine.
 
-## 3 steps to setup this theme at your website!
+# 3 steps to setup this theme at your website!
 
 Here is a [document](https://jarrekk.github.io/Jalpc/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html) of how to setup this theme with 3 steps and a [wiki](https://github.com/jarrekk/Jalpc/wiki/How-to-add-posts) of how to add posts. If you have any **questions** please ask me at [GitHub Issues](https://github.com/jarrekk/Jalpc/issues).
 
-## Features
+# Features
 
-### <a name="#index-page"></a>Index page
+## Index page
 
 The index page is seprated into several sections and they are located in `_includes/sections`,the configuration is in `_data/landing.yml` and section's detail configuration is in `_data/*.yml`.
 
-#### <a name="datayml"></a>`_data/*.yml`
+### `_data/*.yml`
 
 These files are used to dynamically render pages, so you almost don't have to edit *html files* to change your own theme, besides you can use `jekyll serve --watch` to reload changes.
 
@@ -76,11 +76,11 @@ The following is mapping between *yml files* to *donation*
 * donation/alipay.yml  ==>  blog/donate.html
 * donation/wechat_pay.yml ==> blog/donate.yml
 
-### <a name="chart-skills"></a>Chart Skills
+## Chart Skills
 
 I use [Chart.js](http://www.chartjs.org/) to show skills, the type of skills' chart is radar, if you want to custom, please read document of Chart.js and edit **_includes/sections/skills.html** and **_data/index/skills.yml**.
 
-### <a name="categories-in-blog-page"></a>Categories in blog page
+## Categories in blog page
 
 In blog page, we categorize posts into several categories by url, all category pages use same template html file - `_includes/category.html`.
 
@@ -106,15 +106,15 @@ For example: URL is `http://127.0.0.1:4000/python/`. In `_data/blog.yml`, we def
             <li>
 ```
 
-### <a name="pagination"></a>Pagination
+## Pagination
 
 The pagination in jekyll is not very perfect,so I use front-end web method,there is a [blog](http://www.jarrekk.com/html/2016/06/04/jekyll-pagination-with-jpages.html) about the method and you can refer to [jPages](http://luis-almeida.github.io/jPages).
 
-### <a name="page-views-counter"></a>Page views counter
+## Page views counter
 
 Many third party page counter platforms are too slow,so I count my website page view myself,the javascript file is [static/js/count.min.js](https://github.com/jarrekk/jalpc_jekyll_theme/blob/gh-pages/static/js/count.min.js) ([static/js/count.js](https://github.com/jarrekk/jalpc_jekyll_theme/blob/gh-pages/static/js/count.js)),the backend API is written with flask on [Vultr VPS](https://www.vultr.com/), detail code please see [ztool-backhend-mongo](https://github.com/Z-Tool/ztool-backhend-mongo).
 
-### <a name="multilingual-page"></a>Multilingual Page
+## Multilingual Page
 
 The landing page has multilingual support with the [i18next](http://i18next.com) plugin.
 
@@ -124,27 +124,27 @@ Languages are configured in the `_data/index/language.yml` file.
 
 About how to custom multilingual page, please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Multilingual-Page).
 
-### <a name="web-analytics"></a>Web analytics
+## Web analytics
 
 I use [Google analytics](https://www.google.com/analytics/) and [GrowingIO](https://www.growingio.com/) to do web analytics, you can choose either to realize it,just register a account and replace id in `_config.yml`.
 
-### <a name="comment"></a>Comment
+## Comment
 
 I use [Disqus](https://disqus.com/) to realize comment. You should set disqus_shortname and get public key and then, in `_config.yml`, edit the disqus value to enable Disqus.
 
-### <a name="share"></a>Share
+## Share
 
 I use [AddToAny](https://www.addtoany.com/) to share my blog on other social network platform. You can go to this website to custom your share buttons and paste code at `_includes/share.html`.
 
 ![share](https://github.com/jarrekk/Jalpc/raw/master/readme_files/share.png)
 
-### <a name="search-engines"></a>Search engines
+## Search engines
 
 I use javascript to realize blog search,you can double click `Ctrl` or click the icon at lower right corner of the page,the detail you can got to this [repository](https://github.com/androiddevelop/jekyll-search). Just use it.
 
 ![search](https://github.com/jarrekk/Jalpc/raw/master/readme_files/search.gif)
 
-### <a name="compress-css-js"></a>Compress CSS and JS files
+## Compress CSS and JS files
 
 All CSS and JS files are compressed at `/static/assets`.
 
@@ -168,15 +168,15 @@ I use [UglifyJS2](https://github.com/mishoo/UglifyJS2), [clean-css](https://gith
   **xxx** is date when you compress your files.
 3. If you want to add or remove CSS/JS files, just edit **build/build.js** and **build/files.conf.js**, then run `npm run build` at root dir of project, link/src files will use new files.
 
-## <a name="put-in-a-jalpc-plug"></a>Put in a Jalpc Plug
+# Put in a Jalpc Plug
 
 If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jarrekk.com>, that'd be awesome. No worries if you don't.
 
-## <a name="upgrading-jalpc"></a>Upgrading Jalpc
+# Upgrading Jalpc
 
 Jalpc is always being improved by its users, so sometimes one may need to upgrade.
 
-### <a name="ensure-theres-an-upstream-remote"></a>Ensure there's an upstream remote
+## Ensure there's an upstream remote
 
 If `git remote -v` doesn't have an upstream listed, you can do the following to add it:
 
@@ -184,7 +184,7 @@ If `git remote -v` doesn't have an upstream listed, you can do the following to 
 git remote add upstream https://github.com/jarrekk/Jalpc.git
 ```
 
-### <a name="pull-in-the-latest-changes"></a>Pull in the latest changes
+## Pull in the latest changes
 
 ```
 git pull upstream gh-pages
@@ -192,7 +192,7 @@ git pull upstream gh-pages
 
 There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
 
-## <a name="thanks-to-the-following"></a>Thanks to the following
+# Thanks to the following
 * [Jekyll](http://jekyllrb.com)
 * [Bootstrap](http://www.bootcss.com)
 * [jPages](http://luis-almeida.github.io/jPages)
@@ -207,18 +207,18 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 * [Font Awesome](http://fontawesome.io/icons/)
 * [Font Mfizz](http://fizzed.com/oss/font-mfizz)
 
-## <a name="todo"></a>Todo
+# Todo
 - [ ] `jekyll server --watch` mode need to use original CSS/JS files
 - [ ] User can customise index page's section title.
 
-##  <a name="change-log"></a>Change Log
+# Change Log
 Please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Change-Log)
 
-## <a name="donate"></a>Donate Jalpc
+# Donate Jalpc
 If this project let you enjoy your blog time, you can give me a cup of coffee :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
 
-## <a name="ad"></a>Ad
+# Ad
 [Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
 
