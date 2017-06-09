@@ -8,6 +8,8 @@
 
 ![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
 
+[TOC]
+
 * [3 steps to setup this theme at your website!](#three-steps)
 * [Features](#features)
     * [Index page](#index-page)
