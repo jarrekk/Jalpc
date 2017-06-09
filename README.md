@@ -1,8 +1,13 @@
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+# Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
 
-- [Jalpc. *](#jalpc-)
+[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
+[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/)
+
+<https://jarrekk.github.io/Jalpc/>
+
+![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
+
 - [3 steps to setup this theme at your website!](#3-steps-to-setup-this-theme-at-your-website)
 - [Features](#features)
   - [Index page](#index-page)
@@ -26,18 +31,6 @@
 - [Change Log](#change-log)
 - [Donate Jalpc](#donate-jalpc)
 - [Ad](#ad)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-# Jalpc. [![Analytics](https://ga-beacon.appspot.com/UA-73784599-1/welcome-page)](https://github.com/jarrekk/Jalpc)
-
-[![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
-[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.png?v=103)](https://github.com/ellerbrock/open-source-badge/)
-
-<https://jarrekk.github.io/Jalpc/>
-
-![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
 
