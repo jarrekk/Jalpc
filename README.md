@@ -10,6 +10,18 @@
 
 [TOC]
 
+chapter 1
+===========
+
+section 1
+-----------
+
+chapter 2
+===========
+
+section 2
+-----------
+
 * [3 steps to setup this theme at your website!](#three-steps)
 * [Features](#features)
     * [Index page](#index-page)
