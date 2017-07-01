@@ -6,6 +6,8 @@
 
 <https://jarrekk.github.io/Jalpc/>
 
+<http://www.jarrekk.com>  -- Personal website 
+
 ![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
 
 - [3 steps to setup this theme at your website!](#3-steps-to-setup-this-theme-at-your-website)
