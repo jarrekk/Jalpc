@@ -9,18 +9,18 @@
 - name: Linux
   href: /linux/
 
-- name: HTML
+- name: 前端相关
   href: /html/
 
-- name: Database
-  href: /database/
-
-- name: Mac
+- name: iOS/Mac
   href: /mac/
 
-- name: Life
+- name: 生活
   href: /life/
 
+- name: 随笔
+  href: /essayist/
+  
 # Don't display donation page: change donation to off at file '_config.yml'
 - name: Donate
   href: /donate/
