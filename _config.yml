@@ -53,7 +53,7 @@ donation: on  # type 'on'/'off' to choice display donation button at post page o
 
 ## carousels
 index_carousel: on
-blog_carousel: off
+blog_carousel: on
 
 # Build settings
 encoding: utf-8
