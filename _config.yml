@@ -16,7 +16,7 @@ author:  # change following line to your infomation.
   last_name: Git  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: jarrekk  # Leave blank if you don't have now
-  linkedin_id: kun-jia-991264a2 # Leave blank if you don't have now
+  linkedin_id: jarrekk # Leave blank if you don't have now
   facebook_username: jiakunnj  # Leave blank if you don't have now
   twitter_username: jiakun614  # Leave blank if you don't have now
   email: me@jarrekk.com  # Leave blank if you don't have now
@@ -46,6 +46,9 @@ gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your 
 ## donation
 donation: on  # type 'on'/'off' to choice display donation button at post page or not
 
+## carousels
+index_carousel: on
+blog_carousel: on
 
 # Build settings
 encoding: utf-8
