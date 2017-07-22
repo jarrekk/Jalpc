@@ -4,7 +4,7 @@ $(document).ready(function() {
     $.ajax({
         type: "get",
         async: false,
-        url: "https://vps.jarrekk.com:8443/api/v1.0/jalpc/pv_count",
+        url: "https://api.jarrekk.com/api/v1.0/jalpc/pv_count",
         dataType: "jsonp",
         jsonp: "callback",
         jsonpCallback: "flightHandler",

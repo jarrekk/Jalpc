@@ -142,13 +142,6 @@ h3,h4,h5 {
   top: 12px;
 }
 
-body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav li:hover>.nav-second-level {
-  display: block;
-  border-radius: 0 2px 2px 0;
-  min-width: 140px;
-  height: auto;
-}
-
 .navbar-default .landing_link a {
   background: #3385FF;
   color: #fff;
@@ -196,10 +189,6 @@ body.fixed-nav.fixed-nav-basic.body-small .navbar-fixed-top {
 
 .body-small .navbar-fixed-top {
   margin-left: 0;
-}
-
-body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav-second-level {
-  display: none;
 }
 
 body.canvas-menu .nav-header {
@@ -700,7 +689,7 @@ button.dim:active:before {
   color: #ed5565;
 }
 
-.author-info,.dd-item>button,.dd-item>button:before,.forum-avatar,.forum-icon,.forum-info,.vertical-timeline-icon {
+.author-info,.dd-item>button,.dd-item>button:before,.vertical-timeline-icon {
   text-align: center;
 }
 
@@ -801,83 +790,10 @@ label.error {
   width: 100%;
 }
 
-.forum-avatar {
-  float: left;
-  margin-right: 20px;
-  width: 110px;
-}
-
-.forum-avatar .img-circle {
-  height: 48px;
-  width: 48px;
-}
-
 .author-info {
   color: #676a6c;
   font-size: 11px;
   margin-top: 5px;
-}
-
-.forum-desc,.forum-item small {
-  color: #999;
-}
-
-.forum-post-info {
-  padding: 9px 12px 6px;
-  background: #f9f9f9;
-  border: 1px solid #f1f1f1;
-}
-
-.forum-item {
-  margin: 10px 0;
-  padding: 10px 0 20px;
-  border-bottom: 1px solid #f1f1f1;
-}
-
-.forum-container,.forum-post-container {
-  padding: 30px!important;
-}
-
-.forum-title {
-  margin: 15px 0;
-}
-
-.forum-icon {
-  float: left;
-  width: 30px;
-  margin-right: 20px;
-}
-
-a.forum-item-title {
-  color: inherit;
-  display: block;
-  font-size: 18px;
-  font-weight: 600;
-}
-
-a.forum-item-title:hover {
-  color: inherit;
-}
-
-.forum-icon .fa {
-  font-size: 30px;
-  margin-top: 8px;
-  color: #9b9b9b;
-}
-
-.forum-item.active .fa,.forum-item.active a.forum-item-title {
-  color: #3385FF;
-}
-
-@media (max-width:992px) {
-  .forum-info {
-    margin: 15px 0 10px;
-    display: none;
-  }
-
-  .forum-desc {
-    float: none!important;
-  }
 }
 
 .vertical-container {
@@ -1528,20 +1444,6 @@ a.close-canvas-menu:hover {
 
 .search-form {
   margin-top: 10px;
-}
-
-.search-result h3 {
-  margin-bottom: 0;
-  color: #1E0FBE;
-}
-
-.search-result .search-link {
-  color: #006621;
-}
-
-.search-result p {
-  font-size: 12px;
-  margin-top: 5px;
 }
 
 .contact-box {
