@@ -20,7 +20,11 @@ permalink: /
         <ul class="nav navbar-nav navbar-right" id="i18_navbar">
           {% for section in site.data.landing %}
           <li>
-            <a class="page-scroll" href="#{{ section.id }}">
+            {% if section.page %}
+              <a class="page-scroll" href="{{ section.page}} ">
+            {% else %}
+              <a class="page-scroll" href="{{ section.id | prepend: '#'}} ">
+            {% endif %}
               <span data-i18n="{{ section.i18n }}">{{ section.name }}</span>
             </a>
           </li>
