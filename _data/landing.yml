@@ -28,6 +28,7 @@
   i18n: nav.blog
   name: Blog
   tpl: blog.html
+  page: blog/
   css: testimonials navy-section
 
 - id: links
