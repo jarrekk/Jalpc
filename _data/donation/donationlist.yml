@@ -1,4 +1,17 @@
 # donation list
+
+- name: Christ Maximilian
+  account: i****n@yahoo.de
+  type: eur
+  value: 3.5
+  date: 2017-07-19
+
+- name: Peter Yang
+  account: 40*****12@qq.com
+  type: rmb
+  value: 10
+  date: 2017-04-03
+
 - name: Kun Liu
   account: 187****6486
   github:
