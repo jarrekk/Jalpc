@@ -32,7 +32,7 @@
 - [Todo](#todo)
 - [Change Log](#change-log)
 - [Donate Jalpc](#donate-jalpc)
-- [Contributors](#Contributors)
+- [Contributors](#contributors)
 - [Ad](#ad)
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
