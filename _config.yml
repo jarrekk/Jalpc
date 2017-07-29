@@ -47,8 +47,8 @@ gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your 
 donation: on  # type 'on'/'off' to choice display donation button at post page or not
 
 ## carousels
-index_carousel: on
-blog_carousel: on
+index_carousel: on  # index page carousel switch
+blog_carousel: on  # blog page carousel switch
 
 # Build settings
 encoding: utf-8

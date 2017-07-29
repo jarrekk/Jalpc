@@ -6,7 +6,7 @@
 
 <https://jarrekk.github.io/Jalpc/>
 
-<http://www.jarrekk.com>  -- Personal website 
+<http://www.jarrekk.com>  -- Personal website
 
 ![Blog](https://github.com/jarrekk/Jalpc/raw/master/readme_files/Jalpc.png)
 
@@ -32,6 +32,7 @@
 - [Todo](#todo)
 - [Change Log](#change-log)
 - [Donate Jalpc](#donate-jalpc)
+- [Contributors](#Contributors)
 - [Ad](#ad)
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
@@ -214,6 +215,14 @@ Please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Change-Log)
 If this project let you enjoy your blog time, you can give me a cup of coffee :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
+
+# Contributors
+
+* [lucasschejtman](https://github.com/lucasschejtman)
+* [felansu](https://github.com/felansu)
+* [brianjking](https://github.com/brianjking)
+* [JonSn0w](https://github.com/JonSn0w)
+* [remimarenco](https://github.com/remimarenco)
 
 # Ad
 [Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
