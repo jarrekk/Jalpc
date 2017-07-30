@@ -9,7 +9,7 @@ layout: default
                 <div class="ibox-content">
                     <div class="pull-right">
                     	{% for category in page.categories %}
-                        	<button class="btn btn-white btn-xs" type="button">{{ category }}</button>
+                        	<a class="btn btn-white btn-xs" href="{{ category | prepend: '/' | prepend: site.baseurl }}">{{ category }}</a>
                         {% endfor %}
                     </div>
                     <div class="text-center article-title">
@@ -29,7 +29,6 @@ layout: default
                         </div>
                         <div class="col-md-6">
                             <div class="small text-right">
-                                <h5>Stats:</h5>
                                 <div>
                                 {% if site.disqus %}
                                 <i class="fa fa-comments-o"> </i> <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ page.url }}">0</span> comments
