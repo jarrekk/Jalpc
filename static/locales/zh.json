@@ -1,0 +1,54 @@
+{
+  "website":{
+    "title": "杰克的博客"
+  },
+  "nav":{
+    "home": "首页",
+    "about_me": "关于我",
+    "skills": "技能",
+    "projects": "项目",
+    "career": "职业",
+    "blog": "博客",
+    "link": "友情链接"
+  },
+  "about_me":{
+    "about_me": "关于我",
+    "des": "我是一名全栈工程师，有开发网站，运维自动化，编写脚本的经验。人生是不断学习的过程，工作使我变的更严谨，旅行让我的生活更加多彩。通过编程和旅行我能结识到很多朋友。"
+  },
+  "skills":{
+    "my_skills": "我的技能"
+  },
+  "projects":{
+    "my_projects": "我的项目",
+    "jalpc": "这是一个我自己的GitHub项目.",
+    "cpython": "这是一个别人的GitHub项目.",
+    "familycode": "这是另外一个项目."
+  },
+  "career":{
+    "my_career": "职业生涯",
+    "nextcode": "Nextcode",
+    "nextcode_des": "现在我在Nextcode，使用Python为基因分析项目做网站.",
+    "nextcode_date": "2016年4月",
+    "nextcode_job": "Python工程师",
+    "netease": "网易游戏",
+    "netease_des": "在网易游戏，我了解到游戏体系，并使用Python代码为自动化运维服务.",
+    "netease_date": "2015年6月",
+    "netease_job": "运维开发工程师",
+    "ucloud": "Ucloud",
+    "ucloud_des": "在Ucloud,我开始和服务器、操作系统打交道，并使用shell脚本管理海量服务器.",
+    "ucloud_date": "2013年9月",
+    "ucloud_job": "运维开发工程师",
+    "college": "毕业",
+    "college_des": "2013年7月大学毕业，开始了IT职业生涯",
+    "college_date": "2013年7月",
+    "college_job": "学生"
+  },
+  "blog":{
+    "my_blog": "我的博客"
+  },
+  "link":{
+    "link": "友情链接",
+    "view": "次访问"
+  }
+
+}
