@@ -206,7 +206,7 @@ There may be merge conflicts, so be sure to fix the files that git lists if they
 # Todo
 - [ ] `jekyll server --watch` mode need to use original CSS/JS files
 - [ ] User can customise index page's section title.
-- [ ] Non-github projects also have links.
+- [x] Non-github projects also have links.
 - [ ] Add some custom color themes for selection(Nav bar, background, words, dominant hue).
 
 # Change Log
