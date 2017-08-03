@@ -28,11 +28,9 @@
 - [Upgrading Jalpc](#upgrading-jalpc)
   - [Ensure there's an upstream remote](#ensure-theres-an-upstream-remote)
   - [Pull in the latest changes](#pull-in-the-latest-changes)
-- [Thanks to the following](#thanks-to-the-following)
 - [Todo](#todo)
-- [Change Log](#change-log)
 - [Donate Jalpc](#donate-jalpc)
-- [Contributors](#contributors)
+- [Wiki](#wiki)
 - [Ad](#ad)
 
 This is a simple, beautiful and swift theme for Jekyll. It's mobile first, fluidly responsive, and delightfully lightweight.
@@ -188,42 +186,24 @@ git pull upstream gh-pages
 
 There may be merge conflicts, so be sure to fix the files that git lists if they occur. That's it!
 
-# Thanks to the following
-* [Jekyll](http://jekyllrb.com)
-* [Bootstrap](http://www.bootcss.com)
-* [jPages](http://luis-almeida.github.io/jPages)
-* [i18next](http://i18next.github.io/i18next)
-* [pixyll](https://github.com/johnotander)
-* [androiddevelop](https://github.com/androiddevelop)
-* [UglifyJS2](https://github.com/mishoo/UglifyJS2)
-* [clean-css](https://github.com/jakubpawlowicz/clean-css)
-* [Chart.js](http://www.chartjs.org/)
-* [shelljs](https://github.com/shelljs/shelljs)
-* [colors](https://github.com/marak/colors.js/)
-* [Font Awesome](http://fontawesome.io/icons/)
-* [Font Mfizz](http://fizzed.com/oss/font-mfizz)
-
 # Todo
 - [ ] `jekyll server --watch` mode need to use original CSS/JS files
 - [ ] User can customise index page's section title.
 - [x] Non-github projects also have links.
 - [ ] Add some custom color themes for selection(Nav bar, background, words, dominant hue).
 
-# Change Log
-Please see [wiki](https://github.com/jarrekk/Jalpc/wiki/Change-Log)
-
 # Donate Jalpc
 If this project let you enjoy your blog time, you can give me a cup of coffee :)
 
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://paypal.me/jarrekk)
 
-# Contributors
-* [lucasschejtman](https://github.com/lucasschejtman)
-* [felansu](https://github.com/felansu)
-* [brianjking](https://github.com/brianjking)
-* [JonSn0w](https://github.com/JonSn0w)
-* [remimarenco](https://github.com/remimarenco)
-* [hjfzxc](https://github.com/hjfzxc)
+# Wiki
+
+* [Multilingual Page](https://github.com/jarrekk/Jalpc/wiki/Multilingual-Page)
+* [How to add posts](https://github.com/jarrekk/Jalpc/wiki/How-to-add-posts)
+* [Change Log](https://github.com/jarrekk/Jalpc/wiki/Change-Log)
+* [Contributors](https://github.com/jarrekk/Jalpc/wiki/Contributors)
+* [Thanks to the following](https://github.com/jarrekk/Jalpc/wiki/Thanks-to-the-following)
 
 # Ad
 [Jalpc-A](https://github.com/Jack614/Jalpc-A): another Jekyll theme written by [AngularJS](https://angularjs.org/).
