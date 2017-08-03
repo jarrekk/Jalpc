@@ -1,0 +1,48 @@
+---
+layout: blog
+title: Blog
+permalink: /blog/
+---
+
+<div class="row">
+    <div class="col-lg-12 text-center">
+        <div class="navy-line"></div>
+        <h1>Latest Blog</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-lg-8 col-lg-offset-2">
+        <div class="wrapper wrapper-content animated fadeInRight">
+
+            <!-- latest 10 blog -->
+			{% for post in site.posts limit:10 %}
+            <div class="vote-item">
+                <div class="row">
+                    <div class="col-md-10">
+                        <div class="vote-actions">
+                        </div>
+                        <a href="{{ post.url | prepend: site.baseurl }}" class="vote-title">
+                            {{ post.title }}
+                        </a>
+                        <div class="vote-info">
+                        {% if site.disqus %}
+                            <i class="fa fa-comments-o"> </i> <a>Comments (<span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}">0</span>)</a>
+                        {% endif %}
+                            <i class="fa fa-clock-o"></i> <a>{{ post.date | date: "%-d %b %Y" }}</a>
+                            <i class="fa fa-user"></i> <a>{{ site.author.name }}</a>
+                        </div>
+                    </div>
+                    <div class="col-md-2 ">
+                        <div class="vote-icon">
+                            {% if post.icon %}<i class="fa {{ post.icon }}"> </i>{% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+</div>
+

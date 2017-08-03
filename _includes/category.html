@@ -1,5 +1,5 @@
 <!-- jPages -->
-<script src="{{"/static/assets/jPage-20170606.min.js" | prepend: site.baseurl}}"></script>
+<script src="{{"/static/assets/jPage-20170803.min.js" | prepend: site.baseurl}}"></script>
 <script type="text/javascript">
 $(function(){
   /* initiate the plugin */
@@ -52,13 +52,9 @@ $(function(){
                                 </div>
                                 <div class="col-md-6">
                                     <div class="small text-right">
-                                        <h5>Stats:</h5>
                                         <div>
-                                            {% if site.changyan %}
-                                            <i class="fa fa-comments-o"> </i> <span id="url::{{post.url | prepend: site.url}}" class="cy_cmt_count"></span> comments
-                                            {% endif %}
                                             {% if site.disqus %}
-                                            <i class="fa fa-comments-o"> </i> <span class='disqus-comment-count' data-disqus-url="{{ site.url }}{{ post.url }}">0</span> comments
+                                            <i class="fa fa-comments-o"> </i> <span class="disqus-comment-count" data-disqus-url="{{ site.url }}{{ post.url }}">0</span> comments
                                             {% endif %}
                                         </div>
                                     </div>
