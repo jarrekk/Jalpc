@@ -14,7 +14,7 @@ author:  # change following line to your infomation.
   name: GitHub  # Be used at blog posts' author.
   first_name: Anip  # Be used at index page about me section.
   last_name: Mehta  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
+  avatar: https://avatars2.githubusercontent.com/u/12862333?v=4&u=65d5750cada311867f53ddefe6e70135412772c6&s=400  # upload your avatar at directory and edit it.
   github_username: anipmehta  # Leave blank if you don't have now
   linkedin_id:  # Leave blank if you don't have now
   facebook_username: jiakunnj  # Leave blank if you don't have now
