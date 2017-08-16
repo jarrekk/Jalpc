@@ -2,4 +2,4 @@
 title: robots
 ---
 User-agent: *
-Sitemap: <{{site.url}}/sitemap.xml>
+Sitemap: <http://{{site.url}}/sitemap.xml>
