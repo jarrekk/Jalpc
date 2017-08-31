@@ -16,11 +16,11 @@ author:  # change following line to your infomation.
   last_name: Mehta  # Be used at index page about me section.
   avatar: https://avatars2.githubusercontent.com/u/12862333?v=4&u=65d5750cada311867f53ddefe6e70135412772c6&s=400  # upload your avatar at directory and edit it.
   github_username: anipmehta  # Leave blank if you don't have now
-  linkedin_id:  # Leave blank if you don't have now
-  facebook_username: jiakunnj  # Leave blank if you don't have now
-  twitter_username: jiakun614  # Leave blank if you don't have now
+  linkedin_id:  https://www.linkedin.com/in/anip-mehta-210a16104/ # Leave blank if you don't have now
+  facebook_username:   # Leave blank if you don't have now
+  twitter_username: anip_me  # Leave blank if you don't have now
   email: anipmehta13@gmail.com  # Leave blank if you don't have now
-  cv: http://cv.jarrekk.com  # A online CV can be printed as PDF, leave blank if you don't have now
+  cv: http://139.59.39.37/Anip_CV_General.pdf  # A online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
