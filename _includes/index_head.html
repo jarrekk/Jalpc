@@ -1,0 +1,25 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta content="{{ site.description }}" name="description">
+  <meta name="keywords" content="{{ site.keywords }}">
+  <meta name="author" content="{{ site.author.name }}">
+  <title>{{ site.title }}</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.ico" | prepend: site.baseurl }}">
+
+  <!-- Main CSS -->
+  <link href="{{ "/static/assets/app-20170906.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
+
+  <!-- Main scripts -->
+  <script src="{{ "/static/assets/app-20170906.min.js" | prepend: site.baseurl }}"></script>
+  {% if site.data.index.projects %}
+  <script async defer src="{{ "/static/js/github_api.min.js" | prepend: site.baseurl }}"></script>
+  {% endif %}
+  {% if site.data.index.language %}
+  <script src="{{"/static/assets/i18-20170906.min.js"| prepend: site.baseurl }}"></script>
+  {% endif %}
+</head>

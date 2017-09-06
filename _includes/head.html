@@ -1,0 +1,32 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% if page.desc %}
+    <meta content="{{ page.desc }}" name="description">
+  {% endif %}
+  {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  <meta name="author" content="{{ site.author.name }}">
+  <meta name="baseurl" content="{{ site.baseurl }}">
+
+  <title>
+    {% if page.title != "index" %}
+        {{ site.title }}|{{ page.title }}
+    {% else %}
+        {{ site.title }}
+    {% endif %}
+  </title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="{{ "/static/assets/img/favicon.ico" | prepend: site.baseurl }}">
+
+  <!-- Main CSS -->
+  <link href="{{ "/static/assets/app-20170906.min.css" | prepend: site.baseurl }}" rel="stylesheet">
+  <link href="{{ "/static/css/custom.css" | prepend: site.baseurl }}" rel="stylesheet">
+
+  <!-- Main Scripts -->
+  <script src="{{"/static/assets/app-20170906.min.js"| prepend: site.baseurl }}"></script>
+  <script src="{{"/static/assets/blog-20170906.min.js"| prepend: site.baseurl }}"></script>
+
+</head>
