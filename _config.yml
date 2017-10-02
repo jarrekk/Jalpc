@@ -1,8 +1,8 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Jalpc
-description: Jack's blog,use Jekyll and github pages.
+title: Khanya Bouma
+description: A little something to help me get a job
 keywords: Jack,Jalpc,blog,Jekyll,github,gh-pages
 baseurl:  /homepage # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://khanyabouma.github.io/homepage  # url should be 'http://<github_username>.github.io/homepage' as before
