@@ -2502,12 +2502,8 @@ body {
   .header-back {
     height: 470px;
     width: 100%;
-    &.one {
-      background: url(../assets/img/landing/header_one.jpg) 50% 0 no-repeat;
-    }
-    &.two {
-      background: url(../assets/img/landing/header_two.jpg) 50% 0 no-repeat;
-    }
+    background-position: 50% 0;
+    background-repeat:  no-repeat;
   }
   .carousel {
     height: 470px;
