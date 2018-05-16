@@ -27,8 +27,8 @@ author:  # change following line to your infomation.
     - name: icon-apache
     - name: icon-java
   skill_icon2:
-    - name: icon-java
-    - name: icon-apache
+    - name: icon-html
+    - name: icon-html5-alt
     
   desc: Introduce myself will be here.  # Describe yourself.
 
