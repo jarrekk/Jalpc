@@ -18,7 +18,7 @@ author:  # change following line to your infomation.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: SOYEUNAN  # Leave blank if you don't have now
   linkedin_id:  # Leave blank if you don't have now 인스타아이디로 로고 교체예정
-  facebook_username: soyeunan  # Leave blank if you don't have now
+  facebook_username: an.soyeun  # Leave blank if you don't have now
   twitter_username:   # Leave blank if you don't have now 트위터 없앨예정
   email: soyeunn@gmail.com  # Leave blank if you don't have now
   cv: http://cv.soyeunn.com  # An online CV can be printed as PDF, leave blank if you don't have now
