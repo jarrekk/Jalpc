@@ -1,6 +1,7 @@
 # Welcome to Jekyll!
 
 # Website settings
+remote_theme : mmistakes/minimal-mistakes
 title: Hian
 description: Jack's blog,use Jekyll and github pages.
 keywords: Jack,Jalpc,blog,Jekyll,github,gh-pages
