@@ -25,11 +25,9 @@ author:  # change following line to your infomation.
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
-    - name: fa-linux
     - name: icon-java
   skill_icon2:
     - name: icon-java
-    - name: fa-linux
     - name: icon-apache
     
   desc: Introduce myself will be here.  # Describe yourself.
