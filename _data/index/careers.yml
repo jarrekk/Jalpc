@@ -15,15 +15,15 @@
   icon: fa-plus-square
 
 - name:
-    detail: Company B
+    detail: Pongdang.com
     i18n: company_b
   desc:
-    detail: I worked at Company B ...
+    detail: Web Designer
     i18n: company_b_desc
   date:
     detail: Jun. 2015
     i18n: company_b_date
   job:
-    detail: Full Stack Developer
+    detail: Web Designer
     i18n: company_b_job
   icon: fa-plus-square
