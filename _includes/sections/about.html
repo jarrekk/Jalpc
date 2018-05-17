@@ -7,7 +7,7 @@
         </div>
     </div>
     <div class="row">
-        <!-- first two icons -->
+        <!-- first two icons 스킬 아이콘-->
         {% for icon in site.author.skill_icon1 %}
         <div class="col-xs-2 wow fadeInLeft">
             <div class="team-member">
@@ -19,29 +19,31 @@
         {% endfor %}
         <!-- avatar -->
         <div class="col-xs-4">
-            <div class="team-member wow zoomIn">
-                <img src="{{ site.author.avatar | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
-                <h4><span class="navy">{{ site.author.first_name }}</span> {{ site.author.last_name }}</h4>
+            <div class="team-member wow zoomIn
+              <img src="{{ site.author.avatar | prepend: site.baseurl }}" height="110" width="110" class="img-responsive img-circle" alt="">
+           
+               <h4><span class="navy">{{ site.author.first_name }}</span> {{ site.author.last_name }}</h4>
                 <ul class="list-inline social-icon">
                     {% if site.author.github_username %}
                     <li><a href="https://github.com/{{ site.author.github_username }}" target="blank"><i class="fa fa-github"></i></a></li>
                     {% endif %}
-                    {% if site.author.linkedin_id %}
-                    <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin_id }}" target="blank"><i class="fa fa-linkedin"></i></a></li>
-                    {% endif %}
+                    
                     {% if site.author.facebook_username %}
                     <li><a href="https://www.facebook.com/{{ site.author.facebook_username }}" target="blank"><i class="fa fa-facebook"></i></a></li>
                     {% endif %}
-                    {% if site.author.twitter_username %}
-                    <li><a href="https://twitter.com/{{ site.author.twitter_username }}" target="blank"><i class="fa fa-twitter"></i></a></li>
-                    {% endif %}
+                   
                     {% if site.author.email %}
                     <li><a href="mailto:{{ site.author.email }}"><i class="fa fa-envelope-o"></i></a></li>
                     {% endif %}
-                    <li><a href="{{ site.baseurl }}/feed.xml" target="blank"><i class="fa fa-rss"></i></a></li>
-                    {% if site.author.cv %}
-                    <li><a href="{{ site.author.cv }}" target="blank"><i class="fa fa-file-pdf-o"></i></a></li>
+
+                    {% if site.author.insta_username %}
+                    <li><a href="https://www.instagram.com/{{site.author.insta_username}}" target="blank"><i class="fa fa-instagram"></i></a></li>
                     {% endif %}
+                    
+                 
+
+                    
+                    
                 </ul>
             </div>
         </div>
