@@ -22,6 +22,7 @@ author:  # change following line to your infomation.
   twitter_username:   # Leave blank if you don't have now 트위터 없앨예정
   email: soyeunn@gmail.com  # Leave blank if you don't have now
   cv: http://cv.soyeunn.com  # An online CV can be printed as PDF, leave blank if you don't have now
+  insta: soyeunn #인스타추가
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
