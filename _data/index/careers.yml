@@ -13,7 +13,7 @@
     detail: web developer
     i18n: company_a_job
   icon: fa-plus-square
-
+#
 - name:
     detail: Pongdang.com
     i18n: company_b
