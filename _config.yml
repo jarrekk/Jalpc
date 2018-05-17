@@ -21,7 +21,10 @@ author:  # change following line to your infomation.
   facebook_username: an.soyeun  # Leave blank if you don't have now
   twitter_username:   # Leave blank if you don't have now 트위터 없앨예정
   email: soyeunn@gmail.com  # Leave blank if you don't have now
+<<<<<<< HEAD
   cv: http://cv.soyeunn.com  # An online CV can be printed as PDF, leave blank if you don't have now
+=======
+>>>>>>> branch 'master' of https://github.com/SOYEUNAN/SOYEUNAN.github.io.git
   insta_username: soyeunn #인스타추가
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
