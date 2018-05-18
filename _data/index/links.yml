@@ -1,57 +1,45 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: 솔비텍1
-    i18n: 솔비텍
+    detail: KH정보교육원
+    i18n: KH
   desc:
-    detail: 웹 개발자 1
+    detail: [NCS]응용SW엔지니어 및  하이브리드 APP 개발자 양성과정
     i18n: company_a_desc
   date:
-    detail: May. 2018 ~ 
+    detail: Jan. 2017 ~ Jul. 2017
     i18n: company_a_date
   job:
-    detail: E.Check Form Ai Report 사내 솔루션 개발
+    detail: ORACLE, Java, Servlet / JSP, FrameWork, jdbc, struts, spring, Mybatis, Ajax, HTML / CSS / JavaScript
     i18n: company_a_job
   icon: fa-plus-square
 #
 - name:
-    detail: 필라웨어(인턴)
+    detail: 계원예술대학교
     i18n: company_b
   desc:
-    detail: 웹 개발자
+    detail: Art furniture/산업디자인학과
     i18n: company_b_desc
   date:
-    detail: Dec. 2017 ~ Mar. 2018
+    detail: Mar. 2011 ~ Mar. 2013
     i18n: company_b_date
   job:
-    detail: 삼성전자 기흥 AD 고도화 프로젝트
+    detail: Photoshop / illustration
     i18n: company_b_job
   icon: fa-plus-square
 #
 - name:
-    detail: 퐁당닷컴
+    detail: 창덕여자고등학교
     i18n: company_b
   desc:
-    detail: 웹 디자이너
+    detail: 인문
     i18n: company_b_desc
   date:
-    detail: Aug. 2015 ~ Aug. 2016
+    detail: Mar. 2007 ~ Mar. 2010
     i18n: company_b_date
   job:
-    detail: 홈페이지관리, 웹디자인, 상품관리, 상세페이지제작 등 
+    detail: 
     i18n: company_b_job
   icon: fa-plus-square
-  #
-- name:
-    detail: 중아트갤러리
-    i18n: company_b
-  desc:
-    detail: 웹 디자이너
-    i18n: company_b_desc
-  date:
-    detail: Sept. 2013 ~ Aug. 2014
-    i18n: company_b_date
-  job:
-    detail: 홈페이지관리, 웹디자인, 상품관리, 상세페이지제작 등 
-    i18n: company_b_job
-  icon: fa-plus-square
+  
+
