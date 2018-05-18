@@ -21,7 +21,7 @@
 - id: links
   i18n: nav.links
   name: Educations
-  tpl: career.html
+  tpl: links.html
   css: timeline
 
 - id: projects
