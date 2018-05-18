@@ -20,7 +20,7 @@
   
 - id: education
   i18n: nav.educations
-  name : Education
+  name : Educations
   tp1: education.html
   css: timeline  
 
