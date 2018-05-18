@@ -5,32 +5,37 @@ remote_theme : mmistakes/minimal-mistakes
 title: Hian
 description: Hian's blog,use Hian and github pages.
 keywords: Hian,blog,github
-baseurl:  /Jalpc # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
+baseurl:   # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://SOYEUNAN.github.io  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
-img_path: /http://SOYEUNAN.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
   name: Hian  # Be used at blog posts' author.
   first_name: Hi  # Be used at index page about me section.
-  last_name: An  # Be used at index page about me section.
+  last_name: an  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: SOYEUNAN  # Leave blank if you don't have now
-  linkedin_id:  # Leave blank if you don't have now
+  linkedin_id:  # Leave blank if you don't have now 인스타아이디로 로고 교체예정
   facebook_username: an.soyeun  # Leave blank if you don't have now
-  twitter_username:   # Leave blank if you don't have now
+  twitter_username:   # Leave blank if you don't have now 트위터 없앨예정
   email: soyeunn@gmail.com  # Leave blank if you don't have now
-  cv: http://cv.SOYEUNAN.com  # An online CV can be printed as PDF, leave blank if you don't have now
-  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
+
+  cv: http://cv.soyeunn.com  # An online CV can be printed as PDF, leave blank if you don't have now
+
   insta_username: soyeunn #인스타추가
+  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
     - name: icon-java
   skill_icon2:
     - name: icon-html
     - name: icon-html5-alt
-  desc: 쑥쑥 자라나는 햇병아리 개발자 왜안됄까  # Describe yourself.
+    
+  desc: 쑥쑥 자라나는 햇병아리 개발자 왜안됄까ㅠㅠㅠㄴㅇㄹㄴㅇㄹㄴㅇㄹㄴㅇㄹ  # Describe yourself.
+
+    
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
@@ -50,7 +55,7 @@ gio:  # if you wanna this feature, go to https://www.growingio.com/ to get your 
   # id:
 
 ## donation
-donation: on  # type 'on'/'off' to choice display donation button at post page or not
+donation: off  # type 'on'/'off' to choice display donation button at post page or not
 
 ## carousels
 index_carousel: on  # index page carousel switch
