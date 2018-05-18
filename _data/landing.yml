@@ -18,6 +18,11 @@
   tpl: skills.html
   css: team
   
+- id: education
+  i18n: nav.education
+  name: Educations
+  tpl: education.html
+  css: contact
 
 - id: projects
   i18n: nav.projects
@@ -32,8 +37,4 @@
   page: blog/
   css: testimonials navy-section
 
-- id: education
-  i18n: nav.education
-  name: Educations
-  tpl: education.html
-  css: contact
+
