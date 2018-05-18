@@ -7,11 +7,25 @@
     detail: 웹 개발자 
     i18n: company_a_desc
   date:
-    detail: Apr. 2016
+    detail: May. 2018
     i18n: company_a_date
   job:
     detail: web developer
     i18n: company_a_job
+  icon: fa-plus-square
+#
+- name:
+    detail: 필라웨어
+    i18n: company_b
+  desc:
+    detail: 웹 개발자
+    i18n: company_b_desc
+  date:
+    detail: mar. 2017 ~ Dec. 2018
+    i18n: company_b_date
+  job:
+    detail: 삼성전자 기흥 AD 고도화 프로젝트
+    i18n: company_b_job
   icon: fa-plus-square
 #
 - name:
@@ -21,9 +35,9 @@
     detail: Web Designer
     i18n: company_b_desc
   date:
-    detail: Jun. 2015
+    detail: Aug. 2015 ~ Aug. 2016
     i18n: company_b_date
   job:
-    detail: Web Designer
+    detail: 홈페이지관리, 웹디자인, 상품관리, 상세페이지제작 등 
     i18n: company_b_job
   icon: fa-plus-square
