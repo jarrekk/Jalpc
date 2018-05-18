@@ -22,7 +22,7 @@
   i18n: nav.education
   name: Educations
   tpl: education.html
-  css: contact
+  css: timeline
 
 - id: projects
   i18n: nav.projects
