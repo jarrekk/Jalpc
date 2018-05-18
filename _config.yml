@@ -15,7 +15,7 @@ author:  # change following line to your infomation.
   name: Hian  # Be used at blog posts' author.
   first_name: System.out.println("  # Be used at index page about me section.
   last_name: Hian  # Be used at index page about me section.
-  #last_name2: ")
+  last_name2: ")
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: SOYEUNAN  # Leave blank if you don't have now
   linkedin_id:  # Leave blank if you don't have now 인스타아이디로 로고 교체예정
