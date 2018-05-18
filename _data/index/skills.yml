@@ -2,5 +2,5 @@
 
 label: Ability
 id : cs
-aspects: GitHub, Java, Spring, HTML5&Css, Oracle, Ajax, JavaScript, photoshop&illustration
+aspects: GitHub, Java, Spring, HTML5&Css, Oracle, Ajax, JavaScript, photoshop &<br> illustration
 percentage: 10, 35, 65, 80, 70, 90, 50
