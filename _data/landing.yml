@@ -19,7 +19,7 @@
   css: team
   
 - id: education
-  i18n: nav.education
+  i18n:
   name : Educations
   tp1: education.html
   css: timeline  
