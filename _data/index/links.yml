@@ -5,14 +5,17 @@
   website: https://www.google.com
   email: ceo@google.com
 
-- last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
-
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
+- name:
+    detail: 솔비텍
+    i18n: 솔비텍
+  desc:
+    detail: 웹 개발자 
+    i18n: company_a_desc
+  date:
+    detail: May. 2018 ~ 
+    i18n: company_a_date
+  job:
+    detail: E.Check Form Ai Report 사내 솔루션 개발
+    i18n: company_a_job
+  icon: fa-plus-square
+#
