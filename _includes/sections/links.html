@@ -1,38 +1,28 @@
-<div class="container" id="i18_link">
-    <div class="row m-b-lg">
+<div class="container" id="i18_career">
+    <div class="row">
         <div class="col-lg-12 text-center">
             <div class="navy-line"></div>
-            <h1><span data-i18n="link.link">Link</span></h1>
+            <h1><span data-i18n="career.my_career">My Career2</span></h1>
         </div>
     </div>
-    <div class="row">
-    {% for link in site.data.index.links %}
-        {% assign loopindex = forloop.index | modulo: 3 %}
-        {% if forloop.last %}
-            {% if forloop.last == forloop.first %}
-        <div class="col-sm-4 col-sm-offset-4 wow zoomIn">
-                {% else %}
-        <div class="col-sm-4 wow {% if loopindex != 0 %} col-sm-offset-4 fadeInRight {% else %} zoomIn {% endif %}">
-            {% endif %}
-        {% else %}
-        <div class="col-sm-4 wow {% if loopindex == 1 %} fadeInLeft {% else if loopindex == 2 %} zoomIn {% else %} fadeInRight {% endif %}">
-        {% endif %}
-        <div class="team-member">
-            <h4><span class="navy">{{ link.last_name }}</span> {{ link.first_name }}</h4>
-            <p>{{ link.desc }}</p>
-            <ul class="list-inline social-icon">
-                <li><a href="{{ link.website }}" target="blank"><i class="fa fa-link"></i></a>
-                </li>
-                <li><a href="mailto:{{ link.email }}"><i class="fa fa-envelope-o"></i></a>
-                </li>
-            </ul>
-        </div>
-        </div>
-    {% endfor %}
-    </div>
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-2 text-center m-t-lg m-b-lg">
-            <p id="jalpc_site_pv"><strong>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}</strong></p>
+    <div class="row features-block">
+        <div class="col-lg-12">
+            <div id="vertical-timeline" class="vertical-container light-timeline center-orientation">
+            {% for career in site.data.index.links %}
+            {% assign loopindex = forloop.index | modulo: 2 %}
+                <div class="vertical-timeline-block">
+                    <div class="vertical-timeline-icon navy-bg wow rotateIn">
+                        <i class="fa {{ links.icon }}"></i>
+                    </div>
+                    <div class="vertical-timeline-content wow {% if loopindex == 1 %} rotateInUpRight {% else %} rotateInUpLeft {% endif %}">
+                        <h2><span data-i18n="links.{{ links.name.i18n }}">{{ links.name.detail }}</span></h2>
+                        <p><span data-i18n="links.{{ links.desc.i18n }}">{{ links.desc.detail }} </span></p>
+                        <span class="vertical-date"><span data-i18n="links.{{ links.date.i18n }}"> {{ career.date.detail }} </span>
+                        <br/> <small><span data-i18n="links.{{ links.job.i18n }}">{{ links.job.detail }}</span></small> </span>
+                    </div>
+                </div>
+            {% endfor %}
+            </div>
         </div>
     </div>
 </div>
