@@ -15,7 +15,7 @@
   icon: fa-plus-square
 #
 - name:
-    detail: 필라웨어
+    detail: 필라웨어(인턴)
     i18n: company_b
   desc:
     detail: 웹 개발자
