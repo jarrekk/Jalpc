@@ -4,7 +4,7 @@
 
 # edit following lines to custom your blog page, make sure name is the same as href but capitalized first letter(except HTML)
 - name: Java
-  href: /python/
+  href: /Java/
 
 - name: 
   href: /linux/
