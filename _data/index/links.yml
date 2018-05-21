@@ -1,18 +1,45 @@
-# links section data
-- last_name: Name 1
-  first_name:
-  desc: CEO
-  website: https://www.google.com
-  email: ceo@google.com
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name:
+    detail: KH정보교육원
+    i18n: KH
+  desc:
+    detail: (NCS)응용SW엔지니어 및  하이브리드 APP 개발자 양성과정
+    i18n: company_a_desc
+  date:
+    detail: Jan. 2017 ~ Jul. 2017
+    i18n: company_a_date
+  job:
+    detail: ORACLE, Java, Servlet / JSP, FrameWork, jdbc, struts, spring, Mybatis, Ajax, HTML / CSS / JavaScript
+    i18n: company_a_job
+  icon: fa-plus-square
+#
+- name:
+    detail: 계원예술대학교
+    i18n: company_b
+  desc:
+    detail: Art furniture/산업디자인학과
+    i18n: company_b_desc
+  date:
+    detail: Mar. 2011 ~ Mar. 2013
+    i18n: company_b_date
+  job:
+    detail: Photoshop / illustration
+    i18n: company_b_job
+  icon: fa-plus-square
+#
+- name:
+    detail: 창덕여자고등학교
+    i18n: company_b
+  desc:
+    detail: 인문
+    i18n: company_b_desc
+  date:
+    detail: Mar. 2007 ~ Mar. 2010
+    i18n: company_b_date
+  job:
+    detail: 
+    i18n: company_b_job
+  icon: fa-plus-square
+  
 
-- last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
-
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
