@@ -1,4 +1,4 @@
-# blog page sections
+# blog page sections 블로그 메뉴바
 - name: Blog
   href: /blog/
 
@@ -6,8 +6,8 @@
 - name: Java
   href: /java/
 
-- name: LINUX
-  href: /linux/
+- name: WEB
+  href: /web/
 
 - name: HTML
   href: /html/
@@ -15,8 +15,8 @@
 - name: Database
   href: /database/
 
-- name: Mac
-  href: /mac/
+- name: TEST
+  href: /test/
 
 - name: Life
   href: /life/
