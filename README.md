@@ -152,6 +152,20 @@ OR
 
 Edit CSS files at `_sass` folder.
 
+# Local tests/development
+
+First, install Jekyll on terminal:
+
+```shell
+bundle install
+```
+
+Then, execute:
+
+```shell
+bundle exec jekyll serve
+```
+
 # Put in a Jalpc Plug
 
 If you want to give credit to the Jalpc theme with a link to my personal website <http://www.jarrekk.com>, that'd be awesome. No worries if you don't.
