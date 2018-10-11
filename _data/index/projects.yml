@@ -5,14 +5,14 @@
   i18n: 
   gh_user: jisung0920
   repo: Darimi
-  img: /static/assets/img/landing/jekyll.png
+  img: /static/assets/img/landing/darimi_logo.png
   desc: This project is team project. In November, 2017, we received the Minister's Award. A laundry order management program for small business owners.
 
 - name: ParkingOfAnsan
   i18n: 
   gh_user: ParkBeomMin
   repo: ParkingOfAnsan
-  img: /static/assets/img/landing/python.png
+  img: /static/assets/img/landing/parking_of_ansan_logo.png
   desc: This project is team project. An app that searches public parking.
 
 # - name: Google
