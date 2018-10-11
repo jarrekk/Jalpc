@@ -1,18 +1,18 @@
 # links section data
-- last_name: Name 1
+- last_name: Hanyang
   first_name:
-  desc: CEO
-  website: https://www.google.com
-  email: ceo@google.com
+  desc: My University
+  website: https://www.hanyang.ac.kr
+  email: club1294@hanynag.ac.kr
 
-- last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
+- last_name: JoinAndJoin
+  first_name: 
+  desc: My Company
+  website: http://www.joinandjoin.com/
+  email: joinandjoin2017@gmail.com
 
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
+- last_name: Gri-go
+  first_name: 
+  desc: Brand Of JoinAndJoin
+  website: http://gri-go.com
+  email: joinandjoin2017@gmail.com
