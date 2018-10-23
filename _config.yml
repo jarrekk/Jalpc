@@ -4,10 +4,10 @@
 title: BeomMin's 19th Room
 description: BeomMin's blog, study android.
 keywords: ParkBeomMin,BeomMin,StevenPark,Steven,github,android,java,kotlin
-baseurl:  / # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
+baseurl:  /homepage # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://parkbeommin.github.io/homepage  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
-img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+img_path: /homepage/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
