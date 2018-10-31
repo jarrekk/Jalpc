@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    <url>
+        <loc>http://localhost:4000/html/2017/12/21/test-code-snippets.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/html/2017/01/31/3-steps-to-setup-website-with-Jalpc.html</loc>
+    </url>
+
+
+    <url>
+        <loc>http://localhost:4000/404.html</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/blog/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/static/css/custom.css</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/database/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/donate/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/feed.xml</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/html/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/life/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/linux/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/mac/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/python/</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/robots.txt</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/search.json</loc>
+    </url>
+
+    <url>
+        <loc>http://localhost:4000/sitemap.xml</loc>
+    </url>
+
+</urlset>

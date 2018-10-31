@@ -1,0 +1,56 @@
+{
+  "website":{
+    "title": "Jack's blog"
+  },
+  "nav":{
+    "home": "Home",
+    "about_me": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "career": "Career",
+    "blog": "Blog",
+    "link": "Link"
+  },
+  "about_me":{
+    "about_me": "About Me",
+    "des": "I am a Full Stack engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel."
+  },
+  "skills":{
+    "my_skills": "My Skills"
+  },
+  "career":{
+    "my_career": "My Career",
+    "nextcode": "Nextcode",
+    "nextcode_des": "Now I am in Nextcode and develop website with Python code for genetic analysis.",
+    "nextcode_date": "Apr. 2016",
+    "nextcode_job": "Python Developer",
+
+    "netease": "Netease Game",
+    "netease_des": "In Netease game, I learned game service system and use Python code for ops.",
+    "netease_date": "Jun. 2015",
+    "netease_job": "Dev Ops",
+
+    "ucloud": "Ucloud",
+    "ucloud_des": "In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.",
+    "ucloud_date": "Sep. 2013",
+    "ucloud_job": "Dev Ops",
+
+    "master_college": "Post Graduation",
+    "master_college_des": "At July 2011,I graduated from IIT-Guwahati",
+    "master_college_date": "Jul. 2011",
+    "master_college_job": "Master's Student"
+    "bachelors_college": "Post Graduation",
+    "bachelors_college_des": "At July 2011,I graduated from IIT-Guwahati",
+    "bachelors_college_date": "Jul. 2011",
+    "bachelors_college_job": "Master's Student"
+
+  },
+  "blog":{
+    "my_blog": "My Blog"
+  },
+  "link":{
+    "link": "Link",
+    "view": "views"
+  }
+
+}
