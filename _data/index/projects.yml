@@ -1,22 +1,26 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: Jalpc
+
+- name: Kaggle Data Science Competitions
   i18n: jalpc
-  gh_user: jarrekk
-  repo: Jalpc
+  gh_user: KrishnaKumarTiwari
+  repo: Kaggle-DataScience
   img: /static/assets/img/landing/jekyll.png
-  desc: This project is my project. I use javescript to get repo's information all my repos have only one request.
+  desc: This is a common repo for all the Kaggle Competitions I participate.
 
-- name: Python
+- name: Wishrupt
   i18n: cpython
-  gh_user: python
-  repo: cpython
+  gh_user: KrishnaKumarTiwari
+  repo: wishrupt
   img: /static/assets/img/landing/python.png
-  desc: This project is other's project. I use another request to get repo's information.
+  desc: Wish for Disruption
 
-- name: Google
-  i18n: google
-  url: https://google.com
-  img: /static/assets/img/landing/google.png
-  desc: This is another project.
+- name: Blood Donor APP
+  i18n: cpython
+  gh_user: KrishnaKumarTiwari
+  repo: krazzy4
+  img: /static/assets/img/landing/krazzy4.png
+  desc: Blood Donor APP for hackthon
+
+

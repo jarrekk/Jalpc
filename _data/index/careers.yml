@@ -1,29 +1,59 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
+    detail: InMobi, India Development Center, Bangalore
     i18n: company_a
   desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail: Working primarily on designing and developing systems to onboard new merchants/clients & building data science models for Fraud Detection
+    i18n: Working as Technial Lead
   date:
-    detail: Apr. 2016
+    detail: March. 2015
     i18n: company_a_date
   job:
-    detail: CTO
+    detail: Technial Lead
+    i18n: company_a_job
+  icon: fa-plus-square
+
+
+
+- name:
+    detail: Samsung R&D Institute, Bangalore
+    i18n: company_a
+  desc:
+    detail: Designed and developed projects under Smart Platform Group. In particular, I worked for Android Framework Team
+    i18n: Working as Technial Lead
+  date:
+    detail: Sept. 2013
+    i18n: company_a_date
+  job:
+    detail: Lead Engineer
     i18n: company_a_job
   icon: fa-plus-square
 
 - name:
-    detail: Company B
-    i18n: company_b
+    detail: Oracle Server Technology, Bangalore
+    i18n: company_a
   desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+    detail: Designed and developed solutions for Oracle SOA group
+    i18n: Working as Technial Lead.
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
+    detail: Aug. 2011
+    i18n: company_a_date
   job:
-    detail: Full Stack Developer
-    i18n: company_b_job
+    detail: Member Technical Staff
+    i18n: company_a_job
+  icon: fa-plus-square
+
+- name:
+    detail: IBM Research Lab, Bangalore
+    i18n: company_a
+  desc:
+    detail: Minute Sense Project
+    i18n: Working as Technial Lead.
+  date:
+    detail: July. 2010
+    i18n: company_a_date
+  job:
+    detail: Extream Blue Intern
+    i18n: company_a_job
   icon: fa-plus-square

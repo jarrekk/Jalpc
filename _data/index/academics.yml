@@ -1,0 +1,32 @@
+# careers section data
+# if you don't have language feature(language.yml is empty), ignore "i18n" items
+- name:
+    detail: Indian Institute of Technology -Guwahati
+    i18n: company_a
+  desc:
+    detail: ML/DL/Data Mining. Worked on second order pseudolikelihood learning in relational domain
+    i18n: Working as Technial Lead
+  date:
+    detail: July. 2011
+    i18n: company_a_date
+  job:
+    detail: M.Tech CSE
+    i18n: company_a_job
+  icon: fa-plus-square
+
+
+
+- name:
+    detail: AKGEC, UPTU
+    i18n: company_a
+  desc:
+    detail: Computer Science & Engineering
+    i18n: Working as Technial Lead
+  date:
+    detail: June. 2009
+    i18n: company_a_date
+  job:
+    detail: B.Tech CSE
+    i18n: company_a_job
+  icon: fa-plus-square
+
