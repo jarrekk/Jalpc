@@ -5,7 +5,7 @@ title: Haris Riaz
 description: Hi there. This is my blog, contact info, and project page..
 keywords: Haris,Riaz, deep learning,Python,ML,AI,DL,computer science,CS,coding,programming,engineering,mathematics,Github
 baseurl:  "" # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
-url: https://harisriaz.github.io/home  # url should be 'http://<github_username>.github.io/homepage' as before
+url: https://harisriaz.github.io/  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
 img_path: /home/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
