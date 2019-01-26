@@ -1,18 +1,12 @@
 # links section data
-- last_name: Name 1
-  first_name:
-  desc: CEO
-  website: https://www.google.com
-  email: ceo@google.com
+- last_name: Connect with
+  first_name: Haris
+  desc: 
+  website: https://www.linkedin.com/harisriaz17
+  icon: fa-linkedin
 
-- last_name: Donate
-  first_name: Jalpc
-  desc: Support Jalpc
-  website: http://www.jarrekk.com/donate/
-  email: me@jarrekk.com
-
-- last_name: LN
-  first_name: FN
-  desc: COO
-  website: https://github.com
-  email: coo@google.com
+- last_name: Befriend
+  first_name: Haris
+  desc:
+  website: https://www.facebook.com/harisriaz17
+  icon: fa-facebook
