@@ -3,7 +3,16 @@
 #
 # Images are expected to be located in `static/assets/img/`.
 - src: landing/header_one.jpg
+  background_color1: 000000
+  background_color2: 000000
   title: first banner image
 
-- src: landing/header_two.jpg
-  title: second banner image
+- src: landing/future_mango.gif
+  background_color1: e9e9e9
+  background_color2: f1eff1
+  title: Polygon art
+  
+- src: landing/pistons_pumpin.gif
+  background_color1: 2a547c
+  background_color2: 2a547c
+  title: Polygon pistons
