@@ -17,6 +17,24 @@
   name: Skills
   tpl: skills.html
   css: team
+  
+- id: skillsa
+  i18n: nav.skills
+  name: Skillsa
+  tpl: skillsa.html
+  css: teama
+
+- id: skillsb
+  i18n: nav.skills
+  name: Skillsb
+  tpl: skillsb.html
+  css: teamb
+  
+- id: skillsc
+  i18n: nav.skills
+  name: Skillsc
+  tpl: skillsc.html
+  css: teamc
 
 - id: projects
   i18n: nav.projects
