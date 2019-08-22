@@ -14,7 +14,7 @@ author:  # change following line to your infomation.
   name: Schmitt  # Be used at blog posts' author.
   first_name: Thomas  # Be used at index page about me section.
   last_name: Schmitt  # Be used at index page about me section.
-  avatar: /static/assets/img/landing/tws.jpg  # upload your avatar at directory and edit it.
+  avatar: /static/assets/img/landing/TS.jpg  # upload your avatar at directory and edit it.
   github_username: twsthomas  # Leave blank if you don't have now
   linkedin_id: twsthomas # Leave blank if you don't have now
 #   facebook_username: jiakunnj  # Leave blank if you don't have now
