@@ -30,7 +30,7 @@ author:  # change following line to your infomation.
     - name: fa-github 
     - name: fa-bicycle
 
-  desc: **Machine Learning Engineer** at INRIA (Parietal team). Working on Missing Values and sklearn.  # Describe yourself.
+  desc: Machine Learning Engineer at INRIA (Parietal team). Working on Missing Values and sklearn.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
