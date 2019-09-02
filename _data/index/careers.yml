@@ -19,7 +19,7 @@
     detail: PhD at Paris-Saclay / INRIA
     i18n: company_b
   desc:
-    detail: "A Collaborative Filtering Approach to Matching Job Openings and Job Seekers." I did Recommender System coupled with Natural Language Processing and Deep Learning (TensorFlow and Keras); supervised by Michele Sebag.
+    detail: Title "A Collaborative Filtering Approach to Matching Job Openings and Job Seekers." I did Recommender System coupled with Natural Language Processing and Deep Learning (TensorFlow and Keras). Supervised by Michele Sebag.
     i18n: company_b_desc
   date:
     detail: Sept. 2014 - Jun. 2018
