@@ -4,7 +4,7 @@
     detail: Research Engineer at INRIA Paris
     i18n: company_a
   desc:
-    detail: Research Engineer at INRIA Paris.
+    detail: Work on Missing Values and contrib to the Machine Learning library `sklearn`
     i18n: company_a_desc
   date:
     detail: Aug. 2019 - Now
@@ -12,19 +12,61 @@
   job:
     detail: Research Engineer
     i18n: company_a_job
-  icon: fa-coffe
+  icon: fa-coffee
   present: true
 
 - name:
     detail: PhD at Paris-Saclay / INRIA
     i18n: company_b
   desc:
-    detail: Deep Learning, Natural Language Processing and Recommender system
+    detail: Deep Learning, Natural Language Processing and Recommender systems
     i18n: company_b_desc
   date:
     detail: Sept. 2014 - Jun. 2018
     i18n: company_b_date
   job:
     detail: PhD Student
+    i18n: company_b_job
+  icon: fa-glasses
+
+- name:
+    detail: PhD at Paris-Saclay / INRIA
+    i18n: company_b
+  desc:
+    detail: PhD title "A Collaborative Filtering Approach to Matching Job Openings and Job Seekers." I did Recommender System coupled with Natural Language Processing and Deep Learning; supervised by Michele Sebag.
+    i18n: company_b_desc
+  date:
+    detail: Sept. 2014 - Jun. 2018
+    i18n: company_b_date
+  job:
+    detail: PhD Student
+    i18n: company_b_job
+  icon: fa-glasses
+
+- name:
+    detail: Master 2
+    i18n: company_b
+  desc:
+    detail: Master 2 - Mathematics for Life Sciences
+    i18n: company_b_desc
+  date:
+    detail: Sept. 2013 - Jun. 2014
+    i18n: company_b_date
+  job:
+    detail: Master 2
+    i18n: company_b_job
+  icon: fa-glasses
+
+- name:
+    detail: Agrégation de Mathématiques
+    i18n: company_b
+  desc:
+    detail: National competitive examination for teaching mathematics in high-school.
+    i18n: company_b_desc
+  date:
+    detail: Sept. 2012 - Jun. 2013
+    i18n: company_b_date
+  job:
+    detail: Agrégation de Mathématiques
     i18n: company_b_job
   icon: fa-glasses
