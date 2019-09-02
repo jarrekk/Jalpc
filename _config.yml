@@ -28,7 +28,6 @@ author:  # change following line to your infomation.
     - name: fa-linux
   skill_icon2:
     - name: fa-github 
-    - name: fa-coffee
     - name: fa-bicycle
 
   desc: Machine Learning Engineer at INRIA (Parietal team). Working on Missing Values and sklearn.  # Describe yourself.
