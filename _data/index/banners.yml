@@ -3,10 +3,22 @@
 #
 # Images are expected to be located in `static/assets/img/`.
 - src: landing/library.jpg
-  title: first banner image
+  title: Library
 
-- src: landing/two_bikes.jpg
-  title: second banner image
+- src: landing/blue.jpg
+  title: Jura's trip
 
-- src: landing/bear.jpg
-  title: second banner image
+- src: landing/orange.jpg
+  title: Bike trip
+
+- src: landing/fire.jpg
+  title: Bike trip
+
+- src: landing/water.jpg
+  title: Triathlon
+
+- src: landing/bike.jpg
+  title: Bike trip
+
+- src: landing/two.jpg
+  title: Bike trip
