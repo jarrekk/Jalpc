@@ -8,7 +8,7 @@
 - src: landing/blue.jpg
   title: Jura's trip
 
-- src: landing/orange.jpg
+- src: landing/orange.png
   title: Sunset
 
 - src: landing/fire.jpg
@@ -17,8 +17,8 @@
 - src: landing/water.jpg
   title: Triathlon
 
-- src: landing/bike.jpg
-  title: Vosges trip
+#- src: landing/bike.jpg
+#  title: Vosges trip
 
-- src: landing/two.jpg
+- src: landing/two.png
   title: Bretagne trip
