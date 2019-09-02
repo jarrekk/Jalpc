@@ -3,22 +3,22 @@
 #
 # Images are expected to be located in `static/assets/img/`.
 - src: landing/library.jpg
-  title: Library
+  title: Math library
 
 - src: landing/blue.jpg
   title: Jura's trip
 
 - src: landing/orange.jpg
-  title: Bike trip
+  title: Sunset
 
 - src: landing/fire.jpg
-  title: Bike trip
+  title: Bike trip's fire
 
 - src: landing/water.jpg
   title: Triathlon
 
 - src: landing/bike.jpg
-  title: Bike trip
+  title: Vosges trip
 
 - src: landing/two.jpg
-  title: Bike trip
+  title: Bretagne trip

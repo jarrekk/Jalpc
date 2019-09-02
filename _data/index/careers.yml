@@ -4,7 +4,7 @@
     detail: Research Engineer at INRIA Paris
     i18n: company_a
   desc:
-    detail: Work on Missing Values and contrib to the Machine Learning library `sklearn`
+    detail: Work on Missing Values and contrib to the Machine Learning library scikit-learn
     i18n: company_a_desc
   date:
     detail: Aug. 2019 - Now
@@ -12,14 +12,14 @@
   job:
     detail: Research Engineer
     i18n: company_a_job
-  icon: fa-python
+  icon: fa-rocket
   present: true
 
 - name:
     detail: PhD at Paris-Saclay / INRIA
     i18n: company_b
   desc:
-    detail: PhD title "A Collaborative Filtering Approach to Matching Job Openings and Job Seekers." I did Recommender System coupled with Natural Language Processing and Deep Learning (TensorFlow and Keras); supervised by Michele Sebag.
+    detail: "A Collaborative Filtering Approach to Matching Job Openings and Job Seekers." I did Recommender System coupled with Natural Language Processing and Deep Learning (TensorFlow and Keras); supervised by Michele Sebag.
     i18n: company_b_desc
   date:
     detail: Sept. 2014 - Jun. 2018
@@ -33,13 +33,13 @@
     detail: Master 2 - Mathematics for Life Sciences
     i18n: company_b
   desc:
-    detail: Master 2 - Mathematics for Life Sciences
+    detail: Master degree at University Paris-Sud XI. Received Researcher Excellence Grant from Hadamard Foundation for 10k€ 
     i18n: company_b_desc
   date:
     detail: Sept. 2013 - Jun. 2014
     i18n: company_b_date
   job:
-    detail: Master degree at University Paris-Sud XI. Received Researcher Excellence Grant from Hadamard Foundation for 10k€ 
+    detail: Master 2 - Mathematics for Life Science
     i18n: company_b_job
   icon: fa-university
 
