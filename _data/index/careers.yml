@@ -12,14 +12,14 @@
   job:
     detail: Research Engineer
     i18n: company_a_job
-  icon: fa-coffee
+  icon: fa-python
   present: true
 
 - name:
     detail: PhD at Paris-Saclay / INRIA
     i18n: company_b
   desc:
-    detail: Deep Learning, Natural Language Processing and Recommender systems
+    detail: PhD title "A Collaborative Filtering Approach to Matching Job Openings and Job Seekers." I did Recommender System coupled with Natural Language Processing and Deep Learning (TensorFlow and Keras); supervised by Michele Sebag.
     i18n: company_b_desc
   date:
     detail: Sept. 2014 - Jun. 2018
@@ -27,24 +27,10 @@
   job:
     detail: PhD Student
     i18n: company_b_job
-  icon: fa-glasses
+  icon: fa-graduation-cap
 
 - name:
-    detail: PhD at Paris-Saclay / INRIA
-    i18n: company_b
-  desc:
-    detail: PhD title "A Collaborative Filtering Approach to Matching Job Openings and Job Seekers." I did Recommender System coupled with Natural Language Processing and Deep Learning; supervised by Michele Sebag.
-    i18n: company_b_desc
-  date:
-    detail: Sept. 2014 - Jun. 2018
-    i18n: company_b_date
-  job:
-    detail: PhD Student
-    i18n: company_b_job
-  icon: fa-glasses
-
-- name:
-    detail: Master 2
+    detail: Master 2 - Mathematics for Life Sciences
     i18n: company_b
   desc:
     detail: Master 2 - Mathematics for Life Sciences
@@ -53,9 +39,9 @@
     detail: Sept. 2013 - Jun. 2014
     i18n: company_b_date
   job:
-    detail: Master 2
+    detail: Master degree at University Paris-Sud XI. Received Researcher Excellence Grant from Hadamard Foundation for 10k€ 
     i18n: company_b_job
-  icon: fa-glasses
+  icon: fa-university
 
 - name:
     detail: Agrégation de Mathématiques
@@ -69,4 +55,4 @@
   job:
     detail: Agrégation de Mathématiques
     i18n: company_b_job
-  icon: fa-glasses
+  icon: fa-book

@@ -3,9 +3,9 @@
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
 - name: sklearn
   i18n: jalpc
-  gh_user: jarrekk
+  gh_user: scikit-learn
   repo: scikit-learn
-  img: /static/assets/img/landing/
+  img: /static/assets/img/landing/sklearn.png
   desc: Contribute to scikit-learn
 
 - name: Python
