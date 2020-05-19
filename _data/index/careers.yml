@@ -34,7 +34,7 @@
     detail: PhD at Paris-Saclay / INRIA
     i18n: company_b
   desc:
-    detail: Recommender System coupled with Natural Language Processing and Deep Learning.|My Ph.D. title is Collaborative Matching of Job Openings and Job Seekers. |During my Ph.D. I learned an ad hoc text representation which take into account the collaborative filtering information to improves recommendation for cold start problem. The main model was a Siamese Neural Network trained on hundreds of thousands text documents, improving the content based-recommendation. |I was qualified to the final phase of the RecSys 2017 challenge on recommendation (final rank 15 out of 100+)
+    detail: Recommender System coupled with Natural Language Processing and Deep Learning.\nMy Ph.D. title is Collaborative Matching of Job Openings and Job Seekers. |During my Ph.D. I learned an ad hoc text representation which take into account the collaborative filtering information to improves recommendation for cold start problem. The main model was a Siamese Neural Network trained on hundreds of thousands text documents, improving the content based-recommendation. |I was qualified to the final phase of the RecSys 2017 challenge on recommendation (final rank 15 out of 100+)
     i18n: company_b_desc
   date:
     detail: Sept. 2014 - Dec. 2017
