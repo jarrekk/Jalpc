@@ -4,7 +4,7 @@
     detail: Research Engineer at INRIA Paris
     i18n: company_a
   desc:
-    detail: Working as a team support and contributing to the Scikit-Learn library. Implementing algorithms to handle missing values in big datasets and writing tutorials on missing values imputation.
+    detail: Working as a team support and contributing to the Scikit-Learn library. Implementing algorithms to handle missing values and writing tutorials on missing values imputation.
     i18n: company_a_desc
   date:
     detail: Aug. 2019 - Now
@@ -34,8 +34,7 @@
     detail: PhD at Paris-Saclay / INRIA
     i18n: company_b
   desc:
-    detail: Recommender System coupled with Natural Language Processing and Deep Learning. 
-    My Ph.D. title is Collaborative Matching of Job Openings and Job Seekers. |During my Ph.D. I learned an ad hoc text representation which take into account the collaborative filtering information to improves recommendation for cold start problem. The main model was a Siamese Neural Network trained on hundreds of thousands text documents, improving the content based-recommendation. |I was qualified to the final phase of the RecSys 2017 challenge on recommendation (final rank 15 out of 100+)
+    detail: Recommender System coupled with Natural Language Processing and Deep Learning. My Ph.D. title is Collaborative Matching of Job Openings and Job Seekers. During my Ph.D. I learned an ad hoc text representation which take into account the collaborative filtering information to improves recommendation for cold start problem. The main model was a Siamese Neural Network trained on hundreds of thousands text documents, improving the content based-recommendation.
     i18n: company_b_desc
   date:
     detail: Sept. 2014 - Dec. 2017
