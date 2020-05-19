@@ -5,20 +5,20 @@
 - src: landing/library.jpg
   title: Math library
 
-- src: landing/blue.jpg
-  title: Jura's trip
+# - src: landing/blue.jpg
+#   title: Jura's trip
 
-- src: landing/orange.png
-  title: Sunset
+# - src: landing/orange.png
+#   title: Sunset
 
-- src: landing/fire.jpg
-  title: Bike trip's fire
+# - src: landing/fire.jpg
+#   title: Bike trip's fire
 
-- src: landing/water.jpg
-  title: Triathlon
+# - src: landing/water.jpg
+#   title: Triathlon
 
-#- src: landing/bike.jpg
-#  title: Vosges trip
+# #- src: landing/bike.jpg
+# #  title: Vosges trip
 
-- src: landing/two.png
-  title: Bretagne trip
+# - src: landing/two.png
+#   title: Bretagne trip
