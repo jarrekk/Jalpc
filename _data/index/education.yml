@@ -1,0 +1,30 @@
+# Education section data
+# If you don't have language feature(language.yml is empty), ignore "i18n" items
+# Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
+- school_name: Northeastern University
+  degree: MS in Information Systems
+  start_date: September 2018
+  end_date: December 2020
+  subjects:
+    - Algorithms
+    - Application Engineering Development
+    - Web Development
+    - Deep Learning and Neural Networks
+    - Network structures and Cloud Computing
+    - Fintech Engineering
+    - Managerial Communication for Engineers
+    - Data science Methods and tools
+  activities:
+    - Skunkworks
+
+- school_name: Jawaharlal Nehru Engineerin College
+  degree: BE in Electronics and Telecommunication
+  start_date: August 2013
+  end_date: July 2017
+  honors_awards:
+    - Best Student (2017)
+  activities:
+    - Robocon team lead(2015-2016)
+    - Rotaract Club Treasurer (2015-2016)
+    - Debate Club Head (2016-2017)
+

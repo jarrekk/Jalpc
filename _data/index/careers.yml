@@ -1,30 +1,43 @@
 # careers section data
 # if you don't have language feature(language.yml is empty), ignore "i18n" items
 - name:
-    detail: Company A
-    i18n: company_a
+    detail: RedHat Inc
+    #i18n: company_a
   desc:
-    detail: I worked at Company A ...
-    i18n: company_a_desc
+    detail:
+      • Developed GitOps to seamlessly deploy container-native applications into multiple environments using Git as a source
+      • Automated CI/CD pipelines and implemented commit status tacker to seamlessly deploy application
+      • Created CI using Tekton and CD using Argo CD for multiple environments, integrated Gitlab and Github to Gitops
+      • Contributed to upstream opensource repository like Kubernetes, Tekton, Argo-cd and Jenkin-x
+
+   # i18n: company_a_desc
   date:
-    detail: Apr. 2016
-    i18n: company_a_date
+    detail: January 2020 - August 2020
+    #i18n: company_a_date
   job:
-    detail: CTO
-    i18n: company_a_job
-  icon: fa-plus-square
-  present: true
+    detail: Software Engineer Co-op
+    #i18n: company_a_job
+  logo: redhat.jpg
+  #icon: fa-plus-square
+  #present: true
 
 - name:
-    detail: Company B
-    i18n: company_b
+    detail: MIT media labs
+    #i18n: company_a
   desc:
-    detail: I worked at Company B ...
-    i18n: company_b_desc
+    detail:
+      • Trained a logistic regression model in Python for cohort analysis of 21 culinary practices
+      • Optimized the space usage in a Piccolo Kitchen by analyzing real time video processing and surveys
+      • Designed an interactive Tableau dashboard for visual storytelling
+
+
+    # i18n: company_a_desc
   date:
-    detail: Jun. 2015
-    i18n: company_b_date
+    detail: June 2019 - September 2019
+    #i18n: company_a_date
   job:
-    detail: Full Stack Developer
-    i18n: company_b_job
-  icon: fa-plus-square
+    detail: Research Intern
+    #i18n: company_a_job
+  logo: mit.jpg
+  #icon: fa-plus-square
+  #present: true

@@ -1,6 +1,41 @@
 # skills section data
 
-label: Ability
-id : cs
-aspects: GitHub, Motivation, HTML5, ReactJS, Machine Learing, Python, Sleeping
-percentage: 100, 35, 65, 80, 70, 90, 50
+# label: Ability
+# id : cs
+# aspects: Quest KACE, Windows Server, Linux/Shell, IBM Notes/Domino, Citrix XenApp, Citrix XenDesktop, Active Directory, WordPress, Git, GitHub, HTML/CSS, Jekyll, ITIL
+# percentage: 99, 90, 85, 90, 85, 80, 90, 85, 70, 80, 65, 75, 85
+skills:
+# Languages
+  - Python
+  - Go
+  - Java
+  - Shell
+# Technologies
+  - SQL
+  - NoSQL
+# DBs
+  - MongoDB
+  - DynamoDB
+
+# Frameworks
+  - Django
+  - Flask
+  - Spring Boot
+# CI/CD
+  - Jenkins
+  - Tekton
+  - Argo
+  - CircleCI
+# Cloud Platforms
+  - Openshift
+  - Kubernetes
+  - AWS
+# Version Control
+  - GIT
+  - TFS
+# Version Control Hubs
+  - GitHub
+  - BitBucket
+  - GitLab
+# Containers
+  - Docker
