@@ -1,7 +1,7 @@
 on:
   push:
     branches:
-      - gh-pages
+      - master
 name: build gatsby
 jobs:
   build_gatsby:
