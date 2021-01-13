@@ -5,7 +5,7 @@ title: Kwon
 description: Jack's blog,use Jekyll and github pages.
 keywords: Jack,Jalpc,blog,Jekyll,github,gh-pages
 baseurl:  "" # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
-url: https://kwon.github.io/homepage  # url should be 'http://<github_username>.github.io/homepage' as before
+url: https://kwon.github.io  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
 img_path: /kwon.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
