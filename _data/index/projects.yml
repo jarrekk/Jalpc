@@ -6,7 +6,7 @@
   gh_user: scikit-learn
   repo: scikit-learn
   img: /static/assets/img/landing/sklearn.png
-  desc: Contribute to scikit-learn
+  desc: Contribute to scikit-learn ##
 
 - name: Python
   i18n: cpython
