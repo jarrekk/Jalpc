@@ -1,19 +1,19 @@
 # projects section data
 # If you don't have language feature(language.yml is empty), ignore "i18n" items
 # Suggest projects' img be located at '/static/assets/img/landing', and edit following img items.
-- name: sklearn
-  i18n: sklearn
-  gh_user: scikit-learn
-  repo: scikit-learn
-  img: /static/assets/img/landing/sklearn.png
-  desc: Contribute to scikit-learn
+# - name: sklearn
+#   i18n: sklearn
+#   gh_user: scikit-learn
+#   repo: scikit-learn
+#   img: /static/assets/img/landing/sklearn.png
+#   desc: Contribute to scikit-learn
 
-- name: Python
-  i18n: cpython
-  gh_user: python
-  repo: cpython
-  img: /static/assets/img/landing/python.png
-  desc: Python
+# - name: Python
+#   i18n: cpython
+#   gh_user: python
+#   repo: cpython
+#   img: /static/assets/img/landing/python.png
+#   desc: Python
 
 #- name: Google
 #  i18n: google
