@@ -20,7 +20,7 @@
     detail: PostDoc at Nara / Japan
     i18n: company_b
   desc:
-    detail: Algorithms and Data Structures for Machine Learning
+    detail: Neural network for text documents embedding
     i18n: company_b_desc
   date:
     detail: Jan. 2018 - Jun. 2018
