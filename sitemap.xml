@@ -6,12 +6,12 @@ title : Sitemap
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {% for post in site.posts %}
     <url>
-        <loc>{{site.url}}{{ post.url }}</loc>
+        <loc>{{site.url}}{{ post.url | prepend: site.baseurl }}</loc>
     </url>
 {% endfor %}
 {% for page in site.pages %}
     <url>
-        <loc>{{site.url}}{{ page.url }}</loc>
+        <loc>{{site.url}}{{ page.url | prepend: site.baseurl }}</loc>
     </url>
 {% endfor %}
 </urlset>
