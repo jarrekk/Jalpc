@@ -2439,7 +2439,7 @@ body {
       li > a {
         &:focus, &:hover {
           color: #3385FF;
-          background: inherit;
+          background: #f6f6f6;
         }
       }
       .active > a:focus {
@@ -2505,27 +2505,20 @@ body {
     height: auto;
   }
   .header-back {
-    height: 470px;
+    height: 100%;
     width: 100%;
     background-position: 50% 0;
     background-repeat:  no-repeat;
+    background-size: cover;
   }
-  .carousel {
-    height: 470px;
+  .carousel { 
   }
   .carousel-caption {
     z-index: 10;
   }
   .carousel .item {
-    height: 470px;
-    background-color: #777;
   }
-  .carousel-inner > .item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 470px;
+  .carousel-inner > .item > img { 
   }
   .carousel-fade {
     .carousel-inner {
@@ -2758,7 +2751,7 @@ body {
       margin-top: 6px;
     }
     .navbar-default {
-      background-color: #fff;
+      background-color: transparent;
       border-color: #fff;
       padding: 15px 0;
       .navbar-nav > .active > a:focus {
@@ -2780,6 +2773,7 @@ body {
     }
     .nav > li > a {
       padding: 25px 10px 15px;
+      background-color: #dadada;
     }
     .navbar-nav > li > a {
       padding: 20px 10px;

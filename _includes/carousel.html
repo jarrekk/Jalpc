@@ -1,47 +1,37 @@
-<div id="inSlider" class="carousel carousel-fade" data-ride="carousel">
+<div class="container-fluid">
+  <div id="inSlider" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
     <ol class="carousel-indicators">
-        <li data-target="#inSlider" data-slide-to="0" class="active"></li>
-        <li data-target="#inSlider" data-slide-to="1"></li>
+      <li data-target="#inSlider" data-slide-to="0" class="active"></li>
+      <li data-target="#inSlider" data-slide-to="1"></li>
     </ol>
-    <div class="carousel-inner" role="listbox">
 
-        <div class="item active">
-            <div class="container">
-                <div class="carousel-caption">
-                </div>
-                <div class="carousel-image wow zoomIn">
-                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
-                </div>
-            </div>
-            <!-- Set background for slide in css -->
-            <div
-            class="header-back"
-            style="background-image: url({{ '/static/assets/img/' | prepend: site.baseurl }}{{ site.data.index.banners[0].src }});"
-            title="{{ site.data.index.banners[0].title }}">
-            </div>
-        </div>
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
 
-        {% for banner in site.data.index.banners offset:1 %}
-        <div class="item">
-            <div class="container">
-                <div class="carousel-caption">
-                </div>
-                <div class="carousel-image wow zoomIn">
-                    <!-- <img src="static/img/landing/laptop.png" alt="laptop"/> -->
-                </div>
-            </div>
-            <!-- Set background for slide in css -->
-            <div class="header-back" style="background-image: url({{ "/static/assets/img/"  | prepend: site.baseurl }}{{ banner.src }});" title="{{ banner.title }}"></div>
-        </div>
-        {% endfor %}
+      <div class="item active">
+        <div class="carousel-caption"></div>
+        <img src="{{ '/static/assets/img/' | prepend: site.baseurl }}{{ site.data.index.banners[0].src }}" alt="{{ site.data.index.banners[0].title }}" style="width:100%;">
+      </div>
 
+      {% for banner in site.data.index.banners offset:1 %}
+      <div class="item">
+        <div class="carousel-caption"></div>
+        <img src="{{ '/static/assets/img/'  | prepend: site.baseurl }}{{ banner.src }}" alt="{{ banner.title }}" style="width:100%;">
+      </div>
+      {% endfor %}
+      
     </div>
-    <a class="left carousel-control" href="#inSlider" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
+    
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#inSlider" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+      <span class="sr-only">Previous</span>
     </a>
-    <a class="right carousel-control" href="#inSlider" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
+    <a class="right carousel-control" href="#inSlider" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+      <span class="sr-only">Next</span>
     </a>
+  </div>
 </div>
