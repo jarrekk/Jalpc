@@ -3,7 +3,9 @@
     <!-- Indicators -->
     <ol class="carousel-indicators">
       <li data-target="#inSlider" data-slide-to="0" class="active"></li>
-      <li data-target="#inSlider" data-slide-to="1"></li>
+      {% for banner in site.data.index.banners offset:1 %}
+        <li data-target="#inSlider" data-slide-to="{{ forloop.index }}"></li>
+      {% endfor %}
     </ol>
 
     <!-- Wrapper for slides -->
