@@ -35,7 +35,7 @@
     "wowjs": "^1.1.2"
   },
   "devDependencies": {
-    "clean-css": "^4.0.6",
+    "clean-css": "^5.2.4",
     "shelljs": "^0.8.3",
     "uglify-js": "^2.7.5"
   }
