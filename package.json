@@ -20,7 +20,7 @@
   "dependencies": {
     "animate.css": "^3.5.2",
     "bootstrap": "^3.3.6",
-    "chart.js": "^2.4.0",
+    "chart.js": "^3.7.1",
     "colors": "^1.1.2",
     "components-font-awesome": "^4.7.0",
     "font-mfizz": "^2.4.1",
