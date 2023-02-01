@@ -7,20 +7,20 @@ keywords: Wolfwood
 baseurl:  /Jalpc # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://jarrekk.github.io/Jalpc  # url should be 'http://<github_username>.github.io/homepage' as before
 # url: http://127.0.0.1:4000
-img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
+img_path: /static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
-author:  # change following line to your infomation.
-  name: GitHub  # Be used at blog posts' author.
-  first_name: Hub  # Be used at index page about me section.
-  last_name: Git  # Be used at index page about me section.
+author:  Josue C # change following line to your infomation.
+  name: Josue C - NDW  # Be used at blog posts' author.
+  first_name: Josué  # Be used at index page about me section.
+  last_name: Cinencio  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
-  github_username: jarrekk  # Leave blank if you don't have now
-  linkedin_id: jarrekk # Leave blank if you don't have now
-  facebook_username: jiakunnj  # Leave blank if you don't have now
-  twitter_username: jiakun614  # Leave blank if you don't have now
-  email: me@jarrekk.com  # Leave blank if you don't have now
-  cv: http://cv.jarrekk.com  # An online CV can be printed as PDF, leave blank if you don't have now
+  github_username: JosueWolfwood  # Leave blank if you don't have now
+  linkedin_id: https://www.linkedin.com/in/eng-josue-perez/ # Leave blank if you don't have now
+  facebook_username:   # Leave blank if you don't have now
+  twitter_username: https://twitter.com/josuewolfwood  # Leave blank if you don't have now
+  email: # Leave blank if you don't have now
+  cv:  # An online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
     - name: icon-apache
