@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Josue C
+title: Josue
 description: Blog Josue
 keywords: Wolfwood, Josue
 #baseurl:  /JosueWolfwood.github.io # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
@@ -34,7 +34,7 @@ author: Data Science coordinator, my interests are based on data science and inf
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
-  name: jalpc
+  name: Josue
 
 # analytics
 ## google analytics
