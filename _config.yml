@@ -10,25 +10,25 @@ url: https://josuewolfwood.github.io/JosueWolfwood.github.io # url should be 'ht
 img_path: /JosueWolfwood.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
-author: Data Science coordinator, my interests are based on data science and information technology.  # change following line to your infomation.
- name: Josue C  # Be used at blog posts' author.
- first_name: Josue  # Be used at index page about me section.
- last_name: Cinencio  # Be used at index page about me section.
- avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
- github_username: JosueWolfwood  # Leave blank if you don't have now
- linkedin_id:  https://www.linkedin.com/in/eng-josue-perez/ # Leave blank if you don't have now
- facebook_username:   # Leave blank if you don't have now
- twitter_username: https://twitter.com/josuewolfwood  # Leave blank if you don't have now
- email:  # Leave blank if you don't have now
- cv:  # An online CV can be printed as PDF, leave blank if you don't have now
-# skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
-skill_icon1:
- - name: icon-csharp
- - name: icon-c
-skill_icon2:
- - name: icon-python
- - name: icon-database
-desc: Data Science coordinator, my interests are based on data science and information technology.
+author: Data Science coordinator, my interests are based on data science and information technology # change following line to your infomation.
+  name: Josue C  # Be used at blog posts' author.
+  first_name: Josue  # Be used at index page about me section.
+  last_name: Cinencio  # Be used at index page about me section.
+  avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
+  github_username: JosueWolfwood  # Leave blank if you don't have now
+  linkedin_id: eng-josue-perez # Leave blank if you don't have now
+  facebook_username:  # Leave blank if you don't have now
+  twitter_username: josuewolfwood  # Leave blank if you don't have now
+  email:  # Leave blank if you don't have now
+  cv:   # An online CV can be printed as PDF, leave blank if you don't have now
+  # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
+  skill_icon1:
+    - name: icon-csharp
+    - name: icon-c
+  skill_icon2:
+    - name: icon-python
+    - name: icon-database
+  desc: Data Science coordinator, my interests are based on data science and information technology.  # Describe yourself.
 
 # comment
 # disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
