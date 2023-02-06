@@ -10,25 +10,28 @@ url: https://josuewolfwood.github.io/JosueWolfwood.github.io # url should be 'ht
 img_path: /JosueWolfwood.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
-author:  # change following line to your infomation.
-  name: GitHub  # Be used at blog posts' author.
-  first_name: Hub  # Be used at index page about me section.
-  last_name: Git  # Be used at index page about me section.
+author: Data Science coordinator, my interests are based on data science and information technology.
+Degree in Mechatronics Engineering with a Master's Degree in Mechanical Engineering from UNAM. I stand out for being a proactive, intuitive person with a high sense of responsibility. Results-oriented and teamwork skills, good performance and fast learner, Leadership and problem-solving skills from a multidisciplinary point of view, Seeking to apply my experience and technical skills in the areas of automation, automatic control, planning and production control, and project management.
+ # change following line to your infomation.
+  name: Josue C  # Be used at blog posts' author.
+  first_name: Josué  # Be used at index page about me section.
+  last_name: Cinencio  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
-  github_username: jarrekk  # Leave blank if you don't have now
-  linkedin_id: jarrekk # Leave blank if you don't have now
-  facebook_username: jiakunnj  # Leave blank if you don't have now
-  twitter_username: jiakun614  # Leave blank if you don't have now
-  email: me@jarrekk.com  # Leave blank if you don't have now
-  cv: http://cv.jarrekk.com  # An online CV can be printed as PDF, leave blank if you don't have now
+  github_username: JosueWolfwood  # Leave blank if you don't have now
+  linkedin_id:  https://www.linkedin.com/in/eng-josue-perez/ # Leave blank if you don't have now
+  facebook_username:   # Leave blank if you don't have now
+  twitter_username: https://twitter.com/josuewolfwood  # Leave blank if you don't have now
+  email:  # Leave blank if you don't have now
+  cv:  # An online CV can be printed as PDF, leave blank if you don't have now
   # skill icons are on avatar's left and right side. Reference urls are http://fontawesome.io/ and http://fizzed.com/oss/font-mfizz
   skill_icon1:
-    - name: icon-apache
-    - name: fa-linux
+    - name: icon-csharp
+    - name: icon-c
   skill_icon2:
-    - name: fa-linux
-    - name: icon-apache
-  desc: Introduce myself will be here.  # Describe yourself.
+    - name: icon-python
+    - name: icon-database
+  desc: Data Science coordinator, my interests are based on data science and information technology.
+Degree in Mechatronics Engineering with a Master's Degree in Mechanical Engineering from UNAM. I stand out for being a proactive, intuitive person with a high sense of responsibility. Results-oriented and teamwork skills, good performance and fast learner, Leadership and problem-solving skills from a multidisciplinary point of view, Seeking to apply my experience and technical skills in the areas of automation, automatic control, planning and production control, and project management.  # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
@@ -37,7 +40,7 @@ disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your c
 # analytics
 ## google analytics
 ga:  # if you wanna this feature, go to https://www.google.com/analytics/ to get your configuration; if not, comment following line.
-  id: UA-93473370-3
+  id: #UA-93473370-3
 
 ## google optimize
 go:
