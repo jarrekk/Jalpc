@@ -1,8 +1,8 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Josue C
-description: Blog Josue
+title:  Josue C
+description:  Blog Josue
 keywords: Wolfwood, Josue
 #baseurl:  /JosueWolfwood.github.io # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://josuewolfwood.github.io/JosueWolfwood.github.io # url should be 'http://<github_username>.github.io/homepage' as before
