@@ -1,7 +1,7 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: Josue
+title: Josue C
 description: Blog Josue
 keywords: Wolfwood, Josue
 #baseurl:  /JosueWolfwood.github.io # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
@@ -10,10 +10,9 @@ url: https://josuewolfwood.github.io/JosueWolfwood.github.io # url should be 'ht
 img_path: /JosueWolfwood.github.io/static/assets/img/blog  # url should be '/homepage/static/assets/img/blog' as before
 
 # author -- index page "about me" section
-author: Data Science coordinator, my interests are based on data science and information technology.
- # change following line to your infomation.
+author: Data Science coordinator, my interests are based on data science and information technology.  # change following line to your infomation.
   name: Josue C  # Be used at blog posts' author.
-  first_name: Josué  # Be used at index page about me section.
+  first_name: Josue  # Be used at index page about me section.
   last_name: Cinencio  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: JosueWolfwood  # Leave blank if you don't have now
@@ -29,8 +28,7 @@ author: Data Science coordinator, my interests are based on data science and inf
   skill_icon2:
     - name: icon-python
     - name: icon-database
-  desc: Data Science coordinator, my interests are based on data science and information technology. Degree in Mechatronics Engineering with a Master's Degree in Mechanical Engineering from UNAM. I stand out for being a proactive, intuitive person with a high sense of responsibility. Results-oriented and teamwork skills, good performance and fast learner, Leadership and problem-solving skills from a multidisciplinary point of view, Seeking to apply my experience and technical skills in the areas of automation, automatic control, planning and production control, and project management.  # Describe yourself.
-
+  desc: Data Science coordinator, my interests are based on data science and information technology. Degree in Mechatronics Engineering with a Master's Degree in Mechanical Engineering from UNAM. I stand out for being a proactive, intuitive person with a high sense of responsibility. Results-oriented and teamwork skills, good performance and fast learner, Leadership and problem-solving skills from a multidisciplinary point of view, Seeking to apply my experience and technical skills in the areas of automation, automatic control, planning and production control, and project management.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
