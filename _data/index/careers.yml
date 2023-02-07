@@ -28,7 +28,7 @@
     detail: Professional I-Testing Engineer
     i18n: company_b_job
   icon: fa-plus-square
-  
+
 - name:
     detail: C&A Systems
     i18n: https://www.casystem.com.mx/
@@ -42,7 +42,7 @@
     detail: Consultant - Coordinator CAEMS
     i18n: company_c_job
   icon: fa-plus-square  
-  
+
 - name:
     detail: Management Solutions
     i18n: d
@@ -70,7 +70,7 @@
     detail: Consultant
     i18n: company_e_job
   icon: fa-plus-square  
-  
+
  - name:
     detail: GNP Seguros
     i18n: f
