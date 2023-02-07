@@ -19,7 +19,7 @@
     detail: Capgemini Engineering
     i18n: https://www.capgemini.com/es-es/service/capgemini-engineering/
   desc:
-    detail: Design and development of testing for vehicle infotainment systems. Design of manual stress tests for the detection of errors in use cases and rate cases in infotainment systems. Design of automatic stress tests for the detection of errors in use cases in infotainment systems. Documentation of features of infotainment systems. Verify communication protocols in different modules of a car, signals and speeds of the same.
+    detail: Design and development of testing for vehicle infotainment systems. Design of manual stress tests for the detection of errors in use cases and rate cases in infotainment systems. Design of automatic stress tests for the detection of errors in use cases in infotainment systems.
     i18n: company_b_desc
   date:
     detail: Jun. 2022
@@ -41,4 +41,46 @@
   job:
     detail: Consultant - Coordinator CAEMS
     i18n: company_c_job
+  icon: fa-plus-square  
+  
+- name:
+    detail: Management Solutions
+    i18n: d
+  desc:
+    detail: Development of an access control model for banking applications embedded in the user login to computer systems, through Python. Technical leader in the matrix analysis of SoD to identify risks and validation with the client.
+    i18n: company_d_desc
+  date:
+    detail: Dec. 2018
+    i18n: company_d_date
+  job:
+    detail: Consultant
+    i18n: company_d_job
+  icon: fa-plus-square  
+
+- name:
+    detail: Colgate-Palmolive -GTC-
+    i18n: e
+  desc:
+    detail: Attention and solution to failures in laboratory equipment. Development of the automation of report generation for accounting closings through cost centers and areas, by month and year. Using Python and VBA. Development of a system for the automatic filling of forms for the destruction of laboratory equipment inventories using Python and VBA
+    i18n: company_e_desc
+  date:
+    detail: Dec. 2017
+    i18n: company_e_date
+  job:
+    detail: Consultant
+    i18n: company_e_job
+  icon: fa-plus-square  
+  
+ - name:
+    detail: GNP Seguros
+    i18n: f
+  desc:
+    detail: Development of automation, updating, and improvement of processes for the creation of control figures in the reservations area, using SAS Enterprise and Visual Fox Pro. Development of automation of the dividend reporting process, using VBA for the concentration of information from different sources and Python for its analysis.
+    i18n: company_f_desc
+  date:
+    detail: Aug. 2016
+    i18n: company_f_date
+  job:
+    detail: Consultant
+    i18n: company_f_job
   icon: fa-plus-square  
