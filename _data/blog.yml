@@ -6,17 +6,17 @@
 - name: Python
   href: /python/
 
-- name: Linux
-  href: /linux/
+- name: Power BI
+  href: /powerbi/
 
-- name: HTML
-  href: /html/
+- name: Excel
+  href: /Excel/
 
-- name: Database
-  href: /database/
+- name: SQL
+  href: /SQL/
 
-- name: Mac
-  href: /mac/
+- name: RPA
+  href: /RPA/
 
 - name: Life
   href: /life/
