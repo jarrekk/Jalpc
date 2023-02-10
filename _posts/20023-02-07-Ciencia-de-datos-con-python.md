@@ -8,6 +8,7 @@ categories: [HTML]
 tags: [python, pandas]
 icon: icon-python
 ---
+
 # Indroducción a Python
 _Conceptos basicos_
 
