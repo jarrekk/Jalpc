@@ -5,7 +5,7 @@
   i18n: jalpc
   # gh_user: JosueWolfwood
   # repo: Jalpc
-  img: /static/assets/img/landing/NDW.png
+  img: /static/assets/img/landing/NDW.jpg
   desc: Academic and programming blog
 
 - name: Python
