@@ -4,7 +4,7 @@ title:  "Ciencia de datos con Python - Python"
 date:   2023-02-07
 desc: "Ciencia de datos con Python"
 keywords: "Python, Pandas"
-categories: [Python]
+categories: [python]
 tags: [python, pandas]
 icon: fa-brands fa-python
 ---
