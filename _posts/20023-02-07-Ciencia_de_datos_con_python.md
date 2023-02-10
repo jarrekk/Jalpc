@@ -4,10 +4,12 @@ title:  "Ciencia de datos con Python - Python"
 date:   2023-02-07
 desc: "Ciencia de datos con Python"
 keywords: "Python, Pandas"
-categories: [python]
+categories: [Python]
 tags: [python, pandas]
 icon: fa-brands fa-python
 ---
+# Indroducción a Python
+_Conceptos basicos_
 
 En este cuaderno, encontrará los temas más importantes sobre el uso de Python en la ciencia de datos. Debe tener un conocimiento básico de programación para comprender completamente este cuaderno.
 
@@ -19,9 +21,9 @@ La funcion que se utiliza para determinar el tipo de datos es type()
 
 Para escribir comentarios es utiliza el caracter numeral o gato #
 
-# Numeros
+# Números
 Python puede ser usado de forma interactiva como una calculadora. Esto permite que el análisis de datos pueda ser realizado de forma interactiva, de forma similar a como pueden usarse otras herramientas como el lenguaje R o Matlab. A continuación se ejemplifican los cálculos aritméticos básicos.
-```
+```Python
 2 + 3 #Suma
 ```
 5
@@ -53,16 +55,19 @@ Python puede ser usado de forma interactiva como una calculadora. Esto permite q
 53 % 15
 ```
 8
-Orden específico para ralizar las operaciones y resolver fórmulas
 
+Orden específico para ralizar las operaciones y resolver fórmulas
  - Potencias y radicales
  - Multiplicación, división, división sesgada y módulo
  - Suma y resta
+
+
 ```
 ((2 + 3) * (5**2 + 5))/2 #Uso de varias operacion en la misma ecuacion
 ```
 75.0
-## type()
+
+# type()
 La funcion para conocer el tipo de dato
 ```
 #funcion para determinar el tipo de dato numerico
@@ -85,11 +90,12 @@ float
 type(5//2) # Numero entero
 ```
 int
+
 ## Asignacion de valores Variables
 Las variables en python no necesitan ser declaradas, simplemente se definen al ser utilizadas por primera vez. Además, (si bien no es recomendable) pueden cambiar de tipo volviendo a definir. la variables puede ser de cualqueire tipo de datos que maneja Python
 
 ```
-# Los nombres NO pueden empezar con un numero o un caracter especial
+# Los nombres NO pueden empezar con un número o un caracter especial
 name_of_var = 2 #Asignacion de valores a una variable
 type(name_of_var)
 ```
@@ -110,7 +116,7 @@ z
 type(z) #tipo de dato
 ```
 int
-## Strings
+# Strings
 ```
 'Comillas sencillas'
 ```
@@ -135,7 +141,10 @@ int
   comentarios
 """
 ```
-'\n  Los strings de varias lineas pueden\n  escribirse delimitándolos tres comillas \n  dobles y son usados corrientemente como\n  comentarios\n'
+'Los strings de varias lineas pueden
+escribirse delimitándolos tres comillas 
+dobles y son usados corrientemente como
+comentarios'
 ```
 a = "El Big data es como el sexo en la adolescencia: todo el mundo habla de ello, nadie sabe realmente cómo hacerlo, todos piensan que los demás lo están haciendo, así que todos dicen que también lo hacen..."
 a
@@ -157,7 +166,7 @@ palabra
 ```
 'Amo Programar En Python'
 
-## Imprimir con formato
+# Imprimir con formato
 ```
 x = 'hello' # asignar varible tipo string
 x #imprimir la variable en jupyter
@@ -186,7 +195,7 @@ Me llamo: Matias, y mi edad es: 3
 ```
 entrada = input('Como te llamas? ') # los datos sera tipo string
 #Simular entrada de texto
-entrada = 'Jose R. Zapata'
+entrada = 'Josue C'
 ```
 ```
 type(entrada) #tipo de dato
@@ -195,14 +204,15 @@ str
 ```
 print(f'Hola {entrada} te deseo lo mejor aprendiendo python para analisis de datos')
 ```
-Hola Jose R. Zapata te deseo lo mejor aprendiendo python para analisis de datos
-## Listas
+Hola Josue C te deseo lo mejor aprendiendo python para analisis de datos
+# Listas
 Las listas son una de las principales estructuras para almacenar información en Python.
 
  - En las listas podemos ingresar todo tipos de datos.
- - Se utilizan los corchetes [ ] para definir una lista y se separan usando coma.
+ - Se utilizan los corchetes '[ ]' para definir una lista y se separan usando coma.
  - Las listas son elementos Mutables (se pueden cambiar sus valores)
 ```
+
 # definicion de listas
 uno = [1,2,3] # las listas se crean delimitando sus elementos entre [ y ] y usando la , como separacion
 uno
@@ -401,7 +411,7 @@ nest[3][:2][1]
 ## Agregar datos en una lista
 Agregar elementos a una lista se hace con los metodos: .insert() .append()
 
-.insert()
+# .insert()
 list.insert(i, x): Inserta un ítem x en una posición i, los otros elementos despues de la posicion se mueven hacia la derecha.
 ```
 nest = [1,2,3,[4,5,['target']]] # Lista con otra lista al interior
@@ -413,7 +423,7 @@ nest.insert(2,'Amo Python')
 nest
 ```
 [1, 2, 'Amo Python', 3, [4, 5, ['target']]]
-.append()
+# .append()
 Agrega los elementos al final de la lista
 ```
 # se agrega un dato al final de la lista utilizando el metodo append()
@@ -479,7 +489,7 @@ repetida
 new_list
 ```
 [1, 3, [4, 5, [8], 'Pandas'], 'a', 'b', 'c']
-## Diccionarios
+# Diccionarios
 Se utilizan las llaves { } para su definicion, Un Diccionario es una estructura de datos con características especiales que nos permite almacenar cualquier tipo de valor como numeros, strings, listas e incluso otras funciones. Estos diccionarios nos permiten además identificar cada elemento por una clave (Key). Las claves son únicas dentro de un diccionario, es decir que no puede haber un diccionario que tenga dos veces la misma clave, si se asigna un valor a una clave ya existente, se reemplaza el valor anterior.
 
 **Nota:** El algoritmo que usa Python internamente para buscar un elemento en un diccionario es muy distinto que el que utiliza para buscar en listas. los elementos en los diccionarios no tienen un orden determinado.
@@ -555,8 +565,9 @@ type(v1) # tipo de dato
 ```
 bool
 
-## Tuples
-Las tuplas son como las listas (se indexan de la misma forma), pero al igual que los strings no se pueden modificar (son inmutables). Son como unas listas de sólo lectura. Se crean con () (paréntesis) en lugar de [ ] (corchetes). Una vez se crea una tupla, no se puede cambiar ni su contenido ni su tamaño, a menos que hagas una copia de la tupla.
+# Tuples
+
+Las tuplas son como las listas (se indexan de la misma forma), pero al igual que los strings no se pueden modificar (son inmutables). Son como unas listas de sólo lectura. Se crean con () (paréntesis) en lugar de '[ ]' (corchetes). Una vez se crea una tupla, no se puede cambiar ni su contenido ni su tamaño, a menos que hagas una copia de la tupla.
 ```
 fecha = (25, "Mayo", 1810)
 fecha
@@ -661,7 +672,9 @@ Operador	Funcion
 ==	Igual que
 !=	Diferente a
 <	Menor que
-| Mayor que <= | Menor o igual que = | Mayor o igual que
+|> Mayor que
+<=  Menor o igual que
+|>=  Mayor o igual que
 
 Sus respuestas son del tipo Boolean
 ```
@@ -721,7 +734,7 @@ False
 ```
 True
 # Programacion con Python
-Condicionales if,elif, else
+Condicionales if, elif, else
 En Python no hay llaves { } ni begin...end para marcar el comienzo y fin de un bloque, sino que eso se logra con la indentación. La indentación por defecto son 4 espacios en blanco.
 
 Entonces va a ser necesario indentar correctamente para utilizar sentencias if, for o para definir funciones.
@@ -940,7 +953,7 @@ Los elementos de la lista suman = 180
 Son funciones que incluye python desde su instalacion, Built-in Functions, estas son palabras restringidas NO USAR
 
 .	.	.	.	.
-abs()	dict()	help()	min()	setattr()
+abs()   	dict()  	help()  	min()   	setattr()
 all()	dir()	hex()	next()	slice()
 any()	divmod()	id()	object()	sorted()
 ascii()	enumerate()	input()	oct()	staticmethod()
@@ -1155,11 +1168,11 @@ for j in range(2,6): # range de 2 hasta 5
     print(j)
 ```
 - for de 2 a 5:
-2
-3
-4
-5
-### enumerate()
+    2
+    3
+    4
+    5
+# enumerate()
 ```
 mi_lista = ['apple', 'banana', 'grapes', 'pear'] # listado con frutas
 
@@ -1185,7 +1198,7 @@ Existen varios tipos de metodos para los strings, estos se utilizan mucho para h
 
 Metodos completos para strings
 ```
-st = 'Hola mi nombre es Jose R'
+st = 'Hola mi nombre es Josue'
 ```
 ```
 len(st) #funcion que determina la longitud de 'st' tambien sirve con listas
@@ -1197,21 +1210,21 @@ devuelve el string en minusculas
 ```
 st.lower() #devuelve el string en minusculas
 ```
-'hola mi nombre es jose r'
+'hola mi nombre es josue'
 ```
 st # la operacion no es inplace
 ```
-'Hola mi nombre es Jose R'
+'Hola mi nombre es Josue'
 .upper()
 devuelve el string en Mayusculas
 ```
 st.upper() #devuelve el string en Mayusculas
 ```
-'HOLA MI NOMBRE ES JOSE R'
+'HOLA MI NOMBRE ES JOSUE'
 ```
 st # la operacion no es inplace
 ```
-'Hola mi nombre es Jose R'
+'Hola mi nombre es Josue'
 ```
 .swapcase()
 ```
@@ -1219,20 +1232,20 @@ una copia de la cadena convertidas las mayúsculas en minúsculas y viceversa.
 ```
 st
 ```
-'Hola mi nombre es Jose R'
+'Hola mi nombre es Josue'
 ```
 st.swapcase()
 ```
-'hOLA MI NOMBRE ES jOSE r'
+'hOLA MI NOMBRE ES jOSUE'
 ```
 .capitalize()
 ```
 una copia de la cadena con la primera letra en mayúsculas.
 ```
-st = 'hola mi nombre es jose r'
+st = 'hola mi nombre es josue'
 st.capitalize()
 ```
-'Hola mi nombre es jose r'
+'Hola mi nombre es josue'
 
 .zfill()
 Retorna una copia de la cadena rellena con ceros a la izquierda hasta alcanzar la longitud final indicada.
@@ -1247,7 +1260,7 @@ Retorna un entero representando la cantidad de apariciones de subcadena dentro d
 ```
 st
 ```
-'hola mi nombre es jose r'
+'hola mi nombre es josue'
 ```
 st.count('e') # numero de veces que esta la letra 'e'
 ```
@@ -1257,7 +1270,7 @@ Retorna: un entero representando la posición donde inicia la subcadena dentro d
 ```
 st
 ```
-'hola mi nombre es jose r'
+'hola mi nombre es josue'
 ```
 st.find('nombre')
 ```
@@ -1266,35 +1279,35 @@ st.find('nombre')
 .replace()
 Reemplazar texto en una cadena
 ```
-'hola mi nombre es jose r'.replace('jose r','Jose Ricardo')
+'hola mi nombre es josue'.replace('josue','Josue C')
 ```
-'hola mi nombre es Jose Ricardo'
+'hola mi nombre es Josue C'
 ```
-st.replace('jose r','Jose Ricardo')
+st.replace('josue','Josue C')
 ```
-'hola mi nombre es Jose Ricardo'
+'hola mi nombre es Josue'
 ```
 .strip()
 ```
 Eliminar caracteres a la izquierda y derecha de una cadena
 ```
-st_esp = '   hola mi nombre es jose r           '# cadena de caracteres con muchos espacios
+st_esp = '   hola mi nombre es josue           '# cadena de caracteres con muchos espacios
 st_esp
 ```
-'   hola mi nombre es jose r           '
+'   hola mi nombre es josue           '
 ```
 st_esp.strip()  # Eliminar por predeterminado los espacios de izquierda y derecha
 ```
-'hola mi nombre es jose r'
+'hola mi nombre es josue'
 ```
-st_esp = '------hola mi nombre es jose r----'# cadena de caracteres con muchos guiones
+st_esp = '------hola mi nombre es josue----'# cadena de caracteres con muchos guiones
 st_esp
 ```
-'------hola mi nombre es jose r----'
+'------hola mi nombre es josue----'
 ```
 st_esp.strip('-')# Eliminar los guiones de izquierda y derecha
 ```
-'hola mi nombre es jose r'
+'hola mi nombre es josue'
 
 .lstrip()
 Eliminar caracteres a la izquierda de una cadena
@@ -1340,11 +1353,11 @@ palabras
 ```
 st
 ```
-'hola mi nombre es jose r'
+'hola mi nombre es jsoue'
 ```
 st.split() #divide el string en 'espacios en blanco por defecto' y devuelve una lista
 ```
-['hola', 'mi', 'nombre', 'es', 'jose', 'r']
+['hola', 'mi', 'nombre', 'es', 'josue']
 ```
 tweet = 'Viva el Rock and Roll! #Musica #Concierto' # creando un string
 tweet
