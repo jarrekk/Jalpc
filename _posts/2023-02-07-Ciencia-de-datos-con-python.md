@@ -6,7 +6,7 @@ desc: "Ciencia de datos con Python"
 keywords: "Python, Pandas"
 categories: [HTML]
 tags: [python, pandas]
-icon: icon-python
+icon: fa-python
 ---
 
 # Indroducción a Python
