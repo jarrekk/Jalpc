@@ -12,12 +12,6 @@
   tpl: career.html
   css: timeline
 
-- id: research
-  i18n: nav.skills
-  name: Researches
-  tpl: skills.html
-  css: team
-
 - id: publication
   i18n: nav.projects
   name: Publications
@@ -30,9 +24,9 @@
   tpl: projects.html
   css: project
 
-- id: blog
+- id: members
   i18n: nav.blog
-  name: Blog
+  name: Members
   tpl: blog.html
   page: blog/
   css: testimonials navy-section
