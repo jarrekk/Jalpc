@@ -1,8 +1,8 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: PACILAB
-description: PAICLAB HOMEPAGE
+title: PAICLAB
+description:Private Artificial Intelligence and Cryptography Lab
 keywords: Jack,Jalpc,blog,Jekyll,github,gh-pages
 #baseurl:  /Jalpc # if you have suburl as homepage like '/homepage', please change it to '/homepage' and your repo's name should be 'homepage'
 url: https://jaeby99.github.io/homepage  # url should be 'http://<github_username>.github.io/homepage' as before
@@ -11,9 +11,9 @@ img_path: /Jalpc/static/assets/img/blog  # url should be '/homepage/static/asset
 
 # author -- index page "about me" section
 author:  # change following line to your infomation.
-  name: JY  # Be used at blog posts' author.
-  first_name: JY  # Be used at index page about me section.
-  last_name: B  # Be used at index page about me section.
+  name: Joon-Woo Lee  # Be used at blog posts' author.
+  first_name: Joon-Woo  # Be used at index page about me section.
+  last_name: Lee  # Be used at index page about me section.
   avatar: /static/assets/img/landing/avatar.jpg  # upload your avatar at directory and edit it.
   github_username: jarrekk  # Leave blank if you don't have now
   linkedin_id: jarrekk # Leave blank if you don't have now
@@ -28,7 +28,9 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: fa-linux
     - name: icon-apache
-  desc: Introduce myself will be here.  # Describe yourself.
+  desc: I am an assistant professor in School of Computer Science and Engineering at Chung-Ang University since September 2022. Before joining Chung-Ang University, I obtained my Ph.D. in Department of Electrical and Computer Engineering at Seoul National University advised by Jong-Seon No in August 2022.
+My research interests are privacy-preserving machine learning (PPML) with cryptographic tools. During my graduate course at SNU, I have been working mainly on primitives in fully homomorphic encryption (FHE), advanced algorithms on FHE, and efficient PPML with deep neural networks. I am also interested in hardware optimization for PPML on FHE and practical implementation of PPML for AI-as-a-service (AIaaS) cloud systems. 
+Other research interests are post-quantum cryptography (PQC), multi-party computation (MPC), and advanced lattice-based encryption schemes.   # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
