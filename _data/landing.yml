@@ -1,22 +1,28 @@
 # index page sections
 # custom following lines to edit your index page
-- id: about-me
+- id: about
   i18n: nav.about_me
-  name: About
+  name: About PAICLAB
   tpl: about.html
   css:
 
-- id: career
+- id: news
   i18n: nav.career
-  name: Career
+  name: News
   tpl: career.html
   css: timeline
 
-- id: skills
+- id: research
   i18n: nav.skills
-  name: Skills
+  name: Researches
   tpl: skills.html
   css: team
+
+- id: publication
+  i18n: nav.projects
+  name: Publications
+  tpl: projects.html
+  css: project
 
 - id: projects
   i18n: nav.projects
