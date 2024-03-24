@@ -28,7 +28,7 @@ author:  # change following line to your infomation.
   skill_icon2:
     - name: fa-linux
     - name: icon-apache
-  desc: I am an assistant professor in School of Computer Science and Engineering at Chung-Ang University since September 2022.   # Describe yourself.
+  desc: I am looking for graduate students interested in researching private AI and cryptography, including the latest cryptographic techniques such as homomorphic encryption, post-quantum cryptography, and multi-party computation. If you are interested in the field of private AI and cryptography, please contact me at jwlee2815@cau.ac.kr.   # Describe yourself.
 
 # comment
 disqus:  # if you wanna comment feature, go to https://disqus.com/ to get your configuration; if not, comment following two lines.
