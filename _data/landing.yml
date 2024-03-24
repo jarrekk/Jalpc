@@ -12,6 +12,13 @@
   tpl: career.html
   css: timeline
 
+- id: members
+  i18n: nav.blog
+  name: Members
+  tpl: blog.html
+  page: blog/
+  css: testimonials navy-section
+
 - id: publication
   i18n: nav.projects
   name: Publications
@@ -24,12 +31,11 @@
   tpl: projects.html
   css: project
 
-- id: members
-  i18n: nav.blog
-  name: Members
-  tpl: blog.html
-  page: blog/
-  css: testimonials navy-section
+- id: patents
+  i18n: nav.projects
+  name: Patents
+  tpl: projects.html
+  css: project
 
 - id: links
   i18n: nav.link
