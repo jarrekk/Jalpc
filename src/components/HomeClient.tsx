@@ -79,15 +79,19 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
         </div>
       </section>
 
-      <section id="career">
-        <div className="content">
-          <h2>Career</h2>
+      <section id="career" style={{ 
+        background: 'linear-gradient(180deg, rgba(0,26,51,0) 0%, rgba(0,26,51,0.8) 20%, rgba(0,26,51,1) 50%, rgba(0,26,51,0.8) 80%, rgba(0,26,51,0) 100%)',
+        padding: '10rem 2rem',
+        margin: '5rem 0'
+      }}>
+        <div className="content" style={{ background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid rgba(0,139,139,0.3)' }}>
+          <h2 style={{ color: 'white' }}>Career</h2>
           <div ref={careerRef} className="career-timeline">
             {careerItems.map((item, index) => (
-              <div key={index} className="career-item">
-                <h3>{item.title}</h3>
-                <div className="career-org">{item.organization} | {item.period}</div>
-                <p>{item.description}</p>
+              <div key={index} className="career-item" style={{ borderLeftColor: 'var(--color-teal)' }}>
+                <h3 style={{ color: 'white' }}>{item.title}</h3>
+                <div className="career-org" style={{ color: 'var(--color-shallow)' }}>{item.organization} | {item.period}</div>
+                <p style={{ color: 'rgba(255,255,255,0.8)' }}>{item.description}</p>
               </div>
             ))}
           </div>
@@ -114,11 +118,33 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
 
       <section id="blog-teaser">
         <div className="content">
-          <h2>Logs & Insights</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', justifyContent: 'center', marginBottom: '2rem' }}>
+          <h2>Blog</h2>
+          <div style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', 
+            gap: '1rem', 
+            margin: '2rem 0' 
+          }}>
             {Object.entries(categoryCounts).map(([category, count]) => (
-              <div key={category} style={{ background: 'rgba(0,0,0,0.05)', padding: '0.5rem 1rem', borderRadius: '20px', fontSize: '0.9rem', fontWeight: 600 }}>
-                {category} <span style={{ color: 'var(--color-teal)' }}>{count}</span>
+              <div key={category} style={{ 
+                background: 'rgba(0,0,0,0.05)', 
+                padding: '1.5rem 1rem', 
+                borderRadius: '12px', 
+                fontSize: '0.9rem', 
+                fontWeight: 700,
+                border: '1px solid rgba(0,0,0,0.1)',
+                display: 'flex',
+                flexDirection: 'column',
+                alignItems: 'center',
+                gap: '0.5rem',
+                transition: 'transform 0.3s ease',
+                cursor: 'default'
+              }}
+              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
+              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              >
+                <span style={{ fontSize: '1.2rem', color: 'var(--color-teal)' }}>{count}</span>
+                <span style={{ textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.75rem' }}>{category}</span>
               </div>
             ))}
           </div>

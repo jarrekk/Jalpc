@@ -9,93 +9,72 @@ interface BlogListProps {
   posts: PostData[];
 }
 
-const CATEGORY_STRUCTURE: Record<string, string[]> = {
-  'All': [],
-  'Development': ['Web', 'Python', 'System'],
-  'CTF-Wargame': ['Pwn', 'Web', 'Reverse', 'Crypto'],
-  'Security': ['BugBounty', 'Research'],
-  'Academic': ['TechnicalDocument', 'Paper-Conference'],
-  'Others': ['Contest-Certification', 'Etc', 'HTML']
+const CATEGORY_ICONS: Record<string, string> = {
+  'All': '🌊',
+  'Development': '💻',
+  'CTF/Wargame': '🏁',
+  'BugBounty': '🛡️',
+  'Technical Document': '📄',
+  'Paper/Conference': '📚',
+  'Contest/Certification': '🏆'
 };
 
+const CATEGORIES = Object.keys(CATEGORY_ICONS);
+
 export default function BlogList({ posts }: BlogListProps) {
-  const [selectedMainCategory, setSelectedMainCategory] = useState('All');
-  const [selectedSubCategory, setSelectedSubCategory] = useState<string | null>(null);
+  const [selectedCategory, setSelectedCategory] = useState('All');
 
   const filteredPosts = useMemo(() => {
     return posts.filter((post) => {
+      if (selectedCategory === 'All') return true;
+      
       const postCategories = Array.isArray(post.categories) 
         ? post.categories.map(c => c.trim().toLowerCase()) 
         : (typeof post.categories === 'string' ? [post.categories.trim().toLowerCase()] : []);
       
-      if (selectedMainCategory === 'All') return true;
+      const target = selectedCategory.toLowerCase();
 
-      const mainTarget = selectedMainCategory.toLowerCase();
-      const subTarget = selectedSubCategory?.toLowerCase();
-
-      // If a sub-category is selected, match it
-      if (subTarget) {
-        return postCategories.includes(subTarget) || 
-               post.title.toLowerCase().includes(subTarget) ||
-               (post.desc && post.desc.toLowerCase().includes(subTarget));
+      // Broad matching for categories
+      if (target === 'development') {
+        return postCategories.some(c => ['development', 'web', 'python', 'system'].includes(c));
+      }
+      if (target === 'ctf/wargame') {
+        return postCategories.some(c => ['ctf/wargame', 'ctf-wargame', 'ctf', 'pwn', 'web', 'reverse', 'crypto'].includes(c));
+      }
+      if (target === 'bugbounty') {
+        return postCategories.some(c => ['bugbounty', 'bug bounty', 'security', 'research'].includes(c));
+      }
+      if (target === 'technical document') {
+        return postCategories.some(c => ['technical document', 'technicaldocument', 'document'].includes(c));
+      }
+      if (target === 'paper/conference') {
+        return postCategories.some(c => ['paper/conference', 'paper-conference', 'paper', 'conference', 'academic'].includes(c));
+      }
+      if (target === 'contest/certification') {
+        return postCategories.some(c => ['contest/certification', 'contest-certification', 'contest', 'certification', 'others'].includes(c));
       }
 
-      // If only main category is selected
-      if (postCategories.includes(mainTarget)) return true;
-      
-      const subs = CATEGORY_STRUCTURE[selectedMainCategory].map(s => s.toLowerCase());
-      if (subs.some(sub => postCategories.includes(sub))) return true;
-
-      if (mainTarget === 'academic' && (postCategories.includes('technicaldocument') || postCategories.includes('technical document') || postCategories.includes('paper-conference'))) {
-        return true;
-      }
-      
-      if (mainTarget === 'security' && (postCategories.includes('bugbounty'))) {
-        return true;
-      }
-
-      if (mainTarget === 'others' && (postCategories.includes('etc') || postCategories.includes('contest-certification') || postCategories.includes('html') || postCategories.includes('blog'))) {
-        return true;
-      }
-
-      return false;
+      return postCategories.includes(target);
     });
-  }, [posts, selectedMainCategory, selectedSubCategory]);
-
-  const handleMainCategoryClick = (cat: string) => {
-    setSelectedMainCategory(cat);
-    setSelectedSubCategory(null);
-  };
+  }, [posts, selectedCategory]);
 
   return (
     <div className={styles.blogLayout}>
       {/* Sidebar */}
       <aside className={styles.sidebar}>
-        <h2>Categories</h2>
+        <h2 style={{ fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '2rem', opacity: 0.7 }}>Categories</h2>
         <nav>
           <ul className={styles.categoryList}>
-            {Object.keys(CATEGORY_STRUCTURE).map(mainCat => (
-              <li key={mainCat} className={styles.mainCategoryItem}>
+            {CATEGORIES.map(cat => (
+              <li key={cat} className={styles.mainCategoryItem}>
                 <button
-                  onClick={() => handleMainCategoryClick(mainCat)}
-                  className={`${styles.categoryButton} ${selectedMainCategory === mainCat ? styles.activeCategory : ''}`}
+                  onClick={() => setSelectedCategory(cat)}
+                  className={`${styles.categoryButton} ${selectedCategory === cat ? styles.activeCategory : ''}`}
+                  style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%', textAlign: 'left' }}
                 >
-                  {mainCat}
+                  <span style={{ fontSize: '1.2rem' }}>{CATEGORY_ICONS[cat]}</span>
+                  <span>{cat}</span>
                 </button>
-                {selectedMainCategory === mainCat && CATEGORY_STRUCTURE[mainCat].length > 0 && (
-                  <ul className={styles.subCategoryList}>
-                    {CATEGORY_STRUCTURE[mainCat].map(subCat => (
-                      <li key={subCat}>
-                        <button
-                          onClick={() => setSelectedSubCategory(subCat === selectedSubCategory ? null : subCat)}
-                          className={`${styles.subCategoryButton} ${selectedSubCategory === subCat ? styles.activeSubCategory : ''}`}
-                        >
-                          {subCat}
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
-                )}
               </li>
             ))}
           </ul>
@@ -105,9 +84,9 @@ export default function BlogList({ posts }: BlogListProps) {
       {/* Main Content */}
       <main className={styles.mainContent}>
         <header className={styles.header}>
-          <h1 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Insights</h1>
+          <h1 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Archive</h1>
           <p>
-            {selectedMainCategory} {selectedSubCategory ? `> ${selectedSubCategory}` : ''} ({filteredPosts.length} posts)
+            {selectedCategory} ({filteredPosts.length} posts)
           </p>
         </header>
 

@@ -61,13 +61,13 @@ function Boat() {
   );
 }
 
-function Bubbles({ count = 1000 }) {
+function Bubbles({ count = 2500 }) {
   const [positions] = useState(() => {
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 20;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 50;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 20;
+      pos[i * 3] = (Math.random() - 0.5) * 30;
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 60;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 30;
     }
     return pos;
   });
@@ -77,15 +77,15 @@ function Bubbles({ count = 1000 }) {
 
   useFrame((state) => {
     if (pointsRef.current) {
-      pointsRef.current.position.y = (state.clock.elapsedTime * 0.5) % 50 - 25;
+      pointsRef.current.position.y = (state.clock.elapsedTime * 0.4) % 60 - 30;
     }
   });
 
   useLayoutEffect(() => {
     if (materialRef.current) {
       gsap.to(materialRef.current, {
-        opacity: 0.05,
-        size: 0.01,
+        opacity: 0.1,
+        size: 0.02,
         scrollTrigger: {
           trigger: 'body',
           start: 'top top',
@@ -102,10 +102,10 @@ function Bubbles({ count = 1000 }) {
         ref={materialRef}
         transparent
         color="#ffffff"
-        size={0.08}
+        size={0.12}
         sizeAttenuation={true}
         depthWrite={false}
-        opacity={0.6}
+        opacity={0.8}
       />
     </Points>
   );
@@ -117,8 +117,8 @@ export default function Experience() {
 
   useLayoutEffect(() => {
     const colors = [
-      '#9ADCD9', // shallow
-      '#008B8B', // teal
+      '#001524', // darker shallow
+      '#002033', // darker teal-ish
       '#003366', // midsea
       '#001A33', // deep
     ];
@@ -141,19 +141,6 @@ export default function Experience() {
         });
       }
     });
-
-    // Boat movement (diving)
-    if (containerRef.current) {
-      gsap.to('.boat-container', {
-        y: -100, // Move boat up to simulate diving
-        scrollTrigger: {
-          trigger: 'body',
-          start: 'top top',
-          end: 'bottom bottom',
-          scrub: 1,
-        },
-      });
-    }
 
     if (cameraRef.current) {
       gsap.to(cameraRef.current.position, {
@@ -186,16 +173,11 @@ export default function Experience() {
         pointerEvents: 'none',
       }}
     >
-      <div className="boat-container" style={{ width: '100%', height: '100%' }}>
+      <div className="experience-container" style={{ width: '100%', height: '100%' }}>
         <Canvas shadows>
           <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 5]} />
-          <ambientLight intensity={0.7} />
-          <directionalLight position={[10, 10, 10]} intensity={1.5} />
-          <ErrorBoundary fallback={<BoatFallback />}>
-            <Suspense fallback={<BoatFallback />}>
-              <Boat />
-            </Suspense>
-          </ErrorBoundary>
+          <ambientLight intensity={0.5} />
+          <directionalLight position={[10, 10, 10]} intensity={1} />
           <Bubbles />
         </Canvas>
       </div>
