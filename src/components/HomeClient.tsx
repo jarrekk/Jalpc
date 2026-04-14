@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import { CATEGORY_ICONS } from '@/lib/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -139,12 +140,15 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
               onMouseEnter={(e) => {
                 e.currentTarget.style.transform = 'translateY(-5px)';
                 e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
               }}
               onMouseLeave={(e) => {
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
               }}
               >
+                <span style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>{CATEGORY_ICONS[category]}</span>
                 <span style={{ fontSize: '1.5rem', color: 'var(--color-sky-dark)', fontWeight: 800 }}>{count}</span>
                 <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.7rem', fontWeight: 600, opacity: 0.8 }}>{category}</span>
               </div>

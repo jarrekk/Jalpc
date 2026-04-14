@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@700;800&family=Roboto:wght@400;700&display=swap');
 
 :root {
-  --color-sky-dark: #005f73;
-  --color-navy-deepest: #000814;
+  --color-sky-dark: #0077be;
+  --color-navy-deepest: #00050a;
   --color-sand-light: #F4E7C1;
   --color-sand-wet: #DCC6A0;
-  --color-shallow: #005f73;
+  --color-shallow: #0077be;
   --color-upper-sea: #004b5c;
   --color-teal: #008B8B;
   --color-midsea: #001A33;
-  --color-deep: #000814;
+  --color-deep: #00050a;
   --bg-current: var(--color-sky-dark);
 
   /* Font Options */
@@ -37,7 +37,6 @@ body {
 
 body {
   background: linear-gradient(180deg, var(--color-sky-dark) 0%, var(--color-navy-deepest) 100%);
-  background-attachment: fixed;
   color: #fff;
   font-family: var(--font-primary);
   line-height: 1.6;

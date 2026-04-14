@@ -61,7 +61,7 @@ function Boat() {
   );
 }
 
-function Bubbles({ count = 2500 }) {
+function Bubbles({ count = 5000 }) {
   const [positions] = useState(() => {
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
@@ -84,21 +84,21 @@ function Bubbles({ count = 2500 }) {
 
   useLayoutEffect(() => {
     if (pointsRef.current && materialRef.current) {
-      // Intro Reveal: Move outwards and fade
+      // Intro Reveal: Move outwards and fade - MUCH FASTER AND WIDER
       gsap.fromTo(pointsRef.current.scale, 
         { x: 0.1, y: 0.1, z: 0.1 },
-        { x: 15, y: 15, z: 15, duration: 2.5, ease: "power2.out" }
+        { x: 50, y: 50, z: 50, duration: 1.2, ease: "power4.out" }
       );
       
       gsap.fromTo(materialRef.current,
-        { opacity: 1, size: 0.2 },
-        { opacity: 0.2, size: 0.05, duration: 2, ease: "power2.inOut" }
+        { opacity: 1, size: 0.3 },
+        { opacity: 0.5, size: 0.08, duration: 1, ease: "power2.inOut" }
       );
 
       // Scroll interaction
       gsap.to(materialRef.current, {
-        opacity: 0.05,
-        size: 0.01,
+        opacity: 0.1,
+        size: 0.02,
         scrollTrigger: {
           trigger: 'body',
           start: 'top top',
@@ -118,7 +118,8 @@ function Bubbles({ count = 2500 }) {
         size={0.12}
         sizeAttenuation={true}
         depthWrite={false}
-        opacity={0.8}
+        opacity={0.5}
+        blending={THREE.AdditiveBlending}
       />
     </Points>
   );

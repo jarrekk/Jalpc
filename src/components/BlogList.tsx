@@ -34,59 +34,39 @@ export default function BlogList({ posts }: BlogListProps) {
     });
   }, [posts, selectedCategory]);
 
-  if (!selectedCategory) {
-    return (
-      <div className={styles.categoryGridContainer}>
-        <header className={styles.header}>
-          <h1>Archive</h1>
-          <p>Technical journey and research findings</p>
-        </header>
-        <div className={styles.categoryGrid}>
-          {CATEGORIES.map(cat => (
-            <div 
-              key={cat} 
-              className={styles.categoryCard}
-              onClick={() => setSelectedCategory(cat)}
-            >
-              <span className={styles.categoryIcon}>{CATEGORY_ICONS[cat]}</span>
-              <h2 className={styles.categoryTitle}>{cat}</h2>
-              <span className={styles.postCount}>
-                {posts.filter(p => {
-                  const pcats = (Array.isArray(p.categories) ? p.categories : [p.categories || '']).map(c => c.trim().toLowerCase());
-                  if (cat === 'Etc') {
-                    const allAliases = Object.values(STANDARD_CATEGORIES).flat();
-                    return pcats.every(c => !allAliases.includes(c)) || pcats.length === 0;
-                  }
-                  const aliases = STANDARD_CATEGORIES[cat]?.map(a => a.toLowerCase()) || [cat.toLowerCase()];
-                  return pcats.some(c => aliases.includes(c));
-                }).length} Posts
-              </span>
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  }
-
   return (
     <div className={styles.blogLayout}>
       <aside className={styles.sidebar}>
-        <button onClick={() => setSelectedCategory(null)} className={styles.backButton}>
-          ← Back to Archive
-        </button>
-        <div className={styles.sidebarSection}>
-          <h3>Current Domain</h3>
-          <div className={styles.activeCategoryDisplay}>
-            <span>{CATEGORY_ICONS[selectedCategory]}</span>
-            <strong>{selectedCategory}</strong>
-          </div>
-        </div>
+        <h2 style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#111', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+          Archive
+        </h2>
+        <ul className={styles.categoryList}>
+          <li className={styles.mainCategoryItem}>
+            <button 
+              onClick={() => setSelectedCategory(null)} 
+              className={`${styles.categoryButton} ${!selectedCategory ? styles.activeCategory : ''}`}
+            >
+              All Posts
+            </button>
+          </li>
+          {CATEGORIES.map(cat => (
+            <li key={cat} className={styles.mainCategoryItem}>
+              <button 
+                onClick={() => setSelectedCategory(cat)} 
+                className={`${styles.categoryButton} ${selectedCategory === cat ? styles.activeCategory : ''}`}
+              >
+                <span style={{ marginRight: '0.5rem' }}>{CATEGORY_ICONS[cat]}</span>
+                {cat}
+              </button>
+            </li>
+          ))}
+        </ul>
       </aside>
 
       <main className={styles.mainContent}>
         <header className={styles.header}>
-          <h1>{selectedCategory}</h1>
-          <p>{filteredPosts.length} posts discovered</p>
+          <h1>{selectedCategory || 'Archive'}</h1>
+          <p>{filteredPosts.length} posts discovered in this domain</p>
         </header>
 
         <div className={styles.postGrid}>
@@ -99,8 +79,8 @@ export default function BlogList({ posts }: BlogListProps) {
                 </div>
                 {post.desc && <p className={styles.postDesc}>{post.desc}</p>}
                 <div className={styles.tagContainer}>
-                  {Array.isArray(post.categories) && post.categories.map((cat: string) => (
-                    <span key={cat} className={styles.tag}>{cat}</span>
+                  {(Array.isArray(post.categories) ? post.categories : [post.categories || '']).map((cat: string) => (
+                    cat && <span key={cat} className={styles.tag}>{cat}</span>
                   ))}
                 </div>
               </article>
