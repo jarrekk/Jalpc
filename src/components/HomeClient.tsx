@@ -45,32 +45,10 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
   useEffect(() => {
     if (nameRef.current) {
       gsap.fromTo(nameRef.current, 
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.5, ease: "expo.out" }
+        { opacity: 0, scale: 0.95 },
+        { opacity: 1, scale: 1, duration: 2, ease: "power2.out", delay: 0.5 }
       );
     }
-
-    // Background color animation
-    gsap.to('body', {
-      backgroundColor: '#001A33', // var(--color-deep)
-      scrollTrigger: {
-        trigger: 'footer',
-        start: 'top bottom',
-        end: 'bottom bottom',
-        scrub: true,
-      }
-    });
-
-    // Darken progressively as we scroll down
-    gsap.to('body', {
-      backgroundColor: '#003366', // var(--color-midsea)
-      scrollTrigger: {
-        trigger: '#projects',
-        start: 'top 80%',
-        end: 'bottom 20%',
-        scrub: true,
-      }
-    });
 
     if (careerRef.current) {
       gsap.from(careerRef.current.querySelectorAll('.career-item'), {
@@ -89,90 +67,100 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
 
   return (
     <div className="home-container" style={{ position: 'relative', zIndex: 20 }}>
-      <section id="intro" style={{ minHeight: '90vh', padding: '10rem 2rem' }}>
+      <section id="intro" style={{ minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-          <h1 ref={nameRef} style={{ fontSize: '5rem', marginBottom: '0.5rem' }}>
+          <h1 ref={nameRef} style={{ fontSize: 'clamp(3rem, 10vw, 6rem)', marginBottom: '0.5rem', fontWeight: 800 }}>
             Lee Sangho
           </h1>
-          <p style={{ fontSize: '1.2rem', fontWeight: 600, color: '#444', textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+          <p style={{ fontSize: '1.2rem', fontWeight: 500, color: 'rgba(255,255,255,0.7)', textTransform: 'uppercase', letterSpacing: '0.2em' }}>
             Security Researcher & AI Guardrail
           </p>
-          <div className="scroll-cue" style={{ marginTop: '2rem' }}>↓</div>
         </div>
       </section>
 
-      <section id="career" style={{ 
-        background: 'linear-gradient(180deg, rgba(106,183,180,0.1) 0%, rgba(0,26,51,0.9) 50%, rgba(0,26,51,1) 100%)',
-        padding: '15rem 2rem',
-        margin: '10rem 0'
-      }}>
-        <div className="content" style={{ background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid rgba(0,139,139,0.3)' }}>
+      <section id="career" style={{ padding: '10rem 2rem' }}>
+        <div className="content" style={{ background: 'rgba(255,255,255,0.03)', color: 'white', border: '1px solid rgba(255,255,255,0.1)', backdropFilter: 'blur(10px)' }}>
           <h2 style={{ color: 'white' }}>Career</h2>
           <div ref={careerRef} className="career-timeline">
             {careerItems.map((item, index) => (
-              <div key={index} className="career-item" style={{ borderLeftColor: 'var(--color-teal)' }}>
+              <div key={index} className="career-item" style={{ borderLeftColor: 'var(--color-sky-dark)' }}>
                 <h3 style={{ color: 'white' }}>{item.title}</h3>
-                <div className="career-org" style={{ color: 'var(--color-shallow)' }}>{item.organization} | {item.period}</div>
-                <p style={{ color: 'rgba(255,255,255,0.8)' }}>{item.description}</p>
+                <div className="career-org" style={{ color: 'var(--color-sky-dark)', fontWeight: 600 }}>{item.organization} | {item.period}</div>
+                <p style={{ color: 'rgba(255,255,255,0.7)' }}>{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="projects" style={{ padding: '15rem 2rem', margin: '5rem 0' }}>
-        <div className="content">
-          <h2>Projects</h2>
+      <section id="projects" style={{ padding: '10rem 2rem' }}>
+        <div className="content" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)' }}>
+          <h2 style={{ color: 'white' }}>Projects</h2>
           <div className="portfolio-grid">
             {portfolioItems.map((item) => (
               <div
                 key={item.id}
                 className="portfolio-card"
                 onClick={() => setSelectedItem(item)}
+                style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)' }}
               >
-                <h3>{item.title}</h3>
-                <p>{item.description}</p>
+                <h3 style={{ color: 'white' }}>{item.title}</h3>
+                <p style={{ color: 'rgba(255,255,255,0.7)' }}>{item.description}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section id="blog-teaser" style={{ padding: '15rem 2rem' }}>
-        <div className="content">
-          <h2>Blog</h2>
+      <section id="blog-teaser" style={{ padding: '10rem 2rem' }}>
+        <div className="content" style={{ background: 'rgba(255,255,255,0.03)', border: '1px solid rgba(255,255,255,0.1)' }}>
+          <h2 style={{ color: 'white' }}>Blog</h2>
           <div style={{ 
             display: 'grid', 
-            gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 1fr))', 
-            gap: '1rem', 
-            margin: '2rem 0' 
+            gridTemplateColumns: 'repeat(3, 1fr)', 
+            gridTemplateRows: 'repeat(2, 1fr)',
+            gap: '1.5rem', 
+            margin: '3rem 0' 
           }}>
             {Object.entries(categoryCounts).map(([category, count]) => (
               <div key={category} style={{ 
-                background: 'rgba(255,255,255,0.1)', 
-                padding: '1.5rem 1rem', 
-                borderRadius: '12px', 
-                fontSize: '0.9rem', 
-                fontWeight: 700,
-                border: '1px solid rgba(255,255,255,0.1)',
+                background: 'rgba(255,255,255,0.05)', 
+                padding: '2rem 1rem', 
+                borderRadius: '8px', 
+                border: '1px solid rgba(255,255,255,0.05)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                gap: '0.5rem',
-                transition: 'transform 0.3s ease',
+                gap: '0.75rem',
+                transition: 'all 0.3s ease',
                 cursor: 'default',
                 color: 'white'
               }}
-              onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
-              onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-5px)';
+                e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+              }}
               >
-                <span style={{ fontSize: '1.2rem', color: 'var(--color-shallow)' }}>{count}</span>
-                <span style={{ textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.75rem' }}>{category}</span>
+                <span style={{ fontSize: '1.5rem', color: 'var(--color-sky-dark)', fontWeight: 800 }}>{count}</span>
+                <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.7rem', fontWeight: 600, opacity: 0.8 }}>{category}</span>
               </div>
             ))}
           </div>
-          <p>Technical journey and research findings.</p>
-          <a href="/blog" className="blog-link" style={{ fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Enter Archive</a>
+          <p style={{ color: 'rgba(255,255,255,0.7)' }}>Technical journey and research findings.</p>
+          <a href="/blog" className="blog-link" style={{ 
+            fontWeight: 700, 
+            textTransform: 'uppercase', 
+            letterSpacing: '0.15em',
+            background: 'white',
+            color: 'black',
+            padding: '1rem 3rem',
+            borderRadius: '4px',
+            marginTop: '2rem'
+          }}>Enter Archive</a>
         </div>
       </section>
 

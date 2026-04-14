@@ -65,9 +65,10 @@ function Bubbles({ count = 2500 }) {
   const [positions] = useState(() => {
     const pos = new Float32Array(count * 3);
     for (let i = 0; i < count; i++) {
-      pos[i * 3] = (Math.random() - 0.5) * 30;
-      pos[i * 3 + 1] = (Math.random() - 0.5) * 60;
-      pos[i * 3 + 2] = (Math.random() - 0.5) * 30;
+      // Start highly concentrated in the center
+      pos[i * 3] = (Math.random() - 0.5) * 5;
+      pos[i * 3 + 1] = (Math.random() - 0.5) * 5;
+      pos[i * 3 + 2] = (Math.random() - 0.5) * 5;
     }
     return pos;
   });
@@ -82,10 +83,22 @@ function Bubbles({ count = 2500 }) {
   });
 
   useLayoutEffect(() => {
-    if (materialRef.current) {
+    if (pointsRef.current && materialRef.current) {
+      // Intro Reveal: Move outwards and fade
+      gsap.fromTo(pointsRef.current.scale, 
+        { x: 0.1, y: 0.1, z: 0.1 },
+        { x: 15, y: 15, z: 15, duration: 2.5, ease: "power2.out" }
+      );
+      
+      gsap.fromTo(materialRef.current,
+        { opacity: 1, size: 0.2 },
+        { opacity: 0.2, size: 0.05, duration: 2, ease: "power2.inOut" }
+      );
+
+      // Scroll interaction
       gsap.to(materialRef.current, {
-        opacity: 0.1,
-        size: 0.02,
+        opacity: 0.05,
+        size: 0.01,
         scrollTrigger: {
           trigger: 'body',
           start: 'top top',
@@ -116,32 +129,6 @@ export default function Experience() {
   const cameraRef = useRef<THREE.PerspectiveCamera>(null);
 
   useLayoutEffect(() => {
-    const colors = [
-      '#001524', // darker shallow
-      '#002033', // darker teal-ish
-      '#003366', // midsea
-      '#001A33', // deep
-    ];
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: 'body',
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1,
-      },
-    });
-
-    colors.forEach((color, i) => {
-      if (i < colors.length - 1) {
-        tl.to('#bg-fixed', {
-          backgroundColor: colors[i + 1],
-          duration: 1,
-          ease: 'none',
-        });
-      }
-    });
-
     if (cameraRef.current) {
       gsap.to(cameraRef.current.position, {
         z: 10,
