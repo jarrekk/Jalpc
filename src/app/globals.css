@@ -21,11 +21,12 @@ body {
 }
 
 body {
-  background: linear-gradient(to bottom, var(--color-shallow), var(--color-deep));
-  background-attachment: fixed;
+  background: linear-gradient(180deg, var(--color-shallow) 0%, var(--color-teal) 33%, var(--color-midsea) 66%, var(--color-deep) 100%);
+  background-attachment: local;
   color: var(--color-sand-light);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   transition: background-color 0.5s ease;
+  line-height: 1.6;
 }
 
 section {
@@ -40,19 +41,43 @@ section {
 }
 
 .content {
-  max-width: 900px;
+  max-width: 1000px;
   text-align: center;
   z-index: 10;
   background: rgba(0, 26, 51, 0.4);
-  padding: 3rem;
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
+  padding: 4rem;
+  border-radius: 24px;
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
-h1 { font-size: 4.5rem; margin-bottom: 1.5rem; color: white; text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
-h2 { font-size: 3rem; margin-bottom: 2.5rem; color: var(--color-shallow); }
-h3 { font-size: 1.8rem; margin-bottom: 1rem; color: white; }
+h1 { 
+  font-size: 5.5rem; 
+  margin-bottom: 2rem; 
+  color: white; 
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  background: linear-gradient(180deg, #FFFFFF 0%, #B0E0E6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h2 { 
+  font-size: 3.5rem; 
+  margin-bottom: 3rem; 
+  color: var(--color-shallow); 
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+h3 { 
+  font-size: 2rem; 
+  margin-bottom: 1.2rem; 
+  color: white; 
+  font-weight: 600;
+}
 p { font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem; }
 
 .career-timeline {
