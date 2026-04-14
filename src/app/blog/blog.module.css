@@ -225,6 +225,27 @@
 .content a {
   color: #0066cc;
   text-decoration: underline;
+  overflow-wrap: break-word;
+  word-break: break-all;
+}
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 2rem auto;
+  border-radius: 8px;
+}
+
+.content figure {
+  max-width: 100%;
+  margin: 2rem 0;
+  overflow: hidden;
+}
+
+.content {
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .content blockquote {
