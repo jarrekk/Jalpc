@@ -38,14 +38,14 @@ export default function BlogList({ posts }: BlogListProps) {
   const availableSubTags = useMemo(() => {
     const tags = new Set<string>();
     postsInCategory.forEach(post => {
-      post.generatedTags?.forEach(tag => tags.add(tag));
+      post.tags?.forEach(tag => tags.add(tag));
     });
     return Array.from(tags).sort();
   }, [postsInCategory]);
 
   const filteredPosts = useMemo(() => {
     if (!selectedSubTag) return postsInCategory;
-    return postsInCategory.filter(post => post.generatedTags?.includes(selectedSubTag));
+    return postsInCategory.filter(post => post.tags?.includes(selectedSubTag));
   }, [postsInCategory, selectedSubTag]);
 
   const handleCategoryClick = (cat: string | null) => {
@@ -131,7 +131,7 @@ export default function BlogList({ posts }: BlogListProps) {
                   {(Array.isArray(post.categories) ? post.categories : [post.categories || '']).map((cat: string) => (
                     cat && <span key={cat} className={styles.tag}>{cat}</span>
                   ))}
-                  {post.generatedTags?.map((tag: string) => (
+                  {post.tags?.map((tag: string) => (
                     <span key={tag} className={styles.tag} style={{ background: '#e0f2fe', color: '#0369a1' }}>
                       {tag}
                     </span>

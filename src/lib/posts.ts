@@ -11,7 +11,7 @@ export interface PostData {
   title: string;
   date: string;
   categories?: string | string[];
-  generatedTags?: string[];
+  tags?: string[];
   [key: string]: any;
 }
 
@@ -19,28 +19,24 @@ export interface PostWithContent extends PostData {
   contentHtml: string;
 }
 
-function generateTags(content: string, title: string): string[] {
-  const lowerContent = content.toLowerCase();
-  const lowerTitle = title.toLowerCase();
-  const generatedTags = new Set<string>();
+function getTags(data: any, title: string): string[] {
+  let tags: string[] = [];
   
-  const keywordDictionary = [
-    'Jekyll', 'GitHub', 'CTF', 'Bob', 'Fuzzing', 'Linux', 'Python', 
-    'Algorithm', 'Network', 'Security', 'AI', 'Web',
-    'LLM', 'React', 'Next.js', 'Vulnerability', 'Exploit', 'Pwn',
-    'Kernel', 'Syscall', 'Driver', 'Rootkit', 'Modbus', 'Packet',
-    'Syzkaller', 'Syzdirect', 'Recall', 'Precision', 'Confusion Matrix',
-    'Llama Guard', 'LLM Safeguard', 'Dataset', 'Docker', 'Automation'
-  ];
+  if (data.tags && Array.isArray(data.tags)) {
+    tags = [...data.tags];
+  }
 
-  keywordDictionary.forEach(kw => {
-    const lowerKw = kw.toLowerCase();
-    if (lowerContent.includes(lowerKw) || lowerTitle.includes(lowerKw)) {
-      generatedTags.add(kw);
+  // Manual Correction for "카테고리 없음"
+  if (tags.length === 1 && tags[0] === "카테고리 없음") {
+    const lowerTitle = title.toLowerCase();
+    if (lowerTitle.includes("cic dataset")) {
+      tags = ["Packet Analysis"];
+    } else if (lowerTitle.includes("modbus")) {
+      tags = ["ICS/OT Security"];
     }
-  });
+  }
 
-  return Array.from(generatedTags).slice(0, 4);
+  return tags.slice(0, 4);
 }
 
 export function getAllPosts(): PostData[] {
@@ -58,8 +54,8 @@ export function getAllPosts(): PostData[] {
 
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents);
-      
-      const generatedTags = generateTags(matterResult.content, matterResult.data.title || slug);
+      const title = matterResult.data.title || slug;
+      const tags = getTags(matterResult.data, title);
 
       // Extract date from filename if not present in frontmatter or to ensure consistency
       // Jekyll format: YYYY-MM-DD-title.md
@@ -70,10 +66,10 @@ export function getAllPosts(): PostData[] {
       return {
         ...matterResult.data,
         slug,
-        title: matterResult.data.title || slug,
+        title,
         date: matterResult.data.date ? (typeof matterResult.data.date === 'string' ? matterResult.data.date : matterResult.data.date.toISOString().split('T')[0]) : filenameDate,
         categories: matterResult.data.categories || [],
-        generatedTags,
+        tags,
       } as PostData;
     });
 
@@ -93,8 +89,8 @@ export async function getPostBySlug(slug: string): Promise<PostWithContent> {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
-  
-  const generatedTags = generateTags(matterResult.content, matterResult.data.title || slug);
+  const title = matterResult.data.title || slug;
+  const tags = getTags(matterResult.data, title);
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
@@ -110,9 +106,9 @@ export async function getPostBySlug(slug: string): Promise<PostWithContent> {
     ...matterResult.data,
     slug,
     contentHtml,
-    title: matterResult.data.title || slug,
+    title,
     date: matterResult.data.date ? (typeof matterResult.data.date === 'string' ? matterResult.data.date : matterResult.data.date.toISOString().split('T')[0]) : filenameDate,
     categories: matterResult.data.categories || [],
-    generatedTags,
+    tags,
   };
 }

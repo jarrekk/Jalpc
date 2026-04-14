@@ -19,18 +19,17 @@ export default function Home() {
       .filter((c): c is string => !!c)
       .map(c => c.toLowerCase());
     
-    const genTags = post.generatedTags || [];
-    const allTags = [...(Array.isArray(post.categories) ? post.categories : [post.categories]).filter((c): c is string => !!c), ...genTags];
+    const tags = post.tags || [];
 
     Object.entries(STANDARD_CATEGORIES).forEach(([standardCat, aliases]) => {
       const hasMatch = aliases.some(alias => 
         cats.includes(alias.toLowerCase()) || 
-        genTags.some(gt => gt.toLowerCase() === alias.toLowerCase())
+        tags.some(t => t.toLowerCase() === alias.toLowerCase())
       );
 
       if (hasMatch) {
         categoryStats[standardCat].count++;
-        allTags.forEach(tag => {
+        tags.forEach(tag => {
           const lowerTag = tag.toLowerCase();
           // Only add tags that are not the standard category itself or its aliases
           if (lowerTag !== standardCat.toLowerCase() && !aliases.includes(lowerTag)) {
@@ -44,10 +43,10 @@ export default function Home() {
   // Convert Sets to arrays and sort by frequency or just limit
   const categoryData = Object.entries(categoryStats).reduce((acc, [cat, stats]) => {
     // Sort subcategories by some heuristic if possible, or just take first few
-    // Here we just take the first 5 unique tags
+    // Here we just take the first 4 unique tags as per instructions
     acc[cat] = {
       count: stats.count,
-      subCategories: Array.from(stats.subCategories).slice(0, 5)
+      subCategories: Array.from(stats.subCategories).slice(0, 4)
     };
     return acc;
   }, {} as Record<string, { count: number; subCategories: string[] }>);

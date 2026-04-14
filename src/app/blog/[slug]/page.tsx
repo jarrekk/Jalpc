@@ -29,9 +29,9 @@ export default async function PostPage({ params }: Props) {
               </span>
             )}
           </div>
-          {post.generatedTags && post.generatedTags.length > 0 && (
+          {post.tags && post.tags.length > 0 && (
             <div className={styles.tagContainer} style={{ marginTop: '1.5rem' }}>
-              {post.generatedTags.map((tag: string) => (
+              {post.tags.map((tag: string) => (
                 <span key={tag} className={styles.tag} style={{ background: '#e0f2fe', color: '#0369a1', fontSize: '0.8rem', padding: '6px 12px' }}>
                   # {tag}
                 </span>
