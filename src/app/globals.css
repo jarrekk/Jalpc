@@ -37,7 +37,7 @@ body {
 
 body {
   background-color: var(--color-shallow);
-  color: var(--color-sand-light);
+  color: #333;
   font-family: var(--font-primary);
   line-height: 1.6;
 }
@@ -53,11 +53,10 @@ body {
 }
 
 section {
-  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 2rem 1rem;
   background: transparent;
   position: relative;
   z-index: 10;
@@ -69,45 +68,41 @@ section {
   width: 100%;
   text-align: center;
   z-index: 20;
-  background: rgba(0, 26, 51, 0.6);
-  padding: 4rem;
-  border-radius: 24px;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.4);
+  padding: 2.5rem;
+  border-radius: 12px;
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   opacity: 1;
 }
 
 h1 { 
-  font-family: 'Playfair Display', serif;
-  font-size: 5.5rem; 
-  margin-bottom: 2rem; 
-  color: white; 
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); 
+  font-family: var(--font-primary);
+  font-size: 4rem; 
+  margin-bottom: 1rem; 
+  color: #000000; 
   letter-spacing: -0.02em;
   font-weight: 800;
-  background: linear-gradient(180deg, #FFFFFF 0%, #B0E0E6 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 h2 { 
-  font-family: 'Playfair Display', serif;
-  font-size: 3.5rem; 
-  margin-bottom: 3rem; 
-  color: var(--color-shallow); 
+  font-family: var(--font-primary);
+  font-size: 2.5rem; 
+  margin-bottom: 1.5rem; 
+  color: #000000; 
   font-weight: 700;
   letter-spacing: -0.01em;
 }
 
 h3 { 
-  font-family: 'Playfair Display', serif;
-  font-size: 2rem; 
-  margin-bottom: 1.2rem; 
-  color: white; 
+  font-family: var(--font-primary);
+  font-size: 1.5rem; 
+  margin-bottom: 1rem; 
+  color: #000000; 
   font-weight: 600;
 }
-p { font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem; }
+p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem; color: #1a1a1a; }
 
 .career-timeline {
   display: flex;

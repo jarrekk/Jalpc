@@ -73,6 +73,7 @@ function Bubbles({ count = 1000 }) {
   });
 
   const pointsRef = useRef<THREE.Points>(null);
+  const materialRef = useRef<THREE.PointsMaterial>(null);
 
   useFrame((state) => {
     if (pointsRef.current) {
@@ -80,15 +81,31 @@ function Bubbles({ count = 1000 }) {
     }
   });
 
+  useLayoutEffect(() => {
+    if (materialRef.current) {
+      gsap.to(materialRef.current, {
+        opacity: 0.05,
+        size: 0.01,
+        scrollTrigger: {
+          trigger: 'body',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1,
+        },
+      });
+    }
+  }, []);
+
   return (
     <Points ref={pointsRef} positions={positions} stride={3} frustumCulled={false}>
       <PointMaterial
+        ref={materialRef}
         transparent
         color="#ffffff"
-        size={0.05}
+        size={0.08}
         sizeAttenuation={true}
         depthWrite={false}
-        opacity={0.4}
+        opacity={0.6}
       />
     </Points>
   );
