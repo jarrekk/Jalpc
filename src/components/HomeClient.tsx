@@ -151,11 +151,29 @@ export default function HomeClient({ categoryData }: HomeClientProps) {
                 <span style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>{CATEGORY_ICONS[category]}</span>
                 <span style={{ fontSize: '1.5rem', color: 'var(--color-sky-dark)', fontWeight: 800 }}>{count}</span>
                 <div style={{ textAlign: 'center' }}>
-                  <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.7rem', fontWeight: 600, opacity: 0.8, display: 'block' }}>{category}</span>
+                  <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem', fontWeight: 800, opacity: 0.9, display: 'block', color: 'white' }}>{category}</span>
                   {subCategories.length > 0 && (
-                    <span style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.25rem', display: 'block' }}>
-                      {subCategories.join(', ')}
-                    </span>
+                    <div style={{ 
+                      display: 'flex', 
+                      flexWrap: 'wrap', 
+                      justifyContent: 'center', 
+                      gap: '0.4rem', 
+                      marginTop: '0.75rem',
+                      maxWidth: '180px'
+                    }}>
+                      {subCategories.map(tag => (
+                        <span key={tag} style={{ 
+                          fontSize: '0.55rem', 
+                          background: 'rgba(255,255,255,0.08)', 
+                          padding: '0.1rem 0.4rem', 
+                          borderRadius: '4px',
+                          color: 'rgba(255,255,255,0.6)',
+                          border: '1px solid rgba(255,255,255,0.1)'
+                        }}>
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
                   )}
                 </div>
               </div>

@@ -11,11 +11,34 @@ export interface PostData {
   title: string;
   date: string;
   categories?: string | string[];
+  generatedTags?: string[];
   [key: string]: any;
 }
 
 export interface PostWithContent extends PostData {
   contentHtml: string;
+}
+
+function generateTags(content: string, title: string): string[] {
+  const lowerContent = content.toLowerCase();
+  const lowerTitle = title.toLowerCase();
+  const generatedTags = new Set<string>();
+  
+  const keywordDictionary = [
+    'Jekyll', 'GitHub', 'CTF', 'Bob', 'Fuzzing', 'Linux', 'Python', 
+    'Algorithm', 'Network', 'Security', 'AI', 'Web',
+    'LLM', 'React', 'Next.js', 'Vulnerability', 'Exploit', 'Pwn',
+    'Kernel', 'Syscall', 'Driver', 'Rootkit', 'Modbus', 'Packet'
+  ];
+
+  keywordDictionary.forEach(kw => {
+    const lowerKw = kw.toLowerCase();
+    if (lowerContent.includes(lowerKw) || lowerTitle.includes(lowerKw)) {
+      generatedTags.add(kw);
+    }
+  });
+
+  return Array.from(generatedTags);
 }
 
 export function getAllPosts(): PostData[] {
@@ -33,34 +56,8 @@ export function getAllPosts(): PostData[] {
 
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents);
-      const content = matterResult.content.toLowerCase();
-
-      // Intelligent Tagging
-      const tags = new Set<string>();
       
-      // Add existing categories
-      if (matterResult.data.categories) {
-        if (Array.isArray(matterResult.data.categories)) {
-          matterResult.data.categories.forEach((c: string) => tags.add(c));
-        } else {
-          tags.add(matterResult.data.categories);
-        }
-      }
-
-      // Keyword-based tagging
-      const keywordMap: Record<string, string[]> = {
-        'Kernel': ['linux', 'kernel', 'syscall', 'driver', 'rootkit'],
-        'Frontend': ['web', 'react', 'next.js', 'css', 'html', 'javascript', 'typescript'],
-        'AI/ML': ['ai', 'llm', 'machine learning', 'neural', 'guardrail', 'slm'],
-        'Security': ['exploit', 'vulnerability', 'pwn', 'ctf', 'security', 'fuzzing'],
-        'Network': ['tcp', 'udp', 'packet', 'network', 'protocol', 'modbus'],
-      };
-
-      Object.entries(keywordMap).forEach(([tag, keywords]) => {
-        if (keywords.some(kw => content.includes(kw))) {
-          tags.add(tag);
-        }
-      });
+      const generatedTags = generateTags(matterResult.content, matterResult.data.title || slug);
 
       // Extract date from filename if not present in frontmatter or to ensure consistency
       // Jekyll format: YYYY-MM-DD-title.md
@@ -73,7 +70,8 @@ export function getAllPosts(): PostData[] {
         slug,
         title: matterResult.data.title || slug,
         date: matterResult.data.date ? (typeof matterResult.data.date === 'string' ? matterResult.data.date : matterResult.data.date.toISOString().split('T')[0]) : filenameDate,
-        categories: Array.from(tags),
+        categories: matterResult.data.categories || [],
+        generatedTags,
       } as PostData;
     });
 
@@ -93,6 +91,8 @@ export async function getPostBySlug(slug: string): Promise<PostWithContent> {
 
   // Use gray-matter to parse the post metadata section
   const matterResult = matter(fileContents);
+  
+  const generatedTags = generateTags(matterResult.content, matterResult.data.title || slug);
 
   // Use remark to convert markdown into HTML string
   const processedContent = await remark()
@@ -111,5 +111,6 @@ export async function getPostBySlug(slug: string): Promise<PostWithContent> {
     title: matterResult.data.title || slug,
     date: matterResult.data.date ? (typeof matterResult.data.date === 'string' ? matterResult.data.date : matterResult.data.date.toISOString().split('T')[0]) : filenameDate,
     categories: matterResult.data.categories || [],
+    generatedTags,
   };
 }

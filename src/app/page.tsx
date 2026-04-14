@@ -15,31 +15,39 @@ export default function Home() {
   };
 
   posts.forEach(post => {
-    if (post.categories) {
-      const cats = (Array.isArray(post.categories) ? post.categories : [post.categories])
-        .map(c => c.toLowerCase());
-      
-      const subTags = (Array.isArray(post.categories) ? post.categories : [post.categories]);
+    const cats = (Array.isArray(post.categories) ? post.categories : [post.categories])
+      .filter((c): c is string => !!c)
+      .map(c => c.toLowerCase());
+    
+    const genTags = post.generatedTags || [];
+    const allTags = [...(Array.isArray(post.categories) ? post.categories : [post.categories]).filter((c): c is string => !!c), ...genTags];
 
-      Object.entries(STANDARD_CATEGORIES).forEach(([standardCat, aliases]) => {
-        if (aliases.some(alias => cats.includes(alias))) {
-          categoryStats[standardCat].count++;
-          subTags.forEach(tag => {
-            // Only add tags that are not the standard category itself (case insensitive)
-            if (tag.toLowerCase() !== standardCat.toLowerCase() && !aliases.includes(tag.toLowerCase())) {
-              categoryStats[standardCat].subCategories.add(tag);
-            }
-          });
-        }
-      });
-    }
+    Object.entries(STANDARD_CATEGORIES).forEach(([standardCat, aliases]) => {
+      const hasMatch = aliases.some(alias => 
+        cats.includes(alias.toLowerCase()) || 
+        genTags.some(gt => gt.toLowerCase() === alias.toLowerCase())
+      );
+
+      if (hasMatch) {
+        categoryStats[standardCat].count++;
+        allTags.forEach(tag => {
+          const lowerTag = tag.toLowerCase();
+          // Only add tags that are not the standard category itself or its aliases
+          if (lowerTag !== standardCat.toLowerCase() && !aliases.includes(lowerTag)) {
+            categoryStats[standardCat].subCategories.add(tag);
+          }
+        });
+      }
+    });
   });
 
-  // Convert Sets to arrays for the client component
+  // Convert Sets to arrays and sort by frequency or just limit
   const categoryData = Object.entries(categoryStats).reduce((acc, [cat, stats]) => {
+    // Sort subcategories by some heuristic if possible, or just take first few
+    // Here we just take the first 5 unique tags
     acc[cat] = {
       count: stats.count,
-      subCategories: Array.from(stats.subCategories).slice(0, 5) // Limit to top 5 subcategories
+      subCategories: Array.from(stats.subCategories).slice(0, 5)
     };
     return acc;
   }, {} as Record<string, { count: number; subCategories: string[] }>);
