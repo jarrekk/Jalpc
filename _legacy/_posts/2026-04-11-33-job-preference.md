@@ -9,7 +9,7 @@ tags: ["회고록"]
 icon: fa-sticky-note-o
 ---
 
-> Source: [https://sanghole.tistory.com/33/#comment28092251](https://sanghole.tistory.com/33/#comment28092251)
+> Source: [https://sanghole.tistory.com/33](https://sanghole.tistory.com/33)
 
 <p data-ke-size="size16"><span style="background-color: oklab(0.219499 0.00211129 -0.00744916); color: oklab(0.952614 0.000793397 -0.00253761); text-align: left;">연봉, 근무지역, 워라밸, 안정성, 성장가능성, 직무적합성, 자율성, 함께 일하는 사람, 조직문화, 명예, 회사 인지도, 재미</span></p>
 <p data-ke-size="size16">&nbsp;</p>
