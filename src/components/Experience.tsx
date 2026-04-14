@@ -1,7 +1,7 @@
 'use client';
 
 import { Canvas, useFrame } from '@react-three/fiber';
-import { Points, PointMaterial, Float, PerspectiveCamera } from '@react-three/drei';
+import { Points, PointMaterial, Float, PerspectiveCamera, useGLTF } from '@react-three/drei';
 import { useLayoutEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
@@ -10,21 +10,24 @@ import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 function Boat() {
-  const meshRef = useRef<THREE.Mesh>(null);
+  const meshRef = useRef<THREE.Group>(null);
+  const { scene } = useGLTF('/assets/media/models/boat.glb');
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.y += 0.01;
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.2;
+      meshRef.current.rotation.y += 0.005;
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.1;
     }
   });
 
   return (
     <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
-      <mesh ref={meshRef} position={[0, 0, 0]}>
-        <boxGeometry args={[1, 0.5, 2]} />
-        <meshStandardMaterial color="#8B4513" />
-      </mesh>
+      <primitive 
+        object={scene} 
+        ref={meshRef} 
+        scale={0.5} 
+        position={[0, 0, 0]} 
+      />
     </Float>
   );
 }
@@ -126,10 +129,10 @@ export default function Experience() {
         pointerEvents: 'none',
       }}
     >
-      <Canvas>
+      <Canvas shadows>
         <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 5]} />
-        <ambientLight intensity={0.5} />
-        <pointLight position={[10, 10, 10]} intensity={1} />
+        <ambientLight intensity={0.7} />
+        <directionalLight position={[10, 10, 10]} intensity={1.5} />
         <Boat />
         <Bubbles />
       </Canvas>

@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 
-const WAVES_URL = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3'; // Placeholder
-const DEEP_URL = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3'; // Placeholder
+const WAVES_URL = '/assets/media/audio/waves.mp3';
+const DEEP_URL = '/assets/media/audio/deep_ambient.mp3';
 
 export default function AudioController() {
   const wavesRef = useRef<HTMLAudioElement | null>(null);
@@ -77,9 +77,6 @@ export default function AudioController() {
     });
   };
 
-  // Automatically switch based on scroll could be added here or called from Experience.tsx
-  // For now, providing a simple UI toggle
-
   return (
     <div
       style={{
@@ -106,10 +103,30 @@ export default function AudioController() {
       </button>
       {isPlaying && (
         <>
-          <button onClick={playWaves} style={{ padding: '10px', cursor: 'pointer' }}>
+          <button 
+            onClick={playWaves} 
+            style={{ 
+              padding: '10px', 
+              cursor: 'pointer', 
+              background: currentTrack === 'waves' ? 'rgba(255,255,255,0.4)' : 'transparent',
+              border: '1px solid white',
+              color: 'white',
+              borderRadius: '5px'
+            }}
+          >
             Waves
           </button>
-          <button onClick={playDeep} style={{ padding: '10px', cursor: 'pointer' }}>
+          <button 
+            onClick={playDeep} 
+            style={{ 
+              padding: '10px', 
+              cursor: 'pointer',
+              background: currentTrack === 'deep' ? 'rgba(255,255,255,0.4)' : 'transparent',
+              border: '1px solid white',
+              color: 'white',
+              borderRadius: '5px'
+            }}
+          >
             Deep
           </button>
         </>
