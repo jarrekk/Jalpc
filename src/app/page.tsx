@@ -25,13 +25,34 @@ const skills = [
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
 
+  const careerItems = [
+    { title: "Undergraduate Research Intern", organization: "Sangmyung University", period: "2024 - Present", description: "Focusing on AI guardrails and OT security." },
+    { title: "BoB (Best of the Best) Graduate", organization: "KITRI", period: "2023 - 2024", description: "Completed the 12th Best of the Best information security program." },
+    { title: "Information Security Engineering Student", organization: "Sangmyung University", period: "2020 - Present", description: "Studying various aspects of information security." }
+  ];
+
   return (
     <div className="home-container">
       <section id="intro">
         <div className="content">
-          <h1>whysocscs</h1>
-          <p>Full Stack Engineer | Security Researcher | Traveler</p>
+          <h1>Lee Sangho</h1>
+          <p>Information Security Engineering student at Sangmyung University, BoB (Best of the Best) graduate, and Undergraduate Research Intern focusing on AI guardrails and OT security.</p>
           <div className="scroll-cue">Scroll Down ↓</div>
+        </div>
+      </section>
+
+      <section id="career">
+        <div className="content">
+          <h2>Career</h2>
+          <div className="career-timeline">
+            {careerItems.map((item, index) => (
+              <div key={index} className="career-item">
+                <h3>{item.title}</h3>
+                <div className="career-org">{item.organization} | {item.period}</div>
+                <p>{item.description}</p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -39,9 +60,9 @@ export default function Home() {
         <div className="content">
           <h2>About Me</h2>
           <p>
-            I am a Full Stack engineer with website development, automation Ops and writing scripts experience. 
-            Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. 
-            I can make lots of friends when I coding and travel.
+            I am passionate about information security and its intersection with AI. 
+            My research currently focuses on AI guardrails and securing Operational Technology (OT) environments. 
+            I enjoy continuous learning and applying my knowledge to solve complex security challenges.
           </p>
           
           <div className="skills-container" style={{ marginTop: '2rem' }}>
@@ -63,9 +84,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio">
+      <section id="projects">
         <div className="content">
-          <h2>Portfolio</h2>
+          <h2>Projects</h2>
           <div className="portfolio-grid">
             {portfolioItems.map((item) => (
               <div
@@ -84,10 +105,19 @@ export default function Home() {
       <section id="blog-teaser">
         <div className="content">
           <h2>From the Blog</h2>
-          <p>Check out my latest thoughts on security and web development.</p>
+          <p>Check out my latest thoughts on security and research.</p>
           <a href="/blog" className="blog-link">Visit Blog</a>
         </div>
       </section>
+
+      <footer className="site-footer">
+        <div className="footer-content">
+          <a href="https://github.com/whysocscs" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a href="mailto:kudo11111111@gmail.com">Email</a>
+          <a href="https://linkedin.com/in/whysocscs" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <p>© {new Date().getFullYear()} Lee Sangho. All rights reserved.</p>
+      </footer>
 
       {selectedItem && (
         <div className="modal-overlay" onClick={() => setSelectedItem(null)}>

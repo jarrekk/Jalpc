@@ -21,7 +21,8 @@ body {
 }
 
 body {
-  background-color: var(--color-deep);
+  background: linear-gradient(to bottom, var(--color-shallow), var(--color-deep));
+  background-attachment: fixed;
   color: var(--color-sand-light);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   transition: background-color 0.5s ease;
@@ -32,19 +33,85 @@ section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 4rem 2rem;
   background: transparent;
+  position: relative;
+  z-index: 1;
 }
 
 .content {
-  max-width: 800px;
+  max-width: 900px;
   text-align: center;
   z-index: 10;
+  background: rgba(0, 26, 51, 0.4);
+  padding: 3rem;
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-h1 { font-size: 4rem; margin-bottom: 1rem; }
-h2 { font-size: 3rem; margin-bottom: 2rem; }
-p { font-size: 1.2rem; line-height: 1.6; }
+h1 { font-size: 4.5rem; margin-bottom: 1.5rem; color: white; text-shadow: 0 0 20px rgba(0, 255, 255, 0.5); }
+h2 { font-size: 3rem; margin-bottom: 2.5rem; color: var(--color-shallow); }
+h3 { font-size: 1.8rem; margin-bottom: 1rem; color: white; }
+p { font-size: 1.25rem; line-height: 1.8; margin-bottom: 1.5rem; }
+
+.career-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: left;
+}
+
+.career-item {
+  border-left: 3px solid var(--color-teal);
+  padding-left: 2rem;
+  position: relative;
+}
+
+.career-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background: var(--color-shallow);
+  border-radius: 50%;
+  box-shadow: 0 0 10px var(--color-shallow);
+}
+
+.career-org {
+  font-weight: bold;
+  color: var(--color-shallow);
+  margin-bottom: 0.5rem;
+}
+
+.site-footer {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: rgba(0, 10, 20, 0.8);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(0, 139, 139, 0.3);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2rem;
+}
+
+.footer-content a {
+  color: var(--color-shallow);
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-content a:hover {
+  color: white;
+  transform: translateY(-3px);
+}
 
 .scroll-cue {
   margin-top: 2rem;

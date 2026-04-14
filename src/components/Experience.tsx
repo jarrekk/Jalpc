@@ -42,18 +42,20 @@ function Boat() {
 
   useFrame((state) => {
     if (meshRef.current) {
-      meshRef.current.rotation.y += 0.005;
-      meshRef.current.position.y = Math.sin(state.clock.elapsedTime) * 0.1;
+      // Gentle rocking
+      meshRef.current.rotation.z = Math.sin(state.clock.elapsedTime * 0.5) * 0.05;
+      meshRef.current.rotation.x = Math.cos(state.clock.elapsedTime * 0.5) * 0.02;
     }
   });
 
   return (
-    <Float speed={2} rotationIntensity={0.5} floatIntensity={0.5}>
+    <Float speed={1.5} rotationIntensity={0.2} floatIntensity={0.5}>
       <primitive 
         object={scene} 
         ref={meshRef} 
-        scale={0.5} 
-        position={[0, 0, 0]} 
+        scale={1.2} 
+        position={[0, -0.5, 0]} 
+        rotation={[0, Math.PI / 4, 0]}
       />
     </Float>
   );
@@ -98,8 +100,6 @@ export default function Experience() {
 
   useLayoutEffect(() => {
     const colors = [
-      '#F4E7C1', // sand-light
-      '#DCC6A0', // sand-wet
       '#9ADCD9', // shallow
       '#008B8B', // teal
       '#003366', // midsea
@@ -127,8 +127,8 @@ export default function Experience() {
 
     if (cameraRef.current) {
       gsap.to(cameraRef.current.position, {
-        z: 15,
-        y: -30,
+        z: 10,
+        y: -50,
         scrollTrigger: {
           trigger: 'body',
           start: 'top top',
