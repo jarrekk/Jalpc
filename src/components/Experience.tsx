@@ -2,12 +2,39 @@
 
 import { Canvas, useFrame } from '@react-three/fiber';
 import { Points, PointMaterial, Float, PerspectiveCamera, useGLTF } from '@react-three/drei';
-import { useLayoutEffect, useRef, useState } from 'react';
+import { useLayoutEffect, useRef, useState, Suspense, Component, ReactNode } from 'react';
 import * as THREE from 'three';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
+
+class ErrorBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { hasError: boolean }> {
+  constructor(props: { children: ReactNode; fallback: ReactNode }) {
+    super(props);
+    this.state = { hasError: false };
+  }
+
+  static getDerivedStateFromError() {
+    return { hasError: true };
+  }
+
+  render() {
+    if (this.state.hasError) {
+      return this.props.fallback;
+    }
+    return this.props.children;
+  }
+}
+
+function BoatFallback() {
+  return (
+    <mesh scale={0.5}>
+      <boxGeometry args={[1, 1, 1]} />
+      <meshStandardMaterial color="#008B8B" wireframe />
+    </mesh>
+  );
+}
 
 function Boat() {
   const meshRef = useRef<THREE.Group>(null);
@@ -133,7 +160,11 @@ export default function Experience() {
         <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 5]} />
         <ambientLight intensity={0.7} />
         <directionalLight position={[10, 10, 10]} intensity={1.5} />
-        <Boat />
+        <ErrorBoundary fallback={<BoatFallback />}>
+          <Suspense fallback={<BoatFallback />}>
+            <Boat />
+          </Suspense>
+        </ErrorBoundary>
         <Bubbles />
       </Canvas>
     </div>

@@ -13,12 +13,24 @@ export default function AudioController() {
   const [currentTrack, setCurrentTrack] = useState<'waves' | 'deep'>('waves');
 
   useEffect(() => {
-    wavesRef.current = new Audio(WAVES_URL);
-    deepRef.current = new Audio(DEEP_URL);
-    wavesRef.current.loop = true;
-    deepRef.current.loop = true;
-    wavesRef.current.volume = 0;
-    deepRef.current.volume = 0;
+    try {
+      wavesRef.current = new Audio(WAVES_URL);
+      deepRef.current = new Audio(DEEP_URL);
+
+      const handleAudioError = (e: ErrorEvent) => {
+        console.warn('Audio failed to load:', e);
+      };
+
+      wavesRef.current.addEventListener('error', handleAudioError as any);
+      deepRef.current.addEventListener('error', handleAudioError as any);
+
+      wavesRef.current.loop = true;
+      deepRef.current.loop = true;
+      wavesRef.current.volume = 0;
+      deepRef.current.volume = 0;
+    } catch (error) {
+      console.error('Failed to initialize audio:', error);
+    }
 
     return () => {
       wavesRef.current?.pause();
@@ -26,18 +38,28 @@ export default function AudioController() {
     };
   }, []);
 
-  const togglePlay = () => {
+  const safePlay = async (audio: HTMLAudioElement | null) => {
+    if (!audio) return;
+    try {
+      await audio.play();
+    } catch (err) {
+      console.warn('Audio playback was prevented or failed:', err);
+    }
+  };
+
+  const togglePlay = async () => {
     if (!isPlaying) {
-      if (currentTrack === 'waves') {
-        wavesRef.current?.play();
-        gsap.to(wavesRef.current!, { volume: 0.5, duration: 2 });
-      } else {
-        deepRef.current?.play();
-        gsap.to(deepRef.current!, { volume: 0.5, duration: 2 });
+      if (currentTrack === 'waves' && wavesRef.current) {
+        await safePlay(wavesRef.current);
+        gsap.to(wavesRef.current, { volume: 0.5, duration: 2 });
+      } else if (currentTrack === 'deep' && deepRef.current) {
+        await safePlay(deepRef.current);
+        gsap.to(deepRef.current, { volume: 0.5, duration: 2 });
       }
       setIsPlaying(true);
     } else {
-      gsap.to([wavesRef.current!, deepRef.current!], {
+      const activeAudios = [wavesRef.current, deepRef.current].filter((a): a is HTMLAudioElement => a !== null);
+      gsap.to(activeAudios, {
         volume: 0,
         duration: 2,
         onComplete: () => {
@@ -49,32 +71,40 @@ export default function AudioController() {
     }
   };
 
-  const playWaves = () => {
+  const playWaves = async () => {
     if (currentTrack === 'waves') return;
     setCurrentTrack('waves');
     if (!isPlaying) return;
 
-    wavesRef.current?.play();
-    gsap.to(wavesRef.current!, { volume: 0.5, duration: 2 });
-    gsap.to(deepRef.current!, {
-      volume: 0,
-      duration: 2,
-      onComplete: () => deepRef.current?.pause(),
-    });
+    if (wavesRef.current) {
+      await safePlay(wavesRef.current);
+      gsap.to(wavesRef.current, { volume: 0.5, duration: 2 });
+    }
+    if (deepRef.current) {
+      gsap.to(deepRef.current, {
+        volume: 0,
+        duration: 2,
+        onComplete: () => deepRef.current?.pause(),
+      });
+    }
   };
 
-  const playDeep = () => {
+  const playDeep = async () => {
     if (currentTrack === 'deep') return;
     setCurrentTrack('deep');
     if (!isPlaying) return;
 
-    deepRef.current?.play();
-    gsap.to(deepRef.current!, { volume: 0.5, duration: 2 });
-    gsap.to(wavesRef.current!, {
-      volume: 0,
-      duration: 2,
-      onComplete: () => wavesRef.current?.pause(),
-    });
+    if (deepRef.current) {
+      await safePlay(deepRef.current);
+      gsap.to(deepRef.current, { volume: 0.5, duration: 2 });
+    }
+    if (wavesRef.current) {
+      gsap.to(wavesRef.current, {
+        volume: 0,
+        duration: 2,
+        onComplete: () => wavesRef.current?.pause(),
+      });
+    }
   };
 
   return (
