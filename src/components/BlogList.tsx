@@ -10,84 +10,145 @@ interface BlogListProps {
 }
 
 const CATEGORY_ICONS: Record<string, string> = {
-  'All': '🌊',
   'Development': '💻',
   'CTF/Wargame': '🏁',
   'BugBounty': '🛡️',
   'Technical Document': '📄',
   'Paper/Conference': '📚',
-  'Contest/Certification': '🏆'
+  'Contest/Certification': '🏆',
+  'Etc': '⚓'
 };
 
 const CATEGORIES = Object.keys(CATEGORY_ICONS);
 
 export default function BlogList({ posts }: BlogListProps) {
-  const [selectedCategory, setSelectedCategory] = useState('All');
+  const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
 
   const filteredPosts = useMemo(() => {
+    if (!selectedCategory) return posts;
+    
     return posts.filter((post) => {
-      if (selectedCategory === 'All') return true;
-      
       const postCategories = Array.isArray(post.categories) 
         ? post.categories.map(c => c.trim().toLowerCase()) 
         : (typeof post.categories === 'string' ? [post.categories.trim().toLowerCase()] : []);
       
       const target = selectedCategory.toLowerCase();
 
+      if (target === 'etc') {
+        const mainCats = CATEGORIES.filter(c => c !== 'Etc').map(c => c.toLowerCase());
+        return postCategories.some(c => !mainCats.includes(c)) || postCategories.length === 0;
+      }
+
       // Broad matching for categories
       if (target === 'development') {
-        return postCategories.some(c => ['development', 'web', 'python', 'system'].includes(c));
+        return postCategories.some(c => ['development', 'web', 'python', 'system', 'programming'].includes(c));
       }
       if (target === 'ctf/wargame') {
-        return postCategories.some(c => ['ctf/wargame', 'ctf-wargame', 'ctf', 'pwn', 'web', 'reverse', 'crypto'].includes(c));
+        return postCategories.some(c => ['ctf/wargame', 'ctf-wargame', 'ctf', 'pwn', 'web', 'reverse', 'crypto', 'wargame'].includes(c));
       }
       if (target === 'bugbounty') {
-        return postCategories.some(c => ['bugbounty', 'bug bounty', 'security', 'research'].includes(c));
+        return postCategories.some(c => ['bugbounty', 'bug bounty', 'security', 'research', 'vulnerability'].includes(c));
       }
       if (target === 'technical document') {
-        return postCategories.some(c => ['technical document', 'technicaldocument', 'document'].includes(c));
+        return postCategories.some(c => ['technical document', 'technicaldocument', 'document', 'guide', 'tutorial'].includes(c));
       }
       if (target === 'paper/conference') {
-        return postCategories.some(c => ['paper/conference', 'paper-conference', 'paper', 'conference', 'academic'].includes(c));
+        return postCategories.some(c => ['paper/conference', 'paper-conference', 'paper', 'conference', 'academic', 'publication'].includes(c));
       }
       if (target === 'contest/certification') {
-        return postCategories.some(c => ['contest/certification', 'contest-certification', 'contest', 'certification', 'others'].includes(c));
+        return postCategories.some(c => ['contest/certification', 'contest-certification', 'contest', 'certification', 'award'].includes(c));
       }
 
       return postCategories.includes(target);
     });
   }, [posts, selectedCategory]);
 
+  const subCategories = useMemo(() => {
+    const cats = new Set<string>();
+    filteredPosts.forEach(post => {
+      if (Array.isArray(post.categories)) {
+        post.categories.forEach(c => cats.add(c.trim()));
+      } else if (typeof post.categories === 'string') {
+        cats.add(post.categories.trim());
+      }
+    });
+    return Array.from(cats).sort();
+  }, [filteredPosts]);
+
+  if (!selectedCategory) {
+    return (
+      <div className={styles.categoryGridContainer}>
+        <header className={styles.header} style={{ marginBottom: '4rem' }}>
+          <h1 style={{ fontSize: '3.5rem', fontFamily: 'var(--font-display)', textTransform: 'uppercase' }}>Archive</h1>
+          <p style={{ fontSize: '1.2rem', opacity: 0.6 }}>Explore by technical domain</p>
+        </header>
+        <div className={styles.categoryGrid}>
+          {CATEGORIES.map(cat => (
+            <div 
+              key={cat} 
+              className={styles.categoryCard}
+              onClick={() => setSelectedCategory(cat)}
+            >
+              <span className={styles.categoryIcon}>{CATEGORY_ICONS[cat]}</span>
+              <h2 className={styles.categoryTitle}>{cat}</h2>
+              <span className={styles.postCount}>
+                {posts.filter(p => {
+                  const pcats = Array.isArray(p.categories) ? p.categories.map(c => c.toLowerCase()) : [];
+                  if (cat === 'Etc') {
+                    const mainCats = CATEGORIES.filter(c => c !== 'Etc').map(c => c.toLowerCase());
+                    return pcats.some(c => !mainCats.includes(c)) || pcats.length === 0;
+                  }
+                  const target = cat.toLowerCase();
+                  if (target === 'development') return pcats.some(c => ['development', 'web', 'python', 'system', 'programming'].includes(c));
+                  if (target === 'ctf/wargame') return pcats.some(c => ['ctf/wargame', 'ctf-wargame', 'ctf', 'pwn', 'web', 'reverse', 'crypto', 'wargame'].includes(c));
+                  if (target === 'bugbounty') return pcats.some(c => ['bugbounty', 'bug bounty', 'security', 'research', 'vulnerability'].includes(c));
+                  if (target === 'technical document') return pcats.some(c => ['technical document', 'technicaldocument', 'document', 'guide', 'tutorial'].includes(c));
+                  if (target === 'paper/conference') return pcats.some(c => ['paper/conference', 'paper-conference', 'paper', 'conference', 'academic', 'publication'].includes(c));
+                  if (target === 'contest/certification') return pcats.some(c => ['contest/certification', 'contest-certification', 'contest', 'certification', 'award'].includes(c));
+                  return pcats.includes(target);
+                }).length} Posts
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.blogLayout}>
       {/* Sidebar */}
       <aside className={styles.sidebar}>
-        <h2 style={{ fontSize: '1.2rem', textTransform: 'uppercase', letterSpacing: '0.1em', marginBottom: '2rem', opacity: 0.7 }}>Categories</h2>
-        <nav>
-          <ul className={styles.categoryList}>
-            {CATEGORIES.map(cat => (
-              <li key={cat} className={styles.mainCategoryItem}>
-                <button
-                  onClick={() => setSelectedCategory(cat)}
-                  className={`${styles.categoryButton} ${selectedCategory === cat ? styles.activeCategory : ''}`}
-                  style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', width: '100%', textAlign: 'left' }}
-                >
-                  <span style={{ fontSize: '1.2rem' }}>{CATEGORY_ICONS[cat]}</span>
-                  <span>{cat}</span>
-                </button>
+        <button 
+          onClick={() => setSelectedCategory(null)}
+          className={styles.backButton}
+        >
+          ← All Categories
+        </button>
+        <div className={styles.sidebarSection}>
+          <h3>Current</h3>
+          <div className={styles.activeCategoryDisplay}>
+            <span>{CATEGORY_ICONS[selectedCategory]}</span>
+            <strong>{selectedCategory}</strong>
+          </div>
+        </div>
+        <div className={styles.sidebarSection}>
+          <h3>Sub-categories</h3>
+          <ul className={styles.subCategoryList}>
+            {subCategories.map(sub => (
+              <li key={sub} className={styles.subCategoryItem}>
+                #{sub}
               </li>
             ))}
           </ul>
-        </nav>
+        </div>
       </aside>
 
       {/* Main Content */}
       <main className={styles.mainContent}>
         <header className={styles.header}>
-          <h1 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Archive</h1>
-          <p>
-            {selectedCategory} ({filteredPosts.length} posts)
-          </p>
+          <h1>{selectedCategory}</h1>
+          <p>{filteredPosts.length} posts discovered</p>
         </header>
 
         <div className={styles.postGrid}>
@@ -132,3 +193,4 @@ export default function BlogList({ posts }: BlogListProps) {
     </div>
   );
 }
+

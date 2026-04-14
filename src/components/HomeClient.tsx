@@ -50,6 +50,28 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
       );
     }
 
+    // Background color animation
+    gsap.to('body', {
+      backgroundColor: '#001A33', // var(--color-deep)
+      scrollTrigger: {
+        trigger: 'footer',
+        start: 'top bottom',
+        end: 'bottom bottom',
+        scrub: true,
+      }
+    });
+
+    // Darken progressively as we scroll down
+    gsap.to('body', {
+      backgroundColor: '#003366', // var(--color-midsea)
+      scrollTrigger: {
+        trigger: '#projects',
+        start: 'top 80%',
+        end: 'bottom 20%',
+        scrub: true,
+      }
+    });
+
     if (careerRef.current) {
       gsap.from(careerRef.current.querySelectorAll('.career-item'), {
         opacity: 0,
@@ -67,7 +89,7 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
 
   return (
     <div className="home-container" style={{ position: 'relative', zIndex: 20 }}>
-      <section id="intro" style={{ minHeight: 'auto', padding: '6rem 2rem' }}>
+      <section id="intro" style={{ minHeight: '90vh', padding: '10rem 2rem' }}>
         <div style={{ maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
           <h1 ref={nameRef} style={{ fontSize: '5rem', marginBottom: '0.5rem' }}>
             Lee Sangho
@@ -80,9 +102,9 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
       </section>
 
       <section id="career" style={{ 
-        background: 'linear-gradient(180deg, rgba(0,26,51,0) 0%, rgba(0,26,51,0.8) 20%, rgba(0,26,51,1) 50%, rgba(0,26,51,0.8) 80%, rgba(0,26,51,0) 100%)',
-        padding: '10rem 2rem',
-        margin: '5rem 0'
+        background: 'linear-gradient(180deg, rgba(106,183,180,0.1) 0%, rgba(0,26,51,0.9) 50%, rgba(0,26,51,1) 100%)',
+        padding: '15rem 2rem',
+        margin: '10rem 0'
       }}>
         <div className="content" style={{ background: 'rgba(255,255,255,0.05)', color: 'white', border: '1px solid rgba(0,139,139,0.3)' }}>
           <h2 style={{ color: 'white' }}>Career</h2>
@@ -98,7 +120,7 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
         </div>
       </section>
 
-      <section id="projects">
+      <section id="projects" style={{ padding: '15rem 2rem', margin: '5rem 0' }}>
         <div className="content">
           <h2>Projects</h2>
           <div className="portfolio-grid">
@@ -116,7 +138,7 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
         </div>
       </section>
 
-      <section id="blog-teaser">
+      <section id="blog-teaser" style={{ padding: '15rem 2rem' }}>
         <div className="content">
           <h2>Blog</h2>
           <div style={{ 
@@ -127,23 +149,24 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
           }}>
             {Object.entries(categoryCounts).map(([category, count]) => (
               <div key={category} style={{ 
-                background: 'rgba(0,0,0,0.05)', 
+                background: 'rgba(255,255,255,0.1)', 
                 padding: '1.5rem 1rem', 
                 borderRadius: '12px', 
                 fontSize: '0.9rem', 
                 fontWeight: 700,
-                border: '1px solid rgba(0,0,0,0.1)',
+                border: '1px solid rgba(255,255,255,0.1)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 gap: '0.5rem',
                 transition: 'transform 0.3s ease',
-                cursor: 'default'
+                cursor: 'default',
+                color: 'white'
               }}
               onMouseEnter={(e) => e.currentTarget.style.transform = 'translateY(-5px)'}
               onMouseLeave={(e) => e.currentTarget.style.transform = 'translateY(0)'}
               >
-                <span style={{ fontSize: '1.2rem', color: 'var(--color-teal)' }}>{count}</span>
+                <span style={{ fontSize: '1.2rem', color: 'var(--color-shallow)' }}>{count}</span>
                 <span style={{ textTransform: 'uppercase', letterSpacing: '0.05em', fontSize: '0.75rem' }}>{category}</span>
               </div>
             ))}

@@ -57,7 +57,7 @@ export default function BubbleParticles() {
     const handleMouseMove = (e: MouseEvent) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
-      for (let i = 0; i < 2; i++) {
+      if (Math.random() < 0.3) {
         particles.push(new Particle(mouse.x, mouse.y));
       }
     };

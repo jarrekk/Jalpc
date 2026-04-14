@@ -258,7 +258,128 @@
   color: #333333;
 }
 
+.categoryGridContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 8rem 2rem;
+  text-align: center;
+  min-height: 100vh;
+  background: white;
+  position: relative;
+  z-index: 30;
+}
+
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.categoryCard {
+  background: #fafafa;
+  padding: 4rem 2rem;
+  border-radius: 16px;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.categoryCard:hover {
+  transform: translateY(-10px);
+  background: white;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border-color: var(--color-teal);
+}
+
+.categoryIcon {
+  font-size: 3.5rem;
+}
+
+.categoryTitle {
+  font-size: 1.5rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #111111;
+}
+
+.postCount {
+  font-size: 0.9rem;
+  color: #888888;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: #888888;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.backButton:hover {
+  color: #111111;
+}
+
+.sidebarSection {
+  margin-bottom: 3rem;
+}
+
+.sidebarSection h3 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #999999;
+  margin-bottom: 1rem;
+}
+
+.activeCategoryDisplay {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.25rem;
+  color: #111111;
+}
+
+.subCategoryList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.subCategoryItem {
+  font-size: 0.95rem;
+  color: #666666;
+  font-weight: 500;
+  cursor: default;
+}
+
+@media (max-width: 1024px) {
+  .categoryGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
+  .categoryGrid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
   .blogLayout {
     flex-direction: column;
   }
@@ -274,3 +395,4 @@
     padding: 2rem;
   }
 }
+

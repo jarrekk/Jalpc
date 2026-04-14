@@ -3,19 +3,17 @@
 :root {
   --color-sand-light: #F4E7C1;
   --color-sand-wet: #DCC6A0;
-  --color-shallow: #9ADCD9;
+  --color-shallow: #88C9C6; /* Slightly darker than #9ADCD9 */
+  --color-upper-sea: #6AB7B4;
   --color-teal: #008B8B;
   --color-midsea: #003366;
   --color-deep: #001A33;
+  --bg-current: var(--color-shallow);
 
-  /* Font Options - Choose by changing --font-primary and --font-display */
-  /* Option 1: Modern & Solid (Default) */
+  /* Font Options */
   --font-modern-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  /* Option 2: Geometric & Bold */
   --font-geometric: 'Montserrat', sans-serif;
-  /* Option 3: Tech & Precise */
   --font-tech-mono: 'JetBrains Mono', monospace;
-  /* Option 4: Classic Serif */
   --font-elegant-serif: 'Playfair Display', serif;
 
   --font-primary: var(--font-modern-sans);
@@ -36,10 +34,11 @@ body {
 }
 
 body {
-  background-color: var(--color-shallow);
+  background-color: var(--bg-current);
   color: #333;
   font-family: var(--font-primary);
   line-height: 1.6;
+  transition: background-color 0.5s ease;
 }
 
 .bg-fixed {
@@ -49,14 +48,14 @@ body {
   width: 100vw;
   height: 100vh;
   z-index: -10;
-  background-color: var(--color-shallow);
+  background-color: inherit;
 }
 
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem 1rem;
+  padding: 8rem 2rem; /* Increased vertical padding */
   background: transparent;
   position: relative;
   z-index: 10;
