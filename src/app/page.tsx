@@ -126,8 +126,8 @@ export default function Home() {
   useEffect(() => {
     if (nameRef.current) {
       gsap.fromTo(nameRef.current, 
-        { opacity: 0, y: 30 },
-        { opacity: 1, y: 0, duration: 1.5, ease: "power4.out" }
+        { opacity: 0, y: 50, scale: 0.95 },
+        { opacity: 1, y: 0, scale: 1, duration: 2, ease: "expo.out" }
       );
     }
 
@@ -140,37 +140,40 @@ export default function Home() {
         ease: 'power3.out',
         scrollTrigger: {
           trigger: careerRef.current,
-          start: 'top 80%',
+          start: 'top 85%',
         }
       });
     }
   }, []);
 
   const careerItems = [
-    { title: "Intern", organization: "Confidential", period: "2026.01 - 2026.02", description: "Winter Internship." },
-    { title: "BoB (Best of the Best) Graduate", organization: "KITRI", period: "2025.06 - 2025.12", description: "Completed the 14th Best of the Best information security program." },
-    { title: "Information Security Engineering", organization: "Sangmyung University", period: "2021 - Present", description: "Pursuing a degree in Information Security." }
+    { title: "Intern", organization: "Confidential", period: "2026.01 - 2026.02", description: "Winter Internship focused on security research." },
+    { title: "BoB (Best of the Best) Graduate", organization: "KITRI", period: "2025.06 - 2025.12", description: "Completed the 14th Best of the Best information security program, specializing in advanced security research." },
+    { title: "Information Security Engineering", organization: "Sangmyung University", period: "2021 - Present", description: "Pursuing a degree in Information Security Engineering, focusing on AI-driven security." }
   ];
 
   return (
-    <div className="home-container">
-      <section id="intro">
-        <div className="content">
-          <h1 ref={nameRef}>Lee Sangho</h1>
-          <p style={{ fontSize: '1.5rem', fontWeight: 300, color: 'var(--color-shallow)' }}>
-            Information Security Engineering at Sangmyung University
+    <div className="home-container" style={{ position: 'relative', zIndex: 20 }}>
+      <section id="intro" style={{ position: 'relative', overflow: 'hidden' }}>
+        <div className="content" style={{ background: 'rgba(0, 26, 51, 0.7)', backdropFilter: 'blur(15px)' }}>
+          <h1 ref={nameRef} style={{ fontSize: '6rem', letterSpacing: '-0.03em', marginBottom: '1rem' }}>
+            Lee Sangho
+          </h1>
+          <div style={{ width: '100px', height: '4px', background: 'var(--color-teal)', margin: '1.5rem auto', borderRadius: '2px' }} />
+          <p style={{ fontSize: '1.6rem', fontWeight: 400, color: 'var(--color-shallow)', maxWidth: '800px', margin: '0 auto' }}>
+            Security Researcher & AI Enthusiast
           </p>
-          <div className="scroll-cue">Scroll Down ↓</div>
+          <div className="scroll-cue" style={{ marginTop: '4rem', opacity: 0.8 }}>Scroll to Explore ↓</div>
         </div>
       </section>
 
       <section id="career">
         <div className="content">
-          <h2>Career</h2>
+          <h2 style={{ fontFamily: "'Playfair Display', serif" }}>Career Journey</h2>
           <div ref={careerRef} className="career-timeline">
             {careerItems.map((item, index) => (
               <div key={index} className="career-item">
-                <h3>{item.title}</h3>
+                <h3 style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
                 <div className="career-org">{item.organization} | {item.period}</div>
                 <p>{item.description}</p>
               </div>
@@ -218,9 +221,9 @@ export default function Home() {
 
       <section id="blog-teaser">
         <div className="content">
-          <h2>From the Blog</h2>
-          <p>Check out my latest thoughts on security and research.</p>
-          <a href="/blog" className="blog-link">Visit Blog</a>
+          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 800 }}>Logs & Insights</h2>
+          <p>Explore my technical journey and research findings.</p>
+          <a href="/blog" className="blog-link">Enter Archive</a>
         </div>
       </section>
 
