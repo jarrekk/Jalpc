@@ -33,6 +33,34 @@ export function getAllPosts(): PostData[] {
 
       // Use gray-matter to parse the post metadata section
       const matterResult = matter(fileContents);
+      const content = matterResult.content.toLowerCase();
+
+      // Intelligent Tagging
+      const tags = new Set<string>();
+      
+      // Add existing categories
+      if (matterResult.data.categories) {
+        if (Array.isArray(matterResult.data.categories)) {
+          matterResult.data.categories.forEach((c: string) => tags.add(c));
+        } else {
+          tags.add(matterResult.data.categories);
+        }
+      }
+
+      // Keyword-based tagging
+      const keywordMap: Record<string, string[]> = {
+        'Kernel': ['linux', 'kernel', 'syscall', 'driver', 'rootkit'],
+        'Frontend': ['web', 'react', 'next.js', 'css', 'html', 'javascript', 'typescript'],
+        'AI/ML': ['ai', 'llm', 'machine learning', 'neural', 'guardrail', 'slm'],
+        'Security': ['exploit', 'vulnerability', 'pwn', 'ctf', 'security', 'fuzzing'],
+        'Network': ['tcp', 'udp', 'packet', 'network', 'protocol', 'modbus'],
+      };
+
+      Object.entries(keywordMap).forEach(([tag, keywords]) => {
+        if (keywords.some(kw => content.includes(kw))) {
+          tags.add(tag);
+        }
+      });
 
       // Extract date from filename if not present in frontmatter or to ensure consistency
       // Jekyll format: YYYY-MM-DD-title.md
@@ -45,7 +73,7 @@ export function getAllPosts(): PostData[] {
         slug,
         title: matterResult.data.title || slug,
         date: matterResult.data.date ? (typeof matterResult.data.date === 'string' ? matterResult.data.date : matterResult.data.date.toISOString().split('T')[0]) : filenameDate,
-        categories: matterResult.data.categories || [],
+        categories: Array.from(tags),
       } as PostData;
     });
 

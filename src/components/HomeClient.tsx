@@ -35,10 +35,10 @@ const careerItems = [
 ];
 
 interface HomeClientProps {
-  categoryCounts: Record<string, number>;
+  categoryData: Record<string, { count: number; subCategories: string[] }>;
 }
 
-export default function HomeClient({ categoryCounts }: HomeClientProps) {
+export default function HomeClient({ categoryData }: HomeClientProps) {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
   const nameRef = useRef<HTMLHeadingElement>(null);
   const careerRef = useRef<HTMLDivElement>(null);
@@ -123,7 +123,7 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
             gap: '1.5rem', 
             margin: '3rem 0' 
           }}>
-            {Object.entries(categoryCounts).map(([category, count]) => (
+            {Object.entries(categoryData).map(([category, { count, subCategories }]) => (
               <div key={category} style={{ 
                 background: 'rgba(255,255,255,0.05)', 
                 padding: '2rem 1rem', 
@@ -150,7 +150,14 @@ export default function HomeClient({ categoryCounts }: HomeClientProps) {
               >
                 <span style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>{CATEGORY_ICONS[category]}</span>
                 <span style={{ fontSize: '1.5rem', color: 'var(--color-sky-dark)', fontWeight: 800 }}>{count}</span>
-                <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.7rem', fontWeight: 600, opacity: 0.8 }}>{category}</span>
+                <div style={{ textAlign: 'center' }}>
+                  <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.7rem', fontWeight: 600, opacity: 0.8, display: 'block' }}>{category}</span>
+                  {subCategories.length > 0 && (
+                    <span style={{ fontSize: '0.6rem', color: 'rgba(255,255,255,0.5)', marginTop: '0.25rem', display: 'block' }}>
+                      {subCategories.join(', ')}
+                    </span>
+                  )}
+                </div>
               </div>
             ))}
           </div>

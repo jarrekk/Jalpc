@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@700;800&family=Roboto:wght@400;700&display=swap');
 
 :root {
+  --color-step1: #C2F2FF;
+  --color-step2: #7EC8E3;
+  --color-step3: #0000FF;
+  --color-step4: #000C66;
+  --color-step5: #050A30;
   --color-sky-dark: #0077be;
   --color-navy-deepest: #00050a;
   --color-sand-light: #F4E7C1;
@@ -36,7 +41,13 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, var(--color-sky-dark) 0%, var(--color-navy-deepest) 100%);
+  background: linear-gradient(180deg, 
+    var(--color-step1) 0%, 
+    var(--color-step2) 25%, 
+    var(--color-step3) 50%, 
+    var(--color-step4) 75%, 
+    var(--color-step5) 100%
+  );
   color: #fff;
   font-family: var(--font-primary);
   line-height: 1.6;
