@@ -1,0 +1,99 @@
+.blog-content {
+  line-height: 1.6;
+  color: var(--color-sand-light);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.blog-content h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-shallow);
+}
+
+.blog-content h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: var(--color-shallow);
+}
+
+.blog-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: var(--color-shallow);
+}
+
+.blog-content p {
+  margin-bottom: 1.25rem;
+  opacity: 0.9;
+}
+
+.blog-content ul, .blog-content ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.blog-content ul {
+  list-style-type: disc;
+}
+
+.blog-content ol {
+  list-style-type: decimal;
+}
+
+.blog-content li {
+  margin-bottom: 0.5rem;
+}
+
+.blog-content blockquote {
+  border-left: 4px solid var(--color-teal);
+  padding-left: 1rem;
+  font-style: italic;
+  margin-bottom: 1.25rem;
+  color: var(--color-sand-wet);
+}
+
+.blog-content pre {
+  background-color: var(--color-midsea);
+  padding: 1rem;
+  border-radius: 0.375rem;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+  border: 1px solid var(--color-teal);
+}
+
+.blog-content code {
+  background-color: var(--color-midsea);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  font-size: 0.875em;
+  color: var(--color-shallow);
+}
+
+.blog-content pre code {
+  background-color: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.blog-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1.25rem;
+  border-radius: 0.375rem;
+}
+
+.blog-content a {
+  color: var(--color-shallow);
+  text-decoration: underline;
+}
+
+.blog-content a:hover {
+  color: var(--color-teal);
+}
