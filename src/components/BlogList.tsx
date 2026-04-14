@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
 import { PostData } from '@/lib/posts';
+import styles from '@/app/blog/blog.module.css';
 
 interface BlogListProps {
   posts: PostData[];
@@ -40,14 +41,11 @@ export default function BlogList({ posts }: BlogListProps) {
       }
 
       // If only main category is selected
-      // Check if post category matches main category
       if (postCategories.includes(mainTarget)) return true;
       
-      // Special case for grouped categories
       const subs = CATEGORY_STRUCTURE[selectedMainCategory].map(s => s.toLowerCase());
       if (subs.some(sub => postCategories.includes(sub))) return true;
 
-      // Special handling for TechnicalDocument vs Technical Document
       if (mainTarget === 'academic' && (postCategories.includes('technicaldocument') || postCategories.includes('technical document') || postCategories.includes('paper-conference'))) {
         return true;
       }
@@ -70,58 +68,27 @@ export default function BlogList({ posts }: BlogListProps) {
   };
 
   return (
-    <div className="blog-layout" style={{ display: 'flex', minHeight: '100vh', color: 'white', background: 'transparent' }}>
+    <div className={styles.blogLayout}>
       {/* Sidebar */}
-      <aside style={{ 
-        width: '280px', 
-        padding: '4rem 2rem', 
-        borderRight: '1px solid rgba(255,255,255,0.1)',
-        background: 'rgba(0, 26, 51, 0.2)',
-        backdropFilter: 'blur(10px)',
-        position: 'sticky',
-        top: 0,
-        height: '100vh',
-        overflowY: 'auto'
-      }}>
-        <h2 style={{ fontSize: '1.5rem', marginBottom: '2rem', color: 'var(--color-shallow)' }}>Categories</h2>
+      <aside className={styles.sidebar}>
+        <h2>Categories</h2>
         <nav>
-          <ul style={{ listStyle: 'none', padding: 0 }}>
+          <ul className={styles.categoryList}>
             {Object.keys(CATEGORY_STRUCTURE).map(mainCat => (
-              <li key={mainCat} style={{ marginBottom: '1rem' }}>
+              <li key={mainCat} className={styles.mainCategoryItem}>
                 <button
                   onClick={() => handleMainCategoryClick(mainCat)}
-                  style={{
-                    background: 'none',
-                    border: 'none',
-                    color: selectedMainCategory === mainCat ? 'var(--color-shallow)' : 'rgba(255,255,255,0.7)',
-                    fontSize: '1.1rem',
-                    fontWeight: selectedMainCategory === mainCat ? '700' : '400',
-                    cursor: 'pointer',
-                    textAlign: 'left',
-                    width: '100%',
-                    padding: '0.5rem 0',
-                    transition: 'color 0.2s'
-                  }}
+                  className={`${styles.categoryButton} ${selectedMainCategory === mainCat ? styles.activeCategory : ''}`}
                 >
                   {mainCat}
                 </button>
                 {selectedMainCategory === mainCat && CATEGORY_STRUCTURE[mainCat].length > 0 && (
-                  <ul style={{ listStyle: 'none', paddingLeft: '1.5rem', marginTop: '0.5rem' }}>
+                  <ul className={styles.subCategoryList}>
                     {CATEGORY_STRUCTURE[mainCat].map(subCat => (
                       <li key={subCat}>
                         <button
                           onClick={() => setSelectedSubCategory(subCat === selectedSubCategory ? null : subCat)}
-                          style={{
-                            background: 'none',
-                            border: 'none',
-                            color: selectedSubCategory === subCat ? 'white' : 'rgba(255,255,255,0.5)',
-                            fontSize: '0.9rem',
-                            cursor: 'pointer',
-                            textAlign: 'left',
-                            width: '100%',
-                            padding: '0.3rem 0',
-                            transition: 'color 0.2s'
-                          }}
+                          className={`${styles.subCategoryButton} ${selectedSubCategory === subCat ? styles.activeSubCategory : ''}`}
                         >
                           {subCat}
                         </button>
@@ -136,53 +103,38 @@ export default function BlogList({ posts }: BlogListProps) {
       </aside>
 
       {/* Main Content */}
-      <main style={{ flex: 1, padding: '4rem 3rem', maxWidth: '1000px' }}>
-        <header style={{ marginBottom: '4rem' }}>
-          <h1 style={{ fontSize: '3.5rem', fontWeight: 800, marginBottom: '1rem', letterSpacing: '-0.03em' }}>Blog</h1>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '1.1rem' }}>
+      <main className={styles.mainContent}>
+        <header className={styles.header}>
+          <h1>Blog</h1>
+          <p>
             {selectedMainCategory} {selectedSubCategory ? `> ${selectedSubCategory}` : ''} ({filteredPosts.length} posts)
           </p>
         </header>
 
-        <div style={{ display: 'grid', gap: '2.5rem' }}>
+        <div className={styles.postGrid}>
           {filteredPosts.map((post) => (
             <Link 
               key={post.slug} 
               href={`/blog/${post.slug}`} 
-              style={{ textDecoration: 'none', color: 'inherit' }}
+              className={styles.postItem}
             >
-              <article style={{
-                paddingBottom: '2.5rem',
-                borderBottom: '1px solid rgba(255,255,255,0.1)',
-                transition: 'opacity 0.2s'
-              }}
-              className="blog-item"
-              >
-                <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: '1rem' }}>
-                  <h2 style={{ fontSize: '1.8rem', fontWeight: 700, margin: 0, letterSpacing: '-0.02em' }}>
+              <article className={styles.postArticle}>
+                <div className={styles.postHeader}>
+                  <h2 className={styles.postTitle}>
                     {post.title}
                   </h2>
-                  <time style={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.9rem', whiteSpace: 'nowrap', marginLeft: '2rem' }}>
+                  <time className={styles.postDate}>
                     {post.date}
                   </time>
                 </div>
                 {post.desc && (
-                  <p style={{ color: 'rgba(255,255,255,0.7)', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '1.5rem' }}>
+                  <p className={styles.postDesc}>
                     {post.desc}
                   </p>
                 )}
-                <div style={{ display: 'flex', gap: '0.8rem', flexWrap: 'wrap' }}>
+                <div className={styles.tagContainer}>
                   {Array.isArray(post.categories) && post.categories.map((cat: string) => (
-                    <span key={cat} style={{ 
-                      fontSize: '0.75rem', 
-                      color: 'var(--color-shallow)',
-                      background: 'rgba(154, 220, 217, 0.1)', 
-                      padding: '4px 12px', 
-                      borderRadius: '20px',
-                      fontWeight: 600,
-                      textTransform: 'uppercase',
-                      letterSpacing: '0.05em'
-                    }}>
+                    <span key={cat} className={styles.tag}>
                       {cat}
                     </span>
                   ))}
@@ -198,28 +150,6 @@ export default function BlogList({ posts }: BlogListProps) {
           </div>
         )}
       </main>
-
-      <style jsx>{`
-        .blog-item:hover {
-          opacity: 0.8;
-        }
-        @media (max-width: 768px) {
-          .blog-layout {
-            flex-direction: column;
-          }
-          aside {
-            width: 100% !important;
-            height: auto !important;
-            position: relative !important;
-            border-right: none !important;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding: 2rem !important;
-          }
-          main {
-            padding: 2rem !important;
-          }
-        }
-      `}</style>
     </div>
   );
 }

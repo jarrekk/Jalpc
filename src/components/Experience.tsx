@@ -117,13 +117,26 @@ export default function Experience() {
 
     colors.forEach((color, i) => {
       if (i < colors.length - 1) {
-        tl.to('body', {
+        tl.to('#bg-fixed', {
           backgroundColor: colors[i + 1],
           duration: 1,
           ease: 'none',
         });
       }
     });
+
+    // Boat movement (diving)
+    if (containerRef.current) {
+      gsap.to('.boat-container', {
+        y: -100, // Move boat up to simulate diving
+        scrollTrigger: {
+          trigger: 'body',
+          start: 'top top',
+          end: 'bottom bottom',
+          scrub: 1,
+        },
+      });
+    }
 
     if (cameraRef.current) {
       gsap.to(cameraRef.current.position, {
@@ -156,17 +169,19 @@ export default function Experience() {
         pointerEvents: 'none',
       }}
     >
-      <Canvas shadows>
-        <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 5]} />
-        <ambientLight intensity={0.7} />
-        <directionalLight position={[10, 10, 10]} intensity={1.5} />
-        <ErrorBoundary fallback={<BoatFallback />}>
-          <Suspense fallback={<BoatFallback />}>
-            <Boat />
-          </Suspense>
-        </ErrorBoundary>
-        <Bubbles />
-      </Canvas>
+      <div className="boat-container" style={{ width: '100%', height: '100%' }}>
+        <Canvas shadows>
+          <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0, 5]} />
+          <ambientLight intensity={0.7} />
+          <directionalLight position={[10, 10, 10]} intensity={1.5} />
+          <ErrorBoundary fallback={<BoatFallback />}>
+            <Suspense fallback={<BoatFallback />}>
+              <Boat />
+            </Suspense>
+          </ErrorBoundary>
+          <Bubbles />
+        </Canvas>
+      </div>
     </div>
   );
 }

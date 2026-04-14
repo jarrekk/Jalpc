@@ -2,6 +2,9 @@
 
 import { useState, useEffect, useRef } from 'react';
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+
+gsap.registerPlugin(ScrollTrigger);
 
 const portfolioItems = [
   { 
@@ -39,8 +42,26 @@ const RadarChart = ({ skills }: { skills: { name: string, level: number }[] }) =
   const polygonPath = skillPoints.map(p => `${p.x},${p.y}`).join(' ');
   const gridCircles = [20, 40, 60, 80, 100];
 
+  const chartRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (chartRef.current) {
+      gsap.from(chartRef.current.querySelectorAll('polygon, line, text'), {
+        opacity: 0,
+        scale: 0.8,
+        duration: 1,
+        stagger: 0.05,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: chartRef.current,
+          start: 'top 80%',
+        }
+      });
+    }
+  }, []);
+
   return (
-    <div className="radar-chart-container" style={{ position: 'relative', width: size, height: size, margin: '0 auto' }}>
+    <div ref={chartRef} className="radar-chart-container" style={{ position: 'relative', width: size, height: size, margin: '0 auto' }}>
       <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
         {/* Grid Circles */}
         {gridCircles.map(c => (
@@ -100,6 +121,7 @@ const RadarChart = ({ skills }: { skills: { name: string, level: number }[] }) =
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
   const nameRef = useRef<HTMLHeadingElement>(null);
+  const careerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (nameRef.current) {
@@ -107,6 +129,20 @@ export default function Home() {
         { opacity: 0, y: 30 },
         { opacity: 1, y: 0, duration: 1.5, ease: "power4.out" }
       );
+    }
+
+    if (careerRef.current) {
+      gsap.from(careerRef.current.querySelectorAll('.career-item'), {
+        opacity: 0,
+        x: -50,
+        duration: 1,
+        stagger: 0.3,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: careerRef.current,
+          start: 'top 80%',
+        }
+      });
     }
   }, []);
 
@@ -131,7 +167,7 @@ export default function Home() {
       <section id="career">
         <div className="content">
           <h2>Career</h2>
-          <div className="career-timeline">
+          <div ref={careerRef} className="career-timeline">
             {careerItems.map((item, index) => (
               <div key={index} className="career-item">
                 <h3>{item.title}</h3>

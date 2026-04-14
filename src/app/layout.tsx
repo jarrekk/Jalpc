@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Experience from "@/components/Experience";
-import AudioController from "@/components/AudioController";
 
 export const metadata: Metadata = {
   title: "Deep Sea Portfolio",
@@ -16,8 +15,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <div className="bg-fixed" id="bg-fixed" />
         <Experience />
-        <AudioController />
         <main>
           {children}
         </main>
