@@ -12,111 +12,26 @@ const portfolioItems = [
     title: 'SLM-based OT Solution', 
     description: 'An OT security solution based on SLM, focused on practical defense and applied security architecture.', 
     details: 'This project involved developing a comprehensive security solution for Operational Technology (OT) environments using Small Language Models (SLM). It focuses on practical defense mechanisms and the implementation of robust security architectures tailored for industrial control systems.' 
+  },
+  { 
+    id: 2, 
+    title: 'Syzdirect (In Progress)', 
+    description: 'Directed greybox fuzzing for Linux kernel, focusing on efficiency and path discovery.', 
+    details: 'Syzdirect is a directed greybox fuzzer for the Linux kernel. It aims to improve the efficiency of vulnerability discovery by directing the fuzzer towards specific target code areas, leveraging advanced path discovery techniques.' 
+  },
+  { 
+    id: 3, 
+    title: 'Honeypot (In Progress)', 
+    description: 'Advanced deception system for threat intelligence gathering and attacker behavior analysis.', 
+    details: 'This project focuses on building an advanced honeypot system designed to gather high-fidelity threat intelligence. It employs sophisticated deception techniques to analyze attacker behavior and identify emerging threats in real-time.' 
   }
 ];
 
-const skills = [
-  { name: 'Communication', level: 85 },
-  { name: 'AI', level: 75 },
-  { name: 'Dev', level: 80 },
-  { name: 'Python', level: 90 },
-  { name: 'Security', level: 85 },
+const careerItems = [
+  { title: "Undergraduate Research Intern", organization: "Confidential", period: "2026.01 - 2026.02", description: "Winter Internship focused on security research and AI guardrails." },
+  { title: "BoB (Best of the Best) Graduate", organization: "KITRI", period: "2025.06 - 2025.12", description: "Completed the 14th Best of the Best information security program, specializing in advanced security research." },
+  { title: "Information Security Engineering", organization: "Sangmyung University", period: "2021 - Present", description: "Pursuing a degree in Information Security Engineering, focusing on AI-driven security." }
 ];
-
-const RadarChart = ({ skills }: { skills: { name: string, level: number }[] }) => {
-  const size = 300;
-  const center = size / 2;
-  const radius = center * 0.7;
-  const points = skills.length;
-
-  const getCoordinates = (index: number, level: number) => {
-    const angle = (Math.PI * 2 * index) / points - Math.PI / 2;
-    const x = center + radius * (level / 100) * Math.cos(angle);
-    const y = center + radius * (level / 100) * Math.sin(angle);
-    return { x, y };
-  };
-
-  const axisPoints = skills.map((_, i) => getCoordinates(i, 100));
-  const skillPoints = skills.map((s, i) => getCoordinates(i, s.level));
-
-  const polygonPath = skillPoints.map(p => `${p.x},${p.y}`).join(' ');
-  const gridCircles = [20, 40, 60, 80, 100];
-
-  const chartRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (chartRef.current) {
-      gsap.from(chartRef.current.querySelectorAll('polygon, line, text'), {
-        opacity: 0,
-        scale: 0.8,
-        duration: 1,
-        stagger: 0.05,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: chartRef.current,
-          start: 'top 80%',
-        }
-      });
-    }
-  }, []);
-
-  return (
-    <div ref={chartRef} className="radar-chart-container" style={{ position: 'relative', width: size, height: size, margin: '0 auto' }}>
-      <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`}>
-        {/* Grid Circles */}
-        {gridCircles.map(c => (
-          <polygon
-            key={c}
-            points={skills.map((_, i) => {
-              const p = getCoordinates(i, c);
-              return `${p.x},${p.y}`;
-            }).join(' ')}
-            fill="none"
-            stroke="rgba(255, 255, 255, 0.1)"
-            strokeWidth="1"
-          />
-        ))}
-        {/* Axes */}
-        {axisPoints.map((p, i) => (
-          <line
-            key={i}
-            x1={center}
-            y1={center}
-            x2={p.x}
-            y2={p.y}
-            stroke="rgba(255, 255, 255, 0.1)"
-            strokeWidth="1"
-          />
-        ))}
-        {/* Skill Area */}
-        <polygon
-          points={polygonPath}
-          fill="rgba(0, 255, 255, 0.3)"
-          stroke="#00ffff"
-          strokeWidth="2"
-        />
-        {/* Labels */}
-        {skills.map((s, i) => {
-          const p = getCoordinates(i, 115);
-          return (
-            <text
-              key={i}
-              x={p.x}
-              y={p.y}
-              fill="white"
-              fontSize="12"
-              textAnchor="middle"
-              dominantBaseline="middle"
-              style={{ fontWeight: 'bold' }}
-            >
-              {s.name}
-            </text>
-          );
-        })}
-      </svg>
-    </div>
-  );
-};
 
 export default function Home() {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
@@ -146,22 +61,16 @@ export default function Home() {
     }
   }, []);
 
-  const careerItems = [
-    { title: "Intern", organization: "Confidential", period: "2026.01 - 2026.02", description: "Winter Internship focused on security research." },
-    { title: "BoB (Best of the Best) Graduate", organization: "KITRI", period: "2025.06 - 2025.12", description: "Completed the 14th Best of the Best information security program, specializing in advanced security research." },
-    { title: "Information Security Engineering", organization: "Sangmyung University", period: "2021 - Present", description: "Pursuing a degree in Information Security Engineering, focusing on AI-driven security." }
-  ];
-
   return (
     <div className="home-container" style={{ position: 'relative', zIndex: 20 }}>
       <section id="intro" style={{ position: 'relative', overflow: 'hidden' }}>
         <div className="content" style={{ background: 'rgba(0, 26, 51, 0.7)', backdropFilter: 'blur(15px)' }}>
-          <h1 ref={nameRef} style={{ fontSize: '6rem', letterSpacing: '-0.03em', marginBottom: '1rem' }}>
+          <h1 ref={nameRef} style={{ fontSize: '6rem', letterSpacing: '-0.04em', marginBottom: '1rem', fontFamily: 'var(--font-display)' }}>
             Lee Sangho
           </h1>
-          <div style={{ width: '100px', height: '4px', background: 'var(--color-teal)', margin: '1.5rem auto', borderRadius: '2px' }} />
-          <p style={{ fontSize: '1.6rem', fontWeight: 400, color: 'var(--color-shallow)', maxWidth: '800px', margin: '0 auto' }}>
-            Security Researcher & AI Enthusiast
+          <div style={{ width: '80px', height: '3px', background: 'var(--color-teal)', margin: '1.5rem auto', borderRadius: '2px' }} />
+          <p style={{ fontSize: '1.4rem', fontWeight: 600, color: 'var(--color-shallow)', maxWidth: '800px', margin: '0 auto', letterSpacing: '0.05em', textTransform: 'uppercase' }}>
+            Security Researcher & AI Guardrail
           </p>
           <div className="scroll-cue" style={{ marginTop: '4rem', opacity: 0.8 }}>Scroll to Explore ↓</div>
         </div>
@@ -169,11 +78,11 @@ export default function Home() {
 
       <section id="career">
         <div className="content">
-          <h2 style={{ fontFamily: "'Playfair Display', serif" }}>Career Journey</h2>
+          <h2 style={{ fontFamily: 'var(--font-display)' }}>Career Journey</h2>
           <div ref={careerRef} className="career-timeline">
             {careerItems.map((item, index) => (
               <div key={index} className="career-item">
-                <h3 style={{ fontFamily: "'Playfair Display', serif" }}>{item.title}</h3>
+                <h3 style={{ fontFamily: 'var(--font-primary)' }}>{item.title}</h3>
                 <div className="career-org">{item.organization} | {item.period}</div>
                 <p>{item.description}</p>
               </div>
@@ -182,36 +91,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="about">
-        <div className="content">
-          <h2>About Me</h2>
-          <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', justifyContent: 'center', gap: '4rem' }}>
-            <div style={{ flex: '1', minWidth: '300px', textAlign: 'left' }}>
-              <p>
-                I am passionate about information security and its intersection with AI. 
-                My research currently focuses on AI guardrails and securing Operational Technology (OT) environments. 
-                I enjoy continuous learning and applying my knowledge to solve complex security challenges.
-              </p>
-            </div>
-            <div style={{ flex: '1', minWidth: '300px' }}>
-              <RadarChart skills={skills} />
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section id="projects">
         <div className="content">
-          <h2>Projects</h2>
-          <div className="portfolio-grid" style={{ justifyContent: 'center' }}>
+          <h2 style={{ fontFamily: 'var(--font-display)' }}>Projects</h2>
+          <div className="portfolio-grid" style={{ 
+            display: 'grid', 
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gap: '2.5rem',
+            justifyContent: 'center',
+            maxWidth: '1100px',
+            margin: '0 auto'
+          }}>
             {portfolioItems.map((item) => (
               <div
                 key={item.id}
                 className="portfolio-card"
                 onClick={() => setSelectedItem(item)}
-                style={{ maxWidth: '500px', margin: '0 auto' }}
+                style={{ width: '100%' }}
               >
-                <h3>{item.title}</h3>
+                <h3 style={{ fontFamily: 'var(--font-primary)' }}>{item.title}</h3>
                 <p>{item.description}</p>
               </div>
             ))}
@@ -221,9 +119,9 @@ export default function Home() {
 
       <section id="blog-teaser">
         <div className="content">
-          <h2 style={{ fontFamily: "'Playfair Display', serif", fontWeight: 800 }}>Logs & Insights</h2>
+          <h2 style={{ fontFamily: 'var(--font-display)', fontWeight: 800 }}>Logs & Insights</h2>
           <p>Explore my technical journey and research findings.</p>
-          <a href="/blog" className="blog-link">Enter Archive</a>
+          <a href="/blog" className="blog-link" style={{ fontFamily: 'var(--font-display)', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.1em' }}>Enter Archive</a>
         </div>
       </section>
 
@@ -246,7 +144,7 @@ export default function Home() {
         <div className="modal-overlay" onClick={() => setSelectedItem(null)}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <button className="close-btn" onClick={() => setSelectedItem(null)}>×</button>
-            <h2>{selectedItem.title}</h2>
+            <h2 style={{ fontFamily: 'var(--font-display)' }}>{selectedItem.title}</h2>
             <p>{selectedItem.details}</p>
           </div>
         </div>

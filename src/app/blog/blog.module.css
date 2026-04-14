@@ -99,8 +99,9 @@
 }
 
 .header h1 {
+  font-family: var(--font-modern);
   font-size: 3rem;
-  fontWeight: 800;
+  font-weight: 800;
   margin-bottom: 1rem;
   letter-spacing: -0.03em;
   color: #111111;
@@ -140,6 +141,7 @@
 }
 
 .postTitle {
+  font-family: var(--font-modern);
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0;
@@ -195,6 +197,7 @@
 }
 
 .articleTitle {
+  font-family: var(--font-modern);
   font-size: 2.75rem;
   font-weight: 800;
   margin-bottom: 1rem;

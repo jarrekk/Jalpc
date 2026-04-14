@@ -105,7 +105,7 @@ export default function BlogList({ posts }: BlogListProps) {
       {/* Main Content */}
       <main className={styles.mainContent}>
         <header className={styles.header}>
-          <h1>Blog</h1>
+          <h1 style={{ fontFamily: 'var(--font-display)', textTransform: 'uppercase', letterSpacing: '0.05em' }}>Insights</h1>
           <p>
             {selectedMainCategory} {selectedSubCategory ? `> ${selectedSubCategory}` : ''} ({filteredPosts.length} posts)
           </p>

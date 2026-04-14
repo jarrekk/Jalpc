@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@700;800&family=Roboto:wght@400;700&display=swap');
 
 :root {
   --color-sand-light: #F4E7C1;
@@ -7,6 +7,19 @@
   --color-teal: #008B8B;
   --color-midsea: #003366;
   --color-deep: #001A33;
+
+  /* Font Options - Choose by changing --font-primary and --font-display */
+  /* Option 1: Modern & Solid (Default) */
+  --font-modern-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  /* Option 2: Geometric & Bold */
+  --font-geometric: 'Montserrat', sans-serif;
+  /* Option 3: Tech & Precise */
+  --font-tech-mono: 'JetBrains Mono', monospace;
+  /* Option 4: Classic Serif */
+  --font-elegant-serif: 'Playfair Display', serif;
+
+  --font-primary: var(--font-modern-sans);
+  --font-display: var(--font-geometric);
 }
 
 * {
@@ -25,7 +38,7 @@ body {
 body {
   background-color: var(--color-shallow);
   color: var(--color-sand-light);
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-primary);
   line-height: 1.6;
 }
 
