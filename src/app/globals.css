@@ -41,13 +41,7 @@ body {
 }
 
 body {
-  background: linear-gradient(180deg, 
-    var(--color-step1) 0%, 
-    var(--color-step2) 25%, 
-    var(--color-step3) 50%, 
-    var(--color-step4) 75%, 
-    var(--color-step5) 100%
-  );
+  background: linear-gradient(180deg, #0077be 0%, #00050a 100%);
   color: #fff;
   font-family: var(--font-primary);
   line-height: 1.6;

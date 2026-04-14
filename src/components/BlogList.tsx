@@ -14,8 +14,9 @@ const CATEGORIES = Object.keys(CATEGORY_ICONS);
 
 export default function BlogList({ posts }: BlogListProps) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+  const [selectedSubTag, setSelectedSubTag] = useState<string | null>(null);
 
-  const filteredPosts = useMemo(() => {
+  const postsInCategory = useMemo(() => {
     if (!selectedCategory) return posts;
     
     return posts.filter((post) => {
@@ -34,38 +35,86 @@ export default function BlogList({ posts }: BlogListProps) {
     });
   }, [posts, selectedCategory]);
 
+  const availableSubTags = useMemo(() => {
+    const tags = new Set<string>();
+    postsInCategory.forEach(post => {
+      post.generatedTags?.forEach(tag => tags.add(tag));
+    });
+    return Array.from(tags).sort();
+  }, [postsInCategory]);
+
+  const filteredPosts = useMemo(() => {
+    if (!selectedSubTag) return postsInCategory;
+    return postsInCategory.filter(post => post.generatedTags?.includes(selectedSubTag));
+  }, [postsInCategory, selectedSubTag]);
+
+  const handleCategoryClick = (cat: string | null) => {
+    setSelectedCategory(cat);
+    setSelectedSubTag(null);
+  };
+
   return (
     <div className={styles.blogLayout}>
       <aside className={styles.sidebar}>
-        <h2 style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#111', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
-          Archive
-        </h2>
-        <ul className={styles.categoryList}>
-          <li className={styles.mainCategoryItem}>
-            <button 
-              onClick={() => setSelectedCategory(null)} 
-              className={`${styles.categoryButton} ${!selectedCategory ? styles.activeCategory : ''}`}
-            >
-              All Posts
-            </button>
-          </li>
-          {CATEGORIES.map(cat => (
-            <li key={cat} className={styles.mainCategoryItem}>
+        <div className={styles.sidebarSection}>
+          <h2 style={{ fontSize: '1.2rem', marginBottom: '2rem', color: '#111', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em' }}>
+            Archive
+          </h2>
+          <ul className={styles.categoryList}>
+            <li className={styles.mainCategoryItem}>
               <button 
-                onClick={() => setSelectedCategory(cat)} 
-                className={`${styles.categoryButton} ${selectedCategory === cat ? styles.activeCategory : ''}`}
+                onClick={() => handleCategoryClick(null)} 
+                className={`${styles.categoryButton} ${!selectedCategory ? styles.activeCategory : ''}`}
               >
-                <span style={{ marginRight: '0.5rem' }}>{CATEGORY_ICONS[cat]}</span>
-                {cat}
+                All Posts
               </button>
             </li>
-          ))}
-        </ul>
+            {CATEGORIES.map(cat => (
+              <li key={cat} className={styles.mainCategoryItem}>
+                <button 
+                  onClick={() => handleCategoryClick(cat)} 
+                  className={`${styles.categoryButton} ${selectedCategory === cat ? styles.activeCategory : ''}`}
+                >
+                  <span style={{ marginRight: '0.5rem' }}>{CATEGORY_ICONS[cat]}</span>
+                  {cat}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {selectedCategory && availableSubTags.length > 0 && (
+          <div className={styles.sidebarSection} style={{ marginTop: '2rem' }}>
+            <h3 style={{ fontSize: '0.8rem', marginBottom: '1rem', color: '#888', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.1em' }}>
+              Sub-tags
+            </h3>
+            <ul className={styles.categoryList}>
+              <li className={styles.mainCategoryItem}>
+                <button 
+                  onClick={() => setSelectedSubTag(null)} 
+                  className={`${styles.subCategoryButton} ${!selectedSubTag ? styles.activeSubCategory : ''}`}
+                >
+                  All in {selectedCategory}
+                </button>
+              </li>
+              {availableSubTags.map(tag => (
+                <li key={tag} className={styles.mainCategoryItem}>
+                  <button 
+                    onClick={() => setSelectedSubTag(tag)} 
+                    className={`${styles.subCategoryButton} ${selectedSubTag === tag ? styles.activeSubCategory : ''}`}
+                  >
+                    # {tag}
+                  </button>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </aside>
 
       <main className={styles.mainContent}>
         <header className={styles.header}>
-          <h1>{selectedCategory || 'Archive'}</h1>
+          <h1>{selectedSubTag ? `#${selectedSubTag}` : (selectedCategory || 'Archive')}</h1>
           <p>{filteredPosts.length} posts discovered in this domain</p>
         </header>
 
@@ -81,6 +130,11 @@ export default function BlogList({ posts }: BlogListProps) {
                 <div className={styles.tagContainer}>
                   {(Array.isArray(post.categories) ? post.categories : [post.categories || '']).map((cat: string) => (
                     cat && <span key={cat} className={styles.tag}>{cat}</span>
+                  ))}
+                  {post.generatedTags?.map((tag: string) => (
+                    <span key={tag} className={styles.tag} style={{ background: '#e0f2fe', color: '#0369a1' }}>
+                      {tag}
+                    </span>
                   ))}
                 </div>
               </article>

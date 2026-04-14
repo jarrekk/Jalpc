@@ -28,7 +28,9 @@ function generateTags(content: string, title: string): string[] {
     'Jekyll', 'GitHub', 'CTF', 'Bob', 'Fuzzing', 'Linux', 'Python', 
     'Algorithm', 'Network', 'Security', 'AI', 'Web',
     'LLM', 'React', 'Next.js', 'Vulnerability', 'Exploit', 'Pwn',
-    'Kernel', 'Syscall', 'Driver', 'Rootkit', 'Modbus', 'Packet'
+    'Kernel', 'Syscall', 'Driver', 'Rootkit', 'Modbus', 'Packet',
+    'Syzkaller', 'Syzdirect', 'Recall', 'Precision', 'Confusion Matrix',
+    'Llama Guard', 'LLM Safeguard', 'Dataset', 'Docker', 'Automation'
   ];
 
   keywordDictionary.forEach(kw => {
