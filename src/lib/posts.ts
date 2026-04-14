@@ -40,7 +40,7 @@ function generateTags(content: string, title: string): string[] {
     }
   });
 
-  return Array.from(generatedTags);
+  return Array.from(generatedTags).slice(0, 4);
 }
 
 export function getAllPosts(): PostData[] {

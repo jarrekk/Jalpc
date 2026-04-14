@@ -40,6 +40,7 @@ interface HomeClientProps {
 
 export default function HomeClient({ categoryData }: HomeClientProps) {
   const [selectedItem, setSelectedItem] = useState<typeof portfolioItems[0] | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(null);
   const nameRef = useRef<HTMLHeadingElement>(null);
   const careerRef = useRef<HTMLDivElement>(null);
 
@@ -125,50 +126,54 @@ export default function HomeClient({ categoryData }: HomeClientProps) {
           }}>
             {Object.entries(categoryData).map(([category, { count, subCategories }]) => (
               <div key={category} style={{ 
-                background: 'rgba(255,255,255,0.05)', 
+                background: activeCategory === category ? 'rgba(255,255,255,0.15)' : 'rgba(255,255,255,0.05)', 
                 padding: '2rem 1rem', 
                 borderRadius: '8px', 
-                border: '1px solid rgba(255,255,255,0.05)',
+                border: activeCategory === category ? '1px solid rgba(255,255,255,0.3)' : '1px solid rgba(255,255,255,0.05)',
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
                 gap: '0.75rem',
                 transition: 'all 0.3s ease',
-                cursor: 'default',
+                cursor: 'pointer',
                 color: 'white'
               }}
+              onClick={() => setActiveCategory(activeCategory === category ? null : category)}
               onMouseEnter={(e) => {
-                e.currentTarget.style.transform = 'translateY(-5px)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.2)';
+                if (activeCategory !== category) {
+                  e.currentTarget.style.transform = 'translateY(-5px)';
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.1)';
+                }
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.transform = 'translateY(0)';
-                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.05)';
+                if (activeCategory !== category) {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                }
               }}
               >
                 <span style={{ fontSize: '2.5rem', marginBottom: '0.5rem' }}>{CATEGORY_ICONS[category]}</span>
                 <span style={{ fontSize: '1.5rem', color: 'var(--color-sky-dark)', fontWeight: 800 }}>{count}</span>
                 <div style={{ textAlign: 'center' }}>
                   <span style={{ textTransform: 'uppercase', letterSpacing: '0.1em', fontSize: '0.8rem', fontWeight: 800, opacity: 0.9, display: 'block', color: 'white' }}>{category}</span>
-                  {subCategories.length > 0 && (
+                  {activeCategory === category && subCategories.length > 0 && (
                     <div style={{ 
                       display: 'flex', 
                       flexWrap: 'wrap', 
                       justifyContent: 'center', 
                       gap: '0.4rem', 
-                      marginTop: '0.75rem',
-                      maxWidth: '180px'
+                      marginTop: '1rem',
+                      maxWidth: '180px',
+                      animation: 'fadeIn 0.3s ease forwards'
                     }}>
                       {subCategories.map(tag => (
                         <span key={tag} style={{ 
-                          fontSize: '0.55rem', 
-                          background: 'rgba(255,255,255,0.08)', 
-                          padding: '0.1rem 0.4rem', 
+                          fontSize: '0.6rem', 
+                          background: 'rgba(255,255,255,0.12)', 
+                          padding: '0.2rem 0.6rem', 
                           borderRadius: '4px',
-                          color: 'rgba(255,255,255,0.6)',
-                          border: '1px solid rgba(255,255,255,0.1)'
+                          color: 'white',
+                          border: '1px solid rgba(255,255,255,0.2)'
                         }}>
                           {tag}
                         </span>
@@ -214,6 +219,12 @@ export default function HomeClient({ categoryData }: HomeClientProps) {
           </div>
         </div>
       )}
+      <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(10px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+      `}</style>
     </div>
   );
 }
