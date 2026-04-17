@@ -9,11 +9,11 @@
 
     .blog-sidebar-title {
         margin: 0;
-        color: #2f4050;
-        font-size: 16px;
+        color: var(--ink-strong);
+        font-family: var(--font-display);
+        font-size: 1.25rem;
         font-weight: 700;
         letter-spacing: 0.04em;
-        text-transform: uppercase;
     }
 
     .blog-sidebar-list {
@@ -29,22 +29,43 @@
     .blog-sidebar-link {
         display: block;
         padding: 10px 12px;
-        border-radius: 6px;
-        color: #676a6c;
+        border-radius: 2px;
+        color: var(--ink-body);
         text-decoration: none !important;
-        transition: background-color 0.2s ease, color 0.2s ease;
+        transition: background-color 0.2s ease, color 0.2s ease, border-left 0.2s ease;
+        border-left: 2px solid transparent;
+        font-family: var(--font-sans);
     }
 
     .blog-sidebar-link:hover,
     .blog-sidebar-link:focus {
-        background: #f3f3f4;
-        color: #2f4050;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--color-teal);
         text-decoration: none !important;
+        border-left: 2px solid var(--color-teal);
     }
 
     .blog-sidebar-link.active {
-        background: #2f4050;
-        color: #ffffff !important;
+        background: rgba(45, 212, 191, 0.1);
+        color: var(--color-teal) !important;
+        border-left: 2px solid var(--color-teal);
+    }
+
+    .depth-gauge {
+        margin-top: 2rem;
+        padding: 1rem;
+        border-top: 1px solid var(--hairline);
+        font-family: var(--font-mono);
+        font-size: 0.72rem;
+        color: var(--ink-muted);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
+    .depth-gauge strong {
+        display: block;
+        color: var(--color-teal);
+        font-size: 0.9rem;
+        margin-top: 0.25rem;
     }
 </style>
 
@@ -65,6 +86,21 @@
                     {% endif %}
                 {% endfor %}
             </ul>
+
+            {% assign current_depth = 50 %}
+            {% if current_path contains 'development' %}{% assign current_depth = 120 %}
+            {% elsif current_path contains 'ctf-wargame' %}{% assign current_depth = 450 %}
+            {% elsif current_path contains 'bugbounty' %}{% assign current_depth = 800 %}
+            {% elsif current_path contains 'technical-document' %}{% assign current_depth = 250 %}
+            {% elsif current_path contains 'paper-conference' %}{% assign current_depth = 1500 %}
+            {% elsif current_path contains 'contest-certification' %}{% assign current_depth = 350 %}
+            {% elsif current_path contains 'etc' %}{% assign current_depth = 4000 %}
+            {% endif %}
+            
+            <div class="depth-gauge">
+                Current depth
+                <strong>— {{ current_depth }}m</strong>
+            </div>
         </div>
     </div>
 </div>

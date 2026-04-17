@@ -48,16 +48,16 @@ permalink: /
   <div id="foam-field" class="foam-field"></div>
 
   <svg class="wave" viewBox="0 0 1440 250" preserveAspectRatio="none" style="height: 232px; z-index: 1; bottom: 0;">
-    <path id="w1" fill="#0B4E73" d="M0,150 C220,115 440,170 660,130 C880,100 1100,160 1320,120 C1380,105 1420,135 1440,115 L1440,250 L0,250 Z"/>
+    <path id="w1" fill="var(--depth-2)" d="M0,150 C220,115 440,170 660,130 C880,100 1100,160 1320,120 C1380,105 1420,135 1440,115 L1440,250 L0,250 Z"/>
   </svg>
   <svg class="wave wash-wave wash-wave-deep" viewBox="0 0 1440 250" preserveAspectRatio="none" style="height: 228px; z-index: 2; bottom: 3px;">
-    <path id="w2" fill="#1B8FA9" d="M0,125 C220,90 440,145 660,105 C880,75 1100,135 1320,95 C1380,80 1420,110 1440,90 L1440,250 L0,250 Z"/>
+    <path id="w2" fill="var(--depth-1)" d="M0,125 C220,90 440,145 660,105 C880,75 1100,135 1320,95 C1380,80 1420,110 1440,90 L1440,250 L0,250 Z"/>
   </svg>
   <svg class="wave wash-wave wash-wave-mid" viewBox="0 0 1440 250" preserveAspectRatio="none" style="height: 220px; z-index: 3; bottom: 8px;">
-    <path id="w3" fill="rgba(73,188,190,0.42)" d="M0,110 C200,75 400,130 600,90 C800,60 1000,120 1200,80 C1320,55 1400,100 1440,70 L1440,250 L0,250 Z"/>
+    <path id="w3" fill="var(--depth-0)" opacity="0.42" d="M0,110 C200,75 400,130 600,90 C800,60 1000,120 1200,80 C1320,55 1400,100 1440,70 L1440,250 L0,250 Z"/>
   </svg>
   <svg class="wave wash-wave wash-wave-shallow" viewBox="0 0 1440 250" preserveAspectRatio="none" style="height: 210px; z-index: 4; bottom: 18px;">
-    <path id="w4" fill="rgba(139,213,198,0.32)" d="M0,95 C180,60 360,120 540,75 C720,45 900,105 1080,70 C1260,40 1350,90 1440,65 L1440,250 L0,250 Z"/>
+    <path id="w4" fill="var(--depth-0)" opacity="0.32" d="M0,95 C180,60 360,120 540,75 C720,45 900,105 1080,70 C1260,40 1350,90 1440,65 L1440,250 L0,250 Z"/>
   </svg>
   <svg class="wave foam-wave" viewBox="0 0 1440 30" preserveAspectRatio="none" style="height: 28px; z-index: 5; bottom: 168px;">
     <path id="w5" fill="rgba(241,247,245,0.74)" d="M0,15 C160,2 320,25 480,10 C640,0 800,22 960,8 C1120,0 1280,20 1440,5 C1280,28 1120,10 960,22 C800,30 640,12 480,25 C320,30 160,15 0,28 Z"/>
@@ -65,21 +65,6 @@ permalink: /
 </div>
 
 <main class="underwater">
-  <div class="caustics" aria-hidden="true">
-    <svg xmlns="http://www.w3.org/2000/svg">
-      <defs>
-        <filter id="caustic-filter" x="0" y="0" width="100%" height="100%">
-          <feTurbulence type="fractalNoise" baseFrequency="0.014 0.024" numOctaves="2" seed="5">
-            <animate attributeName="baseFrequency" dur="18s" values="0.014 0.024; 0.02 0.03; 0.014 0.024" repeatCount="indefinite" />
-          </feTurbulence>
-          <feColorMatrix values="0 0 0 0 0.55  0 0 0 0 0.85  0 0 0 0 1  0 0 0 0.9 -0.5"/>
-          <feGaussianBlur stdDeviation="1.5" />
-        </filter>
-      </defs>
-      <rect width="100%" height="100%" filter="url(#caustic-filter)" />
-    </svg>
-  </div>
-
   <div class="mouse-glow" id="mouse-glow" aria-hidden="true"></div>
   <div class="bubble-field" id="bubble-field" aria-hidden="true"></div>
 
@@ -153,14 +138,23 @@ permalink: /
 
 <style>
 :root {
+  --depth-0: #3FB7D6;
+  --depth-1: #1B7FA3;
+  --depth-2: #0A4F73;
+  --depth-3: #052B4A;
+  --depth-4: #010F20;
+  --depth-5: #00050A;
+  --color-teal: #2DD4BF;
+  --ink-strong: #F2F7FB;
+  --ink-body: #CFE1EC;
+  --glass-bg: rgba(5, 28, 50, 0.62);
+  --glass-bg-strong: rgba(3, 18, 34, 0.82);
+  --glass-border: rgba(111, 211, 232, 0.14);
+  
   --sand-dry: #E7C691;
   --sand-less-wet: #CFA06B;
   --sand-wet: #9B6C47;
   --foam: #F1F7F5;
-  --water-very-shallow: #8BD5C6;
-  --water-shallow: #49BCBE;
-  --water-mid: #1B8FA9;
-  --water-deep: #0B4E73;
   --tide-progress: 0;
   --shore-retreat: 0px;
   --foam-opacity: 0.22;
@@ -173,7 +167,6 @@ permalink: /
 
 html,
 body.landing-page {
-  background: #000;
   color: #c4ddf0;
   overflow-x: hidden;
 }
@@ -359,10 +352,10 @@ body.landing-page button {
       rgba(168, 120, 81, 0.9) 46%,
       rgba(149, 106, 72, 0.82) 60%,
       rgba(180, 188, 182, 0.18) 69%,
-      rgba(139, 213, 198, 0.42) 79%,
-      rgba(73, 188, 190, 0.8) 89%,
-      rgba(27, 143, 169, 0.95) 96%,
-      rgba(11, 78, 115, 1) 100%);
+      var(--depth-0) 79%,
+      var(--depth-1) 89%,
+      var(--depth-2) 96%,
+      var(--depth-3) 100%);
   background-position: center calc(var(--shore-retreat) * -0.08);
   height: 470px;
   margin-top: -180px;
@@ -504,29 +497,13 @@ body.landing-page button {
     radial-gradient(ellipse 150% 18% at 50% 0%, rgba(241, 247, 245, 0.1) 0%, rgba(241, 247, 245, 0.03) 16%, transparent 40%),
     radial-gradient(ellipse 124% 28% at 24% 12%, rgba(139, 213, 198, 0.12) 0%, transparent 54%),
     radial-gradient(ellipse 112% 24% at 78% 20%, rgba(73, 188, 190, 0.1) 0%, transparent 56%),
-    linear-gradient(180deg, rgba(139, 213, 198, 0.82) 0%, rgba(73, 188, 190, 0.9) 15%, rgba(27, 143, 169, 0.98) 34%, rgba(11, 78, 115, 1) 60%, #072d43 84%, #000000 100%);
+    linear-gradient(180deg, 
+      var(--depth-2) 0%, 
+      var(--depth-3) 25%, 
+      var(--depth-4) 60%, 
+      var(--depth-5) 100%);
   min-height: 100vh;
   position: relative;
-}
-
-.caustics {
-  height: 60vh;
-  left: 0;
-  mix-blend-mode: screen;
-  opacity: 0.12;
-  pointer-events: none;
-  position: absolute;
-  right: 0;
-  top: 0;
-  z-index: 1;
-  mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.5) 40%, transparent 95%);
-  -webkit-mask-image: linear-gradient(180deg, #000 0%, rgba(0, 0, 0, 0.5) 40%, transparent 95%);
-}
-
-.caustics svg {
-  display: block;
-  height: 100%;
-  width: 100%;
 }
 
 .mouse-glow {

@@ -2,25 +2,25 @@
 - name: Blog
   href: /blog/
 
-- name: Development
+- name: ⚙ Development
   href: /development/
 
-- name: CTF-Wargame
+- name: ⚑ CTF-Wargame
   href: /ctf-wargame/
 
-- name: BugBounty
+- name: ⌬ BugBounty
   href: /bugbounty/
 
-- name: Technical Document
+- name: ❡ Technical Document
   href: /technical-document/
 
-- name: Paper-Conference
+- name: ❦ Paper-Conference
   href: /paper-conference/
 
-- name: Contest-Certification
+- name: ✦ Contest-Certification
   href: /contest-certification/
 
-- name: Etc
+- name: ⚓ Etc
   href: /etc/
 
 # Don't display donation page: change donation to off at file '_config.yml'

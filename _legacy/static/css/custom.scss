@@ -8,8 +8,96 @@
 @import "roboto";
 @import "style";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
+
+:root {
+  /* Depth bands — surface → abyss */
+  --depth-0: #3FB7D6;   /* surface glint              0m    */
+  --depth-1: #1B7FA3;   /* sunlight zone           ~100m    */
+  --depth-2: #0A4F73;   /* twilight                ~400m    */
+  --depth-3: #052B4A;   /* midnight              ~1000m     */
+  --depth-4: #010F20;   /* abyss                 ~4000m     */
+  --depth-5: #00050A;   /* hadal trench          ~6000m+    */
+
+  --color-teal: #2DD4BF;       /* bioluminescent accent */
+  --ink-strong: #F2F7FB;       /* headings on dark */
+  --ink-body:   #CFE1EC;       /* body on dark (AA against depth-3) */
+  --ink-muted:  #8EA7B8;       /* metadata */
+  --ink-faint:  #5E748A;
+
+  /* Glass panel */
+  --glass-bg: rgba(5, 28, 50, 0.62);
+  --glass-bg-strong: rgba(3, 18, 34, 0.82);
+  --glass-border: rgba(111, 211, 232, 0.14);
+  --glass-border-hover: rgba(111, 211, 232, 0.32);
+  --hairline: rgba(207, 225, 236, 0.08);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(63,183,214,0.35) 0%, transparent 60%),
+    linear-gradient(180deg,
+      var(--depth-0) 0%,
+      var(--depth-1) 18%,
+      var(--depth-2) 42%,
+      var(--depth-3) 68%,
+      var(--depth-4) 88%,
+      var(--depth-5) 100%);
+  background-attachment: fixed;
+  color: var(--ink-body);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  margin: 0;
+}
+
+/* ---------- Caustics overlay ---------- */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.7  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: screen;
+  opacity: 0.15;
+  animation: caustics 14s linear infinite;
+}
+
+@keyframes caustics {
+  0%   { background-position: 0 0; }
+  100% { background-position: 400px 400px; }
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  color: var(--ink-strong);
+  font-weight: 700;
+}
+
 .article .ibox-content {
   overflow-x: hidden;
+  background-color: var(--glass-bg-strong);
+  color: var(--ink-body);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.article .ibox-title {
+  background-color: var(--depth-4);
+  color: var(--ink-strong);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.article h1 {
+  color: var(--ink-strong);
+  font-family: var(--font-display);
 }
 
 .article .ibox-content img,
@@ -53,8 +141,57 @@
 }
 
 .article .ibox-content a {
-  font-size: 14px;
-  line-height: 1.7;
+  color: var(--color-teal);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s;
+}
+
+.article .ibox-content a:hover {
+  border-bottom: 1px solid var(--color-teal);
+}
+
+code {
+  background-color: var(--depth-5) !important;
+  color: var(--color-teal) !important;
+  font-family: var(--font-mono);
+  padding: 0.2rem 0.4rem;
+  border-radius: 2px;
+}
+
+pre {
+  background-color: var(--depth-5) !important;
+  border: 1px solid var(--glass-border);
+  border-radius: 2px;
+}
+
+.btn-white {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  color: var(--ink-muted);
+}
+
+.btn-white:hover {
+  background-color: var(--color-teal);
+  color: var(--depth-5);
+}
+
+.return-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  color: var(--ink-muted);
+  text-decoration: none !important;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: color 0.2s;
+}
+
+.return-link:hover {
+  color: var(--color-teal);
 }
 
 @media (max-width: 767px) {
