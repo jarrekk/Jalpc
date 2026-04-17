@@ -1,65 +1,134 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:wght@700;800&family=JetBrains+Mono:wght@400;700&family=Montserrat:wght@700;800&family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@600;700;800&family=JetBrains+Mono:wght@300;400;500;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap');
 
+/* =========================================================
+   Deep Sea Portfolio — design tokens
+   Inspired by Awwwards SOTDs: "The Sea We Breathe", Ocean
+   School, Iutopi's scroll-dive parallax. Five depth bands
+   map to scroll progress; foreground surfaces are built from
+   translucent glass panels with hairline borders so the 3D
+   background stays visible without hurting legibility.
+   ========================================================= */
 :root {
-  --color-step1: #C2F2FF;
-  --color-step2: #7EC8E3;
-  --color-step3: #0000FF;
-  --color-step4: #000C66;
-  --color-step5: #050A30;
-  --color-sky-dark: #0077be;
-  --color-navy-deepest: #00050a;
+  /* Depth bands — surface → abyss */
+  --depth-0: #3FB7D6;   /* surface glint              0m    */
+  --depth-1: #1B7FA3;   /* sunlight zone           ~100m    */
+  --depth-2: #0A4F73;   /* twilight                ~400m    */
+  --depth-3: #052B4A;   /* midnight              ~1000m     */
+  --depth-4: #010F20;   /* abyss                 ~4000m     */
+  --depth-5: #00050A;   /* hadal trench          ~6000m+    */
+
+  /* Legacy aliases (kept so we don't break existing imports) */
+  --color-step1: var(--depth-0);
+  --color-step2: var(--depth-1);
+  --color-step3: var(--depth-2);
+  --color-step4: var(--depth-3);
+  --color-step5: var(--depth-4);
+  --color-sky-dark: var(--depth-1);
+  --color-navy-deepest: var(--depth-5);
+  --color-shallow: #6FD3E8;    /* a brighter shallow accent for links */
+  --color-upper-sea: #0A4F73;
+  --color-teal: #2DD4BF;       /* bioluminescent accent */
+  --color-midsea: #02233B;
+  --color-deep: #00050A;
   --color-sand-light: #F4E7C1;
   --color-sand-wet: #DCC6A0;
-  --color-shallow: #0077be;
-  --color-upper-sea: #004b5c;
-  --color-teal: #008B8B;
-  --color-midsea: #001A33;
-  --color-deep: #00050a;
-  --bg-current: var(--color-sky-dark);
 
-  /* Font Options */
-  --font-modern-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-geometric: 'Montserrat', sans-serif;
-  --font-tech-mono: 'JetBrains Mono', monospace;
-  --font-elegant-serif: 'Playfair Display', serif;
+  /* Text on deep surfaces — tuned for comfortable reading */
+  --ink-strong: #F2F7FB;       /* headings on dark */
+  --ink-body:   #CFE1EC;       /* body on dark (AA against depth-3) */
+  --ink-muted:  #8EA7B8;       /* metadata */
+  --ink-faint:  #5E748A;
 
-  --font-primary: var(--font-modern-sans);
-  --font-display: var(--font-geometric);
+  /* Glass panel — for content that needs to be READABLE
+     on top of the 3D scene. Backdrop-blur + 1px hairline. */
+  --glass-bg: rgba(5, 28, 50, 0.62);
+  --glass-bg-strong: rgba(3, 18, 34, 0.82);
+  --glass-border: rgba(111, 211, 232, 0.14);
+  --glass-border-hover: rgba(111, 211, 232, 0.32);
+  --hairline: rgba(207, 225, 236, 0.08);
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, Menlo, monospace;
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+
+  /* Kept for backwards-compat with existing components */
+  --font-modern-sans: var(--font-sans);
+  --font-primary: var(--font-sans);
+  --font-modern: var(--font-display);
+  --font-tech-mono: var(--font-mono);
+  --font-elegant-serif: var(--font-display);
+
+  --bg-current: var(--depth-2);
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
+* { box-sizing: border-box; padding: 0; margin: 0; }
 
-html,
-body {
+html, body {
   max-width: 100vw;
   overflow-x: hidden;
   min-height: 100%;
 }
 
 body {
-  background: linear-gradient(180deg, #0077be 0%, #00050a 100%);
-  color: #fff;
-  font-family: var(--font-primary);
-  line-height: 1.6;
+  /* Five-stop descent. The Experience canvas sits behind this,
+     so keep it as a fallback that already reads "ocean". */
+  background:
+    radial-gradient(1200px 600px at 50% -10%, rgba(63,183,214,0.35) 0%, transparent 60%),
+    linear-gradient(180deg,
+      var(--depth-0) 0%,
+      var(--depth-1) 18%,
+      var(--depth-2) 42%,
+      var(--depth-3) 68%,
+      var(--depth-4) 88%,
+      var(--depth-5) 100%);
+  background-attachment: fixed;
+  color: var(--ink-body);
+  font-family: var(--font-sans);
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
 }
 
-.bg-fixed {
-  display: none; /* Removed background color animation div */
+/* ---------- Caustics overlay ----------
+   Subtle animated noise that evokes light dancing through
+   water. Pinned above body background, below content. */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='400'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.7  0 0 0 0 0.9  0 0 0 0 1  0 0 0 0.08 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  mix-blend-mode: screen;
+  opacity: 0.35;
+  animation: caustics 14s linear infinite;
 }
 
+/* Vignette so edges feel deeper — a trick Ocean School uses */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background: radial-gradient(120% 80% at 50% 50%, transparent 55%, rgba(0,5,10,0.55) 100%);
+}
+
+@keyframes caustics {
+  0%   { background-position: 0 0; }
+  100% { background-position: 400px 400px; }
+}
+
+/* ---------- Sections & content panels ---------- */
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 8rem 2rem; /* Increased vertical padding */
+  padding: 8rem 2rem;
   background: transparent;
   position: relative;
   z-index: 10;
-  opacity: 1;
 }
 
 .content {
@@ -67,180 +136,232 @@ section {
   width: 100%;
   text-align: center;
   z-index: 20;
-  background: rgba(255, 255, 255, 0.4);
-  padding: 2.5rem;
-  border-radius: 12px;
-  backdrop-filter: blur(4px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  opacity: 1;
+  background: var(--glass-bg);
+  padding: 3rem;
+  border-radius: 2px;                 /* sharp, editorial */
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.04) inset,
+    0 30px 80px -30px rgba(0,0,0,0.6);
+  color: var(--ink-body);
 }
 
-h1 { 
-  font-family: var(--font-primary);
-  font-size: 4rem; 
-  margin-bottom: 1rem; 
-  color: #000000; 
+/* ---------- Typography ---------- */
+h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2.75rem, 6vw, 4.5rem);
+  margin-bottom: 1rem;
+  color: var(--ink-strong);
   letter-spacing: -0.02em;
-  font-weight: 800;
-}
-
-h2 { 
-  font-family: var(--font-primary);
-  font-size: 2.5rem; 
-  margin-bottom: 1.5rem; 
-  color: #000000; 
   font-weight: 700;
-  letter-spacing: -0.01em;
+  line-height: 1.05;
 }
-
-h3 { 
-  font-family: var(--font-primary);
-  font-size: 1.5rem; 
-  margin-bottom: 1rem; 
-  color: #000000; 
+h2 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  margin-bottom: 1.5rem;
+  color: var(--ink-strong);
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+h3 {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--ink-strong);
   font-weight: 600;
+  letter-spacing: -0.005em;
 }
-p { font-size: 1.1rem; line-height: 1.6; margin-bottom: 1rem; color: #1a1a1a; }
-
-.career-timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  text-align: left;
+p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  color: var(--ink-body);
 }
 
+/* Small eyebrow label, mono, all caps — used for depth tags etc */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-teal);
+}
+
+/* ---------- Career timeline ---------- */
+.career-timeline { display: flex; flex-direction: column; gap: 2.25rem; text-align: left; }
 .career-item {
-  border-left: 3px solid var(--color-teal);
+  border-left: 1px solid var(--glass-border);
   padding-left: 2rem;
   position: relative;
 }
-
 .career-item::before {
   content: '';
   position: absolute;
-  left: -9px;
-  top: 0;
-  width: 15px;
-  height: 15px;
-  background: var(--color-shallow);
+  left: -5px;
+  top: 0.6rem;
+  width: 9px;
+  height: 9px;
+  background: var(--color-teal);
   border-radius: 50%;
-  box-shadow: 0 0 10px var(--color-shallow);
+  box-shadow: 0 0 12px var(--color-teal), 0 0 24px rgba(45,212,191,0.35);
 }
-
 .career-org {
-  font-weight: bold;
-  color: var(--color-shallow);
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-teal);
   margin-bottom: 0.5rem;
 }
 
+/* ---------- Footer ---------- */
 .site-footer {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem 3rem;
   text-align: center;
-  background: rgba(0, 10, 20, 0.8);
-  backdrop-filter: blur(10px);
-  border-top: 1px solid rgba(0, 139, 139, 0.3);
+  background: linear-gradient(180deg, transparent, rgba(0,5,10,0.8));
+  border-top: 1px solid var(--hairline);
+  position: relative;
+  z-index: 20;
 }
-
 .footer-content {
   display: flex;
   justify-content: center;
-  gap: 3rem;
-  margin-bottom: 2rem;
+  gap: 2.5rem;
+  margin-bottom: 1.5rem;
 }
-
 .footer-content a {
-  color: var(--color-shallow);
+  color: var(--ink-muted);
   text-decoration: none;
-  font-size: 1.2rem;
   transition: color 0.3s ease, transform 0.3s ease;
 }
-
 .footer-content a:hover {
-  color: white;
-  transform: translateY(-3px);
+  color: var(--color-teal);
+  transform: translateY(-2px);
 }
 
 .scroll-cue {
   margin-top: 2rem;
-  animation: bounce 2s infinite;
-  font-weight: bold;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  animation: bounce 2.4s ease-in-out infinite;
 }
-
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-  40% {transform: translateY(-10px);}
-  60% {transform: translateY(-5px);}
+  0%,100% { transform: translateY(0); opacity: 0.6; }
+  50%     { transform: translateY(6px); opacity: 1; }
 }
 
+/* ---------- Portfolio cards (home) ---------- */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2.5rem;
 }
-
 .portfolio-card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(5px);
-  padding: 2rem;
-  border-radius: 10px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  padding: 2rem 1.75rem;
+  border-radius: 2px;
   cursor: pointer;
-  transition: transform 0.3s ease, background 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.portfolio-card:hover {
-  transform: translateY(-10px);
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.blog-link {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  background: white;
-  color: black;
-  text-decoration: none;
-  border-radius: 5px;
-  transition: opacity 0.3s ease;
-}
-
-.blog-link:hover {
-  opacity: 0.8;
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
-}
-
-.modal-content {
-  background: #001A33;
-  padding: 3rem;
-  border-radius: 15px;
-  max-width: 600px;
-  width: 90%;
+  transition: transform 0.4s cubic-bezier(.2,.8,.2,1), background 0.3s, border-color 0.3s;
+  border: 1px solid var(--glass-border);
+  text-align: left;
   position: relative;
-  border: 1px solid var(--color-teal);
-  color: white;
+}
+.portfolio-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2rem; height: 1px;
+  background: var(--color-teal);
+  opacity: 0.6;
+}
+.portfolio-card:hover {
+  transform: translateY(-6px);
+  background: rgba(45,212,191,0.04);
+  border-color: var(--glass-border-hover);
 }
 
+/* ---------- Primary button (archive entry, etc.) ---------- */
+.blog-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 2rem;
+  padding: 1rem 2.25rem;
+  background: transparent;
+  color: var(--ink-strong);
+  text-decoration: none;
+  border: 1px solid var(--color-teal);
+  border-radius: 2px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.blog-link::after {
+  content: '→';
+  transition: transform 0.3s ease;
+}
+.blog-link:hover {
+  background: var(--color-teal);
+  color: var(--depth-5);
+}
+.blog-link:hover::after { transform: translateX(4px); }
+
+/* ---------- Modal ---------- */
+.modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0,5,10,0.78);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  display: flex; justify-content: center; align-items: center;
+  z-index: 1000;
+  padding: 2rem;
+}
+.modal-content {
+  background: var(--glass-bg-strong);
+  padding: 3rem;
+  border-radius: 2px;
+  max-width: 620px;
+  width: 100%;
+  position: relative;
+  border: 1px solid var(--glass-border-hover);
+  color: var(--ink-body);
+  box-shadow: 0 40px 80px -20px rgba(0,0,0,0.6);
+}
+.modal-content h2 { color: var(--ink-strong); font-size: 2rem; margin-bottom: 1rem; }
 .close-btn {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 2rem;
-  background: none;
-  border: none;
-  color: white;
+  position: absolute; top: 12px; right: 18px;
+  font-size: 1.75rem;
+  background: none; border: none;
+  color: var(--ink-muted);
   cursor: pointer;
+  transition: color 0.2s;
+}
+.close-btn:hover { color: var(--color-teal); }
+
+/* Utility: a horizontal nautical hairline */
+.rule {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--glass-border), transparent);
+  border: 0;
+  margin: 2rem 0;
+}
+
+/* Reduced motion: kill caustics animation */
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+  .scroll-cue { animation: none; }
 }
